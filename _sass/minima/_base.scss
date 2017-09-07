@@ -38,16 +38,31 @@ ul, ol, dl, figure,
 }
 
 
+.t2when {
+  color: rgb(132,0,0);
+}
+.t2who {
+  color: rgb(0,132,0);
+}
+.t2what {
+
+}
+
 
 /**
  * Images
  */
 img {
-  max-width: 100%;
+  // max-width: 50%;
   vertical-align: middle;
-  object-fit: cover;
+  // object-fit: cover;
   // width:230px;
   // height:230px;
+}
+
+img.resize {
+  width:200px;
+  height:40px;
 }
 
 

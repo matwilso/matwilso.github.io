@@ -1,4 +1,26 @@
-<header class="site-header" role="banner">
+<!-- <header class="site-header" role="banner"> -->
+<header class="site-header" style="{% if page.header-img %}background-image: url('{{ site.baseurl }}/{{ page.header-img }}');{% else %}background-color: black{% endif %}'" role="banner">
+    <!-- <div class="layer" style="{% if page.header-img-darken %} background-color: rgba(0, 0, 0, {{ page.header-img-darken }});{% endif %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading" style="padding: 75px 0">
+    					{% if page.url == '/' %}
+    					{% if site.logo %}
+    					<img src= "{{ site.logo }}" style="height: 150px">
+    					{% endif %}
+    					{% else %}{% endif %}
+                        <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                        <hr class="small">
+                        <span class="subheading">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</header>
+
+
 
   <div class="wrapper">
     {% assign default_paths = site.pages | map: "path" %}
