@@ -125,9 +125,6 @@ Stay tuned...
 
 
 
-[riss_paper]: /assets/riss/shmoo_paper.pdf
-[poster]: http://riss.ri.cmu.edu/wp-content/uploads/2017/09/2017-RISS-Poster-WILSON-Matthew-compressed.pdf
-
 
 [ballbots]: http://www.msl.ri.cmu.edu/projects/ballbot/
 [software]: https://github.com/utahrobotics/usr_ws/tree/kinetic-devel/src
@@ -137,7 +134,8 @@ Stay tuned...
 [club]: https://utahrobotics.github.io/
 [msl]: http://www.msl.ri.cmu.edu
 [RISS]: http://riss.ri.cmu.edu
-
+[riss_paper]: /assets/riss/shmoo_paper.pdf
+[poster]: http://riss.ri.cmu.edu/wp-content/uploads/2017/09/2017-RISS-Poster-WILSON-Matthew-compressed.pdf
 
 
 <!-- See my [Projects] page for more details.
