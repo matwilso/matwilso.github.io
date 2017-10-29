@@ -19,13 +19,15 @@ minima:
 header_pages:
  - blog.md
  # - about.md
- - projects.md
+ # - projects.md
+ - personal.md
 
 # Build settings
 markdown: kramdown
 theme: minima
 include:
     - _pages
+    # - _drafts
 exclude:
   - Gemfile
   - Gemfile.lock
