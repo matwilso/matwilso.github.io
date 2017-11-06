@@ -5,8 +5,7 @@ layout: default
 <!-- <div class="crop"> -->
 <!-- </div> -->
 
-
-<img width="200" src="/assets/me_crop.jpg" style="border-radius: 3%;"/>
+<img width="200" src="/assets/me_2.jpg" style="border-radius: 2%;"/>
 
 ## Bio
 
@@ -14,7 +13,7 @@ I am a junior computer engineering student at the University of Utah,
 graduating in May 2019, interested in robotics and deep learning.
 I have worked on several robotics projects in the past and am currently getting
 into deep reinforcement learning.
-This past summer (2017) I was a Robotics Insititue Summer Scholar
+This past summer (2017) I was a Robotics Insititue Summer Scholar ([RISS])
 at Carnegie Mellon University working with Ralph Hollis and Jean Oh
 in the the [MSL lab][msl] with the [ballbots]. I am also
 a core contributor to the Utah robotics club, which competes in the
@@ -22,7 +21,6 @@ a core contributor to the Utah robotics club, which competes in the
 
 
 See more details below.
-
 
 
 # Projects
@@ -37,17 +35,15 @@ This past summer, I was part of the [RISS] (Robotics Institute Summer
 Scholards) program at Carnegie Mellon University.  RISS is a program for
 undergraduate students from all around the world to come to CMU and work and
 do research in a robotics lab with professors and graduate students for a summer.
-As part of the RISS program, I worked on adding a object detection
+As part of the RISS program, I worked on adding an object detection
 and natural language communication system to one of the ballbots.
 I presented my research as a [poster] and a [paper][riss_paper].
 
-<br>
 <div style="margin: auto;">
     <img src="/assets/riss/little_and_big.jpg" alt="robot" height="200">
     <img src="/assets/riss/cohort.jpg" alt="robot" height="200">
 </div>
 <br>
-
 The ballbots–invented by Ralph back in '05–are a cool type of robot.
 They balance on a single ball at their base and actively keep their balance
 by sensing their lean angle and driving the ball to correct any tilts.  They
@@ -86,10 +82,10 @@ Each year I compete with the [Utah Student Robotics club][club] in the
 develop robots for a simulated off world mining mission.
 Robots are placed in an arena of Lunar Regolith (dirt) simulant and have
 to drive across the field to collect dirt and subsurface gravel/ice and deposit
-it into a bin, where in a real mission the water would be extracted for
+it into a bin.  In a real Mars or Lunar mission, the water in this material would be extracted for
 rocket fuel, water for plants, and whatever else water is good for.
 
-At the 2017 competition, our team got 3rd place out of about 50 schools.
+At the 2017 competition, our team got [3rd place](https://www.nasa.gov/sites/default/files/atoms/files/rmc2017_scoresummary.pdf) out of about 50 schools.
 
 I work on the programming side of the team and developed a lot of the [software]
 last year, including low-level sensor and motor ROS drivers,
