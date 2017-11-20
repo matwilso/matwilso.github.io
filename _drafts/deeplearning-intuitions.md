@@ -4,8 +4,6 @@ title: Deep Learning Intuitiions
 permalink: /deeplearning-intuitions/
 ---
 
-
-
 ### Some resources to get started
 
 A basic video intro: TODO link to 3b1b

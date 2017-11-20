@@ -4,11 +4,47 @@ title: Getting starting with OpenAI gym and Deep Reinforcement Learning
 permalink: /gym-intro/
 ---
 
+
+<div id="drawing"></div>
+
+<script src="/js/svg.min.js"></script>
+<!-- <script src="/js/d3.min.js"></script> -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var draw = SVG('drawing').size(600, 600)
+var text = draw.text(function(add) {
+  add.tspan('Lorem ipsum dolor sit amet ').newLine()
+})
+tb = text.rbox()
+
+
+var ellipse = draw.ellipse(tb.w*1.5, tb.h*1.5).attr({ fill: '#ff00ff' })
+ellipse.cx(tb.cx)
+ellipse.y(tb.cy)
+ellipse.back()
+
+
+ellipse.click(function() {
+    if (this.attr('fill') == '#ff0066') {
+        this.attr({fill : '#ff00ff'})
+    }
+    else {
+        this.attr({fill : '#ff0066'})
+    }
+})
+
+</script>
+
 I was really excited when I first found out about OpenAI's gym.  It seemed
 really cool that they have this place to essentially develop AI that could
 learn to play all these games.  It seemed so cool, but I had no idea what was
 going on and how you would even try to write a program that could learn to
 play games.  
+
+
+
+
 
 <!--
 I saw that
@@ -27,6 +63,11 @@ aim to cover anything in depth, but just to give you a lay of the land.  To
 give you a feel for what things to research and how you might get started if you
 are motivated.  And trust me, if you are motivated, you will make progress and
 get to the point where you can do cool stuff.  It just takes time. That's it.
+
+If you think back to anything that you can do well that not everybody can do
+(like drawing, coding, playing an instrument), it took a lot of time to get.
+If you haven't gotten very good at anything, this is the reason.  You haven't
+dedicated enough time to that one skill.
 
 Specifically, the things I will be talking about are:
 - What is the Gym for?  Why did the people at OpenAI put in the time to create it?

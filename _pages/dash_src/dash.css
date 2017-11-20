@@ -1,0 +1,8 @@
+.extra {
+    display: none;
+}
+
+#bookmark li:hover .extra {
+    display: inline-block;
+	color: grey;
+}
