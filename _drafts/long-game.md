@@ -4,6 +4,9 @@ title: The Long Game
 permalink: /long-game/
 ---
 
+
+Short-sightedness
+
 The time between senior year of high school and freshman year of college is
 exciting.  It is like being freed and entering this cool new place.  The
 possibilities are much greater and it feels like you can do anything.  At this

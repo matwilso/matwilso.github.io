@@ -55,10 +55,12 @@ low-level control and navigation, and I also developed a lot in ROS
 
 ## NASA Robotic Mining Competition
 
-<img src="/assets/urmp/emcee_2017.png" alt="robot" width="360">
 
 Each year I compete with the [Utah Student Robotics club][club] in the
 [NASA Robotic Mining Competition][nasa].  
+
+<img src="/assets/urmp/emcee_2017.png" alt="robot" width="360">
+
 
 I work on the programming side of the team and developed a lot of the [software]
 last year, including low-level sensor and motor ROS drivers,
@@ -67,27 +69,21 @@ localization using [visual markers](https://github.com/utahrobotics/aruco_pkgs),
 and high-level [autonomy](https://github.com/utahrobotics/usr_ws/tree/kinetic-devel/src/amee_controllers#competition_smach) (finite state machine). This year I am the software team lead
 and am hoping to help the team get its first fully autonomous run at the competition.
 
-<span style="color: grey">2017-2018</span>
-
-Stay tuned...
+<span style="color: grey">2018</span>
 
 <img src="/assets/urmp/dr_demo.png" alt="dr_demo" width="360">
 
+Stay tuned...
+
+<span style="color: grey">2017</span>
 
 
-<span style="color: grey">2016-2017</span>
-
-
-At the 2017 competition, our team got [3rd place](https://www.nasa.gov/sites/default/files/atoms/files/rmc2017_scoresummary.pdf) out of about 50 schools.
-
-
-
-I was also the primary author on the
+At the 2017 competition, our team got [3rd place](https://www.nasa.gov/sites/default/files/atoms/files/rmc2017_scoresummary.pdf) out of about 50 schools.  I was also the primary author on the
 [Systems Engineering][se_paper] [Paper][3rd] for the NASA
 competition for which we got 3rd place.
 
 
-<span style="color: grey">2015-2016</span>
+<span style="color: grey">2016</span>
 
 <img src="/assets/urmp/emcee_2016.png" alt="robot" width="360">
 
