@@ -38,7 +38,7 @@ See more details below.
 <br>
 This past summer, I was part of the [RISS] (Robotics Institute Summer
 Scholars) program at Carnegie Mellon University.  RISS is a program for
-undergraduate students from all around the world to come to CMU and work and
+undergraduate students from around the world to come to CMU and work and
 do research in a robotics lab with professors and graduate students for a summer.
 As part of the RISS program, I worked on adding an object detection
 and natural language communication system to one of the [ballbots][ballbot].
