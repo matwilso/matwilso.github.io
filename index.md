@@ -32,7 +32,7 @@ See more details below.
 
 <div style="margin: auto;">
     <img src="/assets/riss/little_and_big.jpg" alt="robot" height="200">
-    <img src="/assets/riss/cohort.jpg" alt="robot" height="200">
+    <img src="/assets/riss/cohort.png" alt="robot" height="200">
 </div>
 
 <br>
