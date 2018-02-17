@@ -19,9 +19,9 @@ in the the [MSL lab][msl] with the [ballbots]. I am also
 a core contributor to the Utah robotics club, which competes in the
 [NASA Robotic Mining Competition][nasa] each May at Kennedy Space Center in Florida.
 
-
 See more details below.
 
+Also, feel free to contact me: mattwilsonmbw AT gmail.com
 
 # Projects
 

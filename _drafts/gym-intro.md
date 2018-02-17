@@ -5,43 +5,35 @@ permalink: /gym-intro/
 ---
 
 
-<div id="drawing"></div>
+OpenAI gym.
 
-<script src="/js/svg.min.js"></script>
-<!-- <script src="/js/d3.min.js"></script> -->
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script>
+Basically the purpose of this is to develop algorithms (write programs) that 
+are able to succeed on all of the games.  THe same program should be able
+to beat all of the games, just by changing like 1 line – whatever env is
+loaded.
 
-var draw = SVG('drawing').size(600, 600)
-var text = draw.text(function(add) {
-  add.tspan('Lorem ipsum dolor sit amet ').newLine()
-})
-tb = text.rbox()
+So how do you get started with this?
 
-
-var ellipse = draw.ellipse(tb.w*1.5, tb.h*1.5).attr({ fill: '#ff00ff' })
-ellipse.cx(tb.cx)
-ellipse.y(tb.cy)
-ellipse.back()
+Well, there are a lot of possible ways that you could solve this.  Certainly
+if you have an artificial intelligence, it could solve them all.
 
 
-ellipse.click(function() {
-    if (this.attr('fill') == '#ff0066') {
-        this.attr({fill : '#ff00ff'})
-    }
-    else {
-        this.attr({fill : '#ff0066'})
-    }
-})
+But the canonical starting point, I would say, right now is *Policy Gradients*.
 
-</script>
+First learn deep learning, then come back.  cs231n.  Then come back and run the
+Pytorch code.
 
+Then write reinforce yourself in numpy.
+
+
+<!--
 I was really excited when I first found out about OpenAI's gym.  It seemed
 really cool that they have this place to essentially develop AI that could
 learn to play all these games.  It seemed so cool, but I had no idea what was
 going on and how you would even try to write a program that could learn to
 play games.  
 
+-->
 
 
 
