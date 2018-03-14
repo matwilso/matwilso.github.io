@@ -4,16 +4,17 @@ mark: page
 ---
 
 
- <!-- TODO: FIX THIS HACK -->
- <link rel = "stylesheet"
-   type = "text/css"
-   href = "/_pages/dash_src/dash.css" />
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+ <!-- TODO: find out if there is better way to do these relative links -->
+ <link rel="stylesheet" type="text/css" href="/_pages/dash_src/dash.css"/>
  <script src="/_pages/dash_src/dash.js"></script>
 
+<button align="left" class="switch" id="school"></button>
+<button align="left" class="switch" id="workhours"></button>
 <h1 align="center">
-	Dashboard
+	Dashboard 
 </h1>
 <div>
 <div class="dash" id="shortterm" style="display: inline-block; width: 50%; float: left;">
@@ -88,6 +89,11 @@ mark: page
 			<a href="http://web.stanford.edu/class/cs20si/syllabus.html">Tensorflow for Deep Learning Research</a>
 <span class="extra"> (looks like a good introduction to using Tensorflow (better than anything on the TF website))</span>
 		</li>
+		<li>
+			<a href="http://rll.berkeley.edu/cs287/lecture_videos/">Lecture videos for Cal Advanced Robotics - Abbeel</a>
+<span class="extra">Good lectures by Pieter, should try to watch a few of these a week</span>
+		</li>
+
 	</ul>
 
 	<h2>Mantra</h2>
