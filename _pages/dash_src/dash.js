@@ -1,7 +1,7 @@
 // requires jquery, js-cookie
 
 var buttonDisp = {}
-buttonDisp['school'] = ['SCHOOL IS OUT', 'SCHOOL IS IN'];
+buttonDisp['research'] = ['SIDE PROJECT TIME', 'RESEARCH TIME'];
 buttonDisp['workhours'] = ['FREE TIME', 'WORKING HOURS'];
 
 function setButtonText(idTag) {
@@ -23,13 +23,13 @@ function checkButtonTimes() {
 	var timeOfDay = today.getHours()
 
 	if (dayOfWeek == 1) {
-		// set school on mondays
-		Cookies.set('school', true);
+		// set research on mondays
+		Cookies.set('research', true);
 	}
 	else {
-		// else only set school if it doesn't have a previous value
-		if (Cookies.get('school') == undefined || Cookies.get('school') == '') {
-			Cookies.set('school', true);
+		// else only set research if it doesn't have a previous value
+		if (Cookies.get('research') == undefined || Cookies.get('research') == '') {
+			Cookies.set('research', true);
 		}
 	}
 	if (Cookies.get('workhours') != undefined || Cookies.get('workhours') == '') {
@@ -46,12 +46,12 @@ function checkButtonTimes() {
 
 $(document).ready(function() {
 	checkButtonTimes();
-	setButtonText('school');
+	setButtonText('research');
 	setButtonText('workhours');
 
-	$('#school').click(function() {
-		Cookies.set('school', !JSON.parse(Cookies.get('school')), { expires: 1 });
-		setButtonText('school');
+	$('#research').click(function() {
+		Cookies.set('research', !JSON.parse(Cookies.get('research')), { expires: 1 });
+		setButtonText('research');
 	});
 
 	$('#workhours').click(function() {

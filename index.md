@@ -21,8 +21,6 @@ a core contributor to the Utah robotics club, which competes in the
 
 See more details below.
 
-Also, feel free to contact me: mattwilsonmbw AT gmail.com
-
 # Projects
 
 ---
