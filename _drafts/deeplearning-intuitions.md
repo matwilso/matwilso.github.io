@@ -11,7 +11,7 @@ A basic video intro: TODO link to 3b1b
 If you are really interested in getting good, the way I learned a lot was
 through working through the cs231n originally taught by Andrej Karpathy,
 a top deep learning researcher now working as the Director of AI for the
-Tesla visiion.  You must go through all of the assignments.  The only way to
+Tesla vision.  You must go through all of the assignments.  The only way to
 learn about all of this is to implement.  Karpathy says the best bang for your
 buck is implementing it yourself.  It will be hard, but it is the most
 efficient use of your time.  If you really want to learn this stuff, you can

@@ -18,8 +18,10 @@ care about learning to program, or you might lose interest, then it
 probably isn't worth your time. You have to know that you absolutely
 want to learn it.  
 
+You have to really give a shit.
 
-You **have** to want to learn it, because for difficult things, the truth
+
+You *have* to want to learn it, because for difficult things, the truth
 is they take a ton of time to learn.  You can't expect to learn how to
 program in 1 month.  You may be able to write some programs, but you won't
 be any good.  You need to accept it.  The truth is, it will actually take
@@ -39,6 +41,10 @@ You have to be dedicated. Everyday, you have to work on learning.  If you
 keep coming back to it over long timescales, your brain will reinforce the
 ideas.  Over time you will form the neural connections and get better at it.
 You have to keep discplined and keep coming back to it.
+
+
+Plan for long time scales, and try to maximize your productivity over years not days.
+Multi-year plans are much better.
 
 
 This essay is shit and I will probably never finish it or really look at it again...
