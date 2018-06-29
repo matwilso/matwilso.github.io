@@ -8,8 +8,30 @@ permalink: /recommendations/
 Here are some of my recommendations.  These are things that I have found useful, interesting,
 or enjoyable.  YMMV (Your Mileage May Vary)
 
+# Deep Learning Resources 
 
-# Evernote
+At the top of the list for the hype
+
+## Intro to Neural Networks/Deep Learning
+
+[1] http://cs231n.stanford.edu/, http://cs231n.github.io/
+
+First, Stanford's CS231n course (created by Andrej Karpathy et. al.) has been the best resource for getting into deep learning. The course notes and video lectures are great, but to make it worthwhile you need to go complete all of the assignments. It can be challenging, but it will give you a great introduction and base for gaining deep understanding of cutting edge methods and being able to use them in projects.
+
+
+Stanford University: Tensorflow for Deep Learning Research
+
+Best resource I have found for getting into the details of tensorflow. A lot of people use the low-level api, which is not covered well on the TF website, or is at least hard to find.
+
+### Deep Learning in general
+
+
+### Reinforcement Learning specifically
+
+
+# Tools 
+
+## Evernote
 
 Better than Google Keep.  Things are much more organized.  Notebooks allow longer, more cohesive
 long thoughts. Better for daily logs.
@@ -26,29 +48,20 @@ You have to be a bit careful to not overlog, but this may be hard (debatable)
 
 It helps to have a long term mm
 
-# Twitter people to follow
+## Space Repetition (Anki)
+
+
+
+
+
+# Misc
+
+## Twitter people to follow
 
 @matwilso.  Some of them I mute because they tweet too frequently or get annoying, but 
 many of them I recommend.
 
 
-## Intro to Neural Networks/Deep Learning
-
-[1] http://cs231n.stanford.edu/, http://cs231n.github.io/
-
-First, Stanford's CS231n course (created by Andrej Karpathy et. al.) has been the best resource for getting into deep learning. The course notes and video lectures are great, but to make it worthwhile you need to go complete all of the assignments. It can be challenging, but it will give you a great introduction and base for gaining deep understanding of cutting edge methods and being able to use them in projects.
-
-
-Stanford University: Tensorflow for Deep Learning Research
-
-Best resource I have found for getting into the details of tensorflow. A lot of people use the low-level api, which is not covered well on the TF website, or is at least hard to find.
-
-
-
-### Deep Learning in general
-
-
-### Reinforcement Learning specifically
 
 
 ## Books and Blogs
@@ -63,7 +76,6 @@ Harry Potter and the Methods of Rationality (Harry Potter fanfic). I lost a good
 Paul Graham has written a ton of great essays. He is a big software and startup guy, but has written more general essays that I have also really loved. This might be a decent place to start: http://paulgraham.com/procrastination.html. Then, maybe: http://paulgraham.com/hamming.html, http://paulgraham.com/love.html
 
 
-
 4) Half-assing it with everything you've got
 
 Recently, I have gotten into Nate Soares's blog. Linked is probably my favorite post. I also really liked: http://mindingourway.com/where-coulds-go/
@@ -72,9 +84,6 @@ Recently, I have gotten into Nate Soares's blog. Linked is probably my favorite 
 2) http://karpathy.github.io/, https://cs.stanford.edu/people/karpathy/
 
 Along with 1), basically most of what Andrej Karpathy does is cool and his posts are really great. Highly recommended follow for anyone getting into deep learning and machine intelligence.
-
-
-
 
 
 ## YouTube Channels
@@ -101,6 +110,8 @@ Just pretty good conversations, about math and education mostly, but also touch 
 things 
 https://www.benbenandblue.com/
 
+
+80k hours
 
 
 
