@@ -5,23 +5,40 @@ mark: page
 ---
 <body>
     <h2> Summer over </h2>
-    <h3 id=today></h3>
-    <h3 id=till_mid></h3>
     <h2> Days Left (until August 20) </h2>
-    <h3 id=days_left></h3>
+    <h3 id=days_left>_</h3>
 
     <h2>Days Gone (since May 21)</h2>
-    <h3 id=days_done></h3>
+    <h3 id=days_done>_</h3>
+
+	<hr>
+
+    <h2> Pommerman deadline </h2>
+    <h2> Days Left (until November 21) </h2>
+    <h3 id=days_to_pomme>_</h3>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr>
+
 
     <script>
     setInterval(function(){
     var begin = new Date("May 21, 2018")
     var today = new Date();
     var finish = new Date("August 20, 2018")
+    var pomme = new Date("November 21, 2018")
 
     var days_left = Math.round((finish-today)/(1000*60*60*24));
     var total_days = Math.round((begin-finish)/(1000*60*60*24));
     var days_done = Math.round((today - begin)/(1000*60*60*24));
+
+    document.getElementById("days_left").innerHTML = days_left;
+    document.getElementById("days_done").innerHTML = days_done;
+    document.getElementById("days_to_pomme").innerHTML = Math.round((pomme-today)/(1000*60*60*24));
+
 
 
     // var nday = today.getDay();
@@ -40,8 +57,6 @@ mark: page
     var displayTillMid = hourToMid.toString() + " hrs    "+ minToMid.toString() + " mins till Midnight";
 
 
-    document.getElementById("days_left").innerHTML = days_left;
-    document.getElementById("days_done").innerHTML = days_done;
     document.getElementById("till_mid").innerHTML = displayTillMid;
     displayToday = today.toString();
     displayToday = displayToday.substring(3);
@@ -50,4 +65,6 @@ mark: page
     }, 1000);
     </script>
 
+    <h3 id=till_mid></h3>
+    <h3 id=today></h3>
 </body>
