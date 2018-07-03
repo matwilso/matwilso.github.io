@@ -9,17 +9,24 @@ layout: default
 
 ## Bio
 
-I am a junior computer engineering student at the University of Utah,
-graduating in May 2019, interested in robotics and deep learning.
-I have worked on several robotics projects in the past and am currently getting
-into reinforcement + deep learning.
-This past summer (2017), I was a Robotics Insititue Summer Scholar ([RISS])
+I am a senior in computer engineering at the 
+University of Utah (2019), where I work on robotics and reinforcement
+\+ deep learning.  I am part of the [LL4MA lab](https://robot-learning.cs.utah.edu/),
+advised by [Tucker Hermans](https://robot-learning.cs.utah.edu/thermans). I 
+also work on the Utah robotics club at the U, which competes in the
+[NASA Robotic Mining Competition][nasa] each May at Kennedy Space Center 
+in Florida.  In 2017, I was a Robotics Insititue Summer Scholar ([RISS])
 at Carnegie Mellon University working with Ralph Hollis and Jean Oh
-in the the [MSL lab][msl] with the [ballbots]. I am also
-a core contributor to the Utah robotics club, which competes in the
-[NASA Robotic Mining Competition][nasa] each May at Kennedy Space Center in Florida.
+in the the [MSL lab][msl] with the [ballbots].
 
-See more details below.
+
+### News
+- I wrote up an answer to a [stackoverflow question on PPO (Proximal Policy Optimization)](https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl/50663200#50663200)
+
+
+
+
+
 
 # Projects
 
