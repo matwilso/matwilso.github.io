@@ -4,9 +4,11 @@ title: Personal
 permalink: /personal/
 ---
 
+<!--
 I like reading books and blogs. I also enjoy hanging out and talking with friends.
+-->
 
-For sports, I really like climbing and playing basketball, as well as most outdoors
+I like climbing and playing basketball, as well as most outdoors
 stuff like hiking and camping.
 
 <img src="/assets/climb-boy.jpg" alt="climb boy" height="200">
@@ -14,6 +16,8 @@ stuff like hiking and camping.
 <!--Goblin Valley State Park, Utah-->
 
 
+
+<!--
 Extended biography
 
 // TODO: make this click to show 
@@ -42,4 +46,6 @@ all of my time.
 Then I ended up at the university of utah and stated in mechanical engineering,
 but switched to compute engineering after a year of working on the robotics team
 and realized I thought that stuff was way cooler. 
+
+-->
 
