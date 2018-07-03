@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="icon-so.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   width="16"
+   height="16">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1266"
+     inkscape:window-height="831"
+     id="namedview10"
+     showgrid="false"
+     inkscape:zoom="15.733333"
+     inkscape:cx="1.0064982"
+     inkscape:cy="4.0361776"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg8" />
+  <style
+     id="style2">.st0{fill:#bcbbbb}.st1{fill:#f48023}</style>
+  <g
+     id="g817"
+     transform="matrix(0.18126983,0,0,0.18126983,-2.4780538,-2.486569)">
+    <path
+       style="fill:#828282;fill-opacity:1"
+       id="path6"
+       d="m 38.8,68.4 37.8,7.9 1.6,-7.6 -37.8,-7.9 z m 5,-18 35,16.3 3.2,-7 L 47,43.3 Z M 53.5,33.2 83.2,57.9 88.1,52 58.4,27.3 Z m 19.2,-18.3 -6.2,4.6 23,31 6.2,-4.6 z M 38,86 H 76.6 V 78.3 H 38 Z"
+       class="st1"
+       inkscape:connector-curvature="0" />
+    <path
+       class="st0"
+       d="M 84.4,93.8 V 70.6 h 7.7 v 30.9 H 22.6 V 70.6 h 7.7 v 23.2 z"
+       id="path4510"
+       style="fill:#828282;fill-opacity:1"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
