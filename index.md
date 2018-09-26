@@ -12,19 +12,16 @@ layout: default
 I am a senior in computer engineering at the 
 University of Utah (2019), where I work on robotics and reinforcement
 \+ deep learning.  I am part of the [LL4MA lab](https://robot-learning.cs.utah.edu/),
-advised by [Tucker Hermans](https://robot-learning.cs.utah.edu/thermans). I 
-also work on the Utah robotics club at the U, which competes in the
-[NASA Robotic Mining Competition][nasa] each May at Kennedy Space Center 
-in Florida.  In 2017, I was a Robotics Insititue Summer Scholar ([RISS])
+advised by [Tucker Hermans](https://robot-learning.cs.utah.edu/thermans). 
+In 2017, I was a Robotics Insititue Summer Scholar ([RISS])
 at Carnegie Mellon University working with Ralph Hollis and Jean Oh
 in the the [MSL lab][msl] with the [ballbots].
-
+In the past, I was a member of the Utah robotics club at the U, which competes in the
+[NASA Robotic Mining Competition][nasa] each May at Kennedy Space Center 
+in Florida.  
 
 ### News
-- I wrote up an answer to a [stackoverflow question on PPO (Proximal Policy Optimization)](https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl/50663200#50663200)
-
-
-
+- In June 2018, I wrote up an answer to a [stackoverflow question on PPO (Proximal Policy Optimization)](https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl/50663200#50663200)
 
 
 
@@ -61,24 +58,20 @@ low-level control and navigation, and I also developed a lot in ROS
 ## NASA Robotic Mining Competition
 
 
-Each year I compete with the [Utah Student Robotics club][club] in the
+From 2015-2018, I competed with the [Utah Student Robotics club][club] in the
 [NASA Robotic Mining Competition][nasa].  
 
 <img src="/assets/urmp/emcee_2017.png" alt="robot" width="360">
 
 
-I work on the programming side of the team and developed a lot of the [software]
-last year, including low-level sensor and motor ROS drivers,
+I worked on the programming side of the team and developed a lot of the [software]
+for 2017-18 year, including low-level sensor and motor ROS drivers,
 Gazebo [robot](https://github.com/matwilso/emcee_simulation) [simulation](https://github.com/utahrobotics/usr_simulation),
 localization using [visual markers](https://github.com/utahrobotics/aruco_pkgs),
-and high-level [autonomy](https://github.com/utahrobotics/usr_ws/tree/kinetic-devel/src/amee_controllers#competition_smach) (finite state machine). This year I am the software team lead
-and am hoping to help the team get its first fully autonomous run at the competition.
+and high-level [autonomy](https://github.com/utahrobotics/usr_ws/tree/kinetic-devel/src/amee_controllers#competition_smach) (finite state machine). In the 2017-18 year, I was the software team lead.
 
 <span style="color: grey">2018</span>
 
-<img src="/assets/urmp/dr_demo.png" alt="dr_demo" width="360">
-
-Stay tuned...
 
 <span style="color: grey">2017</span>
 
