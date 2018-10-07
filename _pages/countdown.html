@@ -4,21 +4,18 @@ permalink: /countdown/
 mark: page
 ---
 <body>
-	<!--
-
     <h2> Summer over </h2>
     <h2> Days Left (until August 20) </h2>
     <h3 id=days_left>_</h3>
 
     <h2>Days Gone (since May 21)</h2>
     <h3 id=days_done>_</h3>
-	-->
 
 	<hr>
 
-    <h2> CVPR deadline </h2>
-    <h2> Days Left (until November 16) </h2>
-    <h3 id=days_to_cvpr>_</h3>
+    <h2> Pommerman deadline </h2>
+    <h2> Days Left (until November 21) </h2>
+    <h3 id=days_to_pomme>_</h3>
 
 	<br>
 	<br>
@@ -32,21 +29,15 @@ mark: page
     var begin = new Date("May 21, 2018")
     var today = new Date();
     var finish = new Date("August 20, 2018")
-    var cvpr = new Date("November 16, 2018")
+    var pomme = new Date("November 21, 2018")
 
     var days_left = Math.round((finish-today)/(1000*60*60*24));
     var total_days = Math.round((begin-finish)/(1000*60*60*24));
     var days_done = Math.round((today - begin)/(1000*60*60*24));
 
-    //document.getElementById("days_left").innerHTML = days_left;
-    //document.getElementById("days_done").innerHTML = days_done;
-	var TRIP = 3;
-	var WRITING = 20;
-	var days_to = (Math.round((cvpr-today)/(1000*60*60*24)));
-	var minus_trip = days_to - TRIP; 
-	var minus_writing = minus_trip - WRITING; 
-
-    document.getElementById("days_to_cvpr").innerHTML = days_to.toString() + " (-"+TRIP.toString()+") = " + minus_trip.toString() + " (-"+WRITING.toString()+") = " + minus_writing.toString();
+    document.getElementById("days_left").innerHTML = days_left;
+    document.getElementById("days_done").innerHTML = days_done;
+    document.getElementById("days_to_pomme").innerHTML = Math.round((pomme-today)/(1000*60*60*24));
 
 
 

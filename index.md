@@ -61,25 +61,28 @@ low-level control and navigation, and I also developed a lot in ROS
 From 2015-2018, I competed with the [Utah Student Robotics club][club] in the
 [NASA Robotic Mining Competition][nasa].  
 
-<img src="/assets/urmp/emcee_2017.png" alt="robot" width="360">
-
-
 I worked on the programming side of the team and developed a lot of the [software]
 for 2017-18 year, including low-level sensor and motor ROS drivers,
 Gazebo [robot](https://github.com/matwilso/emcee_simulation) [simulation](https://github.com/utahrobotics/usr_simulation),
 localization using [visual markers](https://github.com/utahrobotics/aruco_pkgs),
 and high-level [autonomy](https://github.com/utahrobotics/usr_ws/tree/kinetic-devel/src/amee_controllers#competition_smach) (finite state machine). In the 2017-18 year, I was the software team lead.
 
-<span style="color: grey">2018</span>
+<span style="color: grey">2018</span> <br>
+<img src="/assets/urmp/2018.jpg" alt="2018me" width="200"> 
+<img src="/assets/urmp/2018_control.jpg" alt="2018control" width="200"> 
+<br>
+At the 2018 competition, we ended up getting 3rd overall.
 
 
-<span style="color: grey">2017</span>
 
 
-At the 2017 competition, our team got [3rd place](https://www.nasa.gov/sites/default/files/atoms/files/rmc2017_scoresummary.pdf) out of about 50 schools.  I was also the primary author on the
-[Systems Engineering][se_paper] [Paper][3rd] for the NASA
-competition for which we got 3rd place.
+<span style="color: grey">2017</span> <br>
+<img src="/assets/urmp/emcee_2017.png" alt="2017" width="360">
 
+At the 2017 competition, our team got [3rd place](https://www.nasa.gov/sites/default/files/atoms/files/rmc2017_scoresummary.pdf) 
+out of about 50 schools.  I worked on motor controller code and robot simulation (ROS/Gazebo). 
+I was also the primary author on the [Systems Engineering][se_paper] [Paper][3rd] 
+for the NASA competition for which we got 3rd place.
 
 <span style="color: grey">2016</span>
 

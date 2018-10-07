@@ -8,17 +8,45 @@ permalink: /personal/
 I like reading books and blogs. I also enjoy hanging out and talking with friends.
 -->
 
-I like climbing and playing basketball, as well as most outdoors
-stuff like hiking and camping.
+I like climbing, playing basketball, and hiking/camping.
 
+
+I also enjoy reading and think it helps to improve thinking.  I have 
+started to haphazardly keep track of books I read on [Goodreads](https://www.goodreads.com/user/show/71066633-matthew-wilson).
+
+
+---
+
+
+<!-- (u of u climb gym and Goblin Valley State Park, Utah) --> 
+u of u climb gym<br>
 <img src="/assets/climb-boy.jpg" alt="climb boy" height="200">
+
+Goblin Valley State Park, Utah <br>
 <img src="/assets/goblin_window.jpg" alt="goblin" height="200"> <br>
-<!--Goblin Valley State Park, Utah-->
+
+
+Capitol Reef State Park, Utah <br>
+<img src="/assets/capitol.jpg" alt="goblin" height="200"> <br>
+
+
+String Lake, Grand Tetons, Wyoming<br>
+<img src="/assets/stringlake.jpg" alt="string lake" height="200"> <br>
+
+
+Largest Coal Miner Statue in the State of Utah; Helper, Utah <br>
+<img src="/assets/coalminer.jpg" alt="string lake" height="200"> <br>
+
+
+
+
 
 
 
 <!--
 Extended biography
+
+// this is in rough draft mode. don't look at it please. it is very cringey at the moment
 
 // TODO: make this click to show 
 
