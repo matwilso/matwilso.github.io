@@ -16,6 +16,7 @@ started to haphazardly keep track of books I read on [Goodreads](https://www.goo
 
 
 ---
+Pictures:
 
 
 <!-- (u of u climb gym and Goblin Valley State Park, Utah) --> 
