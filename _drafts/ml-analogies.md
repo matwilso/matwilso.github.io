@@ -1,33 +1,13 @@
 ---
 layout: post
-title: "Machine Learning Analogies"
+title: Machine Learning Analogies: how concepts in machine learning map to everyday life and philosophy
 permalink: /ml-analogies/
 ---
 
-(audience = mild technical background, but also palatable and brief for experts in the field
-maybe write it to a more general audience. like me before I started studying ML. introduce
-ML concepts first and then their analogy)
-(I think format of this will be: introduce the ML concept and the interesting knowledge about
-it, and then desci
-
-
-Working in CS, there are a lot of fun analogies that you can draw to human
-thinking and working.
-
-For example, there is the reference to cycles, as in "don't let bullshit eat up
-your mental cycles", referring to computing of instructions going throught the 
-computer, or running on the clock cycle of the CPU.  There is thinking of your 
-memory as RAM, like you only have so much mental RAM to fit information into.
-These are fun and interesting analogies that help tie in the understanding of 
-the concepts, are amusing, or enrichen understanding of other ideas.
-
-Learning about modern machine learning, especially the subfield of deeplearning,
-I have found some really great analogies or things that seem applicable, or at
-least interesting to think about in other contexts.
-
-
-There is something to be said for the aphorism
-
+There is a claim in ML and that I have heard especially from people in machine 
+learning who have switched from pyschology or neuroscience to the computational
+permalink: /ml-analogies/
+---
 
 There is a claim in ML and that I have heard especially from people in machine 
 learning who have switched from pyschology or neuroscience to the computational
@@ -173,6 +153,24 @@ probably helpful to understand things as analogy to things that we are already f
 # RL good tricks
 
 ## KL Divergence constraint on changing policy too much
+
+## Parameter space is huge 
+
+
+Huge manifold of possibilities.  Things are hard to search for.
+
+
+
+
+
+
+there is room for everybody. representation is there. training is not. getting the weights into the right spot.
+
+
+
+
+
+
 
 There is a big problem that many RL algos have tried to solve of not changing
 your policy too much at each step. The motivation for this is that you just have
