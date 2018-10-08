@@ -27,7 +27,7 @@ Goblin Valley State Park, Utah <br>
 <img src="/assets/goblin_window.jpg" alt="goblin" height="200"> <br>
 
 
-Capitol Reef State Park, Utah <br>
+Capitol Reef National Park, Utah <br>
 <img src="/assets/capitol.jpg" alt="goblin" height="200"> <br>
 
 
