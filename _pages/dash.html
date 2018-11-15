@@ -4,190 +4,207 @@ mark: page
 ---
 
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
- <!-- TODO: find out if there is better way to do these relative links -->
- <link rel="stylesheet" type="text/css" href="/_pages/dash_src/dash.css"/>
- <script src="/_pages/dash_src/dash.js"></script>
+<!-- TODO: find out if there is better way to do these relative links -->
+<link rel="stylesheet" type="text/css" href="/_pages/dash_src/dash.css" />
+<script src="/_pages/dash_src/dash.js"></script>
 
 <button align="left" class="switch" id="research"></button>
 <button align="left" class="switch" id="workhours"></button>
 <h1 align="center">
-	Dashboard 
+	Dashboard
 </h1>
 <div>
-<div class="dash" id="shortterm" style="display: inline-block; width: 50%; float: left;">
-	<h2>Daily regimen</h2>
+	<div class="dash" id="shortterm" style="display: inline-block; width: 50%; float: left;">
+		<h2>Daily regimen</h2>
 
-	<p style="font-weight: bold;">Week (MON-SUN)</p>
+		<p style="font-weight: bold;">Week (MON-SUN)</p>
 
-	<ul>
-		<li>
-		[7am-8am] Wake up and get down to the lab (1 hr/day; 7 hr/week)
-		</li>
-		<li>
-			[8am-4pm] Work on research (8 hr/day; 56 hr/week). 
+		<ul>
+			<li>
+				[7am-8am] Wake up and get down to the lab (1 hr/day; 7 hr/week)
+			</li>
+			<li>
+				[8am-4pm] Work on research (8 hr/day; 56 hr/week).
+				<ul>
+					<li>
+						Kind of:
+					</li>
+					<li>
+						[9am-4pm] Analyzing tests, doing science, coding
+					</li>
+					<li>
+						[2pm-4pm] Study and read things and take Ankis
+					</li>
+				</ul>
+			</li>
+			<li>
+				[4pm-5pm] Eat
+			</li>
+			<li>
+				[5pm-8pm] Work on side projects, or main if needed (3 hr/day; 21 hr/week)
+			</li>
+			<li>
+				[8pm-11pm] Go home, meal prep, misc bullshit, and read book before bed (3 hr/day; 21 hr/week)
+			</li>
+			<li>
+				[MW] Get to the gym to climb, and maybe lift and run, at ~8, then go home
+			</li>
+			<li>
+				[TH] Go until 8 or 9 depending on mood, then go home and read
+			</li>
+			<li>
+				[F] Handle more misc bullshit this day sometimes, and go climbing with friends at 5pm
+			</li>
+			<li>
+				[SatSu] Best times for working because no distractions. Work on whatever you want to.  You don't have to do anything you don't want to do (most times). Sometimes chill at night. Infrequently will go out of town
+			</li>
+		</ul>
+
+		Total workish time, including main work and side = 77 hr/week optimal <br>
+		Really have like 7 hours a week of slop (less than optimal), and 7 hours of maintenance (cooking, driving, hygiene)
+		<br>
+		16 waking hours, with 1 in morning, 3 at night, 1 for dinner, leaves 11 hours. 8 for main and 3 for side. <br>
+		It gets a bit fuzzy, so probably max 70 hours a week I am working. <br>
+		Could gain 7 more by reducing slop and going to be at 11pm and waking at 7am and getting ready immediately<br>
+		You don't have to exactly follow this. But this just gives general idea<br>
+
+
+
+		<h2>Short-term concrete projects</h2>
+		<ol>
+			<li style="color:red;">
+				Working on research project. Domain Randomization + Meta-Learning
+			</li>
+			<li style="color:#2196F3;">
+				Work on Reptile-PPO
+			</li>
+			<li style="color:#2196F3;">
+				Implement RL algos (basics to PPO, ES) from scratch (in np and tf) to learn them well
+			</li>
+			<li style="color:#2196F3;">
+				Read through the Goodfellow and Sutton books
+			</li>
+			<li>
+				Work on training agents for Pommerman
+			</li>
+			<li>
+				Tuning rock detector project and getting it to really work. Until you run out of things to improve.
+			</li>
+		</ol>
+
+		<h2>Bookmarks</h2>
+		<ul id="bookmark">
+			<li>
+				<a href="http://rail.eecs.berkeley.edu/deeprlcourse-fa17/index.html">Deep RL - Levine</a>
+				<span class="extra">good</span>
+			</li>
+			<li>
+				<a href="http://www.med.mcgill.ca/epidemiology/hanley/bios601/GaussianModel/JaynesProbabilityTheory.pdf">E.T.
+					Jaynes. Probability Theory: The Logic of Science</a>
+				<span class="extra">book</span>
+			</li>
+			<li>
+				<a href="file:///home/matwilso/Downloads/bookdraft2018.pdf">Sutton. RL: An Introduction</a>
+				<span class="extra">book</span>
+			</li>
+			<li>
+				<a href="http://web.stanford.edu/class/cs20si/syllabus.html">Tensorflow for Deep Learning Research</a>
+				<span class="extra"> (looks like a good introduction to using Tensorflow (better than anything on the TF website))</span>
+			</li>
+			<li>
+				<a href="http://rll.berkeley.edu/cs287/lecture_videos/">Lecture videos for Cal Advanced Robotics - Abbeel</a>
+				<span class="extra">Good lectures by Pieter, should try to watch a few of these a week</span>
+			</li>
+			<li>
+				<a href="https://people.eecs.berkeley.edu/~pabbeel/cs287-fa15/ ">https://people.eecs.berkeley.edu/~pabbeel/cs287-fa15/
+				</a>
+			</li>
+		</ul>
+
+
+	</div>
+
+
+	<div class="dash" id="prior" style="display: inline-block; width: 50%; float: left;">
+		<h2>Priorities</h2>
+		Anything not in this list should not be time wasted on
+		<div id="priorities">
 			<ul>
-			<li>
-				Kind of:
-			</li>
-			<li>
-				[9am-4pm] Analyzing tests, doing science, coding
-			</li>
-			<li>
-				[2pm-4pm] Study and read things and take Ankis 
-			</li>
+				<li style="color: red;">Do substantial research and projects in robotics and deep (reinforcement) learning to learn
+					for the future </li>
+				<li style="color: red;">Learn deep / reinforcement learning by reading and implementing</li>
+				<li>Keep grades high enough for scholarship and grad school signalling (GPA >= 3.6) </li>
+				<li>Work on side DL and coding projects</li>
+				<li>Get overall smarter and more productive</li>
+				<li>Talk to more girls</li>
+				<li>Gain weight</li>
+				<li>Be interesting and fun to talk to and be around</li>
+				<li>Maintain relationships that you feel are beneficial</li>
 			</ul>
-		</li>
-		<li>
-			[4pm-5pm] Eat
-		</li>
-		<li>
-			[5pm-8pm] Work on side projects, or main if needed (3 hr/day; 21 hr/week)
-		</li>
-		<li>
-			[8pm-11pm] Go home, meal prep, misc bullshit, and read book before bed (3 hr/day; 21 hr/week)
-		</li>
-		<li>
-			[MW] Get to the gym to climb, and maybe lift and run, at ~8, then go home
-		</li>
-		<li>
-			[TH] Go until 8 or 9 depending on mood, then go home and read
-		</li>
-		<li>
-			[F] Handle more misc bullshit this day sometimes, and go climbing with friends at 5pm
-		</li>
-		<li>
-			[SatSu] Best times for working because no distractions. Sometimes chill at night. Infrequently will go out of town
-		</li>
-	</ul>
+		</div>
 
-	Total workish time, including main work and side = 77 hr/week optimal <br>
-	Really have like 7 hours a week of slop (less than optimal), and 7 hours of maintenance (cooking, driving, hygiene) <br>
-	16 waking hours, with 1 in morning, 3 at night, 1 for dinner, leaves 11 hours. 8 for main and 3 for side. <br>
-	It gets a bit fuzzy, so probably max 70 hours a week I am working. <br>
-	Could gain 7 more by reducing slop and going to be at 11pm and waking at 7am and getting ready immediately<br>
-	You don't have to exactly follow this.  But this just gives general idea<br>
+		<h2>Anti-priorities</h2>
+		<div id="anti">
+			These things should specifically not be done. They have been shown to waste a
+			lot of time and a net negative effect on progress.
+			Unless actions are pertinent to one of the priorities, they should
+			not be done. It is good to explore a bit, but not much, and these are just
+			entropic, and time is so limited.
+			<ul>
+				<li>reddit</li>
+				<li>YouTube</li>
+				<li>News (besides that which should be common knowledge)</li>
+				<li>Generally, any more than the minimum amount of work to get an A- in a class</li>
+			</ul>
+		</div>
 
-	
+		<h2>Goals</h2>
+		<div id="goals">
+			<h2>Year</h2>
+			<ul>
+				<li>Submit strong applications to residencies and schools</li>
+				<li>Working on an interesting problem that motivates me and is in the direction I want to go in the future and making a contribution (paper)</li>
+				<li></li>
+			</ul>
+		</div>
 
-	<h2>Short-term concrete projects</h2>
-	<ol>
-		<li style="color:red;">
-		Working on research project. Domain Randomization + Meta-Learning  
-		</li>
-		<li style="color:#2196F3;">
-		Work on Reptile-PPO
-		</li>
-		<li style="color:#2196F3;">
-		Implement RL algos (basics to PPO, ES) from scratch (in np and tf) to learn them well
-		</li>
-		<li style="color:#2196F3;">
-		Read through the Goodfellow and Sutton books
-		</li>
-		<li>
-		Work on training agents for Pommerman
-		</li>
-		<li>
-		Tuning rock detector project and getting it to really work. Until you run out of things to improve.
-		</li>
-	</ol>
+		<h2>Mantra</h2>
+		<div id="mantra">
+			<ul>
+				<li>
+					More than anything, you must be thinking of achieving your goal. Whatever the means.
+				</li>
+				<li>
+					Stay laser focused on RL and DL
+				</li>
+				<li>
+					There are bigger fish to fry. [if you are dwelling on trvial things]
+				</li>
+				<li>
+					Do things others don’t do but should.
+				</li>
+				<li>
+					Start with the most important thing or it might not get done
+				</li>
+				<li>
+					"Good procrastination is avoiding errands to do real work" -pg
+				</li>
+				<li>
+					"Unproductive pleasures pall eventually. After a while you get tired of lying on the beach. If you want to stay
+					happy, you have to do something." -pg
+				</li>
+				<li>
+					"Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have." -pg
+				</li>
+				realized a lot of these were pg. oh well
+			</ul>
+		</div>
 
-	<h2>Bookmarks</h2>
-	<ul id="bookmark">
-		<li>
-			<a href="http://rail.eecs.berkeley.edu/deeprlcourse-fa17/index.html">Deep RL - Levine</a>
-<span class="extra">good</span>
-		</li>
-		<li>
-			<a href="http://www.med.mcgill.ca/epidemiology/hanley/bios601/GaussianModel/JaynesProbabilityTheory.pdf">E.T. Jaynes. Probability Theory: The Logic of Science</a>
-<span class="extra">book</span>
-		</li>
-		<li>
-			<a href="file:///home/matwilso/Downloads/bookdraft2018.pdf">Sutton. RL: An Introduction</a>
-<span class="extra">book</span>
-		</li>
-		<li>
-			<a href="http://web.stanford.edu/class/cs20si/syllabus.html">Tensorflow for Deep Learning Research</a>
-<span class="extra"> (looks like a good introduction to using Tensorflow (better than anything on the TF website))</span>
-		</li>
-		<li>
-			<a href="http://rll.berkeley.edu/cs287/lecture_videos/">Lecture videos for Cal Advanced Robotics - Abbeel</a>
-<span class="extra">Good lectures by Pieter, should try to watch a few of these a week</span>
-		</li>
-		<li>
-			<a href="https://people.eecs.berkeley.edu/~pabbeel/cs287-fa15/ ">https://people.eecs.berkeley.edu/~pabbeel/cs287-fa15/ </a>
-		</li>
-	</ul>
-
-
-</div>
-
-
-<div class="dash" id="prior" style="display: inline-block; width: 50%; float: left;">
-<h2>Priorities</h2>
-Anything not in this list should not be time wasted on
-<div id="priorities">
-    <ul>
-        <li style="color: red;">Do substantial research and projects in robotics and deep (reinforcement) learning to learn for the future </li>
-        <li style="color: red;">Learn deep / reinforcement learning by reading and implementing</li>
-		<li>Keep grades high enough for scholarship and grad school signalling  (GPA >= 3.6) </li>
-        <li>Work on side DL and coding projects</li>
-        <li>Get overall smarter and more productive</li>
-        <li>Talk to more girls</li>
-        <li>Gain weight</li>
-        <li>Be fun to talk to and be around</li>
-        <li>Maintain relationships that you feel are beneficial</li>
-    </ul>
-</div>
-
-<h2>Anti-priorities</h2>
-
-<div id="anti">
-  These things should specifically not be done. They have been shown to waste a 
-  lot of time and a net negative effect on progress.  
-  Unless actions are pertinent to one of the priorities, they should 
-  not be done.  It is good to explore a bit, but not much, and these are just 
-  entropic, and time is so limited.
-    <ul>
-        <li>reddit</li>
-		<li>News (besides that which should be common knowledge)</li>
-		<li>Generally, any more than the minimum amount of work to get an A- in a class</li>
-    </ul>
-</div>
-	<h2>Mantra</h2>
-	<ul>
-		<li>
-			More than anything, you must be thinking of achieving your goal.  Whatever the means.
-		</li>
-		<li>
-			Stay laser focused on RL and DL
-		</li>
-		<li>
-			There are bigger fish to fry. [if you are dwelling on trvial things]
-		</li>
-		<li>
-			Do things others don’t do but should.
-		</li>
-		<li>
-		  Start with the most important thing or it might not get done
-		</li>
-		<li>
-		  "Good procrastination is avoiding errands to do real work" -pg
-		</li>
-		<li>
-		  "Unproductive pleasures pall eventually. After a while you get tired of lying on the beach. If you want to stay happy, you have to do something." -pg
-		</li>
-		<li>
-		  "Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have." -pg
-		</li>
-		realized a lot of these were pg. oh well
-	</ul>
-
-	<!--
+		<!--
 	<h2><span id="time">90:00</span></h2>
 	-->
-
-</div>
+	</div>
 </div>

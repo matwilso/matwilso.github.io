@@ -16,37 +16,46 @@ mark: page
 
 	<hr>
 
-    <h2> CVPR deadline </h2>
-    <h2> Days Left (until November 16) </h2>
-    <h3 id=days_to_cvpr>_</h3>
+    <h2>RSS deadline </h2>
+    <h2> Days Left (until February 1) </h2>
+    <h3 id=rss_days>_</h3>
 
 	<br>
-	<br>
-	<br>
+
+	<hr>
+
+    <h2>CoRL deadline </h2>
+    <h2> Days Left (until June 15) </h2>
+    <h3 id=corl_days>_</h3>
+
+
 	<br>
 	<hr>
 
 
     <script>
     setInterval(function(){
-    var begin = new Date("May 21, 2018")
+    var begin = new Date("November 11, 2018")
     var today = new Date();
-    var finish = new Date("August 20, 2018")
-    var cvpr = new Date("November 16, 2018")
+    var rss = new Date("February 1, 2019")
+    var corl = new Date("June 15, 2019")
 
-    var days_left = Math.round((finish-today)/(1000*60*60*24));
-    var total_days = Math.round((begin-finish)/(1000*60*60*24));
-    var days_done = Math.round((today - begin)/(1000*60*60*24));
-
+    //var days_left = Math.round((finish - today)/(1000*60*60*24));
+    //var total_days = Math.round((begin - finish)/(1000*60*60*24));
+    //var days_done = Math.round((today - begin)/(1000*60*60*24));
     //document.getElementById("days_left").innerHTML = days_left;
     //document.getElementById("days_done").innerHTML = days_done;
-	var TRIP = 3;
-	var WRITING = 20;
-	var days_to = (Math.round((cvpr-today)/(1000*60*60*24)));
-	var minus_trip = days_to - TRIP; 
-	var minus_writing = minus_trip - WRITING; 
 
-    document.getElementById("days_to_cvpr").innerHTML = days_to.toString() + " (-"+TRIP.toString()+") = " + minus_trip.toString() + " (-"+WRITING.toString()+") = " + minus_writing.toString();
+	var TRIP = 3;
+	var WRITING = 21;
+	var rss_days = (Math.round((rss-today)/(1000*60*60*24)));
+	var corl_days = (Math.round((corl-today)/(1000*60*60*24)));
+	//var minus_trip = days_to - TRIP; 
+	rss_writing = rss_days - WRITING; 
+	corl_writing = corl_days - WRITING; 
+
+    document.getElementById("rss_days").innerHTML = rss_days.toString() + " (-"+WRITING.toString()+") = " + rss_writing.toString();
+    document.getElementById("corl_days").innerHTML = corl_days.toString() + " (-"+WRITING.toString()+") = " + corl_writing.toString();
 
 
 
@@ -69,7 +78,7 @@ mark: page
     document.getElementById("till_mid").innerHTML = displayTillMid;
     displayToday = today.toString();
     displayToday = displayToday.substring(3);
-    displayToday = displayToday.substring(0, displayToday.length-15);
+    displayToday = displayToday.substring(0, displayToday.length-34);
     document.getElementById("today").innerHTML = displayToday;
     }, 1000);
     </script>

@@ -21,6 +21,7 @@ In the past, I was a member of the Utah robotics club at the U, which competes i
 in Florida.  
 
 ### News
+- In November 2018, I released my implementation of [Model-Agnostic Meta-Learning (MAML) in raw numpy on Github](https://github.com/matwilso/maml_numpy).
 - In June 2018, I wrote up an answer to a [stackoverflow question on PPO (Proximal Policy Optimization)](https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl/50663200#50663200)
 
 
