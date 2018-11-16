@@ -11,7 +11,7 @@ I like reading books and blogs. I also enjoy hanging out and talking with friend
 I like climbing, playing basketball, and hiking/camping.
 
 
-I also enjoy reading and think it helps to improve thinking.  I have 
+I also enjoy reading.  I have 
 started to haphazardly keep track of books I read on [Goodreads](https://www.goodreads.com/user/show/71066633-matthew-wilson).
 
 
