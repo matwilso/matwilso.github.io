@@ -31,7 +31,7 @@ in Florida.
 
 
 
-# Projects
+# Past Projects
 
 ---
 
