@@ -19,16 +19,8 @@ mark: page
 
 	<hr>
 
-    <h2>RSS deadline </h2>
-    <h2> Days Left (until February 1) </h2>
-    <h3 id=rss_days>_</h3>
-
-	<br>
-
-	<hr>
-
     <h2>CoRL deadline </h2>
-    <h2> Days Left (until June 15) </h2>
+    <h2> Days Left (until June 14) </h2>
     <h3 id=corl_days>_</h3>
 
 
@@ -41,7 +33,7 @@ mark: page
     var begin = new Date("November 11, 2018")
     var today = new Date();
     var rss = new Date("February 1, 2019")
-    var corl = new Date("June 15, 2019")
+    var corl = new Date("June 14, 2019")
 
     //var days_left = Math.round((finish - today)/(1000*60*60*24));
     //var total_days = Math.round((begin - finish)/(1000*60*60*24));
@@ -57,7 +49,6 @@ mark: page
 	rss_writing = rss_days - WRITING; 
 	corl_writing = corl_days - WRITING; 
 
-    document.getElementById("rss_days").innerHTML = rss_days.toString() + " (-"+WRITING.toString()+") = " + rss_writing.toString();
     document.getElementById("corl_days").innerHTML = corl_days.toString() + " (-"+WRITING.toString()+") = " + corl_writing.toString();
 
 
