@@ -36,7 +36,8 @@ String Lake, Grand Tetons, Wyoming<br>
 
 
 Largest Coal Miner Statue in the State of Utah, Helper, Utah <br>
-<img src="/assets/coalminer.jpg" alt="string lake" height="200"> <br>
+<img src="/assets/coalminer.jpg" alt="coalminer" height="200">
+<img src="/assets/coalminer2.jpg" alt="coalminer2" height="200"> <br>
 
 
 
