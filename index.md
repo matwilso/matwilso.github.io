@@ -9,14 +9,14 @@ layout: default
 
 ## Bio
 
-I am first year masters student in computer science at the [University of 
+I am a first year masters student in computer science at the [University of 
 British Columbia (UBC)](https://www.cs.ubc.ca/), working on robotics and reinforcement
 \+ deep learning, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Previously, I worked on similar things for my undergraduate 
 thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://robot-learning.cs.utah.edu/), advised by [Tucker Hermans](https://robot-learning.cs.utah.edu/thermans). 
 In 2017, I was a summer intern at the Robotics Institute ([RISS])
 at Carnegie Mellon University working with Ralph Hollis and Jean Oh
 in the the [MSL lab][msl] with the [ballbots].
-In the past, I was a member of the Utah robotics club, competing in the
+In the beginning of time, I was a member of the University of Utah robotics club, competing in the
 [NASA Robotic Mining Competition][nasa] for 3 years each May at Kennedy Space Center 
 in Florida.  
 
