@@ -6,4 +6,4 @@ permalink: /blog/
 
 
 
-none yet
+none yet, sry
