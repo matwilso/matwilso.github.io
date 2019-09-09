@@ -8,7 +8,6 @@ layout: default
 
 
 <img align="left" width="200" src="/assets/mw.jpg" style="border-radius: 20%; margin: 0px 60px 0px 0px;"/>
-## Bio
 I am a first year masters student in computer science at the [University of 
 British Columbia (UBC)](https://www.cs.ubc.ca/), working on robotics and reinforcement
 \+ deep learning, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Previously, I worked on similar things for my undergraduate 
@@ -29,16 +28,18 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 
 # Publications
 ---
+<br>
 
-"Learning to Manipulate Object Collections Using Grounded State Representations". CoRL 2019.
-More details coming soon.
-
-
+<img align="left" width="30%" src="/assets/task.png" style="border-radius: 0%; margin: 0px 20px 20px 0px;"/>
+<i>Learning to Manipulate Object Collections<br>Using Grounded State Representations <br></i>
+Matthew Wilson, Tucker Hermans <br>
+Conference on Robot Learning (CoRL 2019) <br>
+[[Project Page](/projects/object_collections)] [[Arxiv: TODO](TODO)]
 
 
 <!-- See my [Projects] page for more details.
 
-[Projects]: /projects/ -->
+[Projects]: /backupprojects/ -->
 
 <!-- __Timeline__
 
