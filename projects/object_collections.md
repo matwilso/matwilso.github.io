@@ -1,5 +1,4 @@
 ---
-layout: header
 title: Object Collections
 ---
 
