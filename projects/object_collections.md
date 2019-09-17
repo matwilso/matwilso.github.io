@@ -25,7 +25,7 @@ We propose a method for sim-to-real robot learning which exploits simulator stat
 
 <h2>Videos</h2>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cPsoDO2Tzqk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/D-HY63ltF8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zj8Hne5ssYw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
