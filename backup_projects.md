@@ -2,7 +2,7 @@
 ---
 layout: page
 title: Projects
-permalink: /projects/
+permalink: /backupprojects/
 header-img: "assets/urmp/emcee_nasa_sand_filtered.jpg"
 ---
 
