@@ -30,8 +30,8 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 ---
 <br>
 
-<img align="left" width="30%" src="/assets/task.png" style="border-radius: 0%; margin: 0px 20px 20px 0px;"/>
-<div style="font-family:roboto-bold; font-style:bold;">Learning to Manipulate Object Collections<br>Using Grounded State Representations</div>
+<img align="left" width="30%" src="/assets/task.png" style="border-radius: 0%; margin: 0px 10px 30px 0px;"/>
+<div style="font-size: 18px; font-weight: bold;">Learning to Manipulate Object Collections<br>Using Grounded State Representations</div>
 Matthew Wilson, Tucker Hermans <br>
 Conference on Robot Learning (CoRL 2019) <br>
 [[arXiv](https://arxiv.org/abs/1909.07876)] [[Project Page](/projects/object_collections)]  [[Code](https://github.com/matwilso/object_collections)]
