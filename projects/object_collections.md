@@ -9,7 +9,7 @@ title: Object Collections
 <h1>Learning to Manipulate Object Collections<br>Using Grounded State Representations</h1>
 
 Conference on Robot Learning (CoRL) 2019 <br> <br>
-<a href="/">Matthew Wilson</a> and <a href="https://robot-learning.cs.utah.edu">Tucker Hermans</a><br>
+<a href="/">Matthew Wilson</a> and <a href="https://www.cs.utah.edu/~thermans/">Tucker Hermans</a><br>
 University of Utah<br><br>
 
 </div>
