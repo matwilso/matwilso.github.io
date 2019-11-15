@@ -22,6 +22,7 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 
 ### News
 
+- Nov 2019: Our work won the Best System Paper Award at [CoRL 2019!](https://www.robot-learning.org/) 
 - Sep 2019: Our work on "Learning to Manipulate Object Collections Using Grounded State Representations" was accepted to the Conference on Robot Learning ([CoRL](https://www.robot-learning.org/)) 2019!
 - Jun 2018: I wrote up an answer to a [stackoverflow question on PPO (Proximal Policy Optimization)](https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl/50663200#50663200)
 
