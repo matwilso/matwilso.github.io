@@ -45,6 +45,8 @@ class Node {
 }
 
 var nodes = [];
+var lastX = 0;
+var lastY = 0;
 
 function setup() {
   createCanvas(w, h);
@@ -62,15 +64,34 @@ function setup() {
       }
     }
   }
+	lastX = mouseX;
+	lastY = mouseY;
 }
+
+const thres = 10;
 
 function draw() {
   background(220);
-  print(nodes.length)
   for (let i = 0; i < nodes.length; i++) {
     nodes[i].x = min((nodes[i].x + random([-1,0,1])), w);
     nodes[i].y = min((nodes[i].y + random([-1,0,1])), h);
   }
+
+	
+  if (mouseIsPressed) {
+	  //console.log(mouseX, lastX);
+	  if (mouseX != lastX || mouseY != lastY) {
+		for (let i = 0; i < nodes.length; i++) {
+			if ((abs(nodes[i].x - lastX) < thres) && (abs(nodes[i].y - lastY) < thres)) {
+				nodes[i].x = mouseX
+				nodes[i].y = mouseY
+			}
+		}
+	  }
+  }
+	lastX = mouseX;
+	lastY = mouseY;
+
 
 
   for (let i = 0; i < nodes.length; i++) {
