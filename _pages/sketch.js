@@ -68,6 +68,12 @@ function draw() {
   background(220);
   print(nodes.length)
   for (let i = 0; i < nodes.length; i++) {
+    nodes[i].x = min((nodes[i].x + random([-1,0,1])), w);
+    nodes[i].y = min((nodes[i].y + random([-1,0,1])), h);
+  }
+
+
+  for (let i = 0; i < nodes.length; i++) {
     nodes[i].drawEdges()
   }
   for (let i = 0; i < nodes.length; i++) {
