@@ -3,6 +3,7 @@ permalink: /dash/
 mark: page
 ---
 
+<meta name="robots" content="noindex" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
@@ -16,82 +17,56 @@ mark: page
 <h1 align="center">
 	Dashboard
 </h1>
+Last updated: Jan 12, 2020
+
+This was created in an earlier time.  I will have to see if I still think it makes sense.  Maybe it is a good thing to pull from my past.
+
 <div>
 	<div class="dash" id="shortterm" style="display: inline-block; width: 50%; float: left;">
 		<h2>Daily regimen</h2>
 
-		<p style="font-weight: bold;">Week (MON-SUN)</p>
-
+		<p style="font-weight: bold;">Week (MON-FRI)</p>
 		<ul>
 			<li>
-				[7am-8am] Wake up and get down to the lab (1 hr/day; 7 hr/week)
+				[8am-9am] Wake up, shower, breakfast, get to lab (1 hr/day; 5 hr/week)
 			</li>
 			<li>
-				[8am-4pm] Work on research (8 hr/day; 56 hr/week).
-				<ul>
-					<li>
-						Kind of:
-					</li>
-					<li>
-						[9am-4pm] Analyzing tests, doing science, coding
-					</li>
-					<li>
-						[2pm-4pm] Study and read things and take Ankis
-					</li>
-				</ul>
+				[9am-5pm] Work on research (8 hr/day; 56 hr/week).
 			</li>
 			<li>
-				[4pm-5pm] Eat
+				[5pm-6pm] Go home and eat
 			</li>
 			<li>
-				[5pm-8pm] Work on side projects, or main if needed (3 hr/day; 21 hr/week)
+				[6pm-7pm] Chill and recoup, but don't watch videos
 			</li>
 			<li>
-				[8pm-11pm] Go home, meal prep, misc bullshit, and read book before bed (3 hr/day; 21 hr/week)
+				[7pm-10pm] Code more or run experiments or deal with project stuff.  Else if time, work on blog post or read books and think of ideas.
 			</li>
 			<li>
-				[MW] Get to the gym to climb, and maybe lift and run, at ~8, then go home
+				[10pm-12pm] Read and go to bed
 			</li>
 			<li>
-				[TH] Go until 8 or 9 depending on mood, then go home and read
-			</li>
-			<li>
-				[F] Handle more misc bullshit this day sometimes, and go climbing with friends at 5pm
-			</li>
-			<li>
-				[SatSu] Best times for working because no distractions. Work on whatever you want to.  You don't have to do anything you don't want to do (most times). Sometimes chill at night. Infrequently will go out of town
+				[TH] Bball at 8-10, swimming and otherwise working out, maybe also on the weekend or Monday or something
 			</li>
 		</ul>
 
-		Total workish time, including main work and side = 77 hr/week optimal <br>
-		Really have like 7 hours a week of slop (less than optimal), and 7 hours of maintenance (cooking, driving, hygiene)
-		<br>
-		16 waking hours, with 1 in morning, 3 at night, 1 for dinner, leaves 11 hours. 8 for main and 3 for side. <br>
-		It gets a bit fuzzy, so probably max 70 hours a week I am working. <br>
-		Could gain 7 more by reducing slop and going to be at 11pm and waking at 7am and getting ready immediately<br>
-		You don't have to exactly follow this. But this just gives general idea<br>
+		<p style="font-weight: bold;">Weekend (SAT-SUN)</p>
+		<ul>
+			<li>
+				Work from home on whatever is most pressing or interesting.
+			</li>
+		</ul>
 
-
-
-		<h2>Short-term concrete projects</h2>
+		<h2>Short-term stuff</h2>
 		<ol>
 			<li style="color:red;">
-				Working on research project. Domain Randomization + Meta-Learning
+				Main research project
 			</li>
 			<li style="color:#2196F3;">
-				Work on Reptile-PPO
-			</li>
-			<li style="color:#2196F3;">
-				Implement RL algos (basics to PPO, ES) from scratch (in np and tf) to learn them well
-			</li>
-			<li style="color:#2196F3;">
-				Read through the Goodfellow and Sutton books
+				Blog post
 			</li>
 			<li>
-				Work on training agents for Pommerman
-			</li>
-			<li>
-				Tuning rock detector project and getting it to really work. Until you run out of things to improve.
+				Reading books, learning more math
 			</li>
 		</ol>
 
@@ -106,22 +81,6 @@ mark: page
 					Jaynes. Probability Theory: The Logic of Science</a>
 				<span class="extra">book</span>
 			</li>
-			<li>
-				<a href="file:///home/matwilso/Downloads/bookdraft2018.pdf">Sutton. RL: An Introduction</a>
-				<span class="extra">book</span>
-			</li>
-			<li>
-				<a href="http://web.stanford.edu/class/cs20si/syllabus.html">Tensorflow for Deep Learning Research</a>
-				<span class="extra"> (looks like a good introduction to using Tensorflow (better than anything on the TF website))</span>
-			</li>
-			<li>
-				<a href="http://rll.berkeley.edu/cs287/lecture_videos/">Lecture videos for Cal Advanced Robotics - Abbeel</a>
-				<span class="extra">Good lectures by Pieter, should try to watch a few of these a week</span>
-			</li>
-			<li>
-				<a href="https://people.eecs.berkeley.edu/~pabbeel/cs287-fa15/ ">https://people.eecs.berkeley.edu/~pabbeel/cs287-fa15/
-				</a>
-			</li>
 		</ul>
 
 
@@ -133,16 +92,14 @@ mark: page
 		Anything not in this list should not be time wasted on
 		<div id="priorities">
 			<ul>
-				<li style="color: red;">Do substantial research and projects in robotics and deep (reinforcement) learning to learn
-					for the future </li>
-				<li style="color: red;">Learn deep / reinforcement learning by reading and implementing</li>
-				<li>Keep grades high enough for scholarship and grad school signalling (GPA >= 3.6) </li>
-				<li>Work on side DL and coding projects</li>
+				<li style="color: red;">Research project and ideas </li>
+				<li style="color: red;">Work on blog post</li>
+				<li>Survive classes and TA with minimum effort </li>
+				<li>Learn more and read more and maybe think of what you should be doing</li>
 				<li>Get overall smarter and more productive</li>
-				<li>Talk to more girls</li>
-				<li>Gain weight</li>
-				<li>Be interesting and fun to talk to and be around</li>
-				<li>Maintain relationships that you feel are beneficial</li>
+				<li>Work out</li>
+				<li>Be interesting and funny and fun to talk to and be around</li>
+				<li>Maintain relationships that you feel are beneficial. Phase out ones that are not</li>
 			</ul>
 		</div>
 
@@ -157,7 +114,6 @@ mark: page
 				<li>reddit</li>
 				<li>YouTube</li>
 				<li>News (besides that which should be common knowledge)</li>
-				<li>Generally, any more than the minimum amount of work to get an A- in a class</li>
 			</ul>
 		</div>
 
@@ -165,9 +121,8 @@ mark: page
 		<div id="goals">
 			<h2>Year</h2>
 			<ul>
-				<li>Submit strong applications to residencies and schools</li>
-				<li>Working on an interesting problem that motivates me and is in the direction I want to go in the future and making a contribution (paper)</li>
-				<li></li>
+				<li>Find interesting project to work on and make some cool things happen (finish a paper)</li>
+				<li>Publish a blog post</li>
 			</ul>
 		</div>
 
@@ -176,12 +131,6 @@ mark: page
 			<ul>
 				<li>
 					More than anything, you must be thinking of achieving your goal. Whatever the means.
-				</li>
-				<li>
-					Stay laser focused on RL and DL
-				</li>
-				<li>
-					There are bigger fish to fry. [if you are dwelling on trvial things]
 				</li>
 				<li>
 					Do things others don’t do but should.
