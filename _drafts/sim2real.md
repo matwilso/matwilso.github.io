@@ -1,12 +1,58 @@
 ---
 layout: post
-title: The Sim-to-Real Engine
+title: Learned Simulators and The Sim-to-Real Engine
 permalink: /sim2real/
 ---
 
+How far could we really go with sim2real learning?
+I think the answer is pretty damn far.
+
+
+
+
+Papers boast about not needing any real world samples.
+But that is not 
+
+
+## What I Imagine the Simulator Looks Like
+
+- every object is am embedding of properties:
+	- mass
+	- material
+	- color/visual properties
+	- mass distribution
+	- ...
+- also global characteristic maybe:
+	- global position to COM?
+
+- step() is an interaction of a group of those properties
+	- nearby objects pairwise interact to compute the update of those properties
+
+
+
+## FAQ:
+
+### What about F = ma?
+
+What about deformable objects?
+
+...
+
+Even if we just clone f=ma for some stuff, that is easy to do.
+This would be more general and capable of tuning itself.
+
+Maybe we use some residual approach, but eventually I don't think that will matter.
+
+
+
+
+
+
 
  
-**BLUF (Bottom Line Up Front):**
+<!--**BLUF (Bottom Line Up Front):**-->
+
+> For sim2real robot learning, our main focus should be on learning simulators.
 
 If we want to get much further in robot learning with sim2real approaches, then our main focus should be on improving our simulators --- specifically by learning them.  We should collect data from the real world to learn friction and contact models, sensor models, and actuator models.  And we should incorporate them in the simulator loop.
 
