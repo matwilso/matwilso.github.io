@@ -1,20 +1,96 @@
 ---
 layout: post
-title: Learned Simulators and The Sim-to-Real Engine
+#title: We should rebuild simulators in software 2.0
+#title: Sim2Real Using Learned Simulators
+title: The Future of Physics Simulation and Sim2Real Learning
+date: 2020-02-20 18:00:00
 permalink: /sim2real/
 ---
 
->How far can we really push sim2real learning?
->How might we actually train really capable systems using mainly simulated data?
->How do this approach compare to the alternatives, in terms of challenges?
->
->This post looks at what I see is the most viable and important focus 
->for getting sim2real to really work: learned simulators.  (where we are not focusing as much
->and where I think we could do better.)  
->And I discuss how we might bootstrap our capabilities from poor to great simulators.
->And I think we might be able to push this stuff really far.  
->Like to household robot or so.  Not that it is the best, but it seems plausible
->we could push things that far.
+<!--TODO: remove some whitespace here-->
+<!--TODO: more research on the history of simulaotrs.  maybe this post is really about the future of simulators -->
+
+>How far can we push sim2real learning?
+>Can we train broadly capable robotic systems (e.g., household robots) with mostly simulated experience?
+>In this post I explore this idea and what I see are the key pieces to pushing sim2real forward.
+>The main important shift I see going forward is the transition from hand-coded simulators to learned simulators.
+>I explore this and the trade-offs between the sim2real route and other more real world focused approaches.
+
+There are some arguments against sim2real learning, but I would say it definitely has a future.
+It is not obvious that it is a dead-end.  And there is enough overlap interest and utility to push it forward.
+One, it could make training robot systems super easy.  If you release the simulator.
+
+First, it is not obvious that sim2real is a good route, but it is not obvious that it isn't either.
+But this mostly talks about if you are already interested in that route, or you .
+So we should explore both routes, but if you are already exploring the sim2real route,
+I think this is how we should do it.
+
+The challenge of sim2real is pretty obvious.  Distribution mismatch.
+What is less obvious is how to solve that.
+From the perspecive of learning research, it looks like a domain adaptation problem.
+
+But I think we need a paradigm shift.  We should not be using hand-coded simulators
+like Mujoco or Bullet or whatever.  We should be working on learning our simulators.
+
+
+
+2 main reasons come to mind.  1. physics simulators are inaccurate in many ways.
+Some things like friction and contact dynamics are incredibly hard to model. By
+collecting data and training models to run this physics.
+
+
+In the end, I think this will be the right way to build physics simulators for any usage.
+They will end up being the most accurate and most widely useful simulators.
+They will pull robot learning forward and robot learning will pull them forward.
+
+
+There is a lot of overlap with VR work.
+
+I think it makes a nice decoupling.  You build the 
+
+
+
+
+Basically I think the main argument is that if we want sim2real to work, 
+the lion's share of the effort should be on creating the simulator.
+
+
+
+
+
+The main problem is that 
+
+And also I think it is important that 
+
+
+
+
+
+Some important questions (for me) seem to be: is sim2real a dead end?
+And is this obvious?
+I think nobody has put all the pieces together in this way.
+
+I think people have done physics simulator type stuff.
+But I've got the full blueprint.
+
+
+
+
+
+
+Including both learned rendering system and especially learned physics.
+
+I walk through this and then discuss a bit the trade-offs between this and more pure real world approaches.
+
+
+
+
+(where we are not focusing as much and where I think we could do better.)  
+
+And I discuss how we might bootstrap our capabilities from poor to great simulators.
+And I think we might be able to push this stuff really far.  
+Like to household robot or so.  Not that it is the best, but it seems plausible
+we could push things that far.
 
 
 Sim2real offers several nice advantages over real world training:
@@ -35,6 +111,7 @@ match the real world.
 
 It kind of gets us right back into what we were trying to avoid in the first place:
 training on real world data.
+
 
 <img width="400" src="/assets/meme.png" style="display: block; margin-left: auto; margin-right: auto;"/>
 
