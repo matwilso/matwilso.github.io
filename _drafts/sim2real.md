@@ -2,19 +2,33 @@
 layout: post
 #title: We should rebuild simulators in software 2.0
 #title: Sim2Real Using Learned Simulators
-title: The Future of Physics Simulation and Sim2Real Learning
-date: 2020-02-20 18:00:00
+#title: Upgrading Our Simulators to Software 2.0
+title: "The Future of Sim2Real and Rethinking Physics Simulators"
+#date: 2020-02-20 18:00:00
 permalink: /sim2real/
 ---
 
 <!--TODO: remove some whitespace here-->
+<!--NOTE: focus on making this enjoyable to read.  if i hadn't written it, make it enjoyable for me-->
 <!--TODO: more research on the history of simulaotrs.  maybe this post is really about the future of simulators -->
 
 >How far can we push sim2real learning?
->Can we train broadly capable robotic systems (e.g., household robots) with mostly simulated experience?
->In this post I explore this idea and what I see are the key pieces to pushing sim2real forward.
->The main important shift I see going forward is the transition from hand-coded simulators to learned simulators.
->I explore this and the trade-offs between the sim2real route and other more real world focused approaches.
+>Can we train broadly capable robotic systems using mostly simulated experience?
+>What should we rethink about physics simulators in the dawning age of Software 2.0?
+>In this post I discuss what I see as the more promising directions in the future of sim2real and how we ought to focus on rethinking our physics simulators.
+
+Mostly I think the lion's share of the effort in sim2real work should go towards
+developing better simulators.  And not just a little bit better
+
+
+And not just from a Software 1.0 view, but going all in on a 2.0 approach.
+
+
+
+By learning a great simulator using real world data, we are free from the biases of hand-engineered ones and we can improve without bounds, just like the rest of the components.
+
+
+I explore this and the trade-offs between the sim2real route and other more real world focused approaches.
 
 There are some arguments against sim2real learning, but I would say it definitely has a future.
 It is not obvious that it is a dead-end.  And there is enough overlap interest and utility to push it forward.
@@ -42,6 +56,23 @@ collecting data and training models to run this physics.
 In the end, I think this will be the right way to build physics simulators for any usage.
 They will end up being the most accurate and most widely useful simulators.
 They will pull robot learning forward and robot learning will pull them forward.
+
+
+
+
+
+Of course, we don't need to throw everything away at once.
+It will probably be beneficial to use the current simulators to bootstrap our technique.
+The bootloader.
+Using lots of physics equations and biases on the problem.
+Adding a lot of structure to the problem so that it is tractable.
+But doing things in a Software 2.0 way.
+
+
+The simulator makes sense as 2.0.
+
+This is about upgrading simulators to Software 2.0.
+
 
 
 There is a lot of overlap with VR work.
