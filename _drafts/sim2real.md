@@ -30,25 +30,25 @@ tags: robotics sim2real
 <img width="400" src="/assets/sim2real/draft_opening_figure.jpg" style="display: block; margin-left: auto; margin-right: auto;"/>
 (could also just be a traditional simulator diagram here.  begging to be simplified. just like a traditional cv pipeline.)
 
->This post is about simulators and robotics and how learned simulators could greatly accelerate our progress in sim2real and robot learning more generally.  
+>This post is about simulators and robotics and how learned simulators could greatly accelerate our progress in sim2real and robot learning.  
 
-Sim2real seems like a strong bet for the future of robotics.
+Sim2real seems like a decent bet for the future of robotics.
 The future of robotics is certainly going to rely on machine learning.
 Machine learning relies on data.  Sim2real gives you all the data you could ever want.
 Therefore...
 
-Now I'm not saying sim2real is the obvious solution.
+Now sim2real is not the obvious *best* bet.
 There are other ways you might collect lots of data and build
 capable robotic systems, including teleoperation, robot farms, and
 large shared real world datasets (TODO: links).
 There are ways you might reduce your data needs via model-based approaches,
 meta-learning, other algorithmic improvements. 
 
-But sim2real seems like a strong bet.
-Wrapped up in that "all the data you could ever want" is the ability to create dense reward signals, auxiliary labels, arbitrary world and reset distributions, and automated curriculum.
+But sim2real does seem like a decent bet.
+Wrapped up in "all the data you could ever want" is the ability to create dense reward signals, auxiliary labels, arbitrary world and reset distributions, and automated curriculum.
 These are massive practical advantages is developing learning systems.
-From a learning standpoint, sim2real seems like a clear choice.
-*Except* for the major sticking point of domain shift.
+*Except* for the issue of domain shift, from a learning standpoint, 
+sim2real seems like a clear choice.  Unfortunately, domain shift  *is* a major sticking point.
 
 Simulators vary in major ways from reality.
 The bias means that models don't transfer by default.
@@ -56,30 +56,46 @@ Simulation environment models are hard to calibrate.
 There are some things we can't simulate.
 When we train models, they tend to overfit/exploit the characteristics of the simulator.
 
-Domain randomization and related ideas are a partial solution to this.
-But we are all starting to clearly see that they are *just* partial solutions.
-At some point, you can't just fudge your way into something that works in the real world.
-All projects require pretty intense calibration efforts and care.
-This calibration currently requires a lot of task-specific focus and thus limits the generality fo the approaches.
+Domain randomization and adaptation are partial solution to this.
+But we are all starting to clearly see that they are *just* partial solutions (cite irpan maybe).
+At some point, you can't just robustify your way into something that works in the real world.
+All successful sim2real projects require precise calibration.
+To the extent that this effort has largely been task-specific, this has limited the
+generality and applicability of the approaches
 
-These are huge challenges that sim2real faces.
-They are just challenges.  They are just challenges to be faced.
-Just like for any other approach.
-Are these challenges any bigger than issues faced for other approaches?
-That is the question to ask.
-I don't think it is clear yet.
+Sim2real faces huge challenges.
+But they are just challenges.  Challenges to be faced.
+Just like the challenges we face for any other approach.
+The question to ask is whether these challenges are any biggger or less tractable than
+challenges we face for other approaches.
 
-But I am hopeful about these challenges.
+
+
+Personally I am hopeful about the challenges faced by sim2real.
 And I think the potential payoffs for solving them is huge.
+How might we solve them?
 
-And I think the way we solve them and the best way we can push forward progress on the 
-sim2real front and by extension the robot learning front more generally is through learned simulators.
+By investing much more heavily in developing learned simulators.
+We should develop simulators that use learned models inside the simulator loop.
+Simulators that can benefit from massive amounts of real world data.
+Simulators that can continually improve without human effort.
+Simulators that improve with just data and compute. 
 
-Specifically, we should use real world data to develop a learned simulator.
-A simulator that can accurately model the real world and adapt to different situations.
-With the advances in deep learning generally, and robotics, computer vision, and graphics
-specifically, the time is ripe for starting development on such a system.
+My claim is that if we can create learned simulators, we will greatly accelerate the progress of sim2real and robot learning research.
+The learned simulator will be a great way to incrementally compound and checkpoint our progress.
+It will greatly reduce the time and resources required to achieve robotic capabilities.
+It will become an extremely valuable *tool* that many people benefit from.
+A general tool, like TensorFlow and PyTorch are general tools for deep learning software,
+the learned simulator will become a general tool for robotics and robot learning and perhaps many other areas of development for the physical world.
+It will be useful for a variety of projects, beyond even robot learning and in to engineering design and scientific inquiry.
+
+With the advances in deep learning, robotics, computer vision, and graphics, 
+the time is ripe for starting development on such a system.
 A simulator written in [Software 2.0][s2.0].
+
+<!--
+A simulator that can accurately model the real world and adapt to different situations.
+-->
 
 ## Contents
 - dd
@@ -403,12 +419,6 @@ So why not collect data in the real world.
 I still think that is a valid route (and I talk about some trade-offs below), 
 but sim2real offers some unique advantages and is still very much worth pursuing for some fraction of the field.
 
-There are several obvious nice advantages that sim2real offers over real world training.
-1. Speed and parallelizability.  All the data you could ever want.  Not having to buy a bunch of robots.  Not having to monitor them closely during training or to design custom,  easily-resettable setups (link: tossingbot).
-2. Safety. No worries of damaging an expensive $30k+ robot or its surroundings.
-3. Read access to the environment.  Easy reward and auxiliary loss design using raw state information.
-4. Write access to the environment.  Easy resets and custom environment sampling distributions.  Automated curriculums.
-
 Basically the barrier to entry of simulation is so much lower.
 It is so much easier to try out ideas and explore than it is on a real robot.
 
@@ -656,6 +666,15 @@ A learned simulator could also be useful beyond robotics applications.  Digital 
 
 
 ## FAQ:
+
+### Expanding on benefits of simulation, including automated curriculum?
+
+There are several obvious nice advantages that sim2real offers over real world training.
+1. Speed and parallelizability.  All the data you could ever want.  Not having to buy a bunch of robots.  Not having to monitor them closely during training or to design custom,  easily-resettable setups (link: tossingbot).
+2. Safety. No worries of damaging an expensive $30k+ robot or its surroundings.
+3. Read access to the environment.  Easy reward and auxiliary loss design using raw state information.
+4. Write access to the environment.  Easy resets and custom environment sampling distributions.  Automated curriculums.
+
 
 ### Good way to get started?
 
