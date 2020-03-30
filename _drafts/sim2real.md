@@ -44,7 +44,7 @@ There are ways you might reduce your data needs via model-based approaches,
 meta-learning, and other algorithmic improvements. 
 
 But it seems like a strong bet.
-Data is the fuel for learning systems and sim2real is the all-you-can-eat buffet of robotics data.
+Data drives learning systems and sim2real is the all-you-can-eat buffet of robotics data.
 Beyond the quantity is the ability to create dense reward signals, auxiliary training labels, arbitrary environment and reset distributions, and automated curriculum.
 The world of bits is *much* easier to manipulate than the world of atoms and
 this adds up to massive practical advantages in training learning systems.
@@ -76,7 +76,7 @@ every possible task we might want to solve, sim2real is not going to scale.
 So how might we address the current issues?
 
 There is a lot of great research happening.  Sim2real is pretty hot right now
-and great progress is being made.  But I think one thing that remains a blind spot
+and great progress is being made.  But I think one thing that remains a [blind spot](http://www.paulgraham.com/schlep.html)
 to people is the simulator.  And I think if we focused more research efforts on the
 simulator itself, there is a huge potential payoff.  
 
@@ -84,17 +84,13 @@ The simulator is the current biggest weak link in the chain (sergey link maybe).
 Every other component of our system improves with more data and compute,
 while the simulator stays the same.  It requires human effort to improve. 
 And evidently that is not cutting it; if simulators were accurate enough,
-our models would be transferring to the real world.  But here we are.
-And I think that this is not cutting it in a very similar way that
+our models would be transferring to the real world.
+And in fact, I think that is not cutting it in a very similar way that
 computer vision was not cutting it pre-2012.  
 
-This seems like a problem
-where it would be easier to collect data than it would be to accurately model
-and write equations to handle every potential physical interaction
-that we may want to deal with to build a household personal robot for example.
-
-We need a simulator that can adapt and efficiently handle the full range
-of household or industrial physical interactions.
+I claim simulation is a problem where it is to collect the data than it is 
+to accurately model and write equations and code to handle every potential physical interaction
+that we may want to deal with in household or industrial settings.
 Rigid bodies, deformable objects, fluids, all the strange and complex and varied
 objects with different properties and abilities, like a bottle that can hold water,
 a pencil that can write on paper, a plastic bag that behaves like a plastic bag.
@@ -102,17 +98,25 @@ a pencil that can write on paper, a plastic bag that behaves like a plastic bag.
 Some of this may be out of reach of current methods to learn, but eventually we *will*
 want robots that can write on a piece of paper or something like that.)
 
+For a proof of concept, imagine how good you are at simulating in your head.
+You can pretty well imagine what happens if you knock your coffee cup over or pick it up
+and throw it across the room.
+And you learned that ability from your experience and some amazing inductive biases from evolution.
+With robotic data collection and inductive biases from traditional simulators, we could learn a simulator.
+This is not trivial, but it is certainly possible.
+
+It seems we are in the stone age of simulators.  They are arduous to setup with XML files,
+they only cover a small set of phenomenon efficiently, and they are challenging to calibrate.
+The simulator could be a much more general and useful tool than it currently is.
 We need a simulator that is smart, that can help us calibrate systems automatically
 to form models of the actual phenomenon it is trying to simulate and to improve
 based on errors in its prediction.
-We are in the stone age of simulators.  They are arduous to setup with XML files,
-they only cover a small set of phenomenon efficiently, and they are challenging to calibrate.
-The simulator could be a much more general and useful tool than it currently is.
 
 The simulator should become a central focus of research.
-We should push on it.  We should push on it and I believe we can make the simulator
-into an incredible tool.  Not just bring it up to snuff, but actually blow past
-that, and make it a central tool to the success of sim2real robot learning. 
+We should push on it.  We should push on it and make the simulator
+into a central tool.  Not just bring it up to snuff, but actually blow past
+that, and make it a central tool that enables general progress across the field and 
+even beyond robotics.
 
 With the advances in deep learning, robotics, computer vision, and graphics, 
 the time is ripe for starting development on such a system.
