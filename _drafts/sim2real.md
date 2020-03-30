@@ -12,6 +12,7 @@ tags: robotics sim2real
 ---
 
 <!--TODO: remove some whitespace here-->
+<!--TODO: center the title?-->
 <!--NOTE: focus on making this enjoyable to read.  if i hadn't written it, make it enjoyable for me-->
 <!--TODO: more research on the history of simulaotrs.  maybe this post is really about the future of simulators -->
 <!--TODO: add note asking for people to send me to stuff that i should have cited.  and i would be happy to know about it and put it in.  plz. including your own work -->
