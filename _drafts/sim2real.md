@@ -9,6 +9,8 @@ title: "Learning the Simulator"
 date: 2020-02-14 18:00:00
 permalink: /sim2real/
 tags: robotics sim2real
+toc: true
+toc_sticky: true
 ---
 
 <!--TODO: remove some whitespace here-->
@@ -19,8 +21,15 @@ tags: robotics sim2real
 
 <!--TODO: Add a way to do side notes.  this is going to require some html hacking-->
 <!--TODO: fix double hash bigger than single hash. like swap them-->
-<!--TODO: Auto TOC?  maybe.  we will see.  manual might not be too bad-->
-<!--TODO: make a sidebar for contents.  like an outline like in google docs-->
+<!--TODO: Auto TOC?  maybe.  we will see.  manual might not be too bad
+maybe once we scroll past a certain point.
+-->
+
+<!--TODO: make a sidebar for contents.  like an outline like in google docs
+
+i think the route here is to steal stuff from minimal mistakes code to make this work
+
+-->
 
 <!--
 >If we want to create general robotic systems, is sim2real learning the right bet?
@@ -39,6 +48,7 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 
 >This post is about how learned physics simulators could greatly accelerate our progress in sim2real and robot learning.  
 >[slides version] [video version]
+
 
 Sim2real seems like a strong bet for the future of robot learning.
 
@@ -111,6 +121,13 @@ A simulator that can accurately model the real world and adapt to different situ
 -->
 
 ## Contents
+<div class="sidenav">
+	test
+</div>
+
+* TOC
+{:toc}
+
 - [Traditional Simulators](#Traditional-Simulators)
 - [What do I mean by a learned simulator?](#What-do-I-mean-by-a-learned-simulator)
 - 
