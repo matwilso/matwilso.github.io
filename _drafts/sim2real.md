@@ -52,63 +52,61 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 
 Sim2real seems like a strong bet for the future of robot learning.
 
-Not the obvious best bet.
 There are other ways you might collect lots of data and build
 capable robotic systems, including teleoperation, large parallelized data collection (arm farm), and
 large shared real world datasets (TODO: links: karpathy, some research, arm farm, recent cohort things).
 There are ways you might reduce your data needs via model-based approaches,
 meta-learning, other algorithmic improvements, etc.
 
-But it seems like a strong bet.
-Data is what drives learning and sim2real is the all-you-can-eat buffet of robotics data.
-Beyond the quantity is the ability to create dense reward signals, auxiliary training labels, arbitrary environment and reset distributions, and automated curriculum.
-The world of bits is *much* easier to manipulate than the world of atoms and
-this adds up to massive practical advantages in training learning systems.
+But sim2real seems like a strong bet.
+Data drives machine learning and sim2real is the all-you-can-eat buffet of robotics data.
+Beyond quantity is the ability to create dense reward signals, auxiliary training labels, arbitrary environment and reset distributions, and automated curriculum.
+The world of bits is much easier to manipulate than the world of atoms and
+this adds up to massive practical advantages for training learning systems.
 
-However, these big advantages currently come with the big disadvantage of domain shift.
-Eventually we care about our models working in the real world,
-but by default, models trained in simulation fail to transfer.
-Current physics simulators are inaccurate and vary substantially from reality.
-In many cases, they do not faithfully capture the real world phenomenon.
-Even when they are capable of modeling the relevant phenomenon, they are hard to
-calibrate to the vastly varied real world setups we want to cover.
+These big advantages, however, currently come with the big disadvantage of domain shift.
+Eventually we care about our systems working in the real world,
+but models trained in simulation fail by default.
+Current physics simulators are crude approximations of reality.
+Often they either can't model the phenomenon you are after or they are difficult
+enough to program and calibrate that they may as well not be able to model it.
+In practice, the effect is the same: models don't transfer.
 
-Domain adaptation and randomization are partial solutions to this,
-but *just* partial solutions.
-At some point, you can't robustify your way into something that works 
-well in the real world. At some point, you have to train on the distribution that 
-accurately matches the real one.
-In practice, you have to calibrate your system aggresively and you have to model all the 
+Domain adaptation and randomization are partial solutions to this.
+They reduce the modeling accuracy required---but only a bit.
+It turns out you can't simply robustify your way into something that works 
+in the real world. You have to train on the distribution that accurately matches the real one.
+You have to calibrate your system aggresively and you have to model all the 
 relevant variables.
 
 This has been the case for the majority of sim2real robotics results of the past few years.
 Domain randomization might help pick up the slack a bit, but calibration is king.
-To the extent that the calibration and simulation modeling effort continue to be
-largely task-specific, sim2real approaches will not be general enough.
-If we have to build complex physical models and accurately calibrate them for 
-every possible task we might want to solve, sim2real is not going to scale.
+And unfortunately this calibration often requires large *task-specific* effort which limits generality.
+If you have to build complex physical models and accurately calibrate them for 
+every possible task you might want to solve, sim2real is not going to scale.
 
-How might we address the current issues?
+What's the solution?
 
 There is a lot of great sim2real research happening and great progress being made now.
 But I think there remains a huge [blind spot](http://www.paulgraham.com/schlep.html)
-for many researchers and that is the simulator.
+for many researchers in the physics simulator.
 
 The simulator is often taken as given,
-very rarely a research focus, instead just an engineering detail.
-The simulator is key to success of *sim*2real methods, but it remains the weakest link in the chain (sergey link maybe).
+very rarely a research focus; instead just an engineering detail.
+The simulator is key to success of sim2real methods, but it remains the weakest link in the chain (sergey link maybe).
 Every other component of our system improves with more data and compute, while
 the simulator stays the same.  It requires human effort to improve,
 and evidently that is not cutting it (if simulators were accurate enough,
-our models would be transferring to the real world).
-And in fact, I think that is not cutting it in a very similar way that
-computer vision was not cutting it pre-2012: it is relying on human
-modeling and the problem is likely easier to collect data for than to model explicitly.
+our models would be transferring to the real world...).
 
-The simulator should become a central focus of sim2real research.
+We should make the simulator a central focus of sim2real research.
 We should push on it and make it into a central tool.
 Not just bring it up to snuff, but actually blow past that, and make the simulator a
-central tool that enables general progress across the field and even beyond robotics.
+powerful tool that enables general progress across the field and even beyond robot learning.
+
+And I think the way we do this is by learning the simulator.
+By collecting data in the real world and using it to learn the 
+forward dynamics of the simulator.
 
 With the advances in deep learning, computer vision, graphics, and robotics,
 the time is ripe for starting development on such a system:
@@ -1092,4 +1090,20 @@ We need a simulator that is smart, that can help us calibrate systems automatica
 to form models of the actual phenomenon it is trying to simulate and to improve
 based on errors in its prediction.
 
+
+
+And in fact, I think that is not cutting it in a very similar way that
+computer vision was not cutting it pre-2012: it is relying on human
+modeling and the problem is likely easier to collect data for than to model explicitly.
+
+And in fact, I think that is not cutting it in a very similar way that
+computer vision was not cutting it pre-2012: it is relying on human
+modeling and the problem is likely easier to collect data for than to model explicitly.
+
+
+and eventually outstrip any purely
+human effort to write a simulator, just as CNNs have outstripped tradiional CV pipelines.
+(The analogy might seem a bit of a stretch to some, but the common thread is that it is
+easier to collect the data than it is to write the program.  This is true for vision
+and it's true for simulation.)
 
