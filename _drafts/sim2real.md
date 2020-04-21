@@ -46,20 +46,60 @@ left: how simulators work (many complex components vs. just a NN)
 right: how simulators are developed (manual iterating and modeling blah blah vs. sim2real enginer)
 -->
 
->This post is about how learned physics simulators could greatly accelerate our progress in sim2real and robot learning.  
+>This post is about learned physics simulators and how they could accelerate progress in sim2real and robot learning. <br>
 >[slides version] [video version]
 
+How are we going to get to robots that work in the real world?
+Not just carefully in a few narrow settings, but broadly and robustly across a range of tasks.
+Manufacturing, construction, cleaning, household maid and cook service.
+*General purpose robots*.
 
-Sim2real seems like a strong bet for the future of robot learning.
+Robots that could do crucial work during the next pandemic.
+Robots that could run [dense job that people wouldn't be sad is taken by robot] during the next pandemic.
+Robots that could allow us to construct and manufacture systems at extremely cheap cost.
+Cheap and extremely scalable labor.
 
-There are other ways you might collect lots of data and build
-capable robotic systems, including teleoperation, large parallelized data collection (arm farm), and
+(
+What's a more specific example?  What would we want constructed or manufactured? 
+Like roads, fixing infrastructure.
+Build profitable mining outposts on other planets.
+)
+
+Honestly, I think sim2real is a decent bet.
+
+General purpose robots are going to be running software
+
+will in large part be 
+
+
+
+General purpose robots are going to be driven by deep learning or whatever
+you want to call large parameterized learned systems that use tons of data.
+Or whatever they are calling the data-driven thing that uses lots of learned
+parameters and beats everything else on a wide range of tasks.
+
+There are other ways you might collect all the data needed to build capable robotic systems,
+including through human teleoperation on a fleet of robots or some self-supervised
+RL approach using resources pooled across many labs.
+
+
+
+including through teleoperation and 
+
+large parallelized systems (a la arm farm)
+or shared datasets across many labs, and training on either human demonstrations
+or some self-supervised approach.
+
+
+
+
+including teleoperation, large parallelized data collection (arm farm), and
 large shared real world datasets (TODO: links: karpathy, some research, arm farm, recent cohort things).
 There are ways you might reduce your data needs via model-based approaches,
 meta-learning, other algorithmic improvements, etc.
 
 But sim2real seems like a strong bet.
-Data drives machine learning and sim2real is the all-you-can-eat buffet of robotics data.
+Data is what drives machine learning and sim2real is the all-you-can-eat buffet of robotics data.
 Beyond quantity is the ability to create dense reward signals, auxiliary training labels, arbitrary environment and reset distributions, and automated curriculum.
 The world of bits is much easier to manipulate than the world of atoms and
 this adds up to massive practical advantages for training learning systems.
@@ -941,6 +981,23 @@ pass using data.
 We should be expanding the domain of what the simulator is responsible for.
 Because it is a tool that is reused across research projects.
 We can checkpoint our progress and push much further this way.)
+
+
+### Other routes to robot learning
+
+Teleoperation seems a bit tricky.
+This approach, which is basically Tesla's approach makes sense for cars but not for robots.
+Cars are useful when teleoperated.
+
+Some robots may be useful while teleoperated.
+But most will not be.
+Because it is harder to do the job with a robot in the loop.
+You would be better off just hiring a human to do the job.
+
+So you don't get a big dataset of teleoperation for free, like Tesla pretty much does.
+This would take a lot of investment to teach robots to do things.
+
+It might happen, but for those reasons it seems a bit less likely.
 
 
 
