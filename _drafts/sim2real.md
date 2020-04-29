@@ -49,28 +49,54 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 >This post is about learned physics simulators and how they could accelerate progress in sim2real and robot learning. <br>
 >[slides version] [video version]
 
-How are we going to get to robots that work in the real world?
-Not just carefully in a few narrow settings, but broadly and robustly across a range of tasks.
+How are we going to get to general purpose robots?
+Robots that work not just in a few narrow settings, but across a range of tasks and environments.
 Manufacturing, construction, cleaning, household maid and cook service.
-*General purpose robots*.
 
-Robots that could do crucial work during the next pandemic.
-Robots that could run [dense job that people wouldn't be sad is taken by robot] during the next pandemic.
+Robots with enough autonomy and capabilities to save our time and expand our capabilities.
+To do our household chores for us.
+To enable us to cheaply fix our crumbling infrastructure, to construct large scale devices, to mine and build on other planets.
 Robots that could allow us to construct and manufacture systems at extremely cheap cost.
 Cheap and extremely scalable labor.
 
+Robots with enough autonomy to help people in their homes to do chores
+
+and help builders construct things more cheaply, quickly, and safely.
+
+
 (
 What's a more specific example?  What would we want constructed or manufactured? 
-Like roads, fixing infrastructure.
+Like roads, fixing infrastructure.one one 
 Build profitable mining outposts on other planets.
 )
+
+The promise is still some years out and there are other societal concerns to address of course. 
+But from a technical standpoint, from the software POV, how would we get to this point?
+What should we be betting on at this point?
+
+Here is my prediction.
+
+Learned robotics simulators are going to play an enormous role in the future rollout of robots.
+
+No matter what, simulators are going to be a huge deal.
+And you are going to want your simulators to be as accurate as possible. 
+
+
+Robotics adds a whole new layer of complexity.
+Beyond the quality control of the physical parts.
+You now need quality control of the behaviors of the robot.
+
+Tesla can do this with shadow mode.
+
+
+
+
+
+
 
 Honestly, I think sim2real is a decent bet.
 
 General purpose robots are going to be running software
-
-will in large part be 
-
 
 
 General purpose robots are going to be driven by deep learning or whatever
@@ -999,6 +1025,43 @@ This would take a lot of investment to teach robots to do things.
 
 It might happen, but for those reasons it seems a bit less likely.
 
+#### Case study counterpoint: Tesla Autonomy
+
+They are not using simulators very heavily.
+For some testing.
+But instead they have the fleet and they are doing things like shadow mode.
+
+In the case that we get something like Karpathy's short story, I think this could happen.
+
+But I think that is less likely.
+
+Driving and general purpose robot teleoperationg are very different.
+Robotics requires much more of a bootstrapping process.
+
+In th
+Robots that could do crucial work during the next pandemic.
+Robots that could run [dense job that people wouldn't be sad is taken by robot] during the next pandemic.
+Robots that could allow us to construct and manufacture systems at extremely cheap cost.
+Cheap and extremely scalable labor.
+
+Cars are by default teleoperated.
+Apart from surgery, most robotics is not teleoperated.
+Many robot applications
+
+And while you could teleoperate, it is going to be slower than just doing the task with a human.
+
+It is going to be slower and more error prone.
+
+So you don't build up the competency naturally.
+
+You have to add much more activation energy into the system to get up to speed.
+
+
+Another big challenge is the long tail of scenarios.
+If you think self-driving is long tail.
+Imagine not being constrained to roads.
+Every single house setting imaginable.
+All weird possibilities.
 
 
 
