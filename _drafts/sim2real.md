@@ -46,8 +46,81 @@ left: how simulators work (many complex components vs. just a NN)
 right: how simulators are developed (manual iterating and modeling blah blah vs. sim2real enginer)
 -->
 
->This post is about learned physics simulators and how they could accelerate progress in sim2real and robot learning. <br>
+<!--
+>This post is about learned physics simulators and how they could accelerate progress in robot learning. <br>
+-->
+
+>This post is about learned physics simulators and the role they will play in the future of robot learning
+and bringing the success of deep learning to the world of atoms.
 >[slides version] [video version]
+
+
+What's this all about?
+What is the end game of robotics and robot learning?
+Where are we trying to head?
+
+The end game of robot learning is a general purpose robot.
+
+
+
+
+
+
+
+
+(I feel like framing it this way might turn people off).
+
+
+
+
+
+Current simulators aren't good enough.
+
+The idea of what a simulator could be.
+
+And the importance of this to the success of robot learning.
+
+Use the lens of sim2real?  Or make it more broad than that?
+
+
+Here is what a simulator could be.
+A simulator could be an amazing tool.
+It could be super accurate.
+You could give it an image of your kitchen and it could turn that image into a full 3D world simulator.
+It could simulate 
+
+
+It is a bit hard to believe this is possible.
+But there is an existence proof.
+Humans.
+
+You can basically look at an image and create a simulation in your head.
+
+While I guarantee this is possible, I guarantee it will be extremely difficult.
+
+How would you train such a system?
+Use robots to interact with the environment.
+Collect data and improve your model.
+Make predictions and use the real data to improve them.
+Form better simulators.
+Use those simulators to train more competent models.
+
+
+
+
+
+
+
+
+Here is what the future (of robot learning) is going to look like.
+Models are going to be trained and evaluated in simulated environments.
+
+
+
+
+
+
+
 
 How are we going to get to general purpose robots?
 Robots that work not just in a few narrow settings, but across a range of tasks and environments.
@@ -862,6 +935,17 @@ A learned simulator could also be useful beyond robotics applications.  Digital 
 
 ## FAQ:
 
+### Etc
+
+I think there is a tendency to avoid the real world too much.
+Going this direction tends to breed that.
+But I think that is wrong.
+There is a lot of work that needs to be done in the real world.
+
+Just smart about it.
+
+
+
 ### Expanding on benefits of simulation, including automated curriculum?
 
 There are several obvious nice advantages that sim2real offers over real world training.
@@ -1026,6 +1110,12 @@ This would take a lot of investment to teach robots to do things.
 It might happen, but for those reasons it seems a bit less likely.
 
 #### Case study counterpoint: Tesla Autonomy
+
+List: 
+- They have shadow mode available.  We will likely not.
+- Road driving is pretty narrow, compared to dealing with household settings.  Very complex, but basically just stay on the road and avoid everything.  
+As compared to navigating in highly unconstrained settings (steps, ladders, doors) and manipulating things.  And manipulation is hard.
+
 
 They are not using simulators very heavily.
 For some testing.
