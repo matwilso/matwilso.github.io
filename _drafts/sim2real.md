@@ -51,8 +51,117 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 -->
 
 >This post is about learned physics simulators and the role they will play in the future of robot learning
-and bringing the success of deep learning to the world of atoms.
+and applying deep learning in the physical world.
 >[slides version] [video version]
+
+How are we going to get really capable general purpose robots?
+Robots that can do our chores and help us build and repair infrastructure, clean up the trash, and mine and explore in space.
+
+From the brain side of things, this is going to be built with deep learning.  
+(footnote: Maybe not exactly deep learning, but something really close to what deep learning does.  Deep learning modulo some pedantic whatever.)
+
+The 3 Magic Ingredients of Deep Learning are:
+- compute
+- data
+- algorithms.
+
+And deep learning is driven by data.
+
+And of most specific concern for robotics is the data question.
+How do we get enough data or robot interaction to learn from?
+So we then conclude that we will need lots of data to train robotic systems.
+And then we conclude that sim2real is a pretty decent bet for how we are going to get there.
+
+There are other ways you might collect all the data needed to build capable robotic systems,
+including through human teleoperation on a fleet of robots or some self-supervised
+RL approach using resources pooled across many labs.
+
+But among these, sim2real seems like a strong bet to me.
+Data is what drives machine learning and sim2real is the all-you-can-eat buffet of robotic data sources.
+Beyond quantity is the ability to create dense reward signals, auxiliary training labels, arbitrary environment and reset distributions, and automated curriculum.
+The world of bits is much easier to manipulate than the world of atoms;  this generates massive practical advantages for training learning systems.
+
+The current achilles heel, though, is domain shift.
+Eventually we care about our sim2real trained systems working in the real world.
+But the default for many problems is failure to transfer.
+The core and central reason for this is that our simulations are not good enough.
+Our simulators are not good enough.
+If the simulation was more accurate, the gap would be small enough that our models would cross it.
+But that is not the case.
+
+Domain adaptation and randomization are partial solutions to this.
+They reduce the modeling accuracy required---but only a bit.
+It turns out you can't simply robustify your way into something that works 
+in the real world. You have to train on the distribution that accurately matches the real one.
+You have to calibrate your system aggresively and you have to model all the 
+relevant variables.
+
+This has been the case for the majority of sim2real robotics results of the past few years.
+Domain randomization might help pick up the slack a bit, but calibration is king.
+And unfortunately this calibration often requires large *task-specific* effort which limits generality.
+If you have to build complex physical models and accurately calibrate them for 
+every possible task you might want to solve, sim2real is not going to scale.
+
+And unfortunately.
+Current physics simulators are crude approximations of reality.
+Often they either can't model the phenomenon you are after or they are difficult
+enough to program and calibrate that they may as well not be able to model it.
+In practice, the effect is the same: models don't transfer.
+
+What's the solution?
+
+There is a lot of great sim2real research happening and great progress being made now.
+But the simulator remains a huge [blind spot](http://www.paulgraham.com/schlep.html) for many researchers.
+
+The simulator is often taken as given, very rarely a research focus; instead just an engineering detail.
+Just choose Mujoco or Bullet or maybe Dart and make it work for your needs.
+They are great tools, and we're all grateful they exist.
+But the current paradigm of rigid body simulators will not cut it for the future of models we need to train.
+
+The simulator is key to success of sim2real methods, but it remains the weakest link in the chain (sergey link maybe).
+Every other component of our system improves with more data and compute, while
+the simulator stays the same.  It requires human effort to improve,
+and evidently that is not cutting it (if simulators were accurate enough,
+our models would be transferring to the real world...).
+
+We should make the simulator a central focus of sim2real research.
+We should push on it and make it into a central tool.
+Not just bring it up to snuff, but actually blow past that, and make the simulator a
+powerful tool that enables general progress across the field and even beyond robot learning.
+
+And I think the way we do this is by learning it.
+By collecting data in the real world and using it to learn the forward dynamics of the simulator.
+
+With the advances in deep learning, computer vision, graphics, and robotics,
+the time is ripe for starting development on such a system:
+a simulator written in [Software 2.0][s2.0].
+A **learned simulator**.
+
+## Contents
+<div class="sidenav">
+	test
+</div>
+
+* TOC
+{:toc}
+
+- [Traditional Simulators](#Traditional-Simulators)
+- [What do I mean by a learned simulator?](#What-do-I-mean-by-a-learned-simulator)
+- 
+
+This is basically a bootstrapping effort.
+Add enough energy into this (at many stages over and over)
+that we eventually create a machine that pushes itself forward.
+Learn the simulator that we can use to learn our models.
+
+
+
+How are we going to make robots work really well?
+
+This is kind of my version for if we wanted sim2real to work really well.
+How would we do it.
+I think learned simulators are probably interesting no matter if you use them for training or not.
+
 
 
 What's this all about?
@@ -60,7 +169,6 @@ What is the end game of robotics and robot learning?
 Where are we trying to head?
 
 The end game of robot learning is a general purpose robot.
-
 
 
 
@@ -177,9 +285,6 @@ you want to call large parameterized learned systems that use tons of data.
 Or whatever they are calling the data-driven thing that uses lots of learned
 parameters and beats everything else on a wide range of tasks.
 
-There are other ways you might collect all the data needed to build capable robotic systems,
-including through human teleoperation on a fleet of robots or some self-supervised
-RL approach using resources pooled across many labs.
 
 
 
@@ -197,86 +302,28 @@ large shared real world datasets (TODO: links: karpathy, some research, arm farm
 There are ways you might reduce your data needs via model-based approaches,
 meta-learning, other algorithmic improvements, etc.
 
-But sim2real seems like a strong bet.
-Data is what drives machine learning and sim2real is the all-you-can-eat buffet of robotics data.
-Beyond quantity is the ability to create dense reward signals, auxiliary training labels, arbitrary environment and reset distributions, and automated curriculum.
-The world of bits is much easier to manipulate than the world of atoms and
-this adds up to massive practical advantages for training learning systems.
-
-These big advantages, however, currently come with the big disadvantage of domain shift.
-Eventually we care about our systems working in the real world,
-but models trained in simulation fail by default.
-Current physics simulators are crude approximations of reality.
-Often they either can't model the phenomenon you are after or they are difficult
-enough to program and calibrate that they may as well not be able to model it.
-In practice, the effect is the same: models don't transfer.
-
-Domain adaptation and randomization are partial solutions to this.
-They reduce the modeling accuracy required---but only a bit.
-It turns out you can't simply robustify your way into something that works 
-in the real world. You have to train on the distribution that accurately matches the real one.
-You have to calibrate your system aggresively and you have to model all the 
-relevant variables.
-
-This has been the case for the majority of sim2real robotics results of the past few years.
-Domain randomization might help pick up the slack a bit, but calibration is king.
-And unfortunately this calibration often requires large *task-specific* effort which limits generality.
-If you have to build complex physical models and accurately calibrate them for 
-every possible task you might want to solve, sim2real is not going to scale.
-
-What's the solution?
-
-There is a lot of great sim2real research happening and great progress being made now.
-But I think there remains a huge [blind spot](http://www.paulgraham.com/schlep.html)
-for many researchers in the physics simulator.
-
-The simulator is often taken as given,
-very rarely a research focus; instead just an engineering detail.
-The simulator is key to success of sim2real methods, but it remains the weakest link in the chain (sergey link maybe).
-Every other component of our system improves with more data and compute, while
-the simulator stays the same.  It requires human effort to improve,
-and evidently that is not cutting it (if simulators were accurate enough,
-our models would be transferring to the real world...).
-
-We should make the simulator a central focus of sim2real research.
-We should push on it and make it into a central tool.
-Not just bring it up to snuff, but actually blow past that, and make the simulator a
-powerful tool that enables general progress across the field and even beyond robot learning.
-
-And I think the way we do this is by learning the simulator.
-By collecting data in the real world and using it to learn the 
-forward dynamics of the simulator.
-
-With the advances in deep learning, computer vision, graphics, and robotics,
-the time is ripe for starting development on such a system:
-a simulator written in [Software 2.0][s2.0].
-A **learned simulator**.
-
 
 <!--
 A simulator that can accurately model the real world and adapt to different situations.
 -->
-
-## Contents
-<div class="sidenav">
-	test
-</div>
-
-* TOC
-{:toc}
-
-- [Traditional Simulators](#Traditional-Simulators)
-- [What do I mean by a learned simulator?](#What-do-I-mean-by-a-learned-simulator)
-- 
 
 
 <a id="Traditional-Simulators"/>
 # Traditional Simulators (1.0 Simulators)
 
 First, how do traditional simulators work?
-What is this [Chesterton's Fence](https://wiki.lesswrong.com/wiki/Chesterton%27s_Fence) we are about to knock down?  In this section, I'll walk through the standard rigid body simulator
-approach used by simulators like Bullet and Mujoco, two common simulators for robot learning.
+What is this [Chesterton's Fence](https://wiki.lesswrong.com/wiki/Chesterton%27s_Fence) we are about to knock down?  
+In this section, I briefly step through the standard rigid body simulator approach used by simulators like Bullet and Mujoco, two common simulators for robot learning.
+(tl; dr:  It's $$f = ma$$)
 
+Rigid body simulators are basically 3 steps:
+1. computing functions of state: forward kinematic, collision detection, contacts, inertia
+2. computing f = ma forward dyanmics.  compute forces, acceleration
+3. numerical integration. euler or rk4. advance time by dt: v = v + a*dt, p = p + v*dt.  
+
+Forward kinematics = taking rigid body robot arm and computing the joint link or end effector positions from the angles.
+
+Collision detecion = 
 
 f = m * a
 and
@@ -284,17 +331,10 @@ torque = inertia * rotational acceleration
 
 Integrate accelerations into velocity, velocity into position.
 
-
-Basically 3 steps:
-- collision detection, contacts
-- forward dyanmics.  compute inertia, forces, acceleration
-- numerical integration.  euler or rk4
-
-
+Look at the bullet slides for more on this
 
 
 Contact forces computation and collision detection are way expensive.
-
 
 What is wrong with this?
 It is an idealistic model.
@@ -312,20 +352,13 @@ And things like that are everywhere.
 Other examples include.
 
 
-
 While there might exist some simulators for games and movies, they are not common
 in robotics.  Likely because they are too slow or difficult to implement.
 
 Computing contacts and collisions becomes too expensive.
 
-
 Learning a simulator could provide a much more unified and general way to
 simulate the wide variety of objects.
-
-
-
-
-
 
 Links:
 - https://www.cs.cmu.edu/~baraff/sigcourse/notesd1.pdf
@@ -1317,3 +1350,8 @@ human effort to write a simulator, just as CNNs have outstripped tradiional CV p
 easier to collect the data than it is to write the program.  This is true for vision
 and it's true for simulation.)
 
+
+sources:
+- http://mujoco.org/book/computation.html
+- https://pybullet.org/wordpress/index.php/forum-2/
+- http://hades.mech.northwestern.edu/images/7/7f/MR.pdf
