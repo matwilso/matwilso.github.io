@@ -54,40 +54,75 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 and applying deep learning in the physical world.
 >[slides version] [video version]
 
-How are we going to get really capable general purpose robots?
-Robots that can do our chores and help us build and repair infrastructure, clean up the trash, and mine and explore in space.
+How are we going to create more capable and general purpose robots?
 
-From the brain side of things, this is going to be built with deep learning.  
-(footnote: Maybe not exactly deep learning, but something really close to what deep learning does.  Deep learning modulo some pedantic whatever.)
+Ultimately, we want robots that can help clean our rooms, repair infrastructure, 
+clean up trash, mine raw materials, build structures, and explore space.
 
-The 3 Magic Ingredients of Deep Learning are:
-- compute
-- data
-- algorithms.
+To get there, we need systems that are intelligent and autonomous.
+Teleoperating or hand-coding behaviors will not let us scale to household robots
+or self-sustaining robotic mining colonies in space.
 
-And deep learning is driven by data.
+The story is not clear though how we get to this point.
+How can we push out from where we are?
 
-And of most specific concern for robotics is the data question.
-How do we get enough data or robot interaction to learn from?
-So we then conclude that we will need lots of data to train robotic systems.
-And then we conclude that sim2real is a pretty decent bet for how we are going to get there.
+It is pretty clear deep learning is going to be part of the solution. 
+(footnote: Or whatever you want to call big things with lots of parameters that you optimize with data.  You get the idea.)
+Deep learning is state of the art in both computer vision (ImageNet, and any other
+computer vision since basically 2012) and playing games (Go, DOTA, Star Craft).  
+You cannot currently write a computer program that even comes close to these
+without using neural networks trained with backpropagation.
 
-There are other ways you might collect all the data needed to build capable robotic systems,
+Computer vision and strategic decision making.
+Sensory perception and control.
+
+It is clear to anyone in robotics that it has not yet been solved.
+So obviously we need a few more tricks.
+
+I think one trick that could really help us is sim2real learning.
+In fact, I think that pushing hard on the sim2real angle is a pretty
+good bet for reaching super capable robots.  And I think
+it is going to be worthwhile pushing on that angle even if real world
+training wins out.  As I will get into later...
+
+One big looming question in robotics is the data one.
+Computer vision uses fixed datasets.
+Game playing has a simulator that you can run literally
+millions of years of game play by running at high speed across clusters.
+But robots must make decisions and interact with the physical world.
+There is no way getting around that.
+Some amount of learning experience must come from a physical robot
+interacting in the physical world at real time.
+(Footnote: you could argue that there are fully sim2real projects,
+but they use some calibration optimization.  It is manual effort, in fact
+worse than if it were learned because it is not reusable engineering effort across
+projects.)
+The question is just: how much?
+
+Besides sim2real there are many other ways you might collect all the data 
+needed to build capable robotic systems,
 including through human teleoperation on a fleet of robots or some self-supervised
 RL approach using resources pooled across many labs.
+including teleoperation, large parallelized data collection (arm farm), and
+large shared real world datasets (TODO: links: karpathy, some research, arm farm, recent cohort things).
+There are ways you might reduce your data needs via model-based approaches,
+meta-learning, other algorithmic improvements, etc.
 
-But among these, sim2real seems like a strong bet to me.
+
+But sim2real seems like a strong bet to me.
 Data is what drives machine learning and sim2real is the all-you-can-eat buffet of robotic data sources.
 Beyond quantity is the ability to create dense reward signals, auxiliary training labels, arbitrary environment and reset distributions, and automated curriculum.
-The world of bits is much easier to manipulate than the world of atoms;  this generates massive practical advantages for training learning systems.
+The world of bits is much easier to manipulate than the world of atoms and
+this creates massive practical advantages for training learning systems.
 
-The current achilles heel, though, is domain shift.
+Sim2real, for all its strengths, does come with an achilles heel and that is domain shift.
+One bad strike of miscalibration and the promise of sim2real shatters.
 Eventually we care about our sim2real trained systems working in the real world.
 But the default for many problems is failure to transfer.
 The core and central reason for this is that our simulations are not good enough.
 Our simulators are not good enough.
-If the simulation was more accurate, the gap would be small enough that our models would cross it.
-But that is not the case.
+If the simulation was more accurate, the gap would be small enough that our 
+models would cross it.  But that is not the case.
 
 Domain adaptation and randomization are partial solutions to this.
 They reduce the modeling accuracy required---but only a bit.
@@ -102,6 +137,7 @@ And unfortunately this calibration often requires large *task-specific* effort w
 If you have to build complex physical models and accurately calibrate them for 
 every possible task you might want to solve, sim2real is not going to scale.
 
+
 And unfortunately.
 Current physics simulators are crude approximations of reality.
 Often they either can't model the phenomenon you are after or they are difficult
@@ -109,6 +145,9 @@ enough to program and calibrate that they may as well not be able to model it.
 In practice, the effect is the same: models don't transfer.
 
 What's the solution?
+
+
+TODO: do i need to update based on that Jason work?
 
 There is a lot of great sim2real research happening and great progress being made now.
 But the simulator remains a huge [blind spot](http://www.paulgraham.com/schlep.html) for many researchers.
