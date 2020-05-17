@@ -39,6 +39,11 @@ i think the route here is to steal stuff from minimal mistakes code to make this
 >I discuss why we need learned simulators and how we might make them.
 -->
 
+>On learned physics simulators, the future of robot learning, 
+and deep learning in the physical world.
+>[slides version] [video version]
+
+
 <img width="400" src="/assets/sim2real/draft_opening_figure.jpg" style="display: block; margin-left: auto; margin-right: auto;"/>
 <!-- TODO: (could also just be a traditional simulator diagram here.  begging to be simplified. just like a traditional cv pipeline.)-->
 <!-- TODO: could also show the development cycle.  how physics sim is developed vs. the sim2real engine
@@ -50,28 +55,70 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 >This post is about learned physics simulators and how they could accelerate progress in robot learning. <br>
 -->
 
->This post is about learned physics simulators and the role they will play in the future of robot learning
-and applying deep learning in the physical world.
->[slides version] [video version]
+<!-- TOOD: make this a different type of quote, ~where it is just indented and in quote font-->
+>Instead of innovating out from the present, what you want to do is invent the future *from the future*.  Go out and live in the future and bring the future back. - Alan Kay
+
+# Intro
 
 How are we going to create more capable and general purpose robots?
 
-Ultimately, we want robots that can help clean our rooms, repair infrastructure, 
-clean up trash, mine raw materials, build structures, and explore space.
+Ultimately, we want robots that are broadly capable and that
+can amplify the constructive power of humans.
+Robots that can do our household chores, repair infrastructure, 
+clean up trash, mine raw materials, build great structures, and explore and develop space.
 
-To get there, we need systems that are intelligent and autonomous.
-Teleoperating or hand-coding behaviors will not let us scale to household robots
-or self-sustaining robotic mining colonies in space.
+To get there, we need systems that can make decisions and execute complex
+actions without human intervention.
+Teleoperating or hand-coding behaviors will not let us scale to millions of 
+household robots or self-sustaining robotic mining colonies in space.
 
-The story is not clear though how we get to this point.
-How can we push out from where we are?
+To get there, the path is uncertain.
+It seems we are far from this future point.
+But if this is the type of thing we would like to achieve,
+how can push out from where we are and try to get closer to where we want to be?
 
-It is pretty clear deep learning is going to be part of the solution. 
+Where are we currently?
+
+...
+
+If I had to bet, I would bet on deep learning being a big part of the solution.
 (footnote: Or whatever you want to call big things with lots of parameters that you optimize with data.  You get the idea.)
+Future robots will be running some type of "network" for perception and for making decisions.
+
 Deep learning is state of the art in both computer vision (ImageNet, and any other
 computer vision since basically 2012) and playing games (Go, DOTA, Star Craft).  
-You cannot currently write a computer program that even comes close to these
-without using neural networks trained with backpropagation.
+Today you cannot write a computer program that even comes close to these
+without using (1) neural networks (2) trained with backpropagation.
+
+This is the current best way to write software to solve these types of problems.
+What are the limitations though?
+If ImageNet is solved and Go is solved, why is robotics not solved?
+What makes it work or not work?
+
+The best first-order way to think about this is in terms of data.
+ImageNet is a fixed dataset;
+AlphaGo works by self-playing millions of hours of Go by simulating
+it at many times real speed and parallelizing across big computer clusters.
+Ditto for Star Craft and DOTA.
+These are fully controllable simulators.
+
+To run similar training processes in the real world would take many hundreds of years,
+countless engineering hours, thousands of broken robots, injured people, and damaged environments.
+What I mean to say is it is impossible.
+
+And like with what we see in self-driving.
+The real world is incredibly complex and diverse.
+Long-tail.
+The complexity of the real world far outstrips any game.
+And this matters when you want your systems operating in a large swath of the real world.
+
+
+
+
+
+
+
+
 
 Computer vision and strategic decision making.
 Sensory perception and control.
@@ -103,8 +150,6 @@ Besides sim2real there are many other ways you might collect all the data
 needed to build capable robotic systems,
 including through human teleoperation on a fleet of robots or some self-supervised
 RL approach using resources pooled across many labs.
-including teleoperation, large parallelized data collection (arm farm), and
-large shared real world datasets (TODO: links: karpathy, some research, arm farm, recent cohort things).
 There are ways you might reduce your data needs via model-based approaches,
 meta-learning, other algorithmic improvements, etc.
 
@@ -115,8 +160,8 @@ Beyond quantity is the ability to create dense reward signals, auxiliary trainin
 The world of bits is much easier to manipulate than the world of atoms and
 this creates massive practical advantages for training learning systems.
 
-Sim2real, for all its strengths, does come with an achilles heel and that is domain shift.
-One bad strike of miscalibration and the promise of sim2real shatters.
+Sim2real, for all its strengths, does come with an achilles heel: domain shift.
+One bad miscalibration hit to the domain shift heel and the power of sim2real shatters.
 Eventually we care about our sim2real trained systems working in the real world.
 But the default for many problems is failure to transfer.
 The core and central reason for this is that our simulations are not good enough.
@@ -132,7 +177,7 @@ You have to calibrate your system aggresively and you have to model all the
 relevant variables.
 
 This has been the case for the majority of sim2real robotics results of the past few years.
-Domain randomization might help pick up the slack a bit, but calibration is king.
+Domain adaptation and randomization might help pick up the slack a bit, but calibration is king.
 And unfortunately this calibration often requires large *task-specific* effort which limits generality.
 If you have to build complex physical models and accurately calibrate them for 
 every possible task you might want to solve, sim2real is not going to scale.
@@ -145,9 +190,6 @@ enough to program and calibrate that they may as well not be able to model it.
 In practice, the effect is the same: models don't transfer.
 
 What's the solution?
-
-
-TODO: do i need to update based on that Jason work?
 
 There is a lot of great sim2real research happening and great progress being made now.
 But the simulator remains a huge [blind spot](http://www.paulgraham.com/schlep.html) for many researchers.
@@ -1394,3 +1436,29 @@ sources:
 - http://mujoco.org/book/computation.html
 - https://pybullet.org/wordpress/index.php/forum-2/
 - http://hades.mech.northwestern.edu/images/7/7f/MR.pdf
+
+
+
+In summary, it seems useful to keep pushing on simulators and sim2real.
+
+
+Scaling up self-supervision or teleoperation (a la Cognitive Discontinuity)
+seem still plausible.  
+While teleoperation seems likely to yield success in self-driving (Tesla),
+general robotics faces a bootstrapping investment problem that seems challenging
+to overcome.
+And self-supervision seems hopeful but it .
+In the end, the line may not be so sharp between the approaches.
+Self-supervision may learn what is effectively a simulator model.
+Sim2real may be used as an initial tool, while self-supervision or teleoperation
+is used to achieve more refined abilities.
+
+
+
+
+
+
+
+
+
+
