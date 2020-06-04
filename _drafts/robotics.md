@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Future of Robot Learning"
+title: "The Future of Robot Learning Series"
 date: 2020-02-14 18:00:00
 permalink: /robotics/
 tags: robotics
@@ -15,12 +15,12 @@ How are we going to create more capable and general purpose robots?
 In this series of posts, I explore how robotics and robot learning might progress in the future.
 
 Below are descriptions and links to the posts as well as a short essay 
-that motivates the posts and why pursue robotics.
+that motivates the posts and why pursue robotics in general.
 
 <!--<img height="200" src="/assets/sim2real/irobot.jpg" style="display: block; margin-left: auto; margin-right: auto;"/>-->
 
-# Technical Posts
-- Learning the Simulator.  How we can push sim2real forward and verification.
+## Posts
+- Learning the Simulator.  How we can improve simulators, for pushing sim2real forward and better verification.
 - Learning from Demonstration.  Some ideas about how we can learn more from humans.  And how that might look.
 
 # Intro and Motivation
@@ -34,7 +34,9 @@ grow and harvest crops, mine raw materials, and explore and develop colonies in 
 
 (maybe one more paragraph here elaborating on robots in space)
 
-## Why don't we have household robots already?  What gives?
+## Where Are The Robots?
+
+Why don't we have household robots already?  
 
 What stands in our way of realizing this future?
 

@@ -39,9 +39,9 @@ i think the route here is to steal stuff from minimal mistakes code to make this
 >I discuss why we need learned simulators and how we might make them.
 -->
 
->On learned physics simulators, the future of robot learning, 
-and deep learning in the physical world.
+>On learned physics simulators and the future of sim2real robot learning.
 >[slides version] [video version]
+>(link to Future of Robot Learning Series index post)
 
 
 <img width="400" src="/assets/sim2real/draft_opening_figure.jpg" style="display: block; margin-left: auto; margin-right: auto;"/>
@@ -57,13 +57,12 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 
 <!-- TOOD: make this a different type of quote, ~where it is just indented and in quote font-->
 
-Besides sim2real there are many other ways you might collect all the data 
+There are many other ways you might collect all the data 
 needed to build capable robotic systems,
 including through human teleoperation on a fleet of robots or some self-supervised
 RL approach using resources pooled across many labs.
 There are ways you might reduce your data needs via model-based approaches,
 meta-learning, other algorithmic improvements, etc.
-
 
 But sim2real seems like a strong bet to me.
 Data is what drives machine learning and sim2real is the all-you-can-eat buffet of robotic data sources.
@@ -71,8 +70,31 @@ Beyond quantity is the ability to create dense reward signals, auxiliary trainin
 The world of bits is much easier to manipulate than the world of atoms and
 this creates massive practical advantages for training learning systems.
 
+And even if you don't buy into sim2real as a feasible route for reaching
+general purpose robots, you would surely enjoy more usable and accurate simulators 
+for developing algorithms, or for evaluating the safety and performance of your 
+robot models before you deploy them to users.
+
+This post goes into how I think sim2real and simulators ought to progress in the future.
+
+## Contents
+<div class="sidenav">
+	test
+</div>
+
+* TOC
+{:toc}
+
+- [Traditional Simulators](#Traditional-Simulators)
+- [What do I mean by a learned simulator?](#What-do-I-mean-by-a-learned-simulator)
+- 
+
+
+While 
+
 Sim2real, for all its strengths, does come with an achilles heel: domain shift.
-One bad miscalibration hit to the domain shift heel and the power of sim2real shatters.
+One bad hit of domain shift from slight miscalibration and the power of sim2real shatters.
+
 Eventually we care about our sim2real trained systems working in the real world.
 But the default for many problems is failure to transfer.
 The core and central reason for this is that our simulations are not good enough.
@@ -129,17 +151,6 @@ the time is ripe for starting development on such a system:
 a simulator written in [Software 2.0][s2.0].
 A **learned simulator**.
 
-## Contents
-<div class="sidenav">
-	test
-</div>
-
-* TOC
-{:toc}
-
-- [Traditional Simulators](#Traditional-Simulators)
-- [What do I mean by a learned simulator?](#What-do-I-mean-by-a-learned-simulator)
-- 
 
 This is basically a bootstrapping effort.
 Add enough energy into this (at many stages over and over)
