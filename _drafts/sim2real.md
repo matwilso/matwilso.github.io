@@ -82,9 +82,9 @@ And not by domain adaptation or randomization (at least not mainly by that).
 Nope, we can overcome these challenges by building better simulators.
 Just make the simulators match the real world.
 
-Everyone ignores the simulator.  It's a [blind spot][schlep],  researchers take it for granted.
+Researchers ignore the simulator.  It's a [blind spot][schlep].
 Just choose Bullet, Dart, Mujoco, ODE, whatever, and make it work for your needs.
-If you try to roll your own simulator, this is precious time away from 
+If you work on the simulator, this is precious time away from 
 developing cool new learning algos.  
 
 But the simulator is the weakest link in the sim2real chain.
@@ -95,15 +95,26 @@ and is hard to tune to custom use cases.
 But where they are pessimistic on the prospects of sim2real, I'm pretty optimistic.)
 
 Even if you don't buy into sim2real as a strong route for developing
-more general robots, you should appreciate the value of better simulators.
-This would be useful for developing algorithms, and eventually for rigorously evaluating the 
+more general robots, you should appreciate the value of better simulators,
+for developing algorithms, and eventually for rigorously evaluating the 
 safety and performance of your robot models before you deploy them to users.
-We could have simulators that do simulators that are super easy to use
+We could have simulators that are super easy to use
 (little to know manual XML tweaking, etc), more accurate to real world phenomenon, 
 and can automatically configure and tune themselves to your specific setup.
 
 The type of simulators I am talking about are *learned simulators*.
-Simulators running neural networks inside them.  Running Software 2.0 baby.
+We collect data in the real world and use it to learn sensor models,
+actuator models, and physics dynamics models that get called in the forward
+pass of the simulator.
+Simulators running neural networks inside them. Simulators running Software 2.0 baby.
+
+These simulators could become powerful tools.
+Imagine recording a video of your robot interacting in an environment.
+The simulator detects the robot model, parses the scene and automatically
+instantiates a model that you can use to develop and test policies on.
+And imagine that simulator 
+
+I don't just think this is possible, I think it is doable within 10 years.
 
 We should make the simulator a central focus of sim2real research.
 We should push on it and make it into a central tool.
@@ -111,8 +122,6 @@ Not just bring it up to snuff, but actually blow past that, and make the simulat
 powerful tool that enables general progress across the field and even beyond robot learning.
 
 And I think the way we do this is by learning it.
-By collecting data in the real world and using it to 
-learn the forward dynamics of the simulator.
 
 With the advances in deep learning, computer vision, graphics, and robotics,
 the time is ripe for starting development on such a system:
@@ -130,6 +139,27 @@ A **learned simulator**.
 - [Traditional Simulators](#Traditional-Simulators)
 - [What do I mean by a learned simulator?](#What-do-I-mean-by-a-learned-simulator)
 - 
+
+
+---
+
+We need to get over not using real world data.
+
+I am sure that is what the future is going to look.
+
+We can't hide in our simulation shells forever.
+If sim2real ends up being a viable future route, it will be because 
+we have embraced training in the real world.
+We need to learn models of the real world.
+
+And mark my words.
+The best simulators in the future will be ones that are largely
+built from data from the real world rather than from 
+
+I would be willing to bet on this.
+(link to why betting is good for making good predictions and being held accountable)
+
+----
 
 
 While 
@@ -1346,6 +1376,15 @@ which is often crucial to research success.  But in this case, this is especiall
 Short horizon wins and it eventually becomes bottleneck.
 Not if we achieve this.
 
+
+## Specific claims that I would bet money on
+(or maybe do superforecasting predictions.  measure my accuracy)
+
+The future best simulator as measured by ability to accurately transfer to the real
+world across a broad set of tasks will largely be learned from data rather
+than programmed.
+At least 1 Million weights will be used in the network.
+And it will be trained on at least 100k image frames and likely more.
 
 ## sim notes
 For individual research projects, this is fine, you have to pick your battles.
