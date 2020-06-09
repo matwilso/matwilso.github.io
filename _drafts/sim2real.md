@@ -41,8 +41,6 @@ i think the route here is to steal stuff from minimal mistakes code to make this
 
 >On learned physics simulators and the future of sim2real robot learning.
 >[slides version] [video version]
->(link to Future of Robot Learning Series index post)
-
 
 <img width="400" src="/assets/sim2real/draft_opening_figure.jpg" style="display: block; margin-left: auto; margin-right: auto;"/>
 <!-- TODO: (could also just be a traditional simulator diagram here.  begging to be simplified. just like a traditional cv pipeline.)-->
@@ -57,25 +55,69 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 
 <!-- TOOD: make this a different type of quote, ~where it is just indented and in quote font-->
 
-There are many other ways you might collect all the data 
-needed to build capable robotic systems,
-including through human teleoperation on a fleet of robots or some self-supervised
-RL approach using resources pooled across many labs.
-There are ways you might reduce your data needs via model-based approaches,
-meta-learning, other algorithmic improvements, etc.
+There are other ways you might collect the experience 
+needed to build more general robotic systems, including
+by pooling resources across research labs or by building fleets of
+teleoperated robots (a la [Karpathy short story](http://karpathy.github.io/2015/11/14/ai/)).
+There are ways you might reduce your data needs with imitation learning,
+model-based approaches, meta-learning, other various algorithmic improvements, etc, etc.
 
-But sim2real seems like a strong bet to me.
-Data is what drives machine learning and sim2real is the all-you-can-eat buffet of robotic data sources.
-Beyond quantity is the ability to create dense reward signals, auxiliary training labels, arbitrary environment and reset distributions, and automated curriculum.
+<!-- TOOD: real links here to other work maybe. i think it would be cool to link them
+stanford and finn has been a part of one i think.
+-->
+
+But sim2real seems like a pretty decent bet to me.
+
+Data is what drives deep learning, and sim2real is like the All-You-Can-Eat Buffet of robotic data sources.
+Beyond the massive volume is the ability to create dense reward signals, auxiliary training labels, arbitrary environments, reset distributions, and automated curriculum.
 The world of bits is much easier to manipulate than the world of atoms and
 this creates massive practical advantages for training learning systems.
 
-And even if you don't buy into sim2real as a feasible route for reaching
-general purpose robots, you would surely enjoy more usable and accurate simulators 
-for developing algorithms, or for evaluating the safety and performance of your 
-robot models before you deploy them to users.
+That is, if we can overcome the massive domain shift challenges.
+All these great training advantages don't matter when you try your 
+policy in the real world and it fails :'(
 
-This post goes into how I think sim2real and simulators ought to progress in the future.
+But I am hopeful that we can overcome these challenges.
+And not by domain adaptation or randomization (at least not mainly by that).
+Nope, we can overcome these challenges by building better simulators.
+Just make the simulators match the real world.
+
+Everyone ignores the simulator.  It's a [blind spot][schlep],  researchers take it for granted.
+Just choose Bullet, Dart, Mujoco, ODE, whatever, and make it work for your needs.
+If you try to roll your own simulator, this is precious time away from 
+developing cool new learning algos.  
+
+But the simulator is the weakest link in the sim2real chain.
+Every other component of our system improves with more data and compute, while
+the simulator stays the same.  It is inaccurate, requires human effort to improve,
+and is hard to tune to custom use cases.
+(Sergey and Chelsea have a few good talks that discuss some of these points.
+But where they are pessimistic on the prospects of sim2real, I'm pretty optimistic.)
+
+Even if you don't buy into sim2real as a strong route for developing
+more general robots, you should appreciate the value of better simulators.
+This would be useful for developing algorithms, and eventually for rigorously evaluating the 
+safety and performance of your robot models before you deploy them to users.
+We could have simulators that do simulators that are super easy to use
+(little to know manual XML tweaking, etc), more accurate to real world phenomenon, 
+and can automatically configure and tune themselves to your specific setup.
+
+The type of simulators I am talking about are *learned simulators*.
+Simulators running neural networks inside them.  Running Software 2.0 baby.
+
+We should make the simulator a central focus of sim2real research.
+We should push on it and make it into a central tool.
+Not just bring it up to snuff, but actually blow past that, and make the simulator a
+powerful tool that enables general progress across the field and even beyond robot learning.
+
+And I think the way we do this is by learning it.
+By collecting data in the real world and using it to 
+learn the forward dynamics of the simulator.
+
+With the advances in deep learning, computer vision, graphics, and robotics,
+the time is ripe for starting development on such a system:
+a simulator written in [Software 2.0][s2.0].
+A **learned simulator**.
 
 ## Contents
 <div class="sidenav">
@@ -152,6 +194,7 @@ a simulator written in [Software 2.0][s2.0].
 A **learned simulator**.
 
 
+
 This is basically a bootstrapping effort.
 Add enough energy into this (at many stages over and over)
 that we eventually create a machine that pushes itself forward.
@@ -207,7 +250,7 @@ Humans.
 
 You can basically look at an image and create a simulation in your head.
 
-While I guarantee this is possible, I guarantee it will be extremely difficult.
+While I guarantee this is possible, I also guarantee it will be extremely difficult.
 
 How would you train such a system?
 Use robots to interact with the environment.
@@ -1299,6 +1342,9 @@ There is a steep progress gradient for us to climb with the simulator.  And that
 (A generalization could be made that simulator stands for engineering effort in general,
 which is often crucial to research success.  But in this case, this is especially true.)
 
+## Simulator as bottleneck.
+Short horizon wins and it eventually becomes bottleneck.
+Not if we achieve this.
 
 
 ## sim notes
@@ -1382,5 +1428,6 @@ is used to achieve more refined abilities.
 
 
 
+[schlep]: http://www.paulgraham.com/schlep.html
 
 

@@ -14,23 +14,100 @@ What does the future of robot learning look like?
 How are we going to create more capable and general purpose robots?
 In this series of posts, I explore how robotics and robot learning might progress in the future.
 
-Below are descriptions and links to the posts as well as a short essay 
-that motivates the posts and why pursue robotics in general.
-
 <!--<img height="200" src="/assets/sim2real/irobot.jpg" style="display: block; margin-left: auto; margin-right: auto;"/>-->
 
 ## Posts
-- Learning the Simulator.  How we can improve simulators, for pushing sim2real forward and better verification.
+- Learning the Simulator.  How we can improve simulators, for pushing sim2real forward and making system verification easier and more automatic.
 - Learning from Demonstration.  Some ideas about how we can learn more from humans.  And how that might look.
 
-# Intro and Motivation
+# Intro and Motivation: why work on robotics?
 
-Ultimately, we want broadly capable robots that can serve to amplify human 
+Ultimately, we want general purpose robots that can serve to amplify human 
 progress and creativity in the physical world.
-Robots that can help us clean and maintain our world and to help us expand and build new things.
-Robots that can help do household chores, clean up trash and pollution, 
-and repair decaying infrastructure.  That can build vast new infrastructure, 
+We want robots that can help us clean and maintain our world, expand and build new things.  
+That can help do household chores, clean up trash and pollution, 
+and repair decaying infrastructure.  That can help us build vast new infrastructure, 
 grow and harvest crops, mine raw materials, and explore and develop colonies in space.
+
+
+Why work on robotics?
+Bringing technological advances to the physical world.
+It is a bit hard to see how it plays out.
+Maybe a story or some image/scene.
+Maybe just imagining the household robot.
+Like that is what I imagine.
+A machine that can do physical chores.
+
+There are many things we don't do because we don't have the capacity to.
+Like tidying our house or doing a backyard project.
+There can be joy in doing physical work.
+But what I imagine is that we can tap new markets.
+Areas where we currently aren't doing stuff.
+Either people are not liking the work, like having to cook or buy meals or clean the house.
+Or work that is not being done.
+Like people not wealthy enough or inclined to hire maid and gardening service.
+
+And for example, the area I live in has a lot of trash on the ground everywhere.
+Somebody has got to pay for that.  And it just doesn't get done.
+There is not enough incentive for anyone to do anything about it.
+Because the activation energy is too high.
+If we could rent a robot for a small amount of time to clean it up.
+That would be good.
+
+This is not about replacing jobs or taking away things that we enjoy.
+
+This is about making it easier for humans to do things in the physical world.
+To empower us more.
+To increase our productivity.
+Let us build more and cheaply.
+Cheaper products, cheaper food.
+Cleaning up the environment, planting trees.
+Let us take on new tasks that were prohibitively expensive or hard to manage before.
+
+This is about giving us control over the world.
+The ability to make decisions,
+
+Not saying its true.
+But what if we could really save the world by planting 1 billion trees.
+An army of robots would let us do that.
+They could work through the night, they could operate more cheaply, they don't require food.
+You don't need to pay them.
+
+(I find this harder to write.  Since it goes more into the domain of other stuff.
+Not just technical challenges but societal.  I should work on the other one some)
+
+
+
+
+
+Humans are currently limited by our ability to manipulate the world.
+
+how we can physically manipulate matter.
+
+We have gotten extremely sophsiticated at manipulating information recently.
+But our ability to manipulate matter has lagged behind.
+
+I think robot learning is a way to fix that.
+I see robotics as a broad thing.
+You want to make a change in the world
+
+
+
+
+
+
+In many ways humans are limited by physical manpower.  We are limited by what
+we can physicall achieve.
+The management of large groups of people, the training and skills required.
+
+I imagine a future where we have armies of robots that can help us build things.
+Robots to cook meals and do chores.
+Robots 
+
+
+
+
+
 
 (maybe one more paragraph here elaborating on robots in space)
 
