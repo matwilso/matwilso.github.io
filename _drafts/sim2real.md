@@ -56,9 +56,9 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 <!-- TOOD: make this a different type of quote, ~where it is just indented and in quote font-->
 
 There are other ways you might collect the experience 
-needed to build more general robotic systems, including
+needed to build general robotic systems, including
 by pooling resources across research labs or by building fleets of
-teleoperated robots (a la [Karpathy short story](http://karpathy.github.io/2015/11/14/ai/)).
+teleoperated robots (a la [Karpathy's short story](http://karpathy.github.io/2015/11/14/ai/)).
 There are ways you might reduce your data needs with imitation learning,
 model-based approaches, meta-learning, other various algorithmic improvements, etc, etc.
 
@@ -66,24 +66,32 @@ model-based approaches, meta-learning, other various algorithmic improvements, e
 stanford and finn has been a part of one i think.
 -->
 
-But sim2real seems like a pretty decent bet to me.
+But sim2real seems like a decent bet, a promising path forward.
 
-Data is what drives deep learning, and sim2real is like the All-You-Can-Eat Buffet of robotic data sources.
+Data is what drives deep learning, and sim2real is the All-You-Can-Eat Buffet of robotic data sources.
 Beyond the massive volume is the ability to create dense reward signals, auxiliary training labels, arbitrary environments, reset distributions, and automated curriculum.
-The world of bits is much easier to manipulate than the world of atoms and
-this creates massive practical advantages for training learning systems.
+The world of bits is much easier to manipulate than the world of atoms,
+and this leads to massive practical advantages for training learned systems.
 
-That is, if we can overcome the massive domain shift challenges.
-All these great training advantages don't matter when you try your 
+That is, if you can overcome the massive domain shift challenges.
+These great training advantages don't matter if you run your 
 policy in the real world and it fails :'(
 
-But I am hopeful that we can overcome these challenges.
-And not by domain adaptation or randomization (at least not mainly by that).
+I am hopeful that we can overcome current challenges associated with domain
+shift.  And not with any domain adaptation or randomization tricks.  These
+are useful, but they have their limits (pretty low-ceiling limits).
+I am hopeful because we can make simulators so much better.  
+We can make them match the real world way better than they do now.
+We can make it match much more closely the real world. 
+
 Nope, we can overcome these challenges by building better simulators.
 Just make the simulators match the real world.
 
-Researchers ignore the simulator.  It's a [blind spot][schlep].
-Just choose Bullet, Dart, Mujoco, ODE, whatever, and make it work for your needs.
+Researchers generally ignore the simulator.  It's somewhat of a [blind spot][schlep].
+You just choose Bullet, Dart, Mujoco, ODE, whatever, and make it work for your needs.
+If you were to build your own simulator, you wouldn't have any time left for
+learning research!
+
 If you work on the simulator, this is precious time away from 
 developing cool new learning algos.  
 
@@ -142,6 +150,31 @@ A **learned simulator**.
 
 
 ---
+
+
+It honestly seems pretty plausible that we can get models that predict
+what will happen in a simulation.
+We can make huge text models and those basically keep getting better.
+Without stop.
+And super impressive.
+So I think we could do this.
+IF we just had the data.
+
+And I think this will allow a bootstrapping method.
+We use better sims to make a bit of progress.
+Then we send some robots out to go collect data about the world.
+Learn new interactions and improve our simulator.
+Bring it back to us.
+Then we can train the next round.
+
+
+
+
+
+
+
+
+
 
 We need to get over not using real world data.
 
@@ -1375,6 +1408,15 @@ which is often crucial to research success.  But in this case, this is especiall
 ## Simulator as bottleneck.
 Short horizon wins and it eventually becomes bottleneck.
 Not if we achieve this.
+
+## Not differntiable simulators.
+
+I have seen this, but this is not what I mean.
+Genally those are just implemented to be differentiable.
+But still programmed by hand.
+I am talking about fairly big neural networks inside of the simulator.
+That figure out what will happen next.
+Like the human brain can do.
 
 
 ## Specific claims that I would bet money on
