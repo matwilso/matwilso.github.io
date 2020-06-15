@@ -55,32 +55,159 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 
 <!-- TOOD: make this a different type of quote, ~where it is just indented and in quote font-->
 
+Sim2real seems like a decent bet to me.
+
 There are other ways you might collect the experience 
-needed to build general robotic systems, including
-by pooling resources across research labs or by building fleets of
-teleoperated robots (a la [Karpathy's short story](http://karpathy.github.io/2015/11/14/ai/)).
-There are ways you might reduce your data needs with imitation learning,
-model-based approaches, meta-learning, other various algorithmic improvements, etc, etc.
+needed to build general robotic systems, by pooling resources across labs or 
+by building large fleets of
+teleoperated robots (a la [Karpathy's short story](http://karpathy.github.io/2015/11/14/ai/))
+for example.
+There are ways you might reduce your data needs with imitation,
+model-based, or meta-learning, other various algorithmic improvements, etc, etc.
+But sim2real seems worth pursuing.
 
 <!-- TOOD: real links here to other work maybe. i think it would be cool to link them
 stanford and finn has been a part of one i think.
 -->
 
-But sim2real seems like a decent bet, a promising path forward.
+Deep learning works.  Super well.
+Deep learning is state of the art (SOTA) in both computer vision, playing games (Go, DOTA, Star Craft),
+and more recently natural language processing.
+Today you cannot write a computer program that even comes close to SOTA
+without using (1) neural networks (2) trained with backpropagation.
 
-Data is what drives deep learning, and sim2real is the All-You-Can-Eat Buffet of robotic data sources.
-Beyond the massive volume is the ability to create dense reward signals, auxiliary training labels, arbitrary environments, reset distributions, and automated curriculum.
-The world of bits is much easier to manipulate than the world of atoms,
-and this leads to massive practical advantages for training learned systems.
+And this only works if you have a ton of data.
+Either in large static datasets or in fast game simulators.
+Deep learning is super data hungry.  You have to feed it a lot to
+make it happy, which makes it harder to apply in robotics.
+Real-time constraints.  Robot specific data.  Low quantity.
 
-That is, if you can overcome the massive domain shift challenges.
-These great training advantages don't matter if you run your 
-policy in the real world and it fails :'(
+Simulators are the All-You-Can-Eat Buffets of robotics data.
+You can easily generate more data than you would ever need in simulation.
+Where data in robotics is much harder to come by, simulation
+and sim2real levels the data playing field and makes it straightforward to apply
+deep learning approaches to robotics.
+
+And beyond the mere volume of data, simulators enable you to specify dense reward signals, auxiliary training labels, arbitrary environments, reset distributions, and automated curriculum.
+Bits are much easier to manipulate than atoms, so systems are much easier to train in simulation
+than in the real world.
+
+Until you start bumping up against the problem of domain shift, that is.
+
+
+
+If you can overcome the large domain shift challenges, that is.
+Ease of training only counts if your policy actually runs in the real world :/
+
+Domain shift is the plague of sim2real learning.  Recently there has been 
+some hope that domain randomization and domain adaptation can help plug in the sim2real
+gap and get models to transfer.  And indeed, we have seen some great success cases here.
+But I think there is a limit to this.
+There is only so much you can randomize.
+And results so far show that you need to calibrate really well for things to work.
+
+And I suggest we focus on a different main angle of attack:
+Making the simulator match the real world.
+Just make the simulator match the real world.
+
+This seems pretty possible.
+
+Just like GPT3 learns to predict the next .
+Language models learn to model more intricate things in the pursuit of prediction.
+They learn grammar because it helps them predict the next token.
+They learn sentiment because it helps them predict the next token.
+They learn simple arithmetic because it helps them predict the next token.
+
+The same should be true for the video modality.
+You learn physics so you can predict the next frame.
+
+
+With robots and lots of external data sources, this should be learnable.
+Then you should be able to turn this into a simulator API.
+You can plug different scenarios in and use them to train robots to do
+various tasks.
+
+
+HUma
+
+You might complain that we are throwing out F=ma.
+But how much does F=ma really cover?
+F=ma doesn't cover fluids.
+
+It doesn't cover biology.
+What happens when you plant a
+
+F=ma is fine.  But it is a crutch.
+It limits what a simulator could be.
+
+Learned simulators are going to be a thing because using physics to predict everything is impossible.  It is impossible to model it all.
+
+The simulator will just be an approximate model.
+But it will be the best thing for predicting what is actually going to happen.
+
+I think GPT3 makes it clear that this will work.
+If you don't think this is possible, I would spend some time reflecting on the language model stuff.
+
+Imagine putting in a query.
+You film a video of your scene.
+The robot is a separate plugin to the network.
+It's proprioception and its control outputs.
+Filming the video of your scene is like prompting the language model.
+It can then predict accurate next stuff because it has seen stuff like your scene before.
+
+
+This is what calibrating your simulator should be:
+You film a video of the object moving around and the robot moving it.
+
+I can kind of picture how a general AI could work.
+You tell it to plant a flower.
+And it knows a model of the world. 
+It knows that if you put a seed in the ground and water it, it will grow.
+It could read about that.
+It could see YouTube videos about that.
+It could have experience moving things.
+And then it could go out and plant a seed in the ground.
+
+Seeing GPT3 work shows that just future prediction is a good enough task.
+If you have enough capacity, future prediction will eventually get you to learn everything.
+
+You could have an AI that learns 3rd person by seeing a bunch of people do stuff.
+And then you just give it a body and it will figure out how its outputs change the world. 
+You could just have it try to predict what is going to happen next.
+I guess you need some active learning of some sort.
+
+It would have a causal model of how the 
+
+Why not just scale the shit out of stuff?
+Figure out what works, then just scale the shit out of it.
+And that is what will get you to AGI.
+
+The challenge of AGI is maybe just building big enough clusters.
+
+If you could predict any 
+
+
+It would learn about human psychology to predict what they would do next.
+It would learn real facts because that is what would help it predict what text was going to say.
+
+
+
+
+
+
+
+
+There has recently been some hope that neural networks will allow knowledge learned in
+simulation to transfer to the real world.
+This has been driven by domain randomization and domain adaptation work.
+
+
+
 
 I am hopeful that we can overcome current challenges associated with domain
 shift.  And not with any domain adaptation or randomization tricks.  These
 are useful, but they have their limits (pretty low-ceiling limits).
-I am hopeful because we can make simulators so much better.  
+I am hopeful because we can make simulators so much better. 
 We can make them match the real world way better than they do now.
 We can make it match much more closely the real world. 
 
@@ -135,6 +262,9 @@ With the advances in deep learning, computer vision, graphics, and robotics,
 the time is ripe for starting development on such a system:
 a simulator written in [Software 2.0][s2.0].
 A **learned simulator**.
+
+How much do I expect for neural network transfer to get better?
+
 
 ## Contents
 <div class="sidenav">
