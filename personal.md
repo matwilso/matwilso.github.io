@@ -10,7 +10,7 @@ permalink: /personal/
 
 Some pictures:
 
-Southern Utah <br>
+Somewhere in Southern Utah <br>
 <img src="/assets/goblin_window.jpg" alt="goblin" height="200"> <br>
 
 Grand Tetons, Wyoming<br>

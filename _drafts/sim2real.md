@@ -42,6 +42,8 @@ i think the route here is to steal stuff from minimal mistakes code to make this
 >On learned physics simulators and the future of sim2real robot learning.
 >[slides version] [video version]
 
+TODO: probably turn this one into sim2real engine, kind of as it began.
+
 <img width="400" src="/assets/sim2real/draft_opening_figure.jpg" style="display: block; margin-left: auto; margin-right: auto;"/>
 <!-- TODO: (could also just be a traditional simulator diagram here.  begging to be simplified. just like a traditional cv pipeline.)-->
 <!-- TODO: could also show the development cycle.  how physics sim is developed vs. the sim2real engine
@@ -55,6 +57,10 @@ right: how simulators are developed (manual iterating and modeling blah blah vs.
 
 <!-- TOOD: make this a different type of quote, ~where it is just indented and in quote font-->
 
+What does the future of sim2real look like?
+Does sim2real have a future?
+
+
 Sim2real seems like a decent bet to me.
 
 There are other ways you might collect the experience 
@@ -63,19 +69,20 @@ by building large fleets of
 teleoperated robots (a la [Karpathy's short story](http://karpathy.github.io/2015/11/14/ai/))
 for example.
 There are ways you might reduce your data needs with imitation,
-model-based, or meta-learning, other various algorithmic improvements, etc, etc.
+model-based, or meta learning, other various algorithmic improvements, etc, etc.
 But sim2real seems worth pursuing.
 
 <!-- TOOD: real links here to other work maybe. i think it would be cool to link them
 stanford and finn has been a part of one i think.
 -->
 
-Deep learning works.  Super well.
-Deep learning is state of the art (SOTA) in both computer vision, playing games (Go, DOTA, Star Craft),
+First of all, deep learning works.
+It is the best way to solve computer vision problems, several challenging games (Go, DOTA, Star Craft),
 and more recently natural language processing.
-Today you cannot write a computer program that even comes close to SOTA
-without using (1) neural networks (2) trained with backpropagation.
+Today you cannot write a computer program that even comes close to state-of-the-art
+in these domains without using (1) neural networks (2) trained with backpropagation.
 
+But this magic recipe only works if you have a ton of data.
 And this only works if you have a ton of data.
 Either in large static datasets or in fast game simulators.
 Deep learning is super data hungry.  You have to feed it a lot to

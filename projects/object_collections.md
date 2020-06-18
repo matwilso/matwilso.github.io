@@ -34,12 +34,12 @@ We propose a method for sim-to-real robot learning which exploits simulator stat
 <br>
 <br>
 <code>
-@article{wilson2019collections,
-  title={Learning to Manipulate Object Collections Using Grounded State Representations},
-  author={Matthew Wilson and Tucker Hermans},
-  journal={Conference on Robot Learning},
-  year={2019},
-  url={https://arxiv.org/abs/1909.07876}
+@article{wilson2019collections,<br>
+  title={Learning to Manipulate Object Collections Using Grounded State Representations},<br>
+  author={Matthew Wilson and Tucker Hermans},<br>
+  journal={Conference on Robot Learning},<br>
+  year={2019},<br>
+  url={https://arxiv.org/abs/1909.07876}<br>
 }
 </code>
 
