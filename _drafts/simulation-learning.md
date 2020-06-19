@@ -14,46 +14,64 @@ incentive to fix it up and get it done quick. would recommend coming back later.
 >On learned simulators and the future of learning in simulation.
 >[slides version] [video version]
 
-I think this is going to involve learning from humans and human data.
-Like teleoperation and mocap.
-But that it happens largely in a simulator. 
+# Opening.
 
-The sim2real border is a false one.
-It implies training only on simulated data.
-Simulation training.
-Not sim2real learning.  Just simulation training.
+I think the future of robotics is going to involve learning a lot from humans
+and human generated data.
+Like teleoperation and mocap and human demonstrations.
+Because those things work well.  Mocap is how you produce natural motion.
+And peng with the youtube stuff.
+There are so many sources of movement data from humans.
+And as deep learning becomes more mature, we will get better at extracting this information.  
+Learning from humans is a rich source of information.
+Just like humans learn from one another.
 
-Kind of like the jemin work.
-And the peng work.
-You take some data from the real world.
-You pull that into your simulator.
+But despite this, I think simulation will continue to play a large role
+in the future of robotics and how deep learning gets deployed in the real world more generally.
 
-So here is my take: simulation training is the future.
-But zero real world data is not.
-And it is distracting to try and not use any real world data.
+But I think a lot of training will happen in simulation.
+A lot of the direct "experience" the agent gets will not come from reality.
+It will come from Software 2.0 (or 3.0 :p simulators).
 
-It is ok to use mocap and human demos.
-Because it works and you could scale that.
-Learning from human and real world video.
+And simulators will play a large role in the rollout of deep learning
+in robotics and other real world applications.
 
-And imagine getting a simulator of a plant.
-Maybe not a plant, but something like that.
-Some model of reality that you could never get besides learning it.
-Like simulating an ant hill.
 
-Every process up to this point uses real world data.
+
+I think what we need from a learning POV is an expectation.
+You need to have an expectation or prior over what the world is going to look like
+so you can predict what is going to happen.
+So something like building a prior with large models.
+Even if it is not 100p accurate, it will help.
+
+
+
+
+
+
+
+
+And I want to make the distinction between simulation training and sim2real.
+Sim2real is a subset of simulation training, where you train purely in a simulator
+and then you deploy your model in the real world.  
+Sim2real generally implies that you train a model purely in simulation and then deploy it to the 
+real world (sim --> real).  
+And it is celebrated if you do this without any real world data.  
+But I think this is not the right long-term outlook.
+
+And in fact, every process up to this point uses real world data.
 Every single paper that claims to use no real data is lying.
-They might actaully do fine-tune.
+Some might explicitly do fine-tuning on real world data of course.
 They use real world data to tune the simulator, using it as data in simple optimization.
 They use real world data to get feedback on the system.
+Even if you do just use the simulator or renderer, you are relying on human models of the real world.
 
-Human get data to learn f=ma and put in simulator.
+Human get data to learn f=ma and put in simulator, or graphics equations in a renderer. 
 They tune it and debug it using physical intuitions (from real world).
 
-And this is not just a cute point.
-It represents a general principle.
-The most general idea of a simulator is that we take real observations about the 
-world.  We compile them into a compressed model.
+This represents a general principle.
+The most general idea of a simulator is that we take real observations about the world.  
+We compile them into a compressed model.
 And then we use that model to simulate what will happen.
 (Might be worth checking out Hamming book on this.)
 
@@ -91,10 +109,48 @@ And I think we are just figuring out how this would work.
 And we are seeing some small, but concrete examples of how to do it.
 
 
-So the point is that this is not just about sim2real.
-This is about simulation learning.
 
-Because people in sim2real generally fetishize using no real data.
+
+
+
+
+
+What is the general idea of a simulator.
+
+The general idea of a simulator is as follows:
+We would like to know what happens.
+
+
+
+
+
+The sim2real border is a false one.
+It implies training only on simulated data.
+Simulation training.
+Not sim2real learning.  Just simulation training.
+
+Kind of like the jemin work.
+And the peng work.
+You take some data from the real world.
+You pull that into your simulator.
+
+So here is my take: simulation training is the future.
+But zero real world data is not.
+And it is distracting to try and not use any real world data.
+
+It is ok to use mocap and human demos.
+Because it works and you could scale that.
+Learning from human and real world video.
+
+And imagine getting a simulator of a plant.
+Maybe not a plant, but something like that.
+Some model of reality that you could never get besides learning it.
+Like simulating an ant hill.
+
+
+Simulators represent a long chain of history.
+
+
 
 
 Questions to answer maybe:
@@ -343,6 +399,37 @@ in the microwave, they'll learn that this is bad.
 (right now, I'm writing down a lot of the big thoughts.  Then I can organize later
 and pare down and fix.  This seems good.  Just let the thoughts flow for now.
 Don't worry about finalizing at all rn.)
+
+
+
+GPT3 gives us a chance to make software better.
+When you see the things that Sketchpad and other early ARPA stuff could do, it is sad that we can't do it.
+
+
+Simulators are hard to use and they are inaccurate.
+You can imagine that this is on the horizon.
+
+If you haven't noticed the GPT3 like capabilities, you should start noticing.
+Chris Olah has a pretty good twitter thread on this, with Karpathy weighing in.
+https://twitter.com/ch402/status/1273765062633639936
+
+I do think there is something to this.
+
+
+
+
+
+Yeah so GPT-3 makes it seem pretty possible.
+You can prompt a model with a custom setup and it can adapt to it.
+Think of how much better a interface this is.
+
+This would be extremely useful.
+You could show it a household setting and it could get fine-grained detail of it.
+
+This is also seeming possible because of some advances in graphics.
+You can train a model that can very accurately represent even a large object mesh quite accurately.
+The CPPN graphics stuff.
+
 
 
 

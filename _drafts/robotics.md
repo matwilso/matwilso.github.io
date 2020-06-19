@@ -8,8 +8,11 @@ toc: true
 toc_sticky: true
 ---
 
-This is my index page for robotics related stuff.
-It contains links to my robotics-related posts
+Index page for robotics related stuff, with links to posts.
+
+Invent the future from the future
+
+
 
 <!-- TODO: have tags to reference my posts on my  -->
 <!-- TODO: add disqus comments  -->
@@ -24,9 +27,9 @@ nuclear.
 
 <!-- TODO: change the block quotes. quote top and change style of kay quote -->
 
-
-One thing that excites me about the future is robots that work super well.
-I think there are some really exciting prospects.
+One thing that excites me about the future is super capable robots.
+It seems like they can be an extremely constructive technology.
+There are some really exciting prospects.
 And that they can be such a constructive technology.
 Enabling us to build things.
 And clean things and maintain our world.
