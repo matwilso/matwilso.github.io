@@ -5,5 +5,3 @@ permalink: /blog/
 ---
 
 
-
-none yet, sry

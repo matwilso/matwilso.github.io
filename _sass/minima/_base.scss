@@ -146,12 +146,15 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: darken($grey-color, 12%);
+  border-left: 4px solid $grey-color;
   padding-left: $spacing-unit / 2;
+  padding-top: $spacing-unit / 2;
+  padding-bottom: $spacing-unit / 2;
   @include relative-font-size(1.125);
-  letter-spacing: -1px;
-  font-style: italic;
+  font-style: bold;
+  background-color:  grey;
+  background-color: lighten($grey-color-light, 3%);
 
   > :last-child {
     margin-bottom: 0;
