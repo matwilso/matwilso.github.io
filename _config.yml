@@ -31,10 +31,13 @@ markdown: kramdown
 theme: minima
 include:
     - _pages
-    - _drafts
+    - _posts
     - projects
 exclude:
   - Gemfile
   - Gemfile.lock
 plugins:
   - jekyll-toc
+  - jekyll-feed
+  - jekyll-seo-tag
+

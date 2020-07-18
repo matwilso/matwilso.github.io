@@ -25,17 +25,18 @@ Any number of other “soft” or hard-to-model interactions, which we have trou
 
 ...
 
-It seems possible *and quite likely* that we can create a “good-enough” general-purpose reality simulator using a stupid predict-the-next-frame training approach (based on what I’ve seen of GPT and its capabilities). Maybe not super soon, but definitely sometime on the horizon.
+It seems possible and *quite likely* that we can create a “good-enough” general-purpose reality simulator using a stupid predict-the-next-frame training approach (based on what I’ve seen of GPT and its capabilities). Maybe not super soon, but definitely sometime on the horizon.
 
 An approximate, data-driven approach to simulation definitely seems the way to go. A way to unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc) into a single useful tool for robot learning, engineering, scientific discovery.
 
 To get something that works “well enough” across the entire range of tasks we care about. To build a simulator way more useful and *usable* than any we’ve ever made.
 
-How else would we possibly model these things, if not from data? Write down and precisely compute the physics of how strawberries get pulverized in the blades of a blender? The heat transfer and chemical processes involved in cooking an egg? Handle every imaginable physics mode?
+How else would we possibly model these things, if not from data? Write down and precisely compute the physics of how strawberries get pulverized in the blades of a blender? The heat transfer and chemical processes involved in cooking an egg? We're going to do this for every imaginable physics mode?
 
 The learned simulator has a huge chance to revolutionize robot learning.<br>
-The perfect model for model-based learning.<br>
-The simulator with no reality gap.<br>
+Model-based learning with the perfect model.<br>
+Sim2real learning with no reality gap.
+
 
 ...
 
@@ -47,11 +48,18 @@ No XML files, no painstaking calibration, no arduously modeling the articulated 
 
 Just film a video of our scene and the model would catch on, like GPT3 catches on when given specific prompts.
 
-Example:
-one guy’s thread.
 
 Example:
 gwern’s thread.
+
+https://twitter.com/gwern/status/1267215588214136833
+
+https://www.gwern.net/newsletter/2020/05#gpt-3
+
+Example:
+one guy’s thread.
+https://twitter.com/xuenay/status/1283312640199196673
+
 
 ....
 
@@ -73,14 +81,18 @@ Once we have YouTube GPT3, it’s prolly not as simple as taking it out-of-the-b
 
 ...
 
-I would bet on learned simulators of this nature having a huge impact on robot learning. A huge wave. I’m not sure when it crashes on shore, but it is forming.
+I would bet on learned simulators of this nature having a huge impact on robot learning. A huge wave. I’m not sure when it crashes on shore, but it is surely forming.
 
-Powerful predictive models and their unrelenting scalability seems like a huge wave for learning in general.
+Powerful predictive models and their unrelenting scalability are a huge wave for learning in general.
 
 The LeCun Cake is seeming pretty reasonable right about now. Unsupervised learning is going to carry us, give us a rich understanding of the world. Then we just do some cherry-on-the-top RL to achieve some goals.
 
 gwern also touches on this is his great post on gpt3: 
+https://www.gwern.net/newsletter/2020/05#gpt-3
 
+
+
+---
 
 Side note:
 The learned sim seems might form the basis of an internal model that the robot when walking around, not just for training. It understands the world in terms of its high-fidelity model. 
