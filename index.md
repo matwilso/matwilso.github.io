@@ -8,7 +8,7 @@ layout: default
 
 
 <img align="left" width="200" src="/assets/mw.jpg" style="border-radius: 20%; margin: 0px 60px 20px 0px;"/>
-I am a first year masters student in computer science at the [University of 
+I am a second year masters student in computer science at the [University of 
 British Columbia (UBC)](https://www.cs.ubc.ca/), working on robotics and reinforcement
 \+ deep learning, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Previously, I worked on similar things for my undergraduate 
 thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://robot-learning.cs.utah.edu/), advised by [Tucker Hermans](https://robot-learning.cs.utah.edu/thermans). 
