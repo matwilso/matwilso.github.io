@@ -56,6 +56,13 @@ Now think how much better you could do with digital brains specifically optimize
 model these things, trained on orders of magnitude more data than you would
 ever encounter in a lifetime, with more memory, higher accuracy representations.
 
+If text-based-GPT is like having thousands of world experts to talk to,
+Robot-YouTube-GPT is like thousands of world experts there in the room with you. 
+It knows survival skills, workout routines, yoga, guitar cords. 
+It can demonstrate and explain the
+mechanics of these things to you (e.g., [starting a fire with a magnifying glass](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
+Like having an Ian Banks Culture or Star Wars droid with you. C3PO that knows all the languages or whatever.
+
 *People are standing having drinks on a small raised outdoor deck.
 "Everybody off the deck!", a droid comes running across the street,
 "Get inside!". They look over, confused, as the supports start creaking.
@@ -67,12 +74,6 @@ Maybe the full scenario isn't realistic, but a model that has integrated so much
 knowledge could likely see and predict things before an
 average person.
 
-If text-based-GPT is like having thousands of world experts to talk to,
-Robot-YouTube-GPT is like thousands of world experts there in the room with you. 
-It knows survival skills, workout routines, yoga, guitar cords. 
-It can demonstrate and explain the
-mechanics of these things to you (e.g., [starting a fire with a magnifying glass](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
-Like having an Ian Banks Culture or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
 ...
 
@@ -100,10 +101,10 @@ It has learned to do things I don't think I would have expected.
 Quantity does really seem to have a quality all its own here.
 There are whole new capabilities that arise from training these bigger and bigger systems.
 
-And where do the capabilities stop?
+And as we keep improving these systems, where do the capabilities stop?
 Where do you expect them to stop?
 Modeling human psychology?
-Discovering that it is in a training process?
+Discovering that it is experiencing a training process?
 Discovering that it can do better at its objective by influencing its data sources?
 
 I believe we can build super powerful systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
@@ -120,8 +121,8 @@ As our brains grew, we could start to absorb more things into them,
 e.g. language.
 
 These current AI training processes optimize through the predict-what-is-going-to-happen incentive,
-and operates in a few months speed (training time).
-I don't see such processes as obviously being irreparably less powerful, to the point where
+and operates at trainin-in-a-few months speed.
+I don't see such processes as obviously being (irreparably) less powerful, to the point where
 they can't achieve the same practical abilities when tuned and scaled.
 A neural network brain could always keep getting smarter to make better predictions (that's what we're seeing).
 And training with backpropagation seems a bit more to the point.
@@ -133,9 +134,9 @@ With much more optimization pressure and a few more tricks, how is this not goin
 It makes me think we need to start thinking much more about safety / alignment, and
 about the future we want.  Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/#:~:text=There's%20no%20possible%20sign%20short,5%2C%20or%202%20years%20away.&text=So%20there%20isn't%20going,Period.).
 Start working more on issues of bias and bad sources of data, to protect against our YouTube-GPT becoming an anti-Vax Flat-Earther. Start learning how to optimize for human preferences
-rather than cold objectives. Personally, start at least becoming more familiar with the biases and AI safety literature as a first step.
+rather than cold objectives. Personally, probably start at least becoming more familiar with the ML biases and AI safety literatures as a first step.
 
-These are super exciting times. But we have our work cut out for us, for sure.
+These are super exciting times. But we definitely have our work cut out for us.
 Super important choices to make and things to get right.
 
 ...
@@ -143,7 +144,7 @@ Super important choices to make and things to get right.
 Anyway, cheers, thanks for reading.
 
 (this document was written by a human, lol)<br>
-(always happy to hear any comments, criticism, feedback you have in comments, DMs, email, etc.)
+(always happy to hear any comments, criticism, feedback you have below, or in DMs, email, etc.)
 
 
 
