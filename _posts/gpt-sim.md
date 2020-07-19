@@ -48,16 +48,16 @@ Beyond just a training tool, it could form the basis of an internal model that t
 
 Think how good humans are at intuitive physics and pyschology. You can predict
 what will happen if you bump your coffee cup near the edge of your table
-or how someone else might respond if you bump their coffee near the edge of the table.
+or how someone might respond if you bump *their* coffee near the edge of the table.
 Yet human information processing abilities are constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
 
-Now think how much better you could do with digital brains specifically optimized to 
+Think how much better you could do with digital brains specifically optimized to 
 model these things, trained on orders of magnitude more data than you would
 ever encounter in a lifetime, with more memory, higher accuracy representations.
 
 If text-based-GPT is like having thousands of world experts to talk to,
-Robot-YouTube-GPT is like thousands of world experts there in the room with you. 
+robot-embodied YouTube-GPT is like thousands of world experts there in the room with you. 
 It knows survival skills, workout routines, yoga, guitar cords. 
 It can demonstrate and explain the
 mechanics of these things to you (e.g., [starting a fire with a magnifying glass](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
@@ -66,11 +66,12 @@ Like having an Ian Banks Culture or Star Wars droid with you. C3PO that knows al
 *People are standing having drinks on a small raised outdoor deck.
 "Everybody off the deck!", a droid comes running across the street,
 "Get inside!". They look over, confused, as the supports start creaking.
-The deck drops, comes to a halt a few feet lower. Most get inside in time,
-a few are knocked to the deck floor with minor bruises and a sprained wrist.* 
+The deck drops, comes to a halt a few feet lower. Enough of them reacted
+soon enough to get inside, with only a few being knocked to the deck floor 
+with minor bruises and sprained wrists.* 
 
 There are thousands of videos of structural failures, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse) happening on YouTube.
-Maybe the full scenario isn't realistic, but a model that has integrated so much 
+Maybe the full scenario isn't realistic, but a learned model that has integrated so much 
 knowledge could likely see and predict things before an
 average person.
 
@@ -79,12 +80,12 @@ average person.
 
 Why do we expect something stupidly simple like future prediction to work so well? To get us to super accurate physics simulators?
 
-Mainly, the empirical evidence we are seeing from text-based models trained on this exact same dumb idea. The results of GPT3 are amazing---[still](https://twitter.com/michael_nielsen/status/1284937254666768384) [limited lol](https://twitter.com/sama/status/1284922296348454913), but amazing.
+Mainly, the empirical evidence we are starting to see from text-based models trained on this exact same dumb idea. The results of GPT3 are amazing---[still](https://twitter.com/michael_nielsen/status/1284937254666768384) [limited lol](https://twitter.com/sama/status/1284922296348454913), but amazing.
 GPT3 just tries to predict the next word as accurately as possible.
 When given a bigger brain, it keeps on filling that brain with more and more knowledge.
 It learns syntax and grammar so it can predict the next word.
 Then it learns basic text patterns (paragraphs, dialogue), so it can predict the next word.
-Then [sentiment](https://openai.com/blog/language-unsupervised/), [amateur chess moves](https://twitter.com/TomChivers/status/1214488063310741504), [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [...](https://twitter.com/xuenay/status/1283312640199196673)
+Then [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/), [amateur chess moves](https://twitter.com/TomChivers/status/1214488063310741504), [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [...](https://twitter.com/xuenay/status/1283312640199196673)
 
 YouTube-based GPT would learn complex and super accurate physics because it would help it to predict the next video frame.
 With enough data, and especially with inductive biases sprinkled in, a super high-fidelity simulation seems possible.
@@ -107,10 +108,10 @@ Discovering that it is experiencing a training process?
 Discovering that it can do better at its objective by influencing its data sources?
 
 I believe we can build super powerful systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
-In terms of the optimization process, if evolution of humans worked, deep learning of 
+In terms of optimization processes, if evolution of humans worked, deep learning of 
 neural networks should definitely work.
 
-Evolution optimizes through the survive-and-reproduce incentive, and operates at glacial speed.
+Evolution optimizes through survive-and-reproduce incentive, and operates at glacial speed.
 It turns out that a certain specific run of this gets you human-level intelligence.
 It turns out that pretty general reasoning abilities is what helps
 you do that in a certain niche of the ecosystem.
@@ -119,13 +120,13 @@ There was pressure for smarter brains.
 As our brains grew, we could start to absorb more things into them,
 e.g. language.
 
-These current AI training processes optimize through the predict-what-is-going-to-happen incentive,
-and operates at training-in-a-few months speed.
+These current AI training processes optimize through predict-what-is-going-to-happen incentive,
+and operate at training-in-a-few months speed.
 I don't see such processes as obviously being (irreparably) less powerful, to the point where
 they can't achieve the same practical abilities when tuned and scaled.
 A neural network brain could always keep getting smarter to make better predictions (that's what we're seeing).
-And training with backpropagation seems a bit more to the point.
-Plus we can use a ton of human ingenuity to drive it.
+And training these objectives directly with backpropagation seems a bit more to the point.
+Plus we can use a ton of human ingenuity to drive and improve these processes.
 
 Neural networks are clearly very capable of solving challenging tasks.
 With much more optimization pressure and a few more tricks, how is this not going to produce super intelligent machines?
@@ -133,14 +134,14 @@ With much more optimization pressure and a few more tricks, how is this not goin
 It makes me think we need to start thinking much more about safety / alignment, and
 about the future we want.  Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/#:~:text=There's%20no%20possible%20sign%20short,5%2C%20or%202%20years%20away.&text=So%20there%20isn't%20going,Period.).
 Start working more on issues of bias and bad sources of data, to protect against our YouTube-GPT becoming an anti-Vax Flat-Earther. Start learning how to optimize for human preferences
-rather than cold objectives. Personally, probably start at least becoming more familiar with the ML biases and AI safety literatures as a first step.
+rather than cold fixed objectives. Personally, probably start at least becoming more familiar with the ML biases and AI safety literatures as a first step.
 
-These are super exciting times. But we definitely have our work cut out for us.
+Super exciting times. But we have our work cut out for us.
 Super important choices to make and things to get right.
 
 ...
 
-Anyway, cheers, thanks for reading.
+Anyway, cheers, thanks for reading
 
 (this document was written by a human, lol)<br>
 (always happy to hear any comments, criticism, feedback you have below, or in DMs, email, etc.)
