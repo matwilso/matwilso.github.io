@@ -11,6 +11,7 @@ toc_sticky: true
 >Imagine video-based GPT3 trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc.) What could we do with a model like this? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
 We could generate custom environments with physical accuracy and variety light-years beyond what is possible with current simulators.
+
 Like an egg cracking, spreading out, and sizzling on a frying pan. A paintbrush dipping into a bucket, dragging across the wall, and leaving a red streak of paint behind it.
 
 Sunlight passing through a magnifying glass to catch a pile of dry leaves on fire, with a rising trail of smoke. A marshmallow cooking to golden brown over the flame, or getting too close, catching on fire, and burning to a crisp.
@@ -21,16 +22,16 @@ Any number of other “soft” or hard-to-model interactions, which we have trou
 
 Based on GPT and its capabilities, it seems possible and *quite likely* that we can create a “good-enough” general-purpose reality simulator using a stupid predict-the-next-frame training approach. Maybe not super soon, but definitely sometime on the horizon.
 
-An approximate, data-driven approach to simulation definitely seems the way to go. A way to unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc) into a single useful tool for robot learning, engineering, scientific discovery.
+An data-driven approach to simulation definitely seems the way to go. A way to unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc) into a single useful tool for robot learning, engineering, scientific discovery.
 Something that works “well enough” across the entire range of tasks we care about. A simulator that's way more useful and *usable* than any we’ve ever made.
 
 (What's the alternative, anyway, if we don't directly learn our models from data using ML? Write down and precisely compute the physics of how strawberries get pulverized in the blades of a blender? The heat transfer and chemical processes involved in cooking an egg? Do this for every imaginable physics mode?)
 
 ...
 
-A learned simulator has huge potential to revolutionize robot learning.
+A learned simulator has the potential to revolutionize robot learning.
 
-Imagine sim2real learning with the smallest possible reality gap.
+Think of sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 
 ...
@@ -48,7 +49,7 @@ Train a robot to paint your room. Visualize the sequence of actions the robot wo
 
 Learn directly from human preferences in source videos. Learn that humans don’t like spilling paint, or breaking vases, or burning their eggs. Learn how humans and animals move naturally. How they step carefully and are gentle. How humans are polite in letting people pass. 
 
-This “learned simulator” would be an incredible tool for accelerating progress across the whole field. We invest resources in creating and developing it and then it becomes a source of compounding growth. As it gets better, so do our capabilities, data, and resource ($, time) budgets.
+This “learned simulator” would be an incredible tool for accelerating progress across the whole field. We invest resources in creating and developing it and then it becomes a source of compounding growth. As it gets better, so do our capabilities, data, $, and time budgets.
 
 Beyond just a training tool, it could form the basis of an internal model that the robot uses online during deployment. It would understand the world in terms of its high-fidelity model. 
 Imagine how good human intuitive physical and pyschology, while under the constraint
@@ -59,13 +60,12 @@ more quickly and with greater accuracy.
 It will have seen so many more physical interactions than you ever had. 
 It will be much better than you at predicting what is going to happen.
 
-Made-up story, not sure how accurate, but illustrates the point. 
-
+Made-up story, maybe inaccurate, but illustrates the point:
 People are standing having drinks on a raised patio. 
 "Everybody get off the patio", a droid comes running from across the street,
 "It's about to collapse." There are thousands of structural failures, including
-several videos of this exact thing happening on YouTube. The droid has been trained on
-this exact type of thing.
+several videos of this exact thing happening on YouTube. The droid knows the 
+tell-tale signs of pillars about to collapse.
 
 Just like someone said GPT is like having a PhD person there. This will be like having a world expert. It would know how to start a fire from nothing. It would know survival skills. It would be like having a droid. C3P0 that knows all the languages or whatever.
 
