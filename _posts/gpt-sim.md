@@ -20,16 +20,16 @@ A human politely stepping aside when someone else is walking towards them, or ge
 
 Any number of other “soft” or hard-to-model interactions, which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
 
-Based on GPT and its capabilities, it seems possible and *quite likely* that we can create a “good-enough” general-purpose reality simulator using a stupid predict-the-next-frame training approach. Maybe not super soon, but definitely sometime on the horizon.
+Based on GPT and its capabilities, it seems possible and *quite likely* that we can create a “good-enough” general-purpose reality simulator using a stupid predict-the-next-frame training approach. Maybe not super soon, but definitely sometime on our horizon.
 
-An data-driven approach to simulation definitely seems the way to go. A way to unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc) into a single useful tool for robot learning, engineering, scientific discovery.
+A data-driven approach to simulation definitely seems the way to go. A way to unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc) into a single useful tool for robot learning, engineering, scientific discovery.
 Something that works “well enough” across the entire range of tasks we care about. A simulator that's way more useful and *usable* than any we’ve ever made.
 
 (What's the alternative, anyway, if we don't directly learn our models from data using ML? Write down and precisely compute the physics of how strawberries get pulverized in the blades of a blender? The heat transfer and chemical processes involved in cooking an egg? Do this for every imaginable physics mode?)
 
 ...
 
-A learned simulator has the potential to revolutionize robot learning.
+A "learned simulator" has the potential to revolutionize robot learning.
 
 Think of sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
@@ -49,36 +49,33 @@ Train a robot to paint your room. Visualize the sequence of actions the robot wo
 
 Learn directly from human preferences in source videos. Learn that humans don’t like spilling paint, or breaking vases, or burning their eggs. Learn how humans and animals move naturally. How they step carefully and are gentle. How humans are polite in letting people pass. 
 
-This “learned simulator” would be an incredible tool for accelerating progress across the whole field. We invest resources in creating and developing it and then it becomes a source of compounding growth. As it gets better, so do our capabilities, data, $, and time budgets.
+This learned simulator would be an incredible tool for accelerating progress across the whole field. We invest resources in creating and developing it and then it becomes a source of compounding growth. As it gets better, so do our capabilities, data, $, and time budgets.
 
 Beyond just a training tool, it could form the basis of an internal model that the robot uses online during deployment. It would understand the world in terms of its high-fidelity model. 
-Imagine how good human intuitive physical and pyschology, while under the constraint
-of the DNA bottleneck, and anything that can be learned in a single lifetime.
-Now imagine how much better you could do with brains specifically designed to 
+
+Think how good human intuitive physical and pyschology are, yet how constrained 
+our information processing is.  All of our knowledge must come from the DNA bottleneck 
+plus whatever can be learned in a single lifetime.
+
+Now think how much better you could do with brains specifically designed to 
 model these things, trained on orders of magnitude more data, that can run much
 more quickly and with greater accuracy.
 It will have seen so many more physical interactions than you ever had. 
 It will be much better than you at predicting what is going to happen.
 
-Made-up story, maybe inaccurate, but illustrates the point:
+Made-up story, maybe inaccurate, but helps illustrates the point:
 People are standing having drinks on a raised patio. 
 "Everybody get off the patio", a droid comes running from across the street,
 "It's about to collapse." There are thousands of structural failures, including
 several videos of this exact thing happening on YouTube. The droid knows the 
 tell-tale signs of pillars about to collapse.
 
-Just like someone said GPT is like having a PhD person there. This will be like having a world expert. It would know how to start a fire from nothing. It would know survival skills. It would be like having a droid. C3P0 that knows all the languages or whatever.
+Just like someone said GPT is like having a PhD person there. This will be like having a world expert. It would know how to start a fire from nothing. It would know survival skills. It would be like having a Ian Banks Culture/Star Wars droid. C3P0 that knows all the languages or whatever.
 
 I would bet on learned simulators of this nature having a huge impact on robot learning. A huge wave. I’m not sure when it crashes on shore, but it is surely forming.
 
 Powerful predictive models and their unrelenting scalability are a huge wave for AI in general.
-
-The LeCun Cake analogy is seeming pretty reasonable right about now. Unsupervised learning is going to carry us, give us a rich understanding of the world. Then we just do some cherry-on-the-top RL to achieve some goals. Gwern also touches on this is his great post on GPT3 ([link again](https://www.gwern.net/newsletter/2020/05#gpt-3)).
-
-
-Idk how far we are from YouTube GPT3.  It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
-
-Once we have YouTube GPT3, it’s prolly not as simple as taking it out-of-the-box and using it for high-fidelity simulation. But with the wide range of tools already built on top of GPT3, it seems possible to jerry rig an accurate physics simulator out of YouTube GPT3.
+A scary wave.
 
 
 
@@ -172,4 +169,29 @@ References:
 gwern thread.
 other guy thread that i faved.
 austin.
+
+
+
+
+The LeCun Cake analogy is seeming pretty reasonable right about now. Unsupervised learning is going to carry us, give us a rich understanding of the world. Then we just do some cherry-on-the-top RL to achieve some goals. Gwern also touches on this is his great post on GPT3 ([link again](https://www.gwern.net/newsletter/2020/05#gpt-3)).
+
+
+Idk how far we are from YouTube GPT3.  It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
+
+Once we have YouTube GPT3, it’s prolly not as simple as taking it out-of-the-box and using it for high-fidelity simulation. But with the wide range of tools already built on top of GPT3, it seems possible to jerry rig an accurate physics simulator out of YouTube GPT3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
