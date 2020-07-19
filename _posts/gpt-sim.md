@@ -45,12 +45,12 @@ Train models directly from human preferences in source videos. Learn that humans
 
 This would be an incredible tool for accelerating progress across the whole field. We invest resources in creating and developing it and then it becomes a source of compounding growth. As it gets better, so do our capabilities, data, $, and time budgets.
 
-Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent would understand the world in terms of its high-fidelity physics model. 
+Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent would understand and interact with the world in terms of its high-fidelity physics model. 
 
-Think how good humans are at intuitive physics and pyschology. You can predict
-what will happen if you bump your coffee cup near the edge of your table
-or how someone might respond if you bump *their* coffee near the edge of the table.
-Yet human information processing abilities are constrained by our hardware,
+Think how good humans are at intuitive physics and pyschology. We can predict
+what will happen if we bump our coffee cup near the edge of your table
+or how someone might respond if we bump *their* coffee near the edge of the table.
+Yet our information processing abilities are constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
 You could do much better with digital brains specifically optimized to 
 model these things, trained on orders of magnitude more data than you would
@@ -67,10 +67,10 @@ Would be like having an Ian Banks Culture or Star Wars droid with you. C3PO that
 "Everybody off the deck!", a droid comes running across the street,
 "Get inside!". They look over, confused, as the supports start creaking.
 The deck drops, comes to a halt a few feet lower. Enough of them react
-soon enough to get inside, with only a few being knocked to the deck floor 
+soon enough to get inside; only a few are knocked to the deck floor 
 with minor bruises and sprained wrists.* 
 
-There are thousands of videos of structural failures, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse) happening on YouTube.
+There are thousands of videos of structural failures on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse).
 Maybe the full scenario isn't realistic, but a learned model that has integrated so much 
 knowledge could likely see and predict things better than an average person.
 
@@ -92,14 +92,14 @@ And you only have to do well enough to bootstrap something like limited househol
 Then you can use those in a Tesla-like data-collection [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), runnning experiments to make the models even more accurate.
 
 To caveat, it's hard to say how far we are from YouTube-GPT. It's possible that
-shoring up the current weaknesses proves to be extremely difficult. It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
+patching up current limitations proves to be extremely difficult. It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
 And to further caveat, if we do get YouTube-GPT, it’s probably not as simple as taking it out-of-the-box and using it for high-fidelity simulation. But with the wide range of tools already built on top of GPT3, it seems possible to jerry-rig this or at least use it to help bootstrap.
 
 ...
 
 Extrapolating forward,
 I can now imagine really powerful AI systems much more clearly than before.
-GPT has learned to do things I don't think I would have expected. 
+GPT learned to do things I don't think I would have expected. 
 Quantity does really seem to have a quality all its own here.
 There are whole new capabilities that arise from training these bigger and bigger systems.
 
@@ -127,8 +127,10 @@ and operate at training-in-a-few months speed.
 And I don't see such processes as obviously being (irreparably) less powerful, to the point where
 they can't achieve the same practical abilities when tuned and scaled.
 A neural network brain could always keep getting smarter to make better predictions (that's what we're seeing).
-And training these objectives directly with backpropagation seems a bit more to the point.
-Plus we can use human ingenuity to drive these processes.
+And training these objectives directly with backpropagation seems a bit more to the point
+than evolution.
+Plus we can use human ingenuity to drive these processes and we can
+use curated and well-structured human-generated data to bootstrap from.
 
 Deep learning is clearly very capable of solving challenging tasks.
 With much more optimization pressure and a few more tricks, how is it not going to produce super intelligent machines?
