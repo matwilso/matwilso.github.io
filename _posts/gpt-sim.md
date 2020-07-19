@@ -57,21 +57,25 @@ in a substrate with more memory and many decimal places of floating point accura
 They will be so freaking accurate.
 
 Made-up story, probably inaccurate, but somewhat illustrative:
-People are standing having drinks on a raised patio. 
-"Everybody off the patio!", a droid comes running from across the street,
-"Get inside!", they look over confused, a moment the supports start creaking.
-Most get inside, while a few drop down a few feet before the patio comes to a halt.
 
-On YouTube, there are thousands of videos of structural failures, including
-several videos of this exact thing happening on YouTube, which much worse
-results.  The droid had integrated this knowledge of the tell-tale signs of pillars about to collapse.
+*People are standing having drinks on a raised patio.
+"Everybody off the patio!", a droid comes running from across the street,
+"Get inside!", they look over confused, as the supports start creaking.
+The patio comes to a halt a few feet lower, most got inside but a few drop
+down and get knocked off their feet.*
+
+*On YouTube, there are thousands of videos of structural failures, including
+several videos of this exact thing happening, which much worse
+results.  The droid had integrated this knowledge of the tell-tale signs of pillars about to collapse.*
 
 Just like someone said GPT is like having a PhD person there. This will be like having a world expert. It would know survival skills. How to do workout exercises, yoga. How to play guitar cords. It would be like having a Ian Banks Culture/Star Wars droid. C3PO that knows all the languages or whatever.
 
-To caveat, idk how far we are from YouTube GPT3.  It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
-And once we have YouTube GPT3, it’s prolly not as simple as taking it out-of-the-box and using it for high-fidelity simulation. But with the wide range of tools already built on top of GPT3, it seems possible to jerry rig an accurate physics simulator out of YouTube GPT3.
+To caveat, hard to say how far we are from YouTube GPT3.  It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
+And to further caveat, if we do get YouTube GPT3, it’s prolly not as simple as taking it out-of-the-box and using it for high-fidelity simulation. But with the wide range of tools already built on top of GPT3, it seems possible to jerry rig this or at least help use it to bootstrap
+better robots.
 
-But I can now imagine really powerful AI systems much more clearly than I could before.
+
+But one big takeaway I have is that I can now imagine really powerful AI systems much more clearly than I could before.
 GPT3 has not stopped scaling.
 The whole quantity has a quality all its own.
 This really seems true.
