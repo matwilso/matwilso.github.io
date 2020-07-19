@@ -11,18 +11,18 @@ toc_sticky: true
 >Imagine video-based GPT3 trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc.) <br><br>
 What would this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
-We could generate RL environments with physical accuracy and variety light-years beyond what is possible with current simulators.
+We could generate RL environments with a variety and physical accuracy light-years beyond what is possible with current simulators.
 
-Simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket, dragging across the wall, and leaving a red streak of paint behind it.
-Sunlight passing through a magnifying glass to catch a pile of dry leaves on fire, a rising trail of smoke, a marshmallow cooking over the flame.
+Simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket, and leaving a red streak of paint on the wall behind it.
+Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire; a rising trail of smoke, a marshmallow cooking over the flame.
 A human politely stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps into them.
 
-Any number of other “soft” or hard-to-model interactions, which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
+Plus any number of other “soft” or hard-to-model interactions, which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
 
-Based on GPT and its capabilities, it seems possible and *quite likely* that we can create a “good-enough” general-purpose reality simulator using a stupid future prediction training approach. Maybe not super soon, but definitely sometime on our horizon.
+Based on GPT and its capabilities, it seems possible and *quite likely* that we can create a good-enough general-purpose reality simulator using a stupid future prediction training approach. Maybe not super soon, but definitely sometime on our horizon.
 
 A data-driven approach to simulation definitely seems the way to go. Unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc) into a single useful tool for robot learning, engineering, scientific discovery.
-Something that works well enough across the entire range of tasks we care about. A simulator that's way more useful and *usable* than what we have now.
+Something that works well enough across the entire range of tasks we care about.
 
 Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
@@ -30,7 +30,7 @@ All in a package that is natural to interface with.
 
 We could “prompt” a GPT learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model automatically generates a virtual scene of our painting task that we can freely modify. “What about blue paint instead?”
 
-No XML files, no painstaking calibration or modeling the articulated physics of e.g., a Rubik’s Cube. (With all the YouTube cubing videos, we're especially well covered here lol.)
+No XML files, no painstaking calibration or modeling the articulated physics of e.g., a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol.)
 
 Just film a video of our scene and the model would catch on, like GPT3 catches on when given prompts. (See [@xuenay's thread](https://twitter.com/xuenay/status/1283312640199196673), [@gwern's twitter thread](https://twitter.com/gwern/status/1267215588214136833) or [longer newsletter post on GPT3](https://www.gwern.net/newsletter/2020/05#gpt-3), or the [OpenAI API blog post](https://openai.com/blog/openai-api/).)
 
@@ -44,42 +44,61 @@ Train models directly from human preferences in source videos. Learn that humans
 
 This would be an incredible tool for accelerating progress across the whole field. We invest resources in creating and developing it and then it becomes a source of compounding growth. As it gets better, so do our capabilities, data, $, and time budgets.
 
-Beyond just a training tool, it could form the basis of an internal model that the robot uses online during deployment. The agent would understand the world in terms of high-fidelity physics model. 
+Beyond just a training tool, it could form the basis of an internal model that the robot uses online during deployment. The agent would understand the world in terms of its high-fidelity physics model. 
 
 Think how good human are at intuitive physics and pyschology. You can predict
 what will happen if you bump your coffee cup near the edge of your table
 or how someone else might respond if you bump their coffee near the edge of the table.
-Yet human information processing abilities are so constrained.
-We are limited by what the DNA bottleneck and whatever we can learn in a single lifetime.
-Our digital models suffer from no such constraints.
-They can be trained on orders of magnitude more data than you would ever hope to see,
-in a substrate with more memory and many decimal places of floating point accuracy.
-They will be so freaking accurate.
+Yet human information processing abilities are constrained by hardware,
+the DNA bottleneck, and whatever we can learn in a single lifetime.
+Our digital models suffer no such constraints.
+They have more memory, they can be trained on orders of magnitude more data than you would ever 
+encounter in a lifetime. They will be so freaking accurate.
 
-Made-up story, probably inaccurate, but somewhat illustrative:
+*People are standing having drinks on a small raised outdoor deck.
+"Everybody off the deck!", a droid comes running from across the street,
+"Get inside!". They look over confused, as the supports start creaking.
+The deck drops, comes to a halt a few feet lower. Most get inside in time,
+a few are knocked down with minor bruises and one sprained wrist.* 
 
-*People are standing having drinks on a raised patio.
-"Everybody off the patio!", a droid comes running from across the street,
-"Get inside!", they look over confused, as the supports start creaking.
-The patio comes to a halt a few feet lower, most got inside but a few drop
-down and get knocked off their feet.*
+There are thousands of videos of structural failures, including several videos of this [exact thing](https://www.youtube.com/results?search_query=patio+collapse) happening on YouTube.
+Maybe the full scenario isn't realistic, but a model that has integrated so much 
+knowledge like this could likely see and predict things before an
+average person.
 
-*On YouTube, there are thousands of videos of structural failures, including
-several videos of this exact thing happening, which much worse
-results.  The droid had integrated this knowledge of the tell-tale signs of pillars about to collapse.*
+Someone on Twitter (I forgot who) said GPT is like having thousands of world expert to talk to. This would be like thousands of world experts there in the room with you. 
+It would know survival skills, how to do workout exercises, yoga, play guitar cords. 
+And it would be able to explain the
+mechanics of these things to you (e.g., [staring fire with magnifying glass](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
+It would be like having a Ian Banks Culture/Star Wars droid. C3PO that knows all the languages or whatever.
 
-Just like someone said GPT is like having a PhD person there. This will be like having a world expert. It would know survival skills. How to do workout exercises, yoga. How to play guitar cords. It would be like having a Ian Banks Culture/Star Wars droid. C3PO that knows all the languages or whatever.
-
-To caveat, hard to say how far we are from YouTube GPT3.  It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
+To caveat, it's hard to say how far we are from YouTube GPT3.  It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
 And to further caveat, if we do get YouTube GPT3, it’s prolly not as simple as taking it out-of-the-box and using it for high-fidelity simulation. But with the wide range of tools already built on top of GPT3, it seems possible to jerry rig this or at least help use it to bootstrap
-better robots.
+better robots to collect more data.
 
+...
 
-But one big takeaway I have is that I can now imagine really powerful AI systems much more clearly than I could before.
+One big takeaway I have is that I can now imagine really powerful AI systems much more clearly than I could before.
 GPT3 has not stopped scaling.
 The whole quantity has a quality all its own.
 This really seems true.
 There are whole new capabilities that arise from training these bigger and bigger systems.
+
+Learning grammar and syntax to predict the next word.
+Then learning sentiment because you learned all the grammar already.
+Then blah.
+Then chess.
+
+And where does it stop?
+It hasn't yet.
+Where will it?
+When it can predict human intentions?
+Model human psychology?
+Discover that it is in a training process?
+Discover that it can do better at its objective by influencing its data sources?
+By influencing humans?
+By hacking into the system?
+
 
 We need to start thinking much more about safety.
 And much more about how we want the future to go.
