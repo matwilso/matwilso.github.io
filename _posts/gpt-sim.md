@@ -79,7 +79,7 @@ average person.
 
 Why do we expect something stupidly simple like future prediction to work so well? To get us to super accurate physics simulators?
 
-Mainly, the empirical evidence we are seeing from text-based models trained on this exact same dumb idea. The results of GPT3 are amazing---[still limited lol](https://twitter.com/sama/status/1284922296348454913), but amazing.
+Mainly, the empirical evidence we are seeing from text-based models trained on this exact same dumb idea. The results of GPT3 are amazing---[still](https://twitter.com/michael_nielsen/status/1284937254666768384) [limited lol](https://twitter.com/sama/status/1284922296348454913), but amazing.
 GPT3 just tries to predict the next word as accurately as possible.
 When given a bigger brain, it keeps on filling that brain with more and more knowledge.
 It learns syntax and grammar so it can predict the next word.
@@ -96,8 +96,7 @@ And to further caveat, if we do get YouTube-GPT, it’s probably not as simple a
 
 Extrapolating forward,
 I can now imagine really powerful AI systems much more clearly than before.
-GPT has not stopped scaling.
-It has learned to do things I don't think I would have expected. 
+GPT has learned to do things I don't think I would have expected. 
 Quantity does really seem to have a quality all its own here.
 There are whole new capabilities that arise from training these bigger and bigger systems.
 
@@ -121,7 +120,7 @@ As our brains grew, we could start to absorb more things into them,
 e.g. language.
 
 These current AI training processes optimize through the predict-what-is-going-to-happen incentive,
-and operates at trainin-in-a-few months speed.
+and operates at training-in-a-few months speed.
 I don't see such processes as obviously being (irreparably) less powerful, to the point where
 they can't achieve the same practical abilities when tuned and scaled.
 A neural network brain could always keep getting smarter to make better predictions (that's what we're seeing).
