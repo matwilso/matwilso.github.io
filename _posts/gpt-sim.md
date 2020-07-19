@@ -11,7 +11,9 @@ toc_sticky: true
 >Imagine video-based GPT4/5 trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc.) <br><br>
 What would this enable? In robotics? In general, for bringing advances of information technology to the world of atoms?
 
-We could generate RL environments with a variety and physical accuracy light-years beyond what is possible with current simulators.
+Based on recent language models like GPT3 and their capabilities, it seems possible and *quite likely* that we can create a good-enough general-purpose reality simulator using a relatively stupid future prediction training approach. Maybe not soon, but definitely sometime on our horizon.
+
+With a "learned simulator" like this, we could generate RL environments with a variety and physical accuracy light-years beyond what is possible with current simulators.
 
 Simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket, and leaving a red streak of paint on the wall behind it.
 Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire; a rising trail of smoke, a marshmallow cooking over the flame.
@@ -19,7 +21,6 @@ A human stepping to the side when someone else is walking towards them, or getti
 
 Any number of other “soft” or hard-to-model interactions, which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
 
-Based on GPT and its capabilities, it seems possible and *quite likely* that we can create a good-enough general-purpose reality simulator using a relatively stupid future prediction training approach. Maybe not super soon, but definitely sometime on our horizon.
 
 This data-driven approach to simulation definitely seems the way to go. Unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc) into a single useful tool for robot learning, engineering, scientific discovery.
 Something that works well enough across the entire range of tasks we care about.
@@ -28,7 +29,7 @@ Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
 
-We could “prompt” a GPT learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model automatically generates a virtual scene of our painting task that we can freely modify. “What about blue paint instead?”
+We could “prompt” a learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model automatically generates a virtual scene of our painting task that we can freely modify. “What about blue paint instead?”
 
 No XML files, no painstaking calibration or modeling the articulated physics of e.g., a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol)
 
@@ -44,7 +45,7 @@ Train models directly from human preferences in source videos. Learn that humans
 
 This would be an incredible tool for accelerating progress across the whole field. We invest resources in creating and developing it and then it becomes a source of compounding growth. As it gets better, so do our capabilities, data, $, and time budgets.
 
-Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. It would understand the world in terms of its high-fidelity physics model. 
+Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent would understand the world in terms of its high-fidelity physics model. 
 
 Think how good humans are at intuitive physics and pyschology. You can predict
 what will happen if you bump your coffee cup near the edge of your table
@@ -56,11 +57,11 @@ model these things, trained on orders of magnitude more data than you would
 ever encounter in a lifetime, with more memory, higher accuracy representations.
 
 If text-based-GPT is like having thousands of world experts to talk to,
-robot-embodied YouTube-GPT is like thousands of world experts there in the room with you. 
+robot-embodied YouTube-GPT is like thousands of world experts in the room with you. 
 It knows survival skills, workout routines, yoga, guitar cords. 
 It can demonstrate and explain the
 mechanics of these things to you (e.g., [starting a fire with a magnifying glass](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
-Like having an Ian Banks Culture or Star Wars droid with you. C3PO that knows all the languages or whatever.
+Would be like having an Ian Banks Culture or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
 *People are standing having drinks on a small raised outdoor deck.
 "Everybody off the deck!", a droid comes running across the street,
@@ -90,7 +91,8 @@ With enough data, and especially with inductive biases sprinkled in, a super hig
 And you only have to do well enough to bootstrap something like limited household robots (dish washing + laundry).
 Then you can use those in a Tesla-like data-collection [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), runnning experiments to make the models even more accurate.
 
-To caveat, it's hard to say how far we are from YouTube-GPT.  It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
+To caveat, it's hard to say how far we are from YouTube-GPT. It's possible that
+shoring up the current weaknesses proves to be extremely difficult. It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
 And to further caveat, if we do get YouTube-GPT, it’s probably not as simple as taking it out-of-the-box and using it for high-fidelity simulation. But with the wide range of tools already built on top of GPT3, it seems possible to jerry-rig this or at least use it to help bootstrap.
 
 ...
@@ -118,15 +120,15 @@ you do that in a certain niche of the ecosystem.
 Humans were just trying to survive and reproduce.
 There was pressure for smarter brains.
 As our brains grew, we could start to absorb more things into them,
-e.g. language.
+like language (for instance).
 
 These specific AI training processes optimize through predict-what-is-going-to-happen incentive,
 and operate at training-in-a-few months speed.
-I don't see such processes as obviously being (irreparably) less powerful, to the point where
+And I don't see such processes as obviously being (irreparably) less powerful, to the point where
 they can't achieve the same practical abilities when tuned and scaled.
 A neural network brain could always keep getting smarter to make better predictions (that's what we're seeing).
 And training these objectives directly with backpropagation seems a bit more to the point.
-Plus we can use human ingenuity to drive and improve these processes.
+Plus we can use human ingenuity to drive these processes.
 
 Deep learning is clearly very capable of solving challenging tasks.
 With much more optimization pressure and a few more tricks, how is it not going to produce super intelligent machines?
@@ -134,9 +136,9 @@ With much more optimization pressure and a few more tricks, how is it not going 
 It makes me think we need to start thinking much more about safety / alignment, and
 about the future we want.  Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/#:~:text=There's%20no%20possible%20sign%20short,5%2C%20or%202%20years%20away.&text=So%20there%20isn't%20going,Period.).
 Start working more on issues of bias and bad sources of data, to protect against our YouTube-GPT becoming an anti-Vax Flat-Earther. Start learning how to optimize for human preferences
-rather than cold fixed objectives. Personally, probably start at least becoming more familiar with the ML biases and AI safety literatures as a first step.
+rather than cold fixed objectives. Personally, probably start at least becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
 
-Super exciting times. But we have our work cut out for us.
+Super exciting times. But we certainly have our work cut out for us.
 Super important choices to make and things to get right.
 
 ...
