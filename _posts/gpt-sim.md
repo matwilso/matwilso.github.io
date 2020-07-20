@@ -14,16 +14,16 @@ What does this enable? In robotics? In general, for bringing advances in informa
 
 Based on the capabilities of recent language models like GPT3, it seems pretty likely that we can create a "good-enough" general-purpose reality simulator using relatively dumb future video prediction training. Maybe not super soon, but definitely sometime on our horizon.
 
-With a powerful "learned simulator" like this, we could generate RL environments with 
+With a powerful enough "learned simulator" like this, we could generate RL environments with 
 physical accuracy and generality light-years beyond what is possible with current simulators.
 
 Simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket, and leaving a red streak of paint on the wall behind it.
 Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire---a rising trail of smoke, a marshmallow cooking over the flame.
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps into them.
 
-Any number of other “soft” or hard-to-model interactions, which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
+Or any number of other hard-to-model interactions, which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
 
-Data-driven simulation definitely seems the way to go, as opposed to hand-designing. We can unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
+Data-driven simulation definitely seems the way to go, as opposed to hand-designed. We can unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 Something that works well enough across the entire range of tasks we care about.
 
 Imagine sim2real learning with the smallest possible reality gap.
@@ -73,7 +73,7 @@ are able to jump inside---only a few are knocked of their feet
 with minor bruises and a sprained wrist.* 
 
 Haha maybe not a super realistic scenario, but there are in fact thousands of videos of structural failures like this on YouTube to learn from, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse) (not turning out quite as well).
-A model that has integrated so much knowledge could notice and predict many things like this better than an average person.
+An agent that has integrated so much knowledge could notice and predict many things like this better than an average person.
 
 ...
 
@@ -89,12 +89,12 @@ Then [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron
 YouTube-GPT would be able to learn super accurate physics because this
 is what would help it better predict the next video frame.
 With enough data, and especially with inductive biases sprinkled in, a super high-fidelity simulation seems possible.
-And you only have to do well enough to bootstrap to something on the order of narrow household robots (dish washing + laundry).
+And you really only have to do well enough to bootstrap to something on the order of narrow household robots (dish washing + laundry).
 Then you can use those robots in a Tesla-like [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), collecting more data to make the models even more accurate.
 
 To caveat, it's hard to say how far we are from YouTube-GPT. It's possible that
 patching up current limitations proves extremely difficult. It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
-And to further caveat, it won't be as simple as taking out-of-the-box vanilla YouTube-GPT and using it for high-fidelity simulation. 
+Also, to further caveat, it won't be as simple as taking out-of-the-box vanilla YouTube-GPT and using it for high-fidelity simulation. 
 I'm guessing you need to put in a lot of physics sim specific effort to make it workable.
 
 ...
@@ -103,6 +103,8 @@ Extrapolating forward from GPT3, I can much more clearly imagine super powerful 
 
 It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
 And though it is still primitive in many ways, I don't think I would have expected GPT to be able to do some of the things that it can.
+(And maybe ditto for AlphaGo, the DOTA/SCII work, though I never really made 
+any concrete advance predictions for any of these.)
 Quantity really does seem to have a quality all its own here.
 Whole new capabilities arise from training bigger and bigger systems.
 
