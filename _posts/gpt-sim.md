@@ -47,7 +47,7 @@ This would be an incredible tool for accelerating progress across the whole fiel
 
 Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent would understand and interact with the world in terms of its high-fidelity physics model. 
 
-Think how strong humans intuitive physics and pyschology models are. We can predict
+Think about how strong humans intuitive physics and pyschology models are. We can predict
 what will happen if we bump our coffee cup near the edge of your table
 or how someone might respond if we bump *their* coffee near the edge of the table.
 Yet our information processing abilities are constrained by our hardware,
@@ -70,9 +70,9 @@ The deck drops, comes to a halt a few feet lower. Most of them react
 soon enough to get inside; only a few are knocked to the deck floor 
 with minor bruises and sprained wrists.* 
 
-There are thousands of videos of structural failures like this on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse).
 Maybe the full scenario isn't realistic, but a learned model that has integrated so much 
 knowledge could likely see and predict things like this better than an average person.
+For instance, there are thousands of videos of structural failures like this on YouTube to learn from, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse).
 
 
 ...
@@ -100,7 +100,7 @@ And to further caveat, if we do get YouTube-GPT, it’s probably not as simple a
 
 Extrapolating forward, I can much more clearly imagine super powerful AI systems, compared to say, a year ago.
 
-And it now seems clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
+It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
 Though it is still primitive in many ways, I don't think I would have expected GPT to be able to do some of the things that it can.
 Quantity does really seem to have a quality all its own here.
 Whole new capabilities arise from training bigger and bigger systems.
@@ -108,25 +108,25 @@ Whole new capabilities arise from training bigger and bigger systems.
 In terms of optimization processes, if evolution of humans worked, deep learning of 
 neural networks should definitely work. 
 Evolution puts a certain type of optimization pressure on organisms to survive and reproduce. 
-These training processes are putting what seems to be an equally powerful 
+These AI training processes are putting what seems to be an equally powerful 
 optimization pressure on the neural networks to accurately predict the future (next word).
-
 Evolution turned out in the specific case of homo sapiens to squeeze human-level intelligence
 out of this by chance, over billions of years.
 I don't see any obvious irreparable reason that these AI training processes can't
-do the same thing using a different objective.
+do something equally impressive using a different objective.
 In fact, it seems more straight-to-the-point in the AI training case;
-predicting the future is probably puts a more direct pressure on intelligence capabilities.
+predicting the future probably puts a more direct pressure on intelligence capabilities.
 Plus AI training benefits by bootstrapping from human artefacts and ingenuity.
 
-And as we keep improving these systems, where do the capabilities stop?
+As we keep improving these systems, where do the capabilities stop?
 Before the model starts probing deeper into human motivations?
 Discovering that it is experiencing a training process?
 Discovering that it can do better at its objective by influencing its data sources?
-It now also seeems pretty clear to me that we should actually be worried about these questions.
+
+It now also seeems pretty clear that we should actually be worried about these questions.
 Starting now (the second best time to plant a tree).
 
-It makes me think we need to start thinking much more about safety / alignment, and
+It makes me think we need to buckle down more on safety / alignment, and thinking hard
 about the future we want.  Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/#:~:text=There's%20no%20possible%20sign%20short,5%2C%20or%202%20years%20away.&text=So%20there%20isn't%20going,Period.).
 Start working more on issues of bias and bad sources of data, to protect against our YouTube-GPT becoming an anti-Vax Flat-Earther. Start learning how to optimize for human preferences
 rather than cold fixed objectives. Personally, probably start at least becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
