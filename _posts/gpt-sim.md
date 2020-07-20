@@ -8,12 +8,13 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT4/5 trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc.) <br><br>
-What does this enable? In robotics? In general, for bringing advances of information technology to the world of atoms?
+>Imagine video-based GPT4/5 trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc), or in other words, a high-fidelity general-purpose reality simulator.
+<br><br>
+What does this enable? In robotics? In general, to bring advances in information technology to the world of atoms?
 
 Based on the capabilities of recent language models like GPT3, it seems possible and *quite likely* that we can create a "good-enough" general-purpose reality simulator using a relatively stupid future-prediction training approach. Maybe not super soon, but definitely sometime on our horizon.
 
-With a "learned simulator" like this, we could generate RL environments with physical 
+With a powerful "learned simulator" like this, we could generate RL environments with physical 
 accuracy and generality light-years beyond what is possible with current simulators.
 
 Simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket, and leaving a red streak of paint on the wall behind it.
@@ -30,7 +31,7 @@ Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
 
-We could “prompt” a learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket; the model automatically generates a virtual scene of our painting scenario that we can freely modify. “What about blue paint instead?”
+We could “prompt” a learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket; the model automatically generates a virtual scene of our scenario that we can freely modify. “What about blue paint instead?”
 
 No XML files, no painstaking calibration or modeling the articulated physics of e.g., a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol)
 
@@ -38,7 +39,7 @@ Just film a video of our scene and the model would catch on, like GPT3 catches o
 
 It’s all differentiable and can be placed directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
 
-Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in AlphaGo/Zero/Mu. (I know stuff like this exists, but there hasn't yet been quite the same slam dunk win as MCTS planning in the discrete case.)
+Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in AlphaGo/Zero/Mu. (I know stuff like this exists, but there hasn't yet been quite the same slam dunk win as MCTS planning is, in the discrete case.)
 
 Train a robot to paint your room. Visualize the sequence of actions the robot would take. Make modifications. “Be careful not to spill on the rug, and don’t paint the baseboards.” Visualize the adjusted behavior to ensure it achieves exactly what you had in mind.
 
@@ -59,10 +60,10 @@ ever encounter in a lifetime, with more memory, higher accuracy representations.
 
 If text-based-GPT is like having thousands of world experts to talk to,
 robot-embodied YouTube-GPT is like having thousands of world experts in the room with you. 
-It would know survival skills, workout routines, yoga, guitar cords. 
-It could demonstrate and explain the
+It knows survival skills, workout routines, yoga, guitar cords. 
+It can demonstrate and explain the
 mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
-Would be like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
+Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
 *Cut to, a scene with a large group of people standing, having drinks on a small outdoor deck.*
 
@@ -112,15 +113,17 @@ These AI training processes are putting what seems to be an equally capable
 optimization pressure on the neural networks to accurately predict the future (next word).
 Evolution turned out in the specific case of homo sapiens to squeeze human-level intelligence
 out of this by chance, over billions of years.
-I see no obvious, irreparable reason that these AI training processes can't
+I see no obvious reason that these specific types of AI training processes can't
 do something equally impressive using a different objective and pressure, given enough effort and development + training time (much less than billions of years).
 And it seems more straight-to-the-point in the AI training case;
 predicting the future probably puts a more direct pressure on intelligence capabilities.
 Plus, AI training benefits by bootstrapping from human artefacts and ingenuity.
 
 These types of arguments have been floating around for awhile.
-But I think we are starting to see *exactly* how these things could work.
-A much more concrete picture than before.
+But I think we are starting to see a much more concrete picture than before,
+of how *exactly* powerful AI might be built.
+
+...
 
 So, as we keep improving these systems, where do the capabilities stop?
 Before the model starts probing deeper into human motivations?
