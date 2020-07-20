@@ -63,17 +63,17 @@ It could demonstrate and explain the
 mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
 Would be like having an Ian Banks Culture or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
-*People are standing having drinks on a small raised outdoor deck.
-"Everybody off the deck!", a droid comes running across the street,
-"Get inside!". They look over, confused, as the supports start creaking.
-The deck drops, comes to a halt a few feet lower. Most of them react
-soon enough to get inside; only a few are knocked to the deck floor 
+*Cut to, a large group of people standing having drinks on a small outdoor deck.*
+
+*"Get inside!", a droid comes running across the street,
+"Get off the deck!". They look over, confused, as the supports start creaking.
+The deck drops down, comes to a halt a few feet lower. Most of them react
+soon enough to step inside; only a few are knocked to the deck floor 
 with minor bruises and sprained wrists.* 
 
-Maybe the full scenario isn't realistic, but a learned model that has integrated so much 
-knowledge could likely see and predict things like this better than an average person.
-For instance, there are thousands of videos of structural failures like this on YouTube to learn from, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse).
-
+Haha maybe not the most realistic scenario, but there are thousands of videos of structural failures like this on YouTube to learn from, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse).
+A model that has integrated so much knowledge could likely notice and 
+predict many things better than an average person.
 
 ...
 
@@ -94,11 +94,11 @@ Then you can use those in a Tesla-like data-collection [fleet](https://www.youtu
 
 To caveat, it's hard to say how far we are from YouTube-GPT. It's possible that
 patching up current limitations proves to be extremely difficult. It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
-And to further caveat, if we do get YouTube-GPT, it’s probably not as simple as taking it out-of-the-box and using it for high-fidelity simulation. But with the wide range of tools already built on top of GPT3, it seems possible to jerry-rig this or at least use it to help bootstrap.
+And to further caveat, if we do get YouTube-GPT, it’s probably not as simple as taking it out-of-the-box and using it for high-fidelity simulation. But with the wide range of tools already built on top of GPT3, it seems possible to jerry-rig this.
 
 ...
 
-Extrapolating forward, I can much more clearly imagine super powerful AI systems, compared to say, a year ago.
+Extrapolating forward, I can much more clearly imagine super powerful AI systems, compared to say, even a few months ago.
 
 It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
 Though it is still primitive in many ways, I don't think I would have expected GPT to be able to do some of the things that it can.
@@ -108,13 +108,13 @@ Whole new capabilities arise from training bigger and bigger systems.
 In terms of optimization processes, if evolution of humans worked, deep learning of 
 neural networks should definitely work. 
 Evolution puts a certain type of optimization pressure on organisms to survive and reproduce. 
-These AI training processes are putting what seems to be an equally powerful 
+These AI training processes are putting what seems to be an equally capable
 optimization pressure on the neural networks to accurately predict the future (next word).
 Evolution turned out in the specific case of homo sapiens to squeeze human-level intelligence
 out of this by chance, over billions of years.
-I don't see any obvious irreparable reason that these AI training processes can't
-do something equally impressive using a different objective.
-In fact, it seems more straight-to-the-point in the AI training case;
+I see no obvious, irreparable reason that these AI training processes can't
+do something equally impressive using a different objective and pressure, given enough effort and time (much less than billions of years).
+And it seems more straight-to-the-point in the AI training case;
 predicting the future probably puts a more direct pressure on intelligence capabilities.
 Plus AI training benefits by bootstrapping from human artefacts and ingenuity.
 
@@ -128,8 +128,8 @@ Starting now (the second best time to plant a tree).
 
 It makes me think we need to buckle down more on safety / alignment, and thinking hard
 about the future we want.  Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/#:~:text=There's%20no%20possible%20sign%20short,5%2C%20or%202%20years%20away.&text=So%20there%20isn't%20going,Period.).
-Start working more on issues of bias and bad sources of data, to protect against our YouTube-GPT becoming an anti-Vax Flat-Earther. Start learning how to optimize for human preferences
-rather than cold fixed objectives. Personally, probably start at least becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
+Dealing with issues of bias and bad sources of data, to protect against our YouTube-GPT model becoming an anti-Vax Flat-Earther. Start learning how to optimize for human preferences
+rather than fixed objectives. Personally, probably start at least becoming more familiar with the biases, human-computer symbiosis, and AI safety literatures as a first step.
 
 Super exciting times. But we certainly have our work cut out for us.
 Super important choices to make and things to get right.
