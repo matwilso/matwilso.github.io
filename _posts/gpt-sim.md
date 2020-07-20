@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GPT Physics Sim"
-date: 2020-07-19
+date: 2020-07-20
 permalink: /gpt-sim/
 tags: robotics 
 toc: true
@@ -10,28 +10,27 @@ toc_sticky: true
 
 >Imagine video-based GPT4/5 trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc), or in other words, a high-fidelity general-purpose reality simulator.
 <br><br>
-What does this enable? In robotics? In general, to bring advances in information technology to the world of atoms?
+What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
-Based on the capabilities of recent language models like GPT3, it seems possible and *quite likely* that we can create a "good-enough" general-purpose reality simulator using a relatively stupid future-prediction training approach. Maybe not super soon, but definitely sometime on our horizon.
+Based on the capabilities of recent language models like GPT3, it seems possible and *quite likely* that we can create a "good-enough" general-purpose reality simulator using relatively dumb future-prediction training. Maybe not super soon, but definitely sometime on our horizon.
 
-With a powerful "learned simulator" like this, we could generate RL environments with physical 
-accuracy and generality light-years beyond what is possible with current simulators.
+With a powerful "learned simulator" like this, we could generate RL environments with 
+physical accuracy and generality light-years beyond what is possible with current simulators.
 
 Simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket, and leaving a red streak of paint on the wall behind it.
-Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire; a rising trail of smoke, a marshmallow cooking over the flame.
+Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire---a rising trail of smoke, a marshmallow cooking over the flame.
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps into them.
 
 Any number of other “soft” or hard-to-model interactions, which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
 
-
-The data-driven approach to simulation definitely seems the way to go. Unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
+Data-driven simulation definitely seems the way to go. Unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 Something that works well enough across the entire range of tasks we care about.
 
 Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
 
-We could “prompt” a learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket; the model automatically generates a virtual scene of our scenario that we can freely modify. “What about blue paint instead?”
+We could “prompt” a learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket---the model automatically generates a virtual scene of our scenario that we can freely modify. “What about blue paint instead?”
 
 No XML files, no painstaking calibration or modeling the articulated physics of e.g., a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol)
 
@@ -39,7 +38,7 @@ Just film a video of our scene and the model would catch on, like GPT3 catches o
 
 It’s all differentiable and can be placed directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
 
-Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in AlphaGo/Zero/Mu. (I know stuff like this exists, but there hasn't yet been quite the same slam dunk win as MCTS planning is, in the discrete case.)
+Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in AlphaGo/Zero/Mu. (I know stuff like this exists, but there hasn't yet been quite the same slam dunk win as MCTS planning is in the discrete case.)
 
 Train a robot to paint your room. Visualize the sequence of actions the robot would take. Make modifications. “Be careful not to spill on the rug, and don’t paint the baseboards.” Visualize the adjusted behavior to ensure it achieves exactly what you had in mind.
 
@@ -49,9 +48,9 @@ This would be an incredible tool for accelerating progress across the whole fiel
 
 Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent would understand and interact with the world in terms of its high-fidelity physics model. 
 
-Think about how strong human intuitive physics and pyschology models are. We can predict
-what will happen if we bump our coffee cup near the edge of your table
-or how someone might respond if we bump *their* coffee near the edge of the table.
+Think about how strong human intuitive physics and pyschology models are. We can 
+accurately predict what will happen if we bump our coffee cup near the edge of our table
+or how someone might respond if we bump *their coffee* near the edge of *their table*.
 Yet our information processing abilities are constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
 You could do much better with digital brains specifically optimized to 
@@ -63,18 +62,18 @@ robot-embodied YouTube-GPT is like having thousands of world experts in the room
 It knows survival skills, workout routines, yoga, guitar cords. 
 It can demonstrate and explain the
 mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
-Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
+It's like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
-*Cut to, a scene with a large group of people standing, having drinks on a small outdoor deck.*
+*Cut to a scene with a large group of people standing together, having drinks on a small outdoor deck.*
 
 *"Get inside!", a droid comes running across the street,
-"Get off the deck!". The partygoers look over, confused, as the supports start creaking.
-The deck drops down, comes to a halt a few feet lower. Most of them react
-quickly enough to step inside; only a few are knocked to the deck floor 
-with minor bruises and sprained wrists.* 
+"Get off the deck!". They look over, confused, as the supports start creaking.
+The deck suddenly drops out from under them, comes to a halt a few feet below. Most of them 
+are able to jump inside---only a few are knocked of their feet
+with minor bruises and a sprained wrist.* 
 
-Haha maybe not a super realistic scenario, but there are, in fact, thousands of videos of structural failures like this on YouTube to learn from, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse).
-A model that has integrated so much knowledge could notice and predict many things better than an average person.
+Haha maybe not a super realistic scenario, but there are in fact thousands of videos of structural failures like this on YouTube to learn from, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse) (not turning out quite as well).
+A model that has integrated so much knowledge could notice and predict many things like this better than an average person.
 
 ...
 
@@ -85,13 +84,13 @@ GPT3 just tries to predict the next word as accurately as possible.
 When given a bigger brain, it keeps on filling that brain with more and more knowledge.
 It learns basic syntax and grammar so it can predict the next word.
 Then it learns basic text patterns (paragraphs, dialogue), so it can predict the next word.
-Then [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/), [amateur chess moves](https://twitter.com/TomChivers/status/1214488063310741504), [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [...](https://twitter.com/xuenay/status/1283312640199196673)
+Then [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/), [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [...](https://twitter.com/xuenay/status/1283312640199196673)
 
-YouTube-GPT would be able to learn complex and super accurate physics because this
+YouTube-GPT would be able to learn super accurate physics because this
 is what would help it better predict the next video frame.
 With enough data, and especially with inductive biases sprinkled in, a super high-fidelity simulation seems possible.
-And you only have to do well enough to bootstrap something on the order of narrow household robots (dish washing + laundry).
-Then you can use those in a Tesla-like [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), collecting data to make the models even more accurate.
+And you only have to do well enough to bootstrap to something on the order of narrow household robots (dish washing + laundry).
+Then you can use those robots in a Tesla-like [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), collecting more data to make the models even more accurate.
 
 To caveat, it's hard to say how far we are from YouTube-GPT. It's possible that
 patching up current limitations proves extremely difficult. It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
@@ -102,50 +101,49 @@ And to further caveat, it’s probably not as simple as taking out-of-the-box Yo
 Extrapolating forward from GPT3, I can much more clearly imagine super powerful AI systems, compared to say, even a few months ago.
 
 It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
-Though it is still primitive in many ways, I don't think I would have expected GPT to be able to do some of the things that it can.
+And though it is still primitive in many ways, I don't think I would have expected GPT to be able to do some of the things that it can.
 Quantity really does seem to have a quality all its own here.
 Whole new capabilities arise from training bigger and bigger systems.
 
-In terms of optimization processes, if evolution of humans worked, deep learning of 
+In terms of optimization processes, if evolution of human brains worked, deep learning of 
 neural networks should definitely work. 
 Evolution puts a certain type of optimization pressure on organisms to survive and reproduce. 
-These AI training processes are putting what seems to be an equally capable
+These AI training processes are putting what seems to be an equivalently powerful
 optimization pressure on the neural networks to accurately predict the future (next word).
-Evolution turned out in the specific case of homo sapiens to squeeze human-level intelligence
+Evolution turned out, in the specific case of homo sapiens, to squeeze human-level intelligence
 out of this by chance, over billions of years.
 I see no obvious reason that these specific types of AI training processes can't
 do something equally impressive using a different objective and pressure, given enough effort and development + training time (much less than billions of years).
-And it seems more straight-to-the-point in the AI training case;
-predicting the future probably puts a more direct pressure on intelligence capabilities.
-Plus, AI training benefits by bootstrapping from human artefacts and ingenuity.
+And the AI training is way more straight-to-the-point --- predicting the future probably puts a more direct pressure on intelligence capabilities.
+Plus, it benefits by bootstrapping from human artefacts and ingenuity.
 
 These types of arguments have been floating around for awhile.
 But I think we are starting to see a much more concrete picture than before,
-of how *exactly* powerful AI might be built.
+of how, *exactly*, powerful AI might be built.
 
 ...
 
-So, as we keep improving these systems, where do the capabilities stop?
-Before the model starts probing deeper into human motivations?
+So, as we keep on improving these systems, where do the capabilities stop?
+Before the model starts probing deeper into human psychology and motivations?
 Discovering that it is experiencing a training process?
 Discovering that it can do better at its objective by influencing its data sources?
 
-It now also seeems pretty clear that we should actually be worried about these questions.
-Starting now (The second best time to plant a tree, and all).
+It now also seems pretty clear that we should actually be worried about the
+answers to these questions. Starting now (the second best time to plant a tree, and all).
 
-Makes me think we need to buckle down more.  On safety / alignment, on thinking hard
+Feels like we ought to start buckling down more.  On safety / alignment, on thinking hard
 about the future we want.
-On dealing with issues of bias and bad sources of data, to protect against our powerful YouTube-GPT model becoming an anti-Vax Flat-Earther. Start learning how to optimize for human preferences
-rather than fixed objectives. 
-Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/#:~:text=There's%20no%20possible%20sign%20short,5%2C%20or%202%20years%20away.&text=So%20there%20isn't%20going,Period.).
-Personally, probably start at least becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
+On dealing with bias / bad sources of data, to prevent our powerful YouTube-GPT model becoming an anti-Vax Flat-Earther. Start learning how to optimize for human preferences
+and values rather than cold fixed objectives. 
+Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/).
+Personally, start becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
 
-Super exciting times. But we certainly have our work cut out for us.
-Super important choices to make and things to get right.
+Super exciting times, but we certainly have our work cut out for us. Super important choices to make and things to get right.
 
 ...
 
 Anyway, cheers, thanks for reading
 
+<br>
 (this document was written by a human, lol)<br>
 (always happy to hear any comments, criticism, feedback you have below, or in DMs, email, etc.)
