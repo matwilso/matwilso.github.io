@@ -29,11 +29,11 @@ Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
 
-We could “prompt” a learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model automatically generates a virtual scene of our painting task that we can freely modify. “What about blue paint instead?”
+We could “prompt” a learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The simulator automatically generates a virtual scene of our painting task that we can freely modify. “What about blue paint instead?”
 
 No XML files, no painstaking calibration or modeling the articulated physics of e.g., a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol)
 
-Just film a video of our scene and the model would catch on, like GPT3 catches on when given prompts. (See [@xuenay's thread](https://twitter.com/xuenay/status/1283312640199196673), [@gwern's twitter thread](https://twitter.com/gwern/status/1267215588214136833) or [longer newsletter post on GPT3](https://www.gwern.net/newsletter/2020/05#gpt-3), or the [OpenAI API blog post](https://openai.com/blog/openai-api/))
+Just film a video of our scene and the model would catch on, like GPT3 catches on when given prompts. (e.g., [@xuenay's thread](https://twitter.com/xuenay/status/1283312640199196673), [@gwern's twitter thread](https://twitter.com/gwern/status/1267215588214136833) or [longer newsletter post on GPT3](https://www.gwern.net/newsletter/2020/05#gpt-3), or the [OpenAI API blog post](https://openai.com/blog/openai-api/))
 
 It’s all differentiable and can be placed directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
 
@@ -47,7 +47,7 @@ This would be an incredible tool for accelerating progress across the whole fiel
 
 Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent would understand and interact with the world in terms of its high-fidelity physics model. 
 
-Think how good humans intuitive physics and pyschology are. We can predict
+Think how strong humans intuitive physics and pyschology models are. We can predict
 what will happen if we bump our coffee cup near the edge of your table
 or how someone might respond if we bump *their* coffee near the edge of the table.
 Yet our information processing abilities are constrained by our hardware,
@@ -60,13 +60,13 @@ If text-based-GPT is like having thousands of world experts to talk to,
 robot-embodied YouTube-GPT is like thousands of world experts in the room with you. 
 It would know survival skills, workout routines, yoga, guitar cords. 
 It could demonstrate and explain the
-mechanics of these things to you (e.g., [starting a fire with a magnifying glass](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
+mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
 Would be like having an Ian Banks Culture or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
 *People are standing having drinks on a small raised outdoor deck.
 "Everybody off the deck!", a droid comes running across the street,
-"Get inside!". They look over, confused, as the deck supports start creaking.
-The deck drops, comes to a halt a few feet lower. Enough of them react
+"Get inside!". They look over, confused, as the supports start creaking.
+The deck drops, comes to a halt a few feet lower. Most of them react
 soon enough to get inside; only a few are knocked to the deck floor 
 with minor bruises and sprained wrists.* 
 
@@ -86,9 +86,10 @@ It learns syntax and grammar so it can predict the next word.
 Then it learns basic text patterns (paragraphs, dialogue), so it can predict the next word.
 Then [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/), [amateur chess moves](https://twitter.com/TomChivers/status/1214488063310741504), [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [...](https://twitter.com/xuenay/status/1283312640199196673)
 
-YouTube-based GPT would learn complex and super accurate physics because it would help it to predict the next video frame.
+YouTube-GPT would be able to learn complex and super accurate physics because this
+is what would help it better predict the next video frame.
 With enough data, and especially with inductive biases sprinkled in, a super high-fidelity simulation seems possible.
-And you only have to do well enough to bootstrap something like limited household robots (dish washing + laundry).
+And you only have to do well enough to bootstrap something like narrow household robots (dish washing + laundry).
 Then you can use those in a Tesla-like data-collection [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), runnning experiments to make the models even more accurate.
 
 To caveat, it's hard to say how far we are from YouTube-GPT. It's possible that
@@ -98,32 +99,32 @@ And to further caveat, if we do get YouTube-GPT, it’s probably not as simple a
 ...
 
 Extrapolating forward, I can much more clearly imagine super powerful AI systems, compared to say, a year ago.
+
+And it now seems clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
 Though it is still primitive in many ways, I don't think I would have expected GPT to be able to do some of the things that it can.
 Quantity does really seem to have a quality all its own here.
-Whole new capabilities arise from just training bigger and bigger systems.
+Whole new capabilities arise from training bigger and bigger systems.
 
-It now seems pretty clear to me that we can build super powerful AI systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
 In terms of optimization processes, if evolution of humans worked, deep learning of 
 neural networks should definitely work. 
-
 Evolution puts a certain type of optimization pressure on organisms to survive and reproduce. 
-The language models training processes seem to be
-putting an equally powerful optimization pressure on the neural networks
-to accurately predict the next word.
+These training processes are putting what seems to be an equally powerful 
+optimization pressure on the neural networks to accurately predict the future (next word).
+
 Evolution turned out in the specific case of homo sapiens to squeeze human-level intelligence
 out of this by chance, over billions of years.
 I don't see any obvious irreparable reason that these AI training processes can't
 do the same thing using a different objective.
-In fact, it seems a bit more straight-to-the-point in the AI training case;
-predicting the future is probably more closely correlated and puts a more direct pressure
-on intelligence capabilities.
-Plus these processes benefit from human ingenuity and can use human artefacts to bootstrap from.
+In fact, it seems more straight-to-the-point in the AI training case;
+predicting the future is probably puts a more direct pressure on intelligence capabilities.
+Plus AI training benefits by bootstrapping from human artefacts and ingenuity.
 
 And as we keep improving these systems, where do the capabilities stop?
-Before the model starts probing deeper into human psychology?
+Before the model starts probing deeper into human motivations?
 Discovering that it is experiencing a training process?
 Discovering that it can do better at its objective by influencing its data sources?
-It now also seeems pretty clear to me that we should actually be worried about this.
+It now also seeems pretty clear to me that we should actually be worried about these questions.
+Starting now (the second best time to plant a tree).
 
 It makes me think we need to start thinking much more about safety / alignment, and
 about the future we want.  Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/#:~:text=There's%20no%20possible%20sign%20short,5%2C%20or%202%20years%20away.&text=So%20there%20isn't%20going,Period.).
@@ -135,32 +136,7 @@ Super important choices to make and things to get right.
 
 ...
 
-Anyway, cheers, thanks for reading. Have a good rest of your day :)
+Anyway, cheers, thanks for reading.
 
 (this document was written by a human, lol)<br>
 (always happy to hear any comments, criticism, feedback you have below, or in DMs, email, etc.)
-
-
-
-Evolution operates at glacial speed, and optimizes the organism through a survive-and-reproduce pressure.
-It turns out in the specific case of homo sapiens, this led to human-level intelligence.
-It turns out that pretty general reasoning abilities is what helps
-you do that in a certain ecological niche.
-The pressure to survive and reproduce in this niche was enough to smarter brains 
-that could grow to understand
-more and more of the world around them, to develop language (for instance).
-
-These AI training processes operate on a speed on the order of weeks to months
-(training time), and optimize the network through predict-what-is-going-to-happen pressure.
-And I don't see such processes as obviously being (irreparably) less powerful, to the point where
-they can't achieve the same practical abilities when tuned and scaled.
-A neural network brain could always keep getting smarter to make better predictions (that's what we're seeing).
-And training these objectives directly with backpropagation seems a bit more to the point
-than evolution.
-Plus we can use human ingenuity to drive these processes and we can
-use curated and well-structured human-generated data to bootstrap from.
-
-Deep learning is clearly very capable of solving challenging tasks.
-With much more optimization pressure and a few more tricks, how is it not going to produce super intelligent machines?
-
-
