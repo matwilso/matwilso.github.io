@@ -117,7 +117,7 @@ Evolution turned out, in the specific case of homo sapiens, to squeeze human-lev
 out of this by chance, over billions of years.
 I see no obvious reason that these specific types of AI training processes can't
 do something equally impressive using a different objective and pressure, given enough effort and development + training time (much less than billions of years).
-And the AI training is way more straight-to-the-point --- predicting the future probably puts a more direct pressure on intelligence capabilities.
+And the AI training seems more straight-to-the-point --- predicting the future probably puts a more direct pressure on intelligence capabilities.
 Plus, AI benefits from bootstrapping off human artefacts and ingenuity.
 
 These types of arguments have been floating around for awhile.
