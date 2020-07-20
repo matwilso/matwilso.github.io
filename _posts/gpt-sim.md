@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT-X trained on e.g., the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---in other words, a high-fidelity *general-purpose reality simulator*.
+>Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---in other words, a high-fidelity *general-purpose reality simulator*.
 <br><br>
 What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
@@ -21,7 +21,7 @@ Simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrus
 Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire---a rising trail of smoke, a marshmallow cooking over the flame.
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps into them.
 
-Or any number of other hard-to-model interactions, which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
+Or any number of other hard-to-model interactions which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
 
 Data-driven simulation definitely seems the way to go, as opposed to hand-designed. We can unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 Something that works well enough across the entire range of tasks we care about.
@@ -51,7 +51,7 @@ Beyond just a training tool, it could form the basis of an internal model that t
 Think of how strong human intuitive physics and pyschology models are. We can 
 accurately predict what will happen if we bump our coffee cup near the edge of our table
 or how someone might respond if we bump *their coffee* near the edge of the table.
-Yet our information processing abilities are constrained by our hardware,
+Yet our information processing abilities are severely constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
 In practice, you could do much better with digital brains, specifically optimized to 
 model these things, trained on orders of magnitude more data than you would
@@ -103,7 +103,7 @@ Extrapolating forward from GPT3, I can much more clearly imagine super powerful 
 
 It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
 And though it is still primitive in many ways, I don't think I would have expected GPT to be able to do some of the things that it can.
-(And maybe ditto for AlphaGo, the DOTA/SCII work, though I never really made 
+(And maybe ditto for AlphaGo, the DOTA/SCII work, though I never made 
 any concrete advance predictions for any of these.)
 Quantity really does seem to have a quality all its own here.
 Whole new capabilities arise from training bigger and bigger systems.
