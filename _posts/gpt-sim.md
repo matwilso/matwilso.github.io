@@ -8,11 +8,11 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT4/5 trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc), or in other words, a high-fidelity general-purpose reality simulator.
+>Imagine video-based GPT-X trained on e.g., the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---in other words, a high-fidelity *general-purpose reality simulator*.
 <br><br>
 What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
-Based on the capabilities of recent language models like GPT3, it seems possible and *quite likely* that we can create a "good-enough" general-purpose reality simulator using relatively dumb future-prediction training. Maybe not super soon, but definitely sometime on our horizon.
+Based on the capabilities of recent language models like GPT3, it seems pretty likely that we can create a "good-enough" general-purpose reality simulator using relatively dumb future video prediction training. Maybe not super soon, but definitely sometime on our horizon.
 
 With a powerful "learned simulator" like this, we could generate RL environments with 
 physical accuracy and generality light-years beyond what is possible with current simulators.
@@ -23,22 +23,22 @@ A human stepping to the side when someone else is walking towards them, or getti
 
 Any number of other “soft” or hard-to-model interactions, which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
 
-Data-driven simulation definitely seems the way to go. Unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
+Data-driven simulation definitely seems the way to go, as opposed to hand-designing. We can unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 Something that works well enough across the entire range of tasks we care about.
 
 Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
 
-We could “prompt” a learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket---the model automatically generates a virtual scene of our scenario that we can freely modify. “What about blue paint instead?”
+We could “prompt” a learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model would automatically generate a virtual scene of our scenario that we can freely modify. “What about blue paint instead?”
 
 No XML files, no painstaking calibration or modeling the articulated physics of e.g., a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol)
 
-Just film a video of our scene and the model would catch on, like GPT3 catches on when given prompts. (e.g., [@xuenay's thread](https://twitter.com/xuenay/status/1283312640199196673), [@gwern's twitter thread](https://twitter.com/gwern/status/1267215588214136833) or [longer newsletter post on GPT3](https://www.gwern.net/newsletter/2020/05#gpt-3), or the [OpenAI API blog post](https://openai.com/blog/openai-api/))
+Just film a video of our scene and the model would catch on, like GPT3 catches on when given prompts. (e.g., [@xuenay's thread](https://twitter.com/xuenay/status/1283312640199196673), [@gwern's twitter thread](https://twitter.com/gwern/status/1267215588214136833) or [longer newsletter post on GPT3](https://www.gwern.net/newsletter/2020/05#gpt-3), [OpenAI API blog post](https://openai.com/blog/openai-api/))
 
 It’s all differentiable and can be placed directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
 
-Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in AlphaGo/Zero/Mu. (I know stuff like this exists, but there hasn't yet been quite the same slam dunk win as MCTS planning is in the discrete case.)
+Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in AlphaGo/Zero/Mu. (I know there are some challenges, and that stuff like this does exist, but there hasn't yet been a slam dunk win like MCTS planning is in the discrete case.)
 
 Train a robot to paint your room. Visualize the sequence of actions the robot would take. Make modifications. “Be careful not to spill on the rug, and don’t paint the baseboards.” Visualize the adjusted behavior to ensure it achieves exactly what you had in mind.
 
@@ -48,21 +48,21 @@ This would be an incredible tool for accelerating progress across the whole fiel
 
 Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent would understand and interact with the world in terms of its high-fidelity physics model. 
 
-Think about how strong human intuitive physics and pyschology models are. We can 
+Think of how strong human intuitive physics and pyschology models are. We can 
 accurately predict what will happen if we bump our coffee cup near the edge of our table
-or how someone might respond if we bump *their coffee* near the edge of *their table*.
+or how someone might respond if we bump *their coffee* near the edge of the table.
 Yet our information processing abilities are constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
-You could do much better with digital brains specifically optimized to 
+In practice, you could do much better with digital brains, specifically optimized to 
 model these things, trained on orders of magnitude more data than you would
 ever encounter in a lifetime, with more memory, higher accuracy representations.
 
 If text-based-GPT is like having thousands of world experts to talk to,
 robot-embodied YouTube-GPT is like having thousands of world experts in the room with you. 
-It knows survival skills, workout routines, yoga, guitar cords. 
-It can demonstrate and explain the
+It would know survival skills, workout routines, yoga, guitar cords. 
+It could demonstrate and explain the
 mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
-It's like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
+Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
 *Cut to a scene with a large group of people standing together, having drinks on a small outdoor deck.*
 
@@ -94,7 +94,8 @@ Then you can use those robots in a Tesla-like [fleet](https://www.youtube.com/wa
 
 To caveat, it's hard to say how far we are from YouTube-GPT. It's possible that
 patching up current limitations proves extremely difficult. It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
-And to further caveat, it’s probably not as simple as taking out-of-the-box YouTube-GPT and using it for high-fidelity simulation. But with the wide range of tools already built on top of GPT3, it seems possible to jerry-rig this.
+And to further caveat, it won't be as simple as taking out-of-the-box vanilla YouTube-GPT and using it for high-fidelity simulation. 
+I'm guessing you need to put in a lot of physics sim specific effort to make it workable.
 
 ...
 
@@ -115,7 +116,7 @@ out of this by chance, over billions of years.
 I see no obvious reason that these specific types of AI training processes can't
 do something equally impressive using a different objective and pressure, given enough effort and development + training time (much less than billions of years).
 And the AI training is way more straight-to-the-point --- predicting the future probably puts a more direct pressure on intelligence capabilities.
-Plus, it benefits by bootstrapping from human artefacts and ingenuity.
+Plus, AI benefits from bootstrapping off human artefacts and ingenuity.
 
 These types of arguments have been floating around for awhile.
 But I think we are starting to see a much more concrete picture than before,
@@ -128,8 +129,8 @@ Before the model starts probing deeper into human psychology and motivations?
 Discovering that it is experiencing a training process?
 Discovering that it can do better at its objective by influencing its data sources?
 
-It now also seems pretty clear that we should actually be worried about the
-answers to these questions. Starting now (the second best time to plant a tree, and all).
+It now also seems pretty clear that we should actually be worried about these questions. 
+Starting now (the second best time to plant a tree, and all).
 
 Feels like we ought to start buckling down more.  On safety / alignment, on thinking hard
 about the future we want.
