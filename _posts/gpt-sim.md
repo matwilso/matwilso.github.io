@@ -57,6 +57,8 @@ In practice, you could do much better with digital brains, specifically optimize
 model these things, trained on orders of magnitude more data than you would
 ever encounter in a lifetime, with more memory, higher accuracy representations.
 
+
+
 If text-based-GPT is like having thousands of world experts to talk to,
 robot-embodied YouTube-GPT is like having thousands of world experts in the room with you. 
 It would know survival skills, workout routines, yoga, guitar cords. 
@@ -64,16 +66,23 @@ It could demonstrate and explain the
 mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
 Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
-*Cut to a scene with a large group of people standing together, having drinks on a small outdoor deck.*
+<!--
 
-*"Get inside!", a droid comes running across the street,
-"Get off the deck!". They look over, confused, as the supports start creaking.
+*Cut to a scene of a large group of people standing together, having drinks on a small outdoor deck.*
+
+*"Get inside!", a droid comes running across the street, "Get off the deck!". 
+It noticed there are way too many of them standing there and they are overloading the deck. 
+The 
+It also notices*
+
+*They look over, confused, as the supports start creaking.
 The deck suddenly drops out from under them, comes to a halt a few feet below. Most of them 
 are able to jump inside---only a few are knocked of their feet
 with minor bruises and a sprained wrist.* 
 
-Haha maybe not a super realistic scenario, but there are in fact thousands of videos of structural failures like this on YouTube to learn from, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse) (not turning out quite as well).
+Maybe not the most realistic scenario, but there are in fact thousands of videos of structural failures like this on YouTube to learn from, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse) (not turning out quite as well).
 An agent that has integrated so much knowledge could notice and predict many things like this better than an average person.
+-->
 
 ...
 
