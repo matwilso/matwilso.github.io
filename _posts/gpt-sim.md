@@ -30,7 +30,7 @@ Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
 
-We could “prompt” a learned simulator with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model would automatically generate a virtual scene of our scenario that we can freely modify. “What about blue paint instead?”
+We can “prompt” the model with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model will automatically generate a virtual scene of our scenario that we can freely modify. “What about blue paint instead?”
 
 No XML files, no painstaking calibration or modeling the articulated physics of e.g., a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol)
 
@@ -38,7 +38,7 @@ Just film a video of our scene and the model would catch on, like GPT3 catches o
 
 It’s all differentiable and can be placed directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
 
-Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in AlphaGo/Zero/Mu. (I know there are some challenges, and that stuff like this does exist, but there hasn't yet been a slam dunk win like MCTS planning is in the discrete case.)
+Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in AlphaGo/Zero/Mu. (I know stuff like this does exist, but there hasn't yet been a slam dunk win like MCTS planning is in the discrete case.)
 
 Train a robot to paint your room. Visualize the sequence of actions the robot would take. Make modifications. “Be careful not to spill on the rug, and don’t paint the baseboards.” Visualize the adjusted behavior to ensure it achieves exactly what you had in mind.
 
