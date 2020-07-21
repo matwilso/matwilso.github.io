@@ -8,11 +8,11 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---in other words, a high-fidelity *general-purpose reality simulator*.
+>Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---in other words, imagine a high-fidelity *general-purpose reality simulator*.
 <br><br>
 What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
-Based on the capabilities of recent language models like GPT3, it seems pretty likely that we can create a "good-enough" general-purpose reality simulator using relatively dumb future video prediction training. Maybe not super soon, but definitely sometime on our horizon.
+Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to create a "good-enough" general-purpose reality simulator using relatively dumb future prediction training. Maybe not super soon, but definitely sometime on our horizon.
 
 With a powerful enough "learned simulator" like this, we could generate RL environments with 
 physical accuracy and generality light-years beyond what is possible with current simulators.
