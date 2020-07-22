@@ -15,7 +15,7 @@ What does this enable? In robotics? In general, for bringing advances in informa
 An egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
 dragging across the wall, and leaving a red streak of paint wall behind it.
 Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire---a rising trail of smoke, a marshmallow cooking over the flame.
-A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps into them.
+A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps them.
 There are many complex interactions for which we have trouble writing computer simulations, but for which we have, or could collect, a lot of data.
 
 Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to create a "good-enough" general-purpose reality simulator using relatively dumb future prediction training. Maybe not super soon, but definitely sometime on our horizon.
