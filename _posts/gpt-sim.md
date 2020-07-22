@@ -21,16 +21,15 @@ There are many complex interactions for which we have trouble writing computer s
 Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to create a "good-enough" general-purpose reality simulator using relatively dumb future prediction training. Maybe not super soon, but definitely sometime on our horizon.
 
 With a powerful enough "learned simulator" like this, we could generate RL environments with 
-physical accuracy and generality light-years beyond what is possible with current simulators.
-
-This data-driven simulation definitely seems the way to go, as opposed to hand-designed. We can unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
+physical accuracy and generality light-years beyond what is possible today.
+We could unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 Something that works well enough across the entire range of tasks we care about.
 
 Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
 
-We can “prompt” the model with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model will automatically generate a virtual scene of our scenario that we can freely modify. “What about blue paint instead?”
+We could “prompt” the model with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model would automatically generate a virtual scene of our scenario that we could freely modify. “What about blue paint instead?”
 
 No XML files, no painstaking calibration or modeling the articulated physics of e.g., a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol)
 
@@ -53,14 +52,14 @@ accurately predict what will happen if we bump our coffee cup near the edge of o
 or how someone might respond if we bump *their coffee* near the edge of the table.
 Yet our information processing abilities are severely constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
-In practice, you could do much better with digital brains, specifically optimized to 
+In practice, you could do much better with digital brains, specially optimized to 
 model these things, trained on orders of magnitude more data than you would
-ever encounter in a lifetime, with more memory, higher accuracy representations.
+ever encounter in a lifetime, with more memory and much higher accuracy representations.
 
 
 
 If text-based-GPT is like having thousands of world experts to talk to,
-robot-embodied YouTube-GPT is like having thousands of world experts in the room with you. 
+robot-embodied YouTube-GPT would be like having thousands of world experts in the room with you. 
 It would know survival skills, workout routines, yoga, guitar cords. 
 It could demonstrate and explain the
 mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
@@ -108,10 +107,10 @@ I'm guessing you need to put in a lot of physics sim specific effort to make it 
 
 ...
 
-Extrapolating forward from GPT3, I can much more clearly imagine super powerful AI systems, compared to say, even a few months ago.
+Extrapolating forward from GPT3, I can much more clearly imagine super powerful AI systems now, compared to say, a few months ago.
 
 It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
-And though it is still primitive in many ways, I don't think I would have expected GPT to be able to do some of the things that it can.
+And though GPT is still primitive in many ways, I don't think I would have expected it to be able to do some of the things that it can.
 (And maybe ditto for AlphaGo, the DOTA/SCII work, though I never made 
 any concrete advance predictions for any of these.)
 Quantity really does seem to have a quality all its own here.
@@ -129,11 +128,10 @@ do something equally impressive using a different objective and pressure, given 
 And the AI training seems more straight-to-the-point --- predicting the future probably puts a more direct pressure on intelligence capabilities.
 Plus, AI benefits from bootstrapping off human artefacts and ingenuity.
 
-These types of arguments have been floating around for awhile.
+These types of ideas and arguments have been floating around for awhile,
+and maybe you are already convinced or already skeptical.
 But I think we are starting to see a much more concrete picture than before,
 of how, *exactly*, powerful AI might be built.
-
-...
 
 So, as we keep on improving these systems, where do the capabilities stop?
 Before the model starts probing deeper into human psychology and motivations?
@@ -145,7 +143,7 @@ Starting now (the second best time to plant a tree, and all).
 
 Feels like we ought to start buckling down more.  On safety / alignment, on thinking hard
 about the future we want.
-On dealing with bias / bad sources of data, to prevent our powerful YouTube-GPT model becoming an anti-Vax Flat-Earther. Start learning how to optimize for human preferences
+On dealing with bad/biased data, to prevent our powerful YouTube-GPT model becoming an anti-Vax Flat-Earther. To start learning how to optimize for human preferences
 and values rather than cold fixed objectives. 
 Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/).
 Personally, start becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
