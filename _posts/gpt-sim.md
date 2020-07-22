@@ -12,18 +12,18 @@ toc_sticky: true
 <br><br>
 What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
+An egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
+dragging across the wall, leaving a red streak of paint wall behind it.
+Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire---a rising trail of smoke, a marshmallow cooking over the flame.
+A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps into them.
+There are many complex interactions for which we have trouble writing computer simulations, but for which we have, or could collect, a lot of data.
+
 Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to create a "good-enough" general-purpose reality simulator using relatively dumb future prediction training. Maybe not super soon, but definitely sometime on our horizon.
 
 With a powerful enough "learned simulator" like this, we could generate RL environments with 
 physical accuracy and generality light-years beyond what is possible with current simulators.
 
-Simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket, and leaving a red streak of paint on the wall behind it.
-Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire---a rising trail of smoke, a marshmallow cooking over the flame.
-A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps into them.
-
-Or any number of other hard-to-model interactions which we have trouble writing computer programs for, but for which we have---or could collect---a lot of data.
-
-Data-driven simulation definitely seems the way to go, as opposed to hand-designed. We can unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
+This data-driven simulation definitely seems the way to go, as opposed to hand-designed. We can unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 Something that works well enough across the entire range of tasks we care about.
 
 Imagine sim2real learning with the smallest possible reality gap.
