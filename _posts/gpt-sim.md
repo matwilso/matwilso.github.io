@@ -31,7 +31,7 @@ All in a package that is natural to interface with.
 
 We could “prompt” the model with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model would automatically generate a virtual scene of our scenario that we could freely modify. “What about blue paint instead?”
 
-No XML files, no painstaking calibration or modeling the articulated physics of e.g., a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol)
+No XML files, no painstaking calibration or modeling e.g., the articulated physics of a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol)
 
 Just film a video of our scene and the model would catch on, like GPT3 catches on when given prompts. (e.g., [@xuenay's thread](https://twitter.com/xuenay/status/1283312640199196673), [@gwern's twitter thread](https://twitter.com/gwern/status/1267215588214136833) or [longer newsletter post on GPT3](https://www.gwern.net/newsletter/2020/05#gpt-3), [OpenAI API blog post](https://openai.com/blog/openai-api/))
 
@@ -47,20 +47,26 @@ This would be an incredible tool for accelerating progress across the whole fiel
 
 Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent would understand and interact with the world in terms of its high-fidelity physics model. 
 
-Think of how strong human intuitive physics and pyschology models are. We can 
+Think of human intuitive physics and intuitive pyschology. We can 
 accurately predict what will happen if we bump our coffee cup near the edge of our table
 or how someone might respond if we bump *their coffee* near the edge of the table.
+We're pretty good at this.
 Yet our information processing abilities are severely constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
-In practice, you could do much better with digital brains, specially optimized to 
+In theory, you could do much better. With digital brains, specially optimized to 
 model these things, trained on orders of magnitude more data than you would
 ever encounter in a lifetime, with more memory and much higher accuracy representations.
 
-
+It could predict many events better than an average person. 
+For example, if the deck that all those people are standing on is about to collapse.
+By having watched thousands of videos of structural 
+failures like that on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse), it will know all the tell-tale signs like
+the overcrowdeding or the stress fracture in the concrete.
+(Maybe not the most accurate full scenario, but it illustrates the point.)
 
 If text-based-GPT is like having thousands of world experts to talk to,
-robot-embodied YouTube-GPT would be like having thousands of world experts in the room with you. 
-It would know survival skills, workout routines, yoga, guitar cords. 
+robot-embodied-YouTube-GPT would be like having thousands of world experts in the room with you. 
+It would know things like survival skills, yoga, workout routines, guitar cords. 
 It could demonstrate and explain the
 mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
 Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
@@ -92,7 +98,7 @@ GPT3 just tries to predict the next word as accurately as possible.
 When given a bigger brain, it keeps on filling that brain with more and more knowledge.
 It learns basic syntax and grammar so it can predict the next word.
 Then it learns basic text patterns (paragraphs, dialogue), so it can predict the next word.
-Then [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/), [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [...](https://twitter.com/xuenay/status/1283312640199196673)
+Then it learns [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/), [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [...](https://twitter.com/xuenay/status/1283312640199196673) all to better predict the next word.
 
 YouTube-GPT would be able to learn super accurate physics because this
 is what would help it better predict the next video frame.
@@ -107,7 +113,7 @@ I'm guessing you need to put in a lot of physics sim specific effort to make it 
 
 ...
 
-Extrapolating forward from GPT3, I can much more clearly imagine super powerful AI systems now, compared to say, a few months ago.
+Extrapolating forward from GPT3, I can much more clearly imagine super powerful AI systems, compared to say, a few months ago.
 
 It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
 And though GPT is still primitive in many ways, I don't think I would have expected it to be able to do some of the things that it can.
