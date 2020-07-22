@@ -13,7 +13,7 @@ toc_sticky: true
 What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
 An egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
-dragging across the wall, leaving a red streak of paint wall behind it.
+dragging across the wall, and leaving a red streak of paint wall behind it.
 Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire---a rising trail of smoke, a marshmallow cooking over the flame.
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps into them.
 There are many complex interactions for which we have trouble writing computer simulations, but for which we have, or could collect, a lot of data.
