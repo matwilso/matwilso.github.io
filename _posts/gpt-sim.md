@@ -53,15 +53,15 @@ or how someone might respond if we bump *their coffee* near the edge of the tabl
 We're pretty good at this.
 Yet our information processing abilities are severely constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
-In theory, you could do much better. With digital brains, specially optimized to 
+In theory, you could do much better---with digital brains, specially optimized to 
 model these things, trained on orders of magnitude more data than you would
 ever encounter in a lifetime, with more memory and much higher accuracy representations.
 
 It could predict many events better than an average person. 
 For example, if the deck that all those people are standing on is about to collapse.
 By having watched thousands of videos of structural 
-failures like that on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse), it will know all the tell-tale signs like
-the overcrowdeding or the stress fracture in the concrete.
+failures like that on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse), it will know all the tell-tale signs, like
+the overloading from too many people and the stress fracture in the concrete.
 (Maybe not the most accurate full scenario, but it illustrates the point.)
 
 If text-based-GPT is like having thousands of world experts to talk to,
@@ -147,7 +147,7 @@ Discovering that it can do better at its objective by influencing its data sourc
 It now also seems pretty clear that we should actually be worried about these questions. 
 Starting now (the second best time to plant a tree, and all).
 
-Feels like we ought to start buckling down more.  On safety / alignment, on thinking hard
+It feels like we ought to start buckling down more.  On safety / alignment, on thinking hard
 about the future we want.
 On dealing with bad/biased data, to prevent our powerful YouTube-GPT model becoming an anti-Vax Flat-Earther. To start learning how to optimize for human preferences
 and values rather than cold fixed objectives. 
