@@ -8,9 +8,25 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---in other words, imagine a high-fidelity *general-purpose reality simulator*.
+>Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---a high-fidelity general-purpose video prediction model,
+with generative abilities akin to what we see with GPT3, but in the video domain.
 <br><br>
 What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
+
+Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to train very accurate future frame predictors using a scaled up, but relatively dumb approach.
+
+A very accurate future frame predictor trained on a gigantic dataset, 
+with a bit of guidance, could become a general purpose reality simulator.
+Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
+YouTube-GPT would learn super accurate physics to better predict the next frame.
+With enough capacity and enough data (and a sprinkle of inductive biases),
+it would become insanely good at this. Good enough, at least, for training robots
+to solve a variety of tasks.
+
+By absorbing knowledge across so many domains, 
+it could simulate real-world environments with 
+physical accuracy and generality light-years beyond what is possible today.
+It could unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 
 An egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
 dragging across the wall, and leaving a red streak of paint behind it.
@@ -18,12 +34,6 @@ Sunlight passing through a magnifying glass, catching a pile of dry leaves on fi
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps them.
 There are many complex interactions for which we have trouble writing computer simulations, but for which we have, or could collect, a lot of data.
 
-Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to create a "good-enough" general-purpose reality simulator using relatively dumb future prediction training. Maybe not super soon, but definitely sometime on our horizon.
-
-With a powerful enough "learned simulator" like this, we could generate RL environments with 
-physical accuracy and generality light-years beyond what is possible today.
-We could unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
-Something that works well enough across the entire range of tasks we care about.
 
 Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
