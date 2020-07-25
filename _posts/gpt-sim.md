@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---a high-fidelity general-purpose video prediction model,
+>Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---a high-fidelity general-purpose prediction model,
 with generative abilities akin to what we see with GPT3, but in the video domain.
 <br><br>
 What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
@@ -25,7 +25,7 @@ it would become insanely good at this. Good enough, at least, to generate very r
 By absorbing knowledge across so many domains, 
 it could simulate real-world environments with 
 physical accuracy and generality light-years beyond what is possible today.
-It could unify all compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
+It could unify all the compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 
 An egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
 dragging across the wall, and leaving a red streak of paint behind it.
@@ -33,7 +33,7 @@ Sunlight passing through a magnifying glass, catching a pile of dry leaves on fi
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps them.
 Any number of other interactions for which we have trouble writing computer simulations, but for which we have, or could collect, a lot of data.
 
-There are many cases where such a simulator would be useful,
+Such a simulator would be incredibly useful,
 especially in robot learning.
 Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
