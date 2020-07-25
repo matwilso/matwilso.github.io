@@ -13,14 +13,14 @@ with generative abilities akin to what we see with GPT3, but in the video domain
 <br><br>
 What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
-Based on the growing capabilities of language models like GPT3, it seems likely we will be able to train a very accurate future frame predictor using a scaled up, but relatively dumb approach.
+Based on the growing capabilities of language models like GPT3, it seems likely we will be able to train a very accurate future-frame-predictor using a scaled up, but relatively dumb approach.
 
-A very accurate future frame predictor, with a bit of guidance, 
+A future-frame-predictor, with a bit of guidance, 
 could become a general purpose reality simulator.
 Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
 YouTube-GPT-X would learn super accurate physics to better predict the next frame.
 With enough capacity and enough data (and a sprinkle of inductive biases),
-it would become insanely good at this. Good enough, at least, to be useful for training robots and other real-world RL agents on many tasks.
+it would become insanely good at this. Good enough, at least, to generate very realistic scenes.
 
 By absorbing knowledge across so many domains, 
 it could simulate real-world environments with 
@@ -31,18 +31,17 @@ An egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping
 dragging across the wall, and leaving a red streak of paint behind it.
 Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire---a rising trail of smoke, a marshmallow cooking over the flame.
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps them.
-There are many complex interactions for which we have trouble writing computer simulations, but for which we have, or could collect, a lot of data.
+Any number of other interactions for which we have trouble writing computer simulations, but for which we have, or could collect, a lot of data.
 
-There are many cases where such a simulator would be extremely useful.
-And it has a big chance to revolutize robot learning.
+There are many cases where such a simulator would be useful,
+especially in robot learning.
 Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
 
 We could “prompt” the model with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model would automatically generate a virtual scene of our scenario that we could freely modify. “What about blue paint instead?”
 
-No XML files, no painstaking calibration or modeling e.g., the articulated physics of a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol)
-
+No XML files, no painstaking calibration or modeling e.g., the articulated physics of a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol.)
 Just film a video of our scene and the model would catch on, like GPT3 catches on when given prompts. (e.g., [@xuenay's thread](https://twitter.com/xuenay/status/1283312640199196673), [@gwern's twitter thread](https://twitter.com/gwern/status/1267215588214136833) or [longer newsletter post on GPT3](https://www.gwern.net/newsletter/2020/05#gpt-3), [OpenAI API blog post](https://openai.com/blog/openai-api/))
 
 It’s all differentiable and can be placed directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
@@ -57,22 +56,21 @@ This would be an incredible tool for accelerating progress across the whole fiel
 
 Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent would understand and interact with the world in terms of its high-fidelity physics model. 
 
-Think of human intuitive physics and intuitive pyschology. We can 
+Humans can 
 accurately predict what will happen if we bump our coffee cup near the edge of our table
 or how someone might respond if we bump *their coffee* near the edge of the table.
-We're pretty good at this.
+We're pretty good at intuitive physics and psychology predictions like this. 
 Yet our information processing abilities are severely constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
 In theory, you could do much better---with digital brains, specially optimized to 
 model these things, trained on orders of magnitude more data than you would
 ever encounter in a lifetime, with more memory and much higher accuracy representations.
 
-It could predict many events better than an average person. 
-For example, if the deck that all those people are standing on is about to collapse.
+Such brains could predict, for example, if the backyard deck that all those people are standing on is about to collapse.
 By having watched thousands of videos of structural 
 failures like that on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse), it will know all the tell-tale signs, like
-the overloading from too many people and the stress fracture in the concrete.
-(Maybe not the most accurate full scenario, but it illustrates the point.)
+the overloading from too many people and the stress fracture in the wood
+(maybe not the most accurate full scenario, but it illustrates the point).
 
 If text-based-GPT is like having thousands of world experts to talk to,
 robot-embodied-YouTube-GPT would be like having thousands of world experts in the room with you. 
