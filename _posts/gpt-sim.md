@@ -13,15 +13,14 @@ with generative abilities akin to what we see with GPT3, but in the video domain
 <br><br>
 What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
-Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to train very accurate future frame predictors using a scaled up, but relatively dumb approach.
+Based on the growing capabilities of language models like GPT3, it seems likely we will be able to train a very accurate future frame predictor using a scaled up, but relatively dumb approach.
 
-A very accurate future frame predictor trained on a gigantic dataset, 
-with a bit of guidance, could become a general purpose reality simulator.
+A very accurate future frame predictor, with a bit of guidance, 
+could become a general purpose reality simulator.
 Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
-YouTube-GPT would learn super accurate physics to better predict the next frame.
+YouTube-GPT-X would learn super accurate physics to better predict the next frame.
 With enough capacity and enough data (and a sprinkle of inductive biases),
-it would become insanely good at this. Good enough, at least, for training robots
-to solve a variety of tasks.
+it would become insanely good at this. Good enough, at least, to be useful for training robots and other real-world RL agents on many tasks.
 
 By absorbing knowledge across so many domains, 
 it could simulate real-world environments with 
@@ -34,7 +33,8 @@ Sunlight passing through a magnifying glass, catching a pile of dry leaves on fi
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps them.
 There are many complex interactions for which we have trouble writing computer simulations, but for which we have, or could collect, a lot of data.
 
-
+There are many cases where such a simulator would be extremely useful.
+And it has a big chance to revolutize robot learning.
 Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
