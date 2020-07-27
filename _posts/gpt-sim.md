@@ -148,7 +148,7 @@ Start [pulling the fire alarm](https://intelligence.org/2017/10/13/fire-alarm/).
 Personally, start becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
 
 Super exciting times, but we certainly have our work cut out for us. 
-Super important choices to make and things to get right. (And not that it often feels, on the ground level, like you are making a ton of progress. Mostly it's hard, 
+Super important choices to make and things to get right. (And not that it often really feels, on the ground level, like you are making a ton of progress. Mostly it's hard, 
 unglamorous work.
 Something like "things never get easier,
 you (*or maybe the field as a whole*) [just go faster](https://twitter.com/ruohanchenux/status/1000258622239068160/photo/2)".)
