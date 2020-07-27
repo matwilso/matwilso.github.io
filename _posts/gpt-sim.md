@@ -8,10 +8,10 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---a high-fidelity general-purpose prediction model,
+>Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc), for example. This would be a high-fidelity general-purpose prediction model,
 with generative abilities akin to what we see with GPT3, but in the video domain.
 <br><br>
-What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
+What would this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
 Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to train a very accurate future-frame-predictor using a scaled up, but relatively dumb approach.
 
@@ -19,11 +19,11 @@ A future-frame-predictor, with a bit of guidance,
 could become a general purpose reality simulator.
 Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
 YouTube-GPT-X would learn super accurate physics to better predict the next frame.
-With enough capacity and enough data (and a sprinkle of inductive biases),
+With enough capacity and enough data (and a pinch of inductive biases),
 it would become insanely good at this. At least good enough to generate and physically
 simulate very realistic scenes.
 
-By absorbing knowledge across so many domains, 
+By absorbing knowledge across many domains, 
 it could simulate RL environments with a
 physical accuracy and generality light-years beyond what is possible today.
 It could unify all the compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
@@ -47,7 +47,7 @@ Just film a video of our scene and the model would catch on, like GPT3 catches o
 
 It’s all differentiable and can be placed directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
 
-Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in AlphaGo/Zero/Mu. (I know stuff like this does exist, but there hasn't yet been a slam dunk win like MCTS planning is in the discrete case.)
+Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in AlphaGo/Zero/Mu. (I know stuff like this does exist, but there hasn't yet been a slam dunk win like MCTS planning is for AlphaGo.)
 
 Train a robot to paint your room. Visualize the sequence of actions the robot would take. Make modifications. “Be careful not to spill on the rug, and don’t paint the baseboards.” Visualize the adjusted behavior to ensure it achieves exactly what you had in mind.
 
@@ -74,11 +74,11 @@ They may be able to predict if the outdoor deck that all those people are standi
 By having watched thousands of videos of structural 
 failures like that on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse), they might know all the tell-tale signs, like
 the overloading from too many people and the stress fracture in the wood.
-What such brains could predict about human psychology is a bit worrying...
+What such brains may be able to predict about human psychology is a bit worrying...
 
 If text-based-GPT is like having thousands of world experts to talk to,
 robot-embodied-YouTube-GPT would be like having thousands of world experts in the room with you. 
-It would know things like survival skills, yoga, workout routines, guitar cords. 
+It could know things like survival skills, yoga, workout routines, guitar cords. 
 It could demonstrate and explain the
 mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
 Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
@@ -107,7 +107,7 @@ I'm guessing you need to put in a lot of physics sim specific effort to make it 
 
 ...
 
-Extrapolating forward from GPT3, I can much more clearly imagine super powerful AI systems, compared to say, a few months ago.
+Seeing GPT3 and extrapolating forward from that, I can now much more clearly imagine super powerful AI systems.
 
 It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
 And though GPT is still primitive in many ways, I don't think I would have expected it to be able to do some of the things that it can.
@@ -148,7 +148,11 @@ and values rather than cold fixed objectives.
 Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/).
 Personally, start becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
 
-Super exciting times, but we certainly have our work cut out for us. Super important choices to make and things to get right.
+Super exciting times, but we certainly have our work cut out for us. 
+Super important choices to make and things to get right. (And not that it often really seems on the ground level like you are making a ton of progress. Most the time it is hard, 
+unglamorous work.
+Something like "things never get easier,
+you (*or maybe, the field as a whole*) [just go faster](https://twitter.com/ruohanchenux/status/1000258622239068160/photo/2)".)
 
 ...
 
