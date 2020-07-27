@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc), for example. This would be a high-fidelity general-purpose prediction model,
+>Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc). This would be a high-fidelity general-purpose prediction model,
 with generative abilities akin to what we see with GPT3, but in the video domain.
 <br><br>
 What would this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
