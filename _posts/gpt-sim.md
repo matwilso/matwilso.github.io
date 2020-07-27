@@ -15,11 +15,11 @@ What would this enable? In robotics? In general, for bringing advances in inform
 
 Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to train a very accurate future-frame-predictor using a scaled up, but relatively dumb approach.
 
-A future-frame-predictor, with a bit of guidance, 
+A future-frame-predictor like this, with a bit of guidance, 
 could become a general purpose reality simulator.
 Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
 YouTube-GPT-X would learn super accurate physics to better predict the next frame.
-With enough capacity and enough data (and a pinch of inductive biases),
+With enough capacity, enough data, and a few built-in inductive biases,
 it would become insanely good at this. At least good enough to generate and physically
 simulate very realistic scenes.
 
@@ -34,8 +34,7 @@ Sunlight passing through a magnifying glass, catching a pile of dry leaves on fi
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps them.
 Any number of other interactions for which we have trouble writing computer simulations, but for which we have, or could collect, a lot of data.
 
-Such a simulator would be incredibly useful,
-especially in robot learning.
+Such a simulator would be incredibly useful---especially in robot learning.
 Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
@@ -69,7 +68,7 @@ ever encounter in a lifetime, with more memory and much higher accuracy represen
 
 For example, such brains may be able to predict things like the precise 
 trajectory of the mug and the splatter pattern the coffee will leave on the carpet based on 
-the speed and angle of the bump, and the shape and fullness of the mug.
+the angle of the bump.
 They may be able to predict if the outdoor deck that all those people are standing on is about to collapse.
 By having watched thousands of videos of structural 
 failures like that on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse), they might know all the tell-tale signs, like
@@ -97,8 +96,8 @@ Then it learns [emotional sentiment](https://openai.com/blog/unsupervised-sentim
 YouTube-GPT would be able to learn super accurate physics because this
 is what would help it better predict the next video frame.
 With enough data, and especially with inductive biases sprinkled in, a super high-fidelity simulation seems possible.
-And you really only have to do well enough to bootstrap to something on the order of narrow household robots (dish washing + laundry).
-Then you can use those robots in a Tesla-like [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), collecting more data to make the models even more accurate.
+And you maybe only have to do well enough to bootstrap to something on the order of narrow household robots (dish washing + laundry).
+Then you can use those robots in a Tesla-like [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), collecting more data to iteratively improve the models.
 
 To caveat, it's hard to say how far we are from YouTube-GPT. It's possible that
 patching up current limitations proves extremely difficult. It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
@@ -145,14 +144,14 @@ It feels like we ought to start buckling down more.  On safety / alignment, on t
 about the future we want.
 On dealing with bad/biased data, to prevent our powerful YouTube-GPT model becoming an anti-Vax Flat-Earther. To start learning how to optimize for human preferences
 and values rather than cold fixed objectives. 
-Start [pulling some fire alarms](https://intelligence.org/2017/10/13/fire-alarm/).
+Start [pulling the fire alarm](https://intelligence.org/2017/10/13/fire-alarm/).
 Personally, start becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
 
 Super exciting times, but we certainly have our work cut out for us. 
-Super important choices to make and things to get right. (And not that it often really seems on the ground level like you are making a ton of progress. Most the time it is hard, 
+Super important choices to make and things to get right. (And not that it often feels, on the ground level, like you are making a ton of progress. Mostly it's hard, 
 unglamorous work.
 Something like "things never get easier,
-you (*or maybe, the field as a whole*) [just go faster](https://twitter.com/ruohanchenux/status/1000258622239068160/photo/2)".)
+you (*or maybe the field as a whole*) [just go faster](https://twitter.com/ruohanchenux/status/1000258622239068160/photo/2)".)
 
 ...
 
