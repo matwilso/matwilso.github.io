@@ -13,17 +13,18 @@ with generative abilities akin to what we see with GPT3, but in the video domain
 <br><br>
 What does this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
-Based on the growing capabilities of language models like GPT3, it seems likely we will be able to train a very accurate future-frame-predictor using a scaled up, but relatively dumb approach.
+Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to train a very accurate future-frame-predictor using a scaled up, but relatively dumb approach.
 
 A future-frame-predictor, with a bit of guidance, 
 could become a general purpose reality simulator.
 Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
 YouTube-GPT-X would learn super accurate physics to better predict the next frame.
 With enough capacity and enough data (and a sprinkle of inductive biases),
-it would become insanely good at this. Good enough, at least, to generate very realistic scenes.
+it would become insanely good at this. At least good enough to generate and physically
+simulate very realistic scenes.
 
 By absorbing knowledge across so many domains, 
-it could simulate real-world environments with 
+it could simulate RL environments with a
 physical accuracy and generality light-years beyond what is possible today.
 It could unify all the compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 
@@ -52,25 +53,28 @@ Train a robot to paint your room. Visualize the sequence of actions the robot wo
 
 Train models directly from human preferences in source videos. Learn that humans don’t like spilling paint, or breaking vases, or burning their eggs. Learn how humans and animals move naturally. How humans are polite in letting others pass. 
 
-This would be an incredible tool for accelerating progress across the whole field. We invest resources in creating and developing it and then it becomes a source of compounding growth. As it gets better, so do our capabilities, data, $, and time budgets.
+This would be an incredible tool for accelerating progress across the whole field. We would invest resources in creating and developing it and then it would become a source of compounding growth. As it gets better, so would our capabilities, data, $, and time budgets.
 
-Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent would understand and interact with the world in terms of its high-fidelity physics model. 
+Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent could understand and interact with the world in terms of its high-fidelity physics model. 
 
-Humans can 
-accurately predict what will happen if we bump our coffee cup near the edge of our table
-or how someone might respond if we bump *their coffee* near the edge of the table.
-We're pretty good at intuitive physics and psychology predictions like this. 
-Yet our information processing abilities are severely constrained by our hardware,
+For example, humans can accurately predict what will happen if we bump our 
+coffee cup near the edge of a table
+or how someone might respond if we bump *their coffee* near the edge of a table.
+Our intuitive physics and psychology predictions are very good, despite the
+fact our information processing abilities are severely constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
-In theory, you could do much better---with digital brains, specially optimized to 
+In theory, you can do much better---with digital brains, specially optimized to 
 model these things, trained on orders of magnitude more data than you would
 ever encounter in a lifetime, with more memory and much higher accuracy representations.
 
-Such brains could predict, for example, if the backyard deck that all those people are standing on is about to collapse.
+For example, such brains may be able to predict things like the precise 
+trajectory of the mug and the splatter pattern the coffee will leave on the carpet based on 
+the speed and angle of the bump, and the shape and fullness of the mug.
+They may be able to predict if the outdoor deck that all those people are standing on is about to collapse.
 By having watched thousands of videos of structural 
-failures like that on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse), it will know all the tell-tale signs, like
-the overloading from too many people and the stress fracture in the wood
-(maybe not the most accurate full scenario, but it illustrates the point).
+failures like that on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse), they might know all the tell-tale signs, like
+the overloading from too many people and the stress fracture in the wood.
+What such brains could predict about human psychology is a bit worrying...
 
 If text-based-GPT is like having thousands of world experts to talk to,
 robot-embodied-YouTube-GPT would be like having thousands of world experts in the room with you. 
@@ -78,24 +82,6 @@ It would know things like survival skills, yoga, workout routines, guitar cords.
 It could demonstrate and explain the
 mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
 Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
-
-<!--
-
-*Cut to a scene of a large group of people standing together, having drinks on a small outdoor deck.*
-
-*"Get inside!", a droid comes running across the street, "Get off the deck!". 
-It noticed there are way too many of them standing there and they are overloading the deck. 
-The 
-It also notices*
-
-*They look over, confused, as the supports start creaking.
-The deck suddenly drops out from under them, comes to a halt a few feet below. Most of them 
-are able to jump inside---only a few are knocked of their feet
-with minor bruises and a sprained wrist.* 
-
-Maybe not the most realistic scenario, but there are in fact thousands of videos of structural failures like this on YouTube to learn from, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse) (not turning out quite as well).
-An agent that has integrated so much knowledge could notice and predict many things like this better than an average person.
--->
 
 ...
 
