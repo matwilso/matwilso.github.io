@@ -13,9 +13,9 @@ with generative abilities akin to what we see with GPT3, but in the video domain
 <br><br>
 What would this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
-Based on the growing capabilities of language models like GPT3, it seems likely that we will be able to train a very accurate future-frame-predictor using a scaled up, but relatively dumb approach.
+Based on the growing capabilities of language models like GPT3, it seems likely we will be able to train a very accurate future-frame-predictor using a scaled up, but relatively dumb approach.
 
-A future-frame-predictor like this, with a bit of guidance, 
+Such a future-frame-predictor, with a bit of guidance, 
 could become a general purpose reality simulator.
 Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
 YouTube-GPT-X would learn super accurate physics to better predict the next frame.
@@ -34,7 +34,7 @@ Sunlight passing through a magnifying glass, catching a pile of dry leaves on fi
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps them.
 Any number of other interactions for which we have trouble writing computer simulations, but for which we have, or could collect, a lot of data.
 
-Such a simulator would be incredibly useful---especially in robot learning.
+Such a simulator could be incredibly useful in robot learning.
 Imagine sim2real learning with the smallest possible reality gap.
 Model-based learning with the best possible model.
 All in a package that is natural to interface with.
