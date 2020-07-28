@@ -9,24 +9,25 @@ toc_sticky: true
 ---
 
 >Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---a high-fidelity general-purpose prediction model,
-with generative abilities akin to what we see with GPT3, but in the video domain.
+with generative abilities akin to GPT3, but in the video domain.
 <br><br>
 What would this enable? In robotics? In general, for bringing advances in information technology to the world of atoms?
 
-Based on the growing capabilities of language models like GPT3, it seems likely we will be able to train a very accurate future-frame-predictor using a scaled up, but relatively dumb approach.
+Based on recent advances in language modeling---the incredible
+capabilities we are seeing with massively scaled but relatively "dumb" approaches---it seems likely we will soon produce incredible
+capabilities in video prediction, using similarly dumb approaches.
 
-Such a future-frame-predictor, with a bit of guidance, 
-could become a general purpose reality simulator.
+Assuming we can create something like a general video prediction model, that puts us a short step away from a general physics simulator.
+In video prediction, you feed the model some prompt video and it tells you what is going to happen in that video.
+If the prompt video happens to describe a physical system, then your model will happen to simulate physics by predicting forward.
+With enough capacity, enough data, and a few built-in inductive biases, a video-GPT-type model could become insanely good at physical prediction.
 Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
-YouTube-GPT-X would learn super accurate physics to better predict the next frame.
-With enough capacity, enough data, and a few built-in inductive biases,
-it would become insanely good at this. At least good enough to generate and physically
-simulate very realistic scenes.
+video-GPT-X would learn super accurate physics to better predict the next frame.
 
-By absorbing knowledge across many domains, 
-it could simulate RL environments with a
+By absorbing knowledge across many domains, it could simulate RL environments with a
 physical accuracy and generality light-years beyond what is possible today.
-It could unify all the compartmentalized, special-case simulation modes (rigid-body, fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
+It could unify all the special-case, compartmentalized simulation modes (rigid-body, 
+fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 
 An egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
 dragging across the wall, and leaving a red streak of paint behind it.
