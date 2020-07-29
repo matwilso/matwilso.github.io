@@ -17,8 +17,8 @@ Based on recent advances in language modeling---the incredible
 capabilities we are seeing with massively scaled but relatively "dumb" approaches---it seems likely we will soon produce incredible
 capabilities in video prediction, using similarly dumb approaches.
 
-Assuming we can create something like a general video prediction model, that puts us a short step away from a general physics simulator.
-In video prediction, you feed the model some prompt video and it tells you what is going to happen in that video.
+Assuming we create a general video prediction model, that puts us a short step away from a general physics simulator.
+In video prediction, you feed the model some "prompt video" and it tells you what is going to happen next.
 If the prompt video happens to describe a physical system, then your model will happen to simulate physics by predicting forward.
 With enough capacity, enough data, and a few built-in inductive biases, a video-GPT-type model could become insanely good at physical prediction.
 Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
