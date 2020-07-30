@@ -68,13 +68,17 @@ model these things, trained on orders of magnitude more data than you would
 ever encounter in a lifetime, with more memory and much higher accuracy representations.
 
 For example, such brains may be able to predict things like the precise 
-trajectory of the mug and the splatter pattern the coffee will leave on the carpet based on 
-the angle of the bump.
-They may be able to predict if the outdoor deck that all those people are standing on is about to collapse.
+trajectory of the mug.  Or whether that outdoor deck all those people are standing on is about to collapse.
 By having watched thousands of videos of structural 
 failures like that on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse), they might know all the tell-tale signs, like
 the overloading from too many people and the stress fracture in the wood.
-What such brains may be able to predict about human psychology is a bit worrying...
+I don't think we should underestimate brains capable of incorporating and 
+being able to recall such masive amounts of data (as a hint of this, see the
+breadth of contexts that GPT3 shows competency in).
+
+<!--
+What such brains may be able to predict about human psychology is perhaps worrying.
+-->
 
 If text-based-GPT is like having thousands of world experts to talk to,
 robot-embodied-video-GPT would be like having thousands of world experts in the room with you. 
@@ -94,7 +98,7 @@ It learns basic syntax and grammar so it can predict the next word.
 Then it learns basic text patterns (paragraphs, dialogue), so it can predict the next word.
 Then it learns [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/), [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [...](https://twitter.com/xuenay/status/1283312640199196673) all to better predict the next word.
 
-video-GPT-X would be able to learn super accurate physics because this
+Video-GPT-X would be able to learn super accurate physics because this
 is what would help it better predict the next video frame.
 With enough data, and especially with inductive biases sprinkled in, a super high-fidelity simulation seems possible.
 And you maybe only have to do well enough to bootstrap to something on the order of narrow household robots (dish washing + laundry).
