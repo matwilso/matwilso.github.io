@@ -77,7 +77,7 @@ the overloading from too many people and the stress fracture in the wood.
 What such brains may be able to predict about human psychology is a bit worrying...
 
 If text-based-GPT is like having thousands of world experts to talk to,
-robot-embodied-YouTube-GPT would be like having thousands of world experts in the room with you. 
+robot-embodied-video-GPT would be like having thousands of world experts in the room with you. 
 It could know things like survival skills, yoga, workout routines, guitar cords. 
 It could demonstrate and explain the
 mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
@@ -94,15 +94,15 @@ It learns basic syntax and grammar so it can predict the next word.
 Then it learns basic text patterns (paragraphs, dialogue), so it can predict the next word.
 Then it learns [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/), [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [...](https://twitter.com/xuenay/status/1283312640199196673) all to better predict the next word.
 
-YouTube-GPT would be able to learn super accurate physics because this
+video-GPT-X would be able to learn super accurate physics because this
 is what would help it better predict the next video frame.
 With enough data, and especially with inductive biases sprinkled in, a super high-fidelity simulation seems possible.
 And you maybe only have to do well enough to bootstrap to something on the order of narrow household robots (dish washing + laundry).
 Then you can use those robots in a Tesla-like [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), collecting more data to iteratively improve the models.
 
-To caveat, it's hard to say how far we are from YouTube-GPT. It's possible that
+To caveat, it's hard to say how far we are from video-GPT-X. It's possible that
 patching up current limitations proves extremely difficult. It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
-Also, to further caveat, it won't be as simple as taking out-of-the-box vanilla YouTube-GPT and using it for high-fidelity simulation. 
+Also, to further caveat, it won't be as simple as taking out-of-the-box vanilla video-GPT-X and using it for high-fidelity simulation. 
 I'm guessing you need to put in a lot of physics sim specific effort to make it workable.
 
 ...
