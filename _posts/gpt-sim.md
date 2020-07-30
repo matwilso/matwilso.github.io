@@ -17,7 +17,7 @@ Based on recent advances in language modeling---the incredible
 capabilities we are seeing with massively scaled but relatively "dumb" approaches---it seems likely we will soon produce incredible
 capabilities in video prediction, using similarly dumb approaches.
 
-Assuming we can create a general video prediction model, that puts us a short step away from a general physics simulator.
+Once we create a general video prediction model, we will also have created a general physics simulator.
 In video prediction, you feed the model some "prompt video" and it tells you what is going to happen next.
 If that video happens to describe a physical system, then your model will happen to simulate physics by predicting forward.
 With enough capacity, enough data, and a few built-in inductive biases, a video-GPT-type model could become insanely good at physical prediction.
@@ -161,3 +161,60 @@ Anyway, cheers, thanks for reading
 <br>
 (this document was written by a human, lol)<br>
 (always happy to hear any comments, criticism, feedback you have below, or in DMs, email, etc.)
+
+
+
+<!--
+
+FAQs/addendums
+
+1. 
+
+When a gpt model looks at starting a fire. It doesn’t have to get perfect physical accuracy. It will look and know that striking a flint with a steel will create sparks. Then that should catch the leaves on fire. That should produce smoke.
+
+It won’t know the exact locations of all of these.
+
+It will have a certain state that corresponds to there is flame. And once it has achieved that, it will know. It won’t have to be perfect.
+
+The only way to achieve something like this is with very little imposed structure, trained on tons of real data. Yeah.
+
+
+Hmm… this kind of makes me think we don’t want much structure at all. Or in fact, any things like conservation laws.
+
+They will make it easier to learn some things, but they are just a crutch.
+
+Big big models with just enough inductive biases to make it possible.
+
+
+2. 
+
+I guess one thing that is often ignored is that you can imagine a state before imagining how you would traverse there.
+
+You can imagine, what would it be like if those words were switched.
+Or if I went home right now, what would I be doing?
+You can imagine states.
+If your model is general enough, you can imagine states that are similar.
+You could imagine different versions of the state.
+Like imagine the desert, but it is grey, there is no air to breathe, the gravity is reduced, the dust can damage your body/electronics. How would you act there?
+You can modify your models like that and try to figure it out.
+
+I think video-GPT sim would work because you could place it in different contexts.
+
+
+3. 
+
+This would be a good way to make it parallelizable.
+
+You collect data from all over, and you can have thousands of agents
+running in the sim training.
+
+I think this is going to the best way to scale.
+You aggregate all of this knowledge into a central location.
+
+-->
+
+
+
+
+
+
