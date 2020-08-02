@@ -105,13 +105,16 @@ And you maybe only have to do well enough to bootstrap to something on the order
 Then you can use those robots in a Tesla-like [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), collecting more data to iteratively improve the models.
 
 To caveat, it's hard to say how far we are from video-GPT-X. It's possible that
-patching up current limitations proves extremely difficult. It’s possible text is a uniquely well-suited modality for progress here. But also there is image-GPT, and though it’s hella compute expensive, it at least strongly suggests that other modalities are conquerable.
-Also, to further caveat, it won't be as simple as taking out-of-the-box vanilla video-GPT-X and using it for high-fidelity simulation. 
+patching up current limitations proves extremely difficult. 
+It’s possible text is a uniquely well-suited modality for progress here. 
+There is image-GPT, which suggests that other modalities are conquerable---if you are willing to pay the price in compute.
+But when will be able to afford massive-scale video prediction?
+And at that point, will it be as simple as taking out-of-the-box vanilla video-GPT-X and using it for high-fidelity simulation?
 I'm guessing you need to put in a lot of physics sim specific effort to make it workable.
 
 ...
 
-Seeing GPT3 and extrapolating forward from that, I can now much more clearly imagine super powerful AI systems.
+Seeing GPT3 and extrapolating forward from that, I can now much more clearly imagine super powerful future AI systems.
 
 It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
 And though GPT is still primitive in many ways, I don't think I would have expected it to be able to do some of the things that it can.
@@ -153,7 +156,7 @@ Start [pulling the fire alarm](https://intelligence.org/2017/10/13/fire-alarm/).
 Personally, start becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
 
 Super exciting times, but we certainly have our work cut out for us. 
-Super important choices to make and things to get right. (And not that it often really feels, on the ground level, like you are making a ton of progress. Mostly it's hard, 
+Super important choices to make and things to get right. (And not that it often really feels, on the ground level, like one is making a ton of progress. Mostly it's hard, 
 unglamorous work.
 Something like "things never get easier,
 you (*or maybe the field as a whole*) [just go faster](https://twitter.com/ruohanchenux/status/1000258622239068160/photo/2)".)
