@@ -11,15 +11,15 @@ toc_sticky: true
 >Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---a high-fidelity general-purpose prediction model,
 with generative abilities akin to GPT3, but for videos.
 <br><br>
-What would this enable? In robotics and for bringing advances in information tech to the world of atoms?
+What would this enable? In robotics?  For bringing advances in information tech to the world of atoms more generally?
 
 Based on recent advances in language modeling---with the incredible
 capabilities of massively scaled but relatively "dumb" approaches trained to
-predict the next token (GPT3)---powerful video prediction does not seem too far off.
-It's maybe not immediate, due to compute costs, necessary improvements in arches, training, etc.,
+predict the next token---powerful video prediction doesn't seem too far off.
+Maybe not immediate, due to compute costs, necessary improvements in arches, training, etc.,
 but it's definitely on our horizon.
 
-Once we do create a general video prediction model, we are then a small step away from a general physics simulator.
+Once we do create a general video prediction model, that puts us a small step away from a general physics simulator.
 In video prediction, you feed the model a "prompt" video and the model tells you what is going to happen next.
 If that video happens to depict a physical system, like a free-falling object, then your model will happen to simulate physics by predicting what
 is going to happen to that object.
@@ -29,7 +29,7 @@ video-GPT-X would learn super accurate physics to better predict the next frame.
 
 By absorbing knowledge across many domains, it could simulate RL environments with a
 physical accuracy and generality light-years beyond what is possible today.
-It could unify all the special-case, compartmentalized simulation modes (rigid-body, 
+It could unify all the special-case, hand-engineered simulation modes (rigid-body, 
 fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 
 An egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
@@ -66,23 +66,18 @@ or how someone might respond if we bump *their coffee* near the edge of a table.
 Our intuitive physics and psychology predictions are very good, despite the
 fact our information processing abilities are severely constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
-In theory, you can do much better---with digital brains, specially optimized to 
-model these things, trained on orders of magnitude more data than you would
-ever encounter in a lifetime, with more memory and much higher accuracy representations.
+In theory, you can do much better---with digital brains, specifically optimized to 
+model these things, trained on orders of magnitude more data than anyone
+encounters in a lifetime, with more memory and much higher accuracy representations.
 
 For example, such brains may be able to predict things like the precise 
 trajectory of the mug.  Or perhaps whether that outdoor deck all those people are standing on is about to collapse.
 By having watched thousands of videos of structural 
 failures like that on YouTube, including several videos of this [exact thing](https://www.youtube.com/results?search_query=deck+collapse), they might know all the tell-tale signs, like
 the overloading from too many people and the stress fracture in the wood.
-If GPT3's vast breadth of knowledge is any indication,
-such scenarios seem plausible.
+Models that have "experienced" much more than any single human may have extraordinary capabilities such as these.
 
-<!--
-What such brains may be able to predict about human psychology is perhaps worrying.
--->
-
-If text-based-GPT is like having thousands of world experts to talk to,
+If text-based-GPT-X is like having thousands of world experts to talk to,
 robot-embodied-video-GPT could be like having thousands of world experts in the room with you. 
 It could know things like survival skills, yoga, workout routines, guitar cords. 
 It could explain and demonstrate the mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
