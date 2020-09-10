@@ -24,6 +24,7 @@ header_pages:
  # - about.md
  # - projects.md
  - personal.md
+ - quotes.md
  # - hacks.md
 
 # Build settings
