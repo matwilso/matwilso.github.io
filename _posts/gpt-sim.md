@@ -15,9 +15,9 @@ What would this enable? In robotics?  For bringing advances in information tech 
 
 Based on recent advances in language modeling---with the incredible
 capabilities of massively scaled but relatively "dumb" approaches trained to
-predict the next token---powerful video prediction doesn't seem too far off.
+predict the next token (i.e., [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3))---powerful video prediction doesn't seem too far off.
 Maybe not immediate, due to compute costs, necessary improvements in arches, training, etc.,
-but it's definitely on our horizon.
+but it's definitely on our near-term horizon.
 
 Once we do create a general video prediction model, that puts us a small step away from a general physics simulator.
 In video prediction, you feed the model a "prompt" video and the model tells you what is going to happen next.
@@ -142,7 +142,7 @@ Discovering that it is experiencing a training process?
 Discovering that it can do better at its objective by influencing its data sources?
 
 It now also seems pretty clear that we should actually be worried about these questions. 
-Starting now (with it being the second best time to plant a tree and all).
+Starting now (the second best time to plant a tree and all).
 
 It feels like we ought to start buckling down more.  On safety / alignment. On thinking hard
 about the future we want.
