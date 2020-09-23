@@ -17,10 +17,10 @@ permalink: /quotes/
 
 "Unproductive pleasures pall eventually. After a while you get tired of lying on the beach. If you want to stay happy, you have to do something." -pg
 
-"Wanting to build a successful social product is like wanting to be a famous actor or artist - it's inherently rewarding work, so everyone wants to do it, which makes your odds of succeeding lower. Building an unsexy SaaS product, on the other hand..." - Jay Graber's friend
+"Wanting to build a successful social product is like wanting to be a famous actor or artist - it's inherently rewarding work, so everyone wants to do it, which makes your odds of succeeding lower. Building an unsexy SaaS product, on the other hand..." - Jay Graber[('s friend)](https://twitter.com/arcalinea/status/1303403898758033408)
 
 
-"The True Way transcends the minutiae of Skill. There is no 'Technology'. There is no 'Design'. There is only a vision of how humanity could be, and the relentless resolve to make it so. The rest is details." - Bret Victor
+"The True Way transcends the minutiae of Skill. There is no 'Technology'. There is no 'Design'. There is only a vision of how humanity could be, and the relentless resolve to make it so. The rest is details." - [Bret Victor](http://worrydream.com/#!/Bio)
 
 
 # Rationality:

@@ -17,7 +17,7 @@ Based on recent advances in language modeling---with the incredible
 capabilities of massively scaled but relatively "dumb" approaches trained to
 predict the next token (i.e., [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3))---powerful video prediction doesn't seem too far off.
 Maybe not immediate, due to compute costs, necessary improvements in arches, training, etc.,
-but it's definitely on our near-term horizon.
+but it's definitely on our horizon.
 
 Once we do create a general video prediction model, that puts us a small step away from a general physics simulator.
 In video prediction, you feed the model a "prompt" video and the model tells you what is going to happen next.
@@ -104,9 +104,9 @@ To caveat, it's hard to say how far we are from video-GPT-X. It's possible that
 patching up current limitations proves extremely difficult. 
 It’s possible text is a uniquely well-suited modality for progress here. 
 There is image-GPT, which suggests that other modalities are conquerable---if you are willing to pay the price in compute.
-But when will be able to afford massive-scale video prediction?
-And at that point, will it be as simple as taking out-of-the-box vanilla video-GPT-X and using it for high-fidelity simulation?
-I'm guessing you need to put in a lot of physics sim specific effort to make it workable.
+At some point massive-scale video prediction will be affordable.
+At that point, it might not be as simple as taking out-of-the-box vanilla video-GPT-X and using it for high-fidelity simulation---it
+might require some physics-sim specifc effort to make it work---but it will be possible.
 
 ...
 
@@ -114,8 +114,9 @@ Seeing GPT3 and extrapolating forward from that, I can now much more clearly ima
 
 It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
 And though GPT is still primitive in many ways, I don't think I would have expected it to be able to do some of the things that it can.
-(And maybe ditto for AlphaGo, the DOTA/SCII work, though I never made 
-any concrete advance predictions for any of these.)
+(And maybe ditto for AlphaGo, the DOTA/SCII work, though I didn't have
+advance predictions for any of these.)
+Neural networks definitely seem up to the task. They just keep [scaling up](https://www.gwern.net/newsletter/2020/05#gpt-3).
 Quantity really does seem to have a quality all its own here.
 Whole new capabilities arise from training bigger and bigger systems.
 
@@ -124,38 +125,34 @@ neural networks should definitely work.
 Evolution puts a certain type of optimization pressure on organisms to survive and reproduce. 
 These AI training processes are putting what seems to be an equivalently powerful
 optimization pressure on the neural networks to accurately predict the future (next word).
-Evolution turned out, in the specific case of homo sapiens, to squeeze human-level intelligence
-out of this by chance, over billions of years.
+Evolution turned out, in the case of homo sapiens, to squeeze human-level intelligence out of this by chance, over billions of years.
 I don't see an obvious reason why these specific types of AI training processes can't
 do something equally impressive using a different objective and pressure, given enough effort and development + training time (much less than billions of years).
 And the AI training seems more straight-to-the-point --- predicting the future probably puts a more direct pressure on intelligence capabilities.
 Plus, AI benefits from bootstrapping off human artefacts and ingenuity.
 
-Sure, these types of ideas and arguments might be old news,
-and you are already convinced or already skeptical.
-But I think we are starting to see a much more concrete picture than before,
-of how, *exactly*, powerful AI might be built.
+I believe what we are seeing now is a much more concrete picture than ever before, of how, *exactly*, powerful AI will be built.
+This stuff is working and it is working well.
 
-So, as we keep on improving these systems, where do the capabilities stop?
-Before the model starts probing deeper into human psychology and motivations?
-Discovering that it is experiencing a training process?
+Consider how far we have come in the past decade, from pre AlexNet (2012) to today in 2020 ([gwern again](https://www.gwern.net/newsletter/2020/05#critiquing-the-critics)).
+In hardware, algorithms, investment, researchers and engineers working on problems, and clear wins for deep learning (Computer Vision, Game Playing, Natural Language Processing)
+Then consider where we might be in another decade.
+
+As we keep on improving these systems, where do the capabilities stop?
+Before the model discovers that it is experiencing a training process?
+Before probing deeper into human psychology and motivations?
 Discovering that it can do better at its objective by influencing its data sources?
 
 It now also seems pretty clear that we should actually be worried about these questions. 
-Starting now (the second best time to plant a tree and all).
-
-It feels like we ought to start buckling down more.  On safety / alignment. On thinking hard
-about the future we want.
-On dealing with bad/biased data, to stop our YouTube-GPT model from becoming an anti-Vax Flat-Earther. 
-To start learning how to optimize for human preferences and values rather than fixed pre-specified objectives. 
-Start [pulling the fire alarm](https://intelligence.org/2017/10/13/fire-alarm/).
-Personally, start becoming more familiar with the ML biases, human-computer symbiosis, and AI safety literatures as a first step.
+Of alignment.  Of handling our data biases well.
+Of optimizing for human preferences and values rather than fixed pre-specified objectives.
+Of determining the future we want and the path to get there.
 
 Super exciting times, but we've got our work cut out for us. 
-Super important choices to make and things to get right. (And not that it often really feels, on the ground level, like one is making a ton of progress. Mostly it's hard, 
-unglamorous work.
-Something like "things never get easier,
-you (or maybe the field as a whole) [just go faster](https://twitter.com/ruohanchenux/status/1000258622239068160/photo/2)".)
+Big choices to make and things to get right.
+And not that it often feels like one is making a ton of progress, on the ground level. Mostly it feels
+like hard, unglamorous work.  Something like: "things never get easier,
+you (and the field as a whole) [just go faster](https://twitter.com/ruohanchenux/status/1000258622239068160/photo/2)".
 
 ...
 
@@ -163,7 +160,7 @@ Anyway, cheers, thanks for reading
 
 <br>
 (this document was written by a human, lol)<br>
-(always happy to hear any comments, criticism, feedback you have below, or in DMs, email, etc.)
+(always happy to catch any comments, criticism, feedback you have below, or in DMs, email, etc.)
 
 
 
