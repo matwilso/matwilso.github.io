@@ -4,7 +4,7 @@ title: Quotes
 permalink: /quotes/
 ---
 
-(random sample of quotes)
+just a random sample of some quotes
 
 
 # Startups/life
