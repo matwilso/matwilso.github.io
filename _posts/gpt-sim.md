@@ -16,22 +16,22 @@ What would this enable? In robotics?  For bridging advances in information tech 
 
 Recent advances in language modeling (i.e., [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3)) demonstrate
 a path to powerful AI systems---that of proving out effective architectures and training procedures, then simply scaling the shit out of everything.
-As it turns out, this works well.
+It turns out we live in a universe where this works.
 Bigger models, more compute, and more data lead to better performance and wholly new qualitative capabilities.
-The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) seems to be true.
+The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true.
 
 With models in the 100s of billions of parameters, we're achieving amazing results in language modeling
 and have yet to hit scaling limits.
 If we can achieve such mastery with such simple approaches in text, we can't be that far away from conquering other domains like video.
 Maybe not immediately, due to much larger compute costs, necessary improvements in video-specific arches, training, etc., but definitely on the horizon.
 
-And we have yet to mine all the applications of text models, but I think video prediction offers some extremely interesting promises.
-There are no doubt many reasons from VR, movie generation, myriad other tools.
-In this post, I mostly focus on that application most relevant to robot learning, which is a *general physics simulator*.
+And we have yet to mine all the applications of text models, but I think video prediction promises some extremely interesting applications.
+No doubt, many in VR, movie generation, etc.
+But in this post, I focus on the possibility of a general purpose physics simulator for use in robot learning.
 
-In text prediction, you feed the model a prompt text and the model fills in the blank for the rest.
-In video prediction, you feed the model a prompt video and the model generates likely future frames.
-If that video happens to depict a physical system, like a free-falling object, then your model will happen to simulate physics by predicting what
+The way a language model works is: you feed in a chunk of prompt text, and it spits back out some continuation, some guess of what comes next.
+It's the same idea in video prediction, but feeding video frames in and getting video frames spit back out.
+If your video happens to depict a physical system, like a free-falling object, then your model will happen to simulate physics by predicting what
 is going to happen to that object.
 With enough capacity, enough data, and a few built-in inductive biases, a video-GPT-X model could become insanely good at physical prediction.
 Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
@@ -42,7 +42,7 @@ physical accuracy and generality light-years beyond what is possible today.
 It could unify all the special-case, hand-engineered simulation modes (rigid-body, 
 fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
 
-An egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
+A single model to simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
 dragging across the wall, and leaving a red streak of paint behind it.
 Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire---a rising trail of smoke, a marshmallow cooking over the flame.
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps them.
@@ -93,9 +93,11 @@ It could know things like survival skills, yoga, workout routines, guitar cords.
 It could explain and demonstrate the mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
 Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
-
-And maybe you only have to do well enough to bootstrap to something on the order of narrow household robots (dish washing + laundry).
-Then you can use those robots in a Tesla-like [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), collecting more data to iteratively improve the models.
+And to bootstrap to something like this, maybe you can start with something on the order of narrow household robots (dish washing + laundry).
+Then you can use those robots in a Tesla-like [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), collecting more data to iteratively improve the models
+and ratcheting up.
+Something like a "Sim2Real Engine", where you use simulators to train policies, use those policies to collect better data,
+and then use that data to improve the simulator. Rinse, repeat.
 
 To caveat, it's hard to say how far we are from video-GPT-X. It's possible that
 patching up current limitations proves extremely difficult. 
@@ -105,8 +107,8 @@ At some point massive-scale video prediction will be affordable.
 At that point, it might not be as simple as taking out-of-the-box vanilla video-GPT-X and using it for high-fidelity simulation---it
 might require some physics-sim specifc effort to make it work---but it will be possible.
 
-I think preparing for the world where the scaling hypothesis and the bitter lesson are true is important.
-What is going to matter in 10-20 years? Is your current research? Is it building to anything that might?
+And I think preparing for the world where the scaling hypothesis and the bitter lesson are true is important.
+What is going to matter in 10-20 years? Are you building towards something that might? 
 
 Specifically, I think this is going to look like huge models trained on massive datasets.
 And then we reuse these massive models for different tasks.
