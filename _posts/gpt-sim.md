@@ -30,9 +30,9 @@ No doubt many in VR, movie generation, etc.
 But in this post, I focus on the applications to robot learning of a general purpose video physics simulator.
 
 The way a language model works is: you feed in a chunk of prompt text, and it spits back out some continuation, some guess of what comes next.
-It's the same idea in video prediction, but feeding video frames in and getting video frames spit back out.
-If your video happens to depict a physical system, like a free-falling object, then your model will happen to simulate physics by predicting what
-is going to happen to that object.
+Same idea for video prediction, but feeding video frames in and getting video frames spit back out.
+So, if you have a super powerful video prediction model, and you feed in a video that happens to depict a physical system,
+like a free-falling object, then your model will happen to simulate physics by predicting what is going to happen to that object.
 With enough capacity, enough data, and a few built-in inductive biases, a video-GPT-X model could become insanely good at physical prediction.
 Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
 video-GPT-X would learn super accurate physics to better predict the next frame.
