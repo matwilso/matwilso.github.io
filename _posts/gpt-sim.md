@@ -8,19 +8,29 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT-X trained on the entirety of YouTube (cooking videos, DIY, home improvement, exercise, sports, gardening, etc)---a high-fidelity general-purpose prediction model,
-with generative abilities akin to GPT3, but for videos.
+>Imagine a video-based GPT-X model trained on the entirety of YouTube---cooking videos, DIY, home improvement, exercise, sports, gardening, etc.
+A high-fidelity general-purpose video prediction model, with generative abilities akin to GPT3, but for video.
 <br><br>
-What would this enable? In robotics?  For bringing advances in information tech to the world of atoms more generally?
+What would this enable? In robotics?  For bridging advances in information tech to the physical world more generally?
 
-Based on recent advances in language modeling---with the incredible
-capabilities of massively scaled but relatively "dumb" approaches trained to
-predict the next token (i.e., [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3))---powerful video prediction doesn't seem too far off.
-Maybe not immediate, due to compute costs, necessary improvements in arches, training, etc.,
-but it's definitely on our horizon.
 
-Once we do create a general video prediction model, that puts us a small step away from a general physics simulator.
-In video prediction, you feed the model a "prompt" video and the model tells you what is going to happen next.
+Recent advances in language modeling (i.e., [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3)) demonstrate
+a path to powerful AI systems---that of proving out effective architectures and training procedures, then simply scaling the shit out of everything.
+As it turns out, this works quite well.
+Bigger models, more compute, and more data lead to better performance and wholly new qualitative capabilities.
+The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) seems to be true.
+
+With models in the 100s of billions of parameters, we're achieving amazing results in language modeling
+and have yet to hit scaling limits.
+If we can achieve such mastery with such simple approaches in text, we can't be that far away from conquering other domains like video.
+Maybe not immediately, due to much larger compute costs, necessary improvements in video-specific arches, training, etc., but definitely on the horizon.
+
+And we have yet to mine all the applications of text models, but I think video prediction offers some extremely interesting promises.
+There are no doubt many reasons from VR, movie generation, myriad other tools.
+In this post, I mostly focus on that application most relevant to robot learning, which is a *general physics simulator*.
+
+In text prediction, you feed the model a prompt text and the model fills in the blank for the rest.
+In video prediction, you feed the model a prompt video and the model generates likely future frames.
 If that video happens to depict a physical system, like a free-falling object, then your model will happen to simulate physics by predicting what
 is going to happen to that object.
 With enough capacity, enough data, and a few built-in inductive biases, a video-GPT-X model could become insanely good at physical prediction.
@@ -83,20 +93,7 @@ It could know things like survival skills, yoga, workout routines, guitar cords.
 It could explain and demonstrate the mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
 Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
-...
 
-Why do we expect something stupidly simple like future prediction to work so well? To get us to super accurate physics simulators?
-
-Mainly, the empirical evidence we are starting to see from text-based models trained on this exact same dumb idea. The results of GPT3 are amazing---[still](https://www.gwern.net/GPT-3#weaknesses) [limited](https://twitter.com/michael_nielsen/status/1284937260798885888) [lol](https://twitter.com/sama/status/1284922296348454913), but amazing.
-GPT3 just tries to predict the next word as accurately as possible.
-When given a bigger brain, it keeps on filling that brain with more and more knowledge.
-It learns basic syntax and grammar so it can predict the next word.
-Then it learns basic text patterns (paragraphs, dialogue), so it can predict the next word.
-Then it learns [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/), [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [...](https://twitter.com/xuenay/status/1283312640199196673) all to better predict the next word.
-
-Video-GPT-X would be able to learn super accurate physics because this
-is what would help it better predict the next video frame.
-With enough data, and especially with inductive biases sprinkled in, a super high-fidelity simulation seems possible.
 And maybe you only have to do well enough to bootstrap to something on the order of narrow household robots (dish washing + laundry).
 Then you can use those robots in a Tesla-like [fleet](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6678), collecting more data to iteratively improve the models.
 
@@ -108,58 +105,36 @@ At some point massive-scale video prediction will be affordable.
 At that point, it might not be as simple as taking out-of-the-box vanilla video-GPT-X and using it for high-fidelity simulation---it
 might require some physics-sim specifc effort to make it work---but it will be possible.
 
-...
+I think preparing for the world where the scaling hypothesis and the bitter lesson are true is important.
+What is going to matter in 10-20 years? Is your current research? Is it building to anything that might?
 
-Seeing GPT3 and extrapolating forward from that, I can now much more clearly imagine super powerful future AI systems.
+Specifically, I think this is going to look like huge models trained on massive datasets.
+And then we reuse these massive models for different tasks.
 
-It now seems pretty clear that we can build such systems using fairly stupid methods (~[Prosaic AI](https://ai-alignment.com/prosaic-ai-control-b959644d79c2)).
-And though GPT is still primitive in many ways, I don't think I would have expected it to be able to do some of the things that it can.
-(And maybe ditto for AlphaGo, the DOTA/SCII work, though I didn't have
-advance predictions for any of these.)
-Neural networks definitely seem up to the task. They just keep [scaling up](https://www.gwern.net/newsletter/2020/05#gpt-3).
-Quantity really does seem to have a quality all its own here.
-Whole new capabilities arise from training bigger and bigger systems.
+I am therefore pretty bullish on model-based learning. Learning the huge model of the world,
+then using that for training and injecting information into policies and value functions.
+And also on sim2real learning, where we can turn massive amounts of data from the real world
+into a simulator that we learn in. In fact, these areas will probably merge a lot in the future.
+(TODO: write and link my other post on this stuff).
 
-In terms of optimization processes, if evolution of human brains worked, deep learning of 
-neural networks should definitely work. 
-Evolution puts a certain type of optimization pressure on organisms to survive and reproduce. 
-These AI training processes are putting what seems to be an equivalently powerful
-optimization pressure on the neural networks to accurately predict the future (next word).
-Evolution turned out, in the case of homo sapiens, to squeeze human-level intelligence out of this by chance, over billions of years.
-I don't see an obvious reason why these specific types of AI training processes can't
-do something equally impressive using a different objective and pressure, given enough effort and development + training time (much less than billions of years).
-And the AI training seems more straight-to-the-point --- predicting the future probably puts a more direct pressure on intelligence capabilities.
-Plus, AI benefits from bootstrapping off human artefacts and ingenuity.
+I also think we will benefit from massive amounts of videos of human demonstrations that
+we can repurpose for training humanoid robots to do tasks. I imagine we could train a huge 
+model that can behave like humans. Without having to do teleoperation. We can just repurpose them,
+maybe through the use of the simulator.
 
-I believe what we are seeing now is a much more concrete picture than ever before, of how, *exactly*, powerful AI will be built.
-This stuff is working and it is working well.
+Maybe I ought to have a pointer to different huge models that are going to matter in robotics.
 
-Consider how far we have come in the past decade, from pre AlexNet (2012) to today in 2020 ([gwern again](https://www.gwern.net/newsletter/2020/05#critiquing-the-critics)).
-In hardware, algorithms, investment, researchers and engineers working on problems, and clear wins for deep learning (Computer Vision, Game Playing, Natural Language Processing)
-Then consider where we might be in another decade.
+Maybe I ought to rewrite this as the 
+impact of huge scaled models in robotics.
+One will be the learned simulator.
+One will be the 
 
-As we keep on improving these systems, where do the capabilities stop?
-Before the model discovers that it is experiencing a training process?
-Before probing deeper into human psychology and motivations?
-Discovering that it can do better at its objective by influencing its data sources?
-
-It now also seems pretty clear that we should actually be worried about these questions. 
-Of alignment.  Of handling our data biases well.
-Of optimizing for human preferences and values rather than fixed pre-specified objectives.
-Of determining the future we want and the path to get there.
-
-Super exciting times, but we've got our work cut out for us. 
-Big choices to make and things to get right.
-And not that it often feels like one is making a ton of progress, on the ground level. Mostly it feels
-like hard, unglamorous work.  Something like: "things never get easier,
-you (and the field as a whole) [just go faster](https://twitter.com/ruohanchenux/status/1000258622239068160/photo/2)".
 
 ...
 
 Anyway, cheers, thanks for reading
 
 <br>
-(this document was written by a human, lol)<br>
 (always happy to catch any comments, criticism, feedback you have below, or in DMs, email, etc.)
 
 
@@ -210,6 +185,19 @@ running in the sim training.
 
 I think this is going to the best way to scale.
 You aggregate all of this knowledge into a central location.
+
+
+
+
+
+
+Considering this, and really thinking about it.
+Sure it is expensive, but the price will drop and people are willing to drop this cash anyway.
+The potential windfall is massive.
+
+
+
+
 
 -->
 

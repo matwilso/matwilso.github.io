@@ -29,6 +29,8 @@ permalink: /quotes/
 
 "Oops is the sound we make when we improve our beliefs and strategies; so to look back at a time and not see anything you did wrong means that you haven’t learned anything or changed your mind since then." - ey
 
+"I beseech you, in the bowels of Christ, think it possible that you may be mistaken" - [Cromwell](https://en.wikipedia.org/wiki/Cromwell%27s_rule)
+
 
 "Now humans cannot use themselves this efficiently. But humans are not adapted for the task of scientific research. Humans are adapted to chase deer across the savanna, throw spears into them, cook them, and then—this is probably the part that takes most of the brains—cleverly argue that they deserve to receive a larger share of the meat. It’s amazing that Albert Einstein managed to repurpose a brain like that for the task of doing physics. This deserves applause. It deserves more than applause, it deserves a place in the Guinness Book of Records. Like successfully building the fastest car ever to be made entirely out of Jello." - ey
 
