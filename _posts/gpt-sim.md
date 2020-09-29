@@ -26,8 +26,8 @@ If we can achieve such mastery with such simple approaches in text, we can't be 
 Maybe not immediately, due to much larger compute costs, necessary improvements in video-specific arches, training, etc., but definitely on the horizon.
 
 And we have yet to mine all the applications of text models, but I think video prediction promises some extremely interesting applications.
-No doubt, many in VR, movie generation, etc.
-But in this post, I focus on the possibility of a general purpose physics simulator for use in robot learning.
+No doubt many in VR, movie generation, etc.
+But in this post, I focus on the applications to robot learning of a general purpose video physics simulator.
 
 The way a language model works is: you feed in a chunk of prompt text, and it spits back out some continuation, some guess of what comes next.
 It's the same idea in video prediction, but feeding video frames in and getting video frames spit back out.
