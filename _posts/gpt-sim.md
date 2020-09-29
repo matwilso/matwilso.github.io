@@ -16,7 +16,7 @@ What would this enable? In robotics?  For bridging advances in information tech 
 
 Recent advances in language modeling (i.e., [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3)) demonstrate
 a path to powerful AI systems---that of proving out effective architectures and training procedures, then simply scaling the shit out of everything.
-As it turns out, this works quite well.
+As it turns out, this works well.
 Bigger models, more compute, and more data lead to better performance and wholly new qualitative capabilities.
 The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) seems to be true.
 
