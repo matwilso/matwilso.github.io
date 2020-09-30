@@ -8,45 +8,50 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine a video-based GPT-X model trained on the entirety of YouTube---cooking videos, DIY, home improvement, exercise, sports, gardening, etc.
-A high-fidelity general-purpose video prediction model, with generative abilities akin to GPT3, but for video.
+>Imagine video-based GPT-X trained on the entirety of YouTube---cooking videos, DIY, home improvement, exercise, sports, gardening, etc.
+A general-purpose video prediction model, with generative abilities akin to GPT3, but in the video domain.
 <br><br>
 What would this enable? In robotics?  For bridging advances in information tech to the physical world more generally?
 
 
 Recent advances in language modeling (i.e., [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3)) demonstrate
-a path to powerful AI systems---that of proving out effective architectures and training procedures, then simply scaling the shit out of everything.
-It turns out we live in a universe where this works.
-Bigger models, more compute, and more data lead to better performance and wholly new qualitative capabilities.
-The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true.
+a path to powerful AI systems---of proving out architectures and training procedures, then simply scaling the shit out of everything.
+And this actually works. Surprisingly well. Bigger models, more compute, and more data lead to better performance and wholly new capabilities.
+The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true. All hail compute 
 
-With models in the 100s of billions of parameters, we're achieving amazing results in language modeling
-and have yet to hit scaling limits.
-If we can achieve such mastery with such simple approaches in text, we can't be that far away from conquering other domains like video.
-Maybe not immediately, due to much larger compute costs, necessary improvements in video-specific arches, training, etc., but definitely on the horizon.
+When given a bigger brain, GPT keeps on filling that brain with more and more 
+knowledge. It learns basic syntax and grammar so it can better predict the next word. 
+Then it learns basic text patterns, like paragraphs and dialogue structure.
+It masters those and has capacity to spare, so it learns [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/) to help predict what words are coming next.
+It keeps on filling up and mastering new concepts, until with 175 billion parameters it
+can do a vast number of unexpected things like [play amateur chess](https://twitter.com/TomChivers/status/1214488063310741504), 
+[do arithmetic](https://twitter.com/gwern/status/1277244260186763265), [program a UI](https://twitter.com/sharifshameem/status/1284095222939451393)... 
 
-And we have yet to mine all the applications of text models, but I think video prediction promises some extremely interesting applications.
-No doubt many in VR, movie generation, etc.
-But in this post, I focus on the applications to robot learning of a general purpose video physics simulator.
+Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
+video-GPT-X could learn super accurate physics to better predict the next frame.
+"Accurate physics predictions" would just be *one* application of what such a model could do.
+There are a number of other related in VR, movie making, etc.
+But "accurate physics predictions" is what this post focuses on.
 
-The way a language model works is: you feed in a chunk of prompt text, and it spits back out some continuation, some guess of what comes next.
-Same idea for video prediction, but feeding video frames in and getting video frames spit back out.
-So, if you have a super powerful video prediction model, and you feed in a video that happens to depict a physical system,
+If you have a super powerful video prediction model, and you feed in a video that happens to depict a physical system,
 like a free-falling object, then your model will happen to simulate physics by predicting what is going to happen to that object.
 With enough capacity, enough data, and a few built-in inductive biases, a video-GPT-X model could become insanely good at physical prediction.
-Just as GPT3 learns things like grammar, sentiment, and so on, in order to better predict the next word,
-video-GPT-X would learn super accurate physics to better predict the next frame.
 
-By absorbing knowledge across many domains, it could simulate RL environments with a
+Just imagine how well you can predict basic physical interactions in your room, like
+what happens if you throw your coffee cup against the wall, or if you drop a book on the floor.
+Then imagine what's possible by training on orders of magnitude more data
+than anyone encounters in a lifetime and using precise floating point representations.
+
+By absorbing knowledge across many domains, a large video prediction model could simulate environments with a
 physical accuracy and generality light-years beyond what is possible today.
-It could unify all the special-case, hand-engineered simulation modes (rigid-body, 
-fluids, optics, agents, etc.) into a single useful tool for robot learning, engineering, scientific discovery.
+It could replace all the narrow, inaccurate, hand-engineered simulators for rigid-bodies, fluids, optics, agents, etc.,
+with a single great tool for robot learning, engineering, scientific discovery.
 
-A single model to simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
+A single model could simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
 dragging across the wall, and leaving a red streak of paint behind it.
 Sunlight passing through a magnifying glass, catching a pile of dry leaves on fire---a rising trail of smoke, a marshmallow cooking over the flame.
 A human stepping to the side when someone else is walking towards them, or getting mad if that someone gets too close and bumps them.
-Any number of other interactions for which it is hard for us to write computer simulations for, but for which we have, or could collect, a lot of data.
+Any number of other interactions for which it is nearly impossible for us to write computer simulations for, but for which we have, or could collect, a lot of data.
 
 Such a simulator could be incredibly useful in robot learning.
 Imagine sim2real learning with the smallest possible reality gap.
@@ -190,15 +195,22 @@ You aggregate all of this knowledge into a central location.
 
 
 
-
-
-
 Considering this, and really thinking about it.
 Sure it is expensive, but the price will drop and people are willing to drop this cash anyway.
 The potential windfall is massive.
 
 
+With models in the 100s of billions of parameters---and yet to hit any scaling limits---we are seeing incredible
+results.  If we can achieve such mastery with such simple approaches in text, we can't be too far away from cracking other domains like video.
+Maybe not immediately, due to the much larger compute costs it will likely take, the necessary improvements in video-specific arches, training, etc.
+But this is definitely on the horizon.
 
+Though we have yet to hit on many of the applications of powerful text models,
+I am excited about the prospects of video prediction.
+Specifically robotics, and specifically for the potential of creating a general purpose physics simulator.
+
+No doubt many in VR, movie generation, etc.
+But in this post, I focus on the applications to robot learning of a general purpose video physics simulator.
 
 
 -->
