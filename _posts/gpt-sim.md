@@ -25,7 +25,7 @@ Then, at 175 billion parameters, things like [amateur chess playing](https://twi
 [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [UI programming](https://twitter.com/sharifshameem/status/1284095222939451393)... 
 
 If this scalability holds for text, then it should hold for other domains as well.
-Nothing's different. It's just more big neural networks trained on more big data.
+Roughly, it'll just be more of the same.  More big neural networks trained on more big data.
 If that wasn't going to work I think we would have seen it not working by now.
 Current language models are still limited of course, and there are many details to work out in each case, but we're just getting started here.
 
