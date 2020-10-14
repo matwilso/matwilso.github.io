@@ -14,9 +14,9 @@ What will this enable in robotics? And more generally, for bringing advances fro
 
 
 Recent advances in language modeling (i.e., [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3)) demonstrate
-a path to powerful AI systems---of developing fairly simple architectures and training procedures, and then *scaling the shit* out of them.
-Bigger models, more compute, and more data lead to better performance and wholly new qualitative abilities.
-The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true. [All hail](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)[ compute.](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) lol
+a path to powerful AI systems---of developing fairly simple architectures and training procedures, and then scaling the shit out of them.
+Bigger models, more compute, and more data lead to better performance and wholly new qualitative abilities, it turns out.
+The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true. [All hail](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)[ compute,](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) lol
 
 When GPT is given more compute and more parameters, it keeps on filling those parameters with more and more 
 knowledge. It learns basic syntax and grammar so it can better predict the next word. 
@@ -24,22 +24,22 @@ Then it learns paragraph and dialogue structure. Then [emotional sentiment](http
 Then, at 175 billion parameters, things like [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), 
 [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [UI programming](https://twitter.com/sharifshameem/status/1284095222939451393)... 
 
-If this scalability holds for text, then it should hold for other domains as well.
-Roughly, it'll just be more of the same.  More big neural networks trained on more big data.
-If that wasn't going to work I think we would have seen it not working by now.
-Current language models are still limited of course, and there are many details to work out in each case, but we're just getting started here.
+If this scalability holds for text, why won't it hold for other domains as well?
+It's just more big networks trained on more big data (roughly).
+If that recipe *wasn't* going to work, I think we would have seen it *not working* by now.
+Current language models are still limited, of course.
+There are many more issues to fix and details to get right in text and other domains, but it seems like we're just getting started here with massively scaled models.
 
-So. Just as GPT3 picks up on grammar, sentiment, and so on,
+So... just as GPT3 picks up on grammar, sentiment, and so on,
 in order to better predict the next word,
-a video-based GPT-X model will learn accurate physics to better predict the next frame.
-It might take specialized effort beyond the `master` branch video-GPT-X model.
-But with enough data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at physical prediction<label for="sn-1" class="margine-toggle sidenote-number"/>.
+a future video-based GPT-X model will learn accurate physics to better predict the next frame.
+It may or may not take a specialized effort beyond the `master` branch model.
+But certainly with enough data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at physical prediction<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
-And this is far from the only use case of such video models.
-VR virtual world applications and AI generated video content are going to be huge.
-Meaning there will be large external incentives to develop these large systems that
-will then be useful in robot learning. (Likely there will be some diffusion the other way as well.)
+Physicsal prediction would be a single narrow use of gigantic video models.
+AI generated video content in online videos and virtual reality, for example, are going to be huge.
+Seems like there will be plenty of incentive to develop large generative video models in the case they don't get built for robot learning initially.
 </span>
 
 
@@ -74,7 +74,7 @@ Train models directly from human preferences in source videos. Learn that humans
 
 This could be an incredible tool for accelerating progress across the whole field. Invest a fraction of resources in creating and developing it and then it becomes a source of compounding growth for the entire company/field. As it gets better, so do our capabilities, data, $, and time budgets.
 
-Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent understands and interacts with the world in terms of its high-fidelity physics model, relying on its future predictions for making choices in the world.
+Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent understands and interacts with the world in terms of its high-fidelity physics model, relying on its future predictions for making decisions in the world.
 
 For example, humans can accurately predict what will happen if we bump our 
 coffee cup near the edge of a table
@@ -92,7 +92,7 @@ trajectory of the mug.  Or perhaps whether that outdoor deck all those people ar
 By having watched thousands of videos of structural 
 failures like that on YouTube, including several videos of this exact thing, they might know all the tell-tale signs, like
 the overloading from too many people and the stress fracture in the wood.
-Models that have "experienced" much more than any single human may have extraordinary capabilities such as these.
+Models that have "experienced" much more than any single human may have extraordinary capabilities like this.
 
 If text-based-GPT-X is like having thousands of world experts to talk to,
 robot-embodied-video-GPT could be like having thousands of world experts in the room with you. 
@@ -104,8 +104,19 @@ To caveat, it's hard to say how far we are from video-GPT-X. It's possible that
 patching up current limitations proves extremely difficult. 
 It’s possible text is a uniquely well-suited modality for progress here. 
 There is image-GPT, which suggests that other modalities are conquerable---if you are willing to pay the price in compute.
-But at some point massive-scale video prediction will be affordable.
+
+With improved hardware, [larger investments](https://openai.com/blog/ai-and-compute/), and [efficiency gains](https://openai.com/blog/ai-and-efficiency/),
+massive-scale video prediction and general physics simulators seem fairly soon on the horizon.
+
+
+<!--
+Creating general physics simulators may be challenging, but it will be possible, and it will be worth doing.
+
+And I think it is probably good to think about if you work in this area.
+What is going to matter?
+
 At that point, it may require a decent amount of extra physics-sim specific effort, but it will be possible, and worth doing.
+-->
 
 <!--
 <label for="bootstrap" class="margine-toggle sidenote-number"/><input type="checkbox" id="bootstrap" class="margin-toggle"/><span class="sidenote">
