@@ -25,7 +25,7 @@ Then, at 175 billion parameters, things like [amateur chess playing](https://twi
 [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [UI programming](https://twitter.com/sharifshameem/status/1284095222939451393)... 
 
 If this scalability holds for text, why won't it hold for other domains as well?
-It's just more big networks trained on more big data (roughly).
+It's just more big networks trained on more big data (pretty much).
 If that recipe *wasn't* going to work, I think we would have seen it *not working* by now.
 Current language models are still limited, of course.
 There are many more issues to fix and details to get right in text and other domains, but it seems like we're just getting started here with massively scaled models.
@@ -33,13 +33,13 @@ There are many more issues to fix and details to get right in text and other dom
 So... just as GPT3 picks up on grammar, sentiment, and so on,
 in order to better predict the next word,
 a future video-based GPT-X model will learn accurate physics to better predict the next frame.
-It may or may not take a specialized effort beyond the `master` branch model.
-But certainly with enough data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at physical prediction<label for="sn-1" class="margine-toggle sidenote-number"/>.
+It will probably take a specialized effort beyond the `master` branch model.
+But certainly with enough "physics specific" data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at physical prediction<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
-Physicsal prediction would be a single narrow use of gigantic video models.
-AI generated video content in online videos and virtual reality, for example, are going to be huge.
-Seems like there will be plenty of incentive to develop large generative video models in the case they don't get built for robot learning initially.
+Physicsal simulation will be a single narrow use of gigantic video models.
+AI generated video content and VR environments, for example, are going to be huge.
+There will be plenty of incentive to develop large generative video models outside of physics prediction.
 </span>
 
 
