@@ -8,10 +8,9 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT-X trained on the entirety of YouTube---cooking videos, DIY, home improvement, exercise, gardening, etc---i.e., a general-purpose generative model akin to GPT3, but for video.
+>Imagine video-based GPT-X trained on the entirety of YouTube---cooking videos, DIY, home improvement, exercise, gardening, etc---a general-purpose generative model akin to GPT3, but for video.
 <br><br>
-What will this enable in robotics? And more generally, for bringing advances from information tech to the physical world?
-
+What could this enable in robotics? And more generally, for bringing advances from information tech to the physical world?
 
 Recent advances in language modeling (i.e., [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3)) demonstrate
 a path to powerful AI systems---of developing fairly simple architectures and training procedures, and then scaling the shit out of them.
@@ -24,22 +23,22 @@ Then it learns paragraph and dialogue structure. Then [emotional sentiment](http
 Then, at 175 billion parameters, things like [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), 
 [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [UI programming](https://twitter.com/sharifshameem/status/1284095222939451393)... 
 
-If this scalability holds for text, why won't it hold for other domains as well?
-It's just more big networks trained on more big data (pretty much).
-If that recipe *wasn't* going to work, I think we would have seen it *not working* by now.
+If scalability has been holding so far in deep learning (in computer vision, game playing, and especially NLP), it seems likely to keep holding.
+Just more big networks trained on more big data.
+If that recipe wasn't going to work, I think we would have seen it *not working* by now.
 Current language models are still limited, of course.
 There are many more issues to fix and details to get right in text and other domains, but it seems like we're just getting started here with massively scaled models.
 
-So... just as GPT3 picks up on grammar, sentiment, and so on,
+Just as GPT3 picks up on grammar, sentiment, and so on,
 in order to better predict the next word,
-a future video-based GPT-X model will learn accurate physics to better predict the next frame.
-It will probably take a specialized effort beyond the `master` branch model.
-But certainly with enough "physics specific" data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at physical prediction<label for="sn-1" class="margine-toggle sidenote-number"/>.
+a future video-based GPT-X model is going to be able to learn accurate physics to better predict the next frame.
+It will probably take a specialized effort beyond the vanilla video prediction model.
+But certainly with enough physics specific data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at *physical* prediction<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
-Physicsal simulation will be a single narrow use of gigantic video models.
-AI generated video content and VR environments, for example, are going to be huge.
-There will be plenty of incentive to develop large generative video models outside of physics prediction.
+And to be clear, physicsal simulation will just be a single narrow use of gigantic video prediction models.
+AI generated video content and VR environments, for example, are going to be huge, I'm guessing.
+There'll be plenty of incentive to develop large generative video models outside of physics prediction.
 </span>
 
 
@@ -60,7 +59,7 @@ All in a package with a natural interface.
 
 We could “prompt” our model with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model would automatically generate a virtual scene of our scenario that we could freely modify. “What about blue paint instead?”
 
-No XML files, no painstaking calibration or modeling e.g., the articulated physics of a Rubik’s Cube. (With all the cubing videos on YouTube, we're especially well covered here lol.)
+No XML files, no painstaking calibration or modeling e.g., the articulated physics of a Rubik’s Cube. (With all the cubing videos on YouTube, we should be especially well covered here lol.)
 Just film a video of our scene and the model would catch on, like GPT3 catches [on](https://twitter.com/xuenay/status/1283312640199196673) [when](https://twitter.com/gwern/status/1267215588214136833) [given](https://www.gwern.net/newsletter/2020/05#gpt-3) [prompts](https://openai.com/blog/openai-api/).
 
 It’s all differentiable and can be placed directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
@@ -102,11 +101,19 @@ Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Cultu
 
 To caveat, it's hard to say how far we are from video-GPT-X. It's possible that
 patching up current limitations proves extremely difficult. 
-It’s possible text is a uniquely well-suited modality for progress here. 
+It’s possible text is a uniquely well-suited modality for progress here<label for="sn-2" class="margine-toggle sidenote-number"/>
+<input type="checkbox" id="sn-2" class="margin-toggle"/>
+<span class="sidenote">
+Probably true---text is more [semantically dense](https://twitter.com/jcjohnss/status/1271273497310965762) than images/video,
+where there are many more bits to parse to arrive at the "big picture" idea (e.g., it usually doesn't matter how the leaves are blowing in the background).
+This doesn't seem like a concrete roadblock to building accurate video models---more of a speed-bump, or perhaps like a wooden fence we're going to have to drive through.
+It'll be possible, just might require a bit more cleverness and a lot more scale.
+</span>.
 There is image-GPT, which suggests that other modalities are conquerable---if you are willing to pay the price in compute.
 
 With improved hardware, [larger investments](https://openai.com/blog/ai-and-compute/), and [efficiency gains](https://openai.com/blog/ai-and-efficiency/),
-massive-scale video prediction and general physics simulators seem fairly soon on the horizon.
+massive-scale video prediction and general physics simulators doesn't seem too far on the horizon.
+Seems like it it's probably worth planning for.
 
 
 <!--
@@ -254,6 +261,39 @@ Specifically robotics, and specifically for the potential of creating a general 
 
 No doubt many in VR, movie generation, etc.
 But in this post, I focus on the applications to robot learning of a general purpose video physics simulator.
+
+
+
+
+
+
+
+Concretely, for training, I think this means something simple like mean-squared error on pixels is not going to
+work like just predicting the next word works.
+I think something like generative models will be the right way to do this.
+Things like GANs, or VAEs that can sample probabilitistically the possible types of cars.
+
+I think a future simulator has randomness built in. Core to the simulation, will be sampling about possible future events.
+About how the wave is going to crash.
+You can train your robot on all variations simultaneously.
+
+Maybe a VAE would be able to handle MSE loss...
+Like if you sample and keep track of that.
+Maybe it would work.
+Maybe pixel loss along with other. But if you are sampling a latent... maybe it could work.
+
+
+I think in narrow settings this will work well.
+There will be plenty of cases where you have enough information to accurately predict what is going to happen.
+
+But then plenty more where all kinds of things can happen because you don't have perfect information.
+
+But you can sample over that. Randomly sample and account for that.
+
+This will be core for a learned simulator.
+
+
+
 
 
 -->

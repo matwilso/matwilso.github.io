@@ -23,8 +23,8 @@ header_pages:
  - blog.md
  # - about.md
  # - projects.md
- - personal.md
  - quotes.md
+ - personal.md
  # - hacks.md
 
 # Build settings
