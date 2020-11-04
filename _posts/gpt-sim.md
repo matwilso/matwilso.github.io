@@ -8,14 +8,16 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine video-based GPT-X trained on the entirety of YouTube---cooking videos, DIY, home improvement, exercise, gardening, etc---a general-purpose generative model akin to GPT3, but for video.
+>Imagine a video prediction model trained on something like the entirety of YouTube---cooking videos, DIY, home improvement, exercise, gardening, etc.
+A general purpose predictive video model, with generative abilities akin to [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3), but for video.
 <br><br>
 What could this enable in robotics? And more generally, for bringing advances from information tech to the physical world?
 
-Recent advances in language modeling (i.e., [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3)) demonstrate
-a path to powerful AI systems---of developing fairly simple architectures and training procedures, and then scaling the shit out of them.
+Recent advances in language modeling demonstrate a path to powerful AI systems.
+Step 1. Develop fairly simple but scalable architectures and training procedures.
+Step 2. Proceed to scale the shit out of them.
 Bigger models, more compute, and more data lead to better performance and wholly new qualitative abilities, it turns out.
-The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true. [All hail](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)[ compute,](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) lol
+The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true. [All hail](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)[ compute](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) ;)
 
 When GPT is given more compute and more parameters, it keeps on filling those parameters with more and more 
 knowledge. It learns basic syntax and grammar so it can better predict the next word. 
@@ -23,24 +25,22 @@ Then it learns paragraph and dialogue structure. Then [emotional sentiment](http
 Then, at 175 billion parameters, things like [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), 
 [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [UI programming](https://twitter.com/sharifshameem/status/1284095222939451393)... 
 
-If scalability has been holding so far in deep learning (in computer vision, game playing, and especially NLP), it seems likely to keep holding.
-Just more big networks trained on more big data.
-If that recipe wasn't going to work, I think we would have seen it *not working* by now.
+And there's good reason to believe these [scaling trends are robust](https://arxiv.org/abs/2001.08361) and that they hold [beyond natural language](https://arxiv.org/abs/2010.14701),
+in video for example.
 Current language models are still limited, of course.
 There are many more issues to fix and details to get right in text and other domains, but it seems like we're just getting started here with massively scaled models.
 
-Just as GPT3 picks up on grammar, sentiment, and so on,
+So, just as GPT-3 picks up on grammar, sentiment, and so on,
 in order to better predict the next word,
-a future video-based GPT-X model is going to be able to learn accurate physics to better predict the next frame.
-It will probably take a specialized effort beyond the vanilla video prediction model.
-But certainly with enough physics specific data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at *physical* prediction<label for="sn-1" class="margine-toggle sidenote-number"/>.
+a future video-based-GPT-X model is going to be able to learn accurate physics to better predict the next frame.
+It will probably take specialized effort beyond a vanilla video prediction model.
+But certainly with enough physics specific data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at physical prediction<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
-And to be clear, physicsal simulation will just be a single narrow use of gigantic video prediction models.
+And physicsal simulation will just be a single narrow use of such a model. 
 AI generated video content and VR environments, for example, are going to be huge, I'm guessing.
 There'll be plenty of incentive to develop large generative video models outside of physics prediction.
 </span>
-
 
 By absorbing knowledge across many domains, a large video prediction model could simulate environments with a
 physical accuracy and generality light-years beyond what is possible today.
@@ -54,13 +54,13 @@ A human stepping to the side when someone else is walking towards them, or getti
 Any number of other interactions for which it is nearly impossible for us to write computer simulations for, but for which we have, or could collect, a lot of data.
 
 Such a simulator could be incredibly useful in robot learning.
-For instance, imagine sim2real learning with the smallest possible reality gap, or model-based learning with the best possible model.
+Imagine sim2real learning with the smallest possible reality gap, or model-based learning with the best possible model.
 All in a package with a natural interface.
 
 We could “prompt” our model with a video sequence to match our specific robotics setup and task.  Film a video of our room layout and our paintbrush dipping into the paint bucket. The model would automatically generate a virtual scene of our scenario that we could freely modify. “What about blue paint instead?”
 
 No XML files, no painstaking calibration or modeling e.g., the articulated physics of a Rubik’s Cube. (With all the cubing videos on YouTube, we should be especially well covered here lol.)
-Just film a video of our scene and the model would catch on, like GPT3 catches [on](https://twitter.com/xuenay/status/1283312640199196673) [when](https://twitter.com/gwern/status/1267215588214136833) [given](https://www.gwern.net/newsletter/2020/05#gpt-3) [prompts](https://openai.com/blog/openai-api/).
+Just film a video of our scene and the model would catch on, like GPT-3 catches [on](https://twitter.com/xuenay/status/1283312640199196673) [when](https://twitter.com/gwern/status/1267215588214136833) [given](https://www.gwern.net/newsletter/2020/05#gpt-3) [prompts](https://openai.com/blog/openai-api/).
 
 It’s all differentiable and can be placed directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
 
@@ -71,7 +71,8 @@ Train a robot to paint your room. Visualize the sequence of actions the robot wo
 
 Train models directly from human preferences in source videos. Learn that humans don’t like spilling paint, or breaking vases, or burning their eggs. Learn how humans and animals move naturally. How humans are polite in letting others pass. 
 
-This could be an incredible tool for accelerating progress across the whole field. Invest a fraction of resources in creating and developing it and then it becomes a source of compounding growth for the entire company/field. As it gets better, so do our capabilities, data, $, and time budgets.
+This could be an incredible tool for accelerating progress. Invest a fraction of resources in creating and developing it and it could become a source of compounding growth for the entire company/field.
+As it gets better, so will robotics capabilities, data, $, and time budgets.
 
 Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent understands and interacts with the world in terms of its high-fidelity physics model, relying on its future predictions for making decisions in the world.
 
@@ -106,14 +107,13 @@ It’s possible text is a uniquely well-suited modality for progress here<label 
 <span class="sidenote">
 Probably true---text is more [semantically dense](https://twitter.com/jcjohnss/status/1271273497310965762) than images/video,
 where there are many more bits to parse to arrive at the "big picture" idea (e.g., it usually doesn't matter how the leaves are blowing in the background).
-This doesn't seem like a concrete roadblock to building accurate video models---more of a speed-bump, or perhaps like a wooden fence we're going to have to drive through.
+This doesn't seem like a concrete roadblock to building accurate video models---more of a speed-bump.
 It'll be possible, just might require a bit more cleverness and a lot more scale.
 </span>.
-There is image-GPT, which suggests that other modalities are conquerable---if you are willing to pay the price in compute.
 
-With improved hardware, [larger investments](https://openai.com/blog/ai-and-compute/), and [efficiency gains](https://openai.com/blog/ai-and-efficiency/),
-massive-scale video prediction and general physics simulators doesn't seem too far on the horizon.
-Seems like it it's probably worth planning for.
+With improved hardware, [larger investments](https://openai.com/blog/ai-and-compute/), and [efficiency gains](https://openai.com/blog/ai-and-efficiency/) though,
+massive-scale video prediction and general physics simulators don't seem too far on the horizon.
+Seems like they're probably worth planning for.
 
 
 <!--
@@ -166,7 +166,7 @@ One will be the
 
 And as we are seeing, powerful prediction models are extremely versatile.
 They can be [programmed based on different prompts](https://twitter.com/ch402/status/1273765062633639936) to do a vast number of things.
-If you want your GPT3 model to solve arithmetic problems, you feed it a
+If you want your GPT-3 model to solve arithmetic problems, you feed it a
 prompt that says to add "the following 4-digit numbers: 4,235 + 1,897 = " and
 then your model happens to do arithmetic by predicting what tokens come next ("6,132").
 
@@ -192,7 +192,7 @@ But here I just focus on physics simulation, because it is super exciting for ro
 Anyway, cheers, thanks for reading
 
 <br>
-(I'm always happy to catch any comments, criticism, feedback you have below, or in DMs, email, etc.)
+(Always happy to catch any comments, criticism, feedback you have below, or in DMs, email, etc.)
 
 
 
