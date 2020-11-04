@@ -8,33 +8,34 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine a video prediction model trained on something like the entirety of YouTube---cooking videos, DIY, home improvement, exercise, gardening, etc.
-A general purpose predictive video model, with generative abilities akin to [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3), but for video.
+>Imagine a *huge* video prediction model trained on a *huge* chunk of YouTube---tens of thousands of cooking videos, DIY, home improvement, exercise, gardening, etc.
+A big enough model could become a fairly general purpose predictive model, with generative abilities akin to [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3),
+but for video instead of text.
 <br><br>
-What could this enable in robotics? And more generally, for bringing advances from information tech to the physical world?
+What might this enable in robotics? And more generally, for bringing advances from information tech to the physical world?
 
 Recent advances in language modeling demonstrate a path to powerful AI systems.
 Step 1. Develop fairly simple but scalable architectures and training procedures.
 Step 2. Proceed to scale the shit out of them.
 Bigger models, more compute, and more data lead to better performance and wholly new qualitative abilities, it turns out.
-The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true. [All hail](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)[ compute](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) ;)
+The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true. [All hail](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)[ compute ;)](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)
 
 When GPT is given more compute and more parameters, it keeps on filling those parameters with more and more 
-knowledge. It learns basic syntax and grammar so it can better predict the next word. 
+knowledge. It learns basic syntax and grammar so it can better predict the next word.
 Then it learns paragraph and dialogue structure. Then [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/).
 Then, at 175 billion parameters, things like [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), 
 [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [UI programming](https://twitter.com/sharifshameem/status/1284095222939451393)... 
 
-And there's good reason to believe these [scaling trends are robust](https://arxiv.org/abs/2001.08361) and that they hold [beyond natural language](https://arxiv.org/abs/2010.14701),
+There's good reason to believe these [scaling trends are robust](https://arxiv.org/abs/2001.08361) and that they hold [beyond natural](https://arxiv.org/abs/2010.14701)[ language](https://www.youtube.com/watch?v=QMqPAM_knrE&feature=youtu.be&t=2380),
 in video for example.
-Current language models are still limited, of course.
+Current language models are still quite limited, of course.
 There are many more issues to fix and details to get right in text and other domains, but it seems like we're just getting started here with massively scaled models.
 
 So, just as GPT-3 picks up on grammar, sentiment, and so on,
 in order to better predict the next word,
 a future video-based-GPT-X model is going to be able to learn accurate physics to better predict the next frame.
 It will probably take specialized effort beyond a vanilla video prediction model.
-But certainly with enough physics specific data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at physical prediction<label for="sn-1" class="margine-toggle sidenote-number"/>.
+But certainly with enough physics specific data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at physical prediction and simulation<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
 And physicsal simulation will just be a single narrow use of such a model. 
@@ -105,14 +106,14 @@ patching up current limitations proves extremely difficult.
 It’s possible text is a uniquely well-suited modality for progress here<label for="sn-2" class="margine-toggle sidenote-number"/>
 <input type="checkbox" id="sn-2" class="margin-toggle"/>
 <span class="sidenote">
-Probably true---text is more [semantically dense](https://twitter.com/jcjohnss/status/1271273497310965762) than images/video,
-where there are many more bits to parse to arrive at the "big picture" idea (e.g., it usually doesn't matter how the leaves are blowing in the background).
-This doesn't seem like a concrete roadblock to building accurate video models---more of a speed-bump.
-It'll be possible, just might require a bit more cleverness and a lot more scale.
+Probably true. Images/video are less [semantically dense than text](https://twitter.com/jcjohnss/status/1271273497310965762),
+You need to process many more bits to gain relevant info---perhaps thousands of irrelevant or redudant pixels to determine you are looking at a blank wall.
+I don't see this as a roadblock to very accurate video models.
+It probably just means we're going to need a bit more cleverness and a lot more scale.
 </span>.
 
-With improved hardware, [larger investments](https://openai.com/blog/ai-and-compute/), and [efficiency gains](https://openai.com/blog/ai-and-efficiency/) though,
-massive-scale video prediction and general physics simulators don't seem too far on the horizon.
+With improved hardware([?](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit)[?](https://en.wikipedia.org/wiki/Huang%27s_law#:~:text=Huang's%20Law%20is%20an%20observation,central%20processing%20units%20(CPU).&text=Huang's%20law%20states%20that%20the,than%20double%20every%20two%20years.)), [larger investments](https://openai.com/blog/ai-and-compute/), and [efficiency gains](https://openai.com/blog/ai-and-efficiency/),
+massive-scale video prediction and general physics simulators don't seem too far on the horizon though.
 Seems like they're probably worth planning for.
 
 
@@ -192,7 +193,7 @@ But here I just focus on physics simulation, because it is super exciting for ro
 Anyway, cheers, thanks for reading
 
 <br>
-(Always happy to catch any comments, criticism, feedback you have below, or in DMs, email, etc.)
+(I'm happy to catch any comments, criticism, feedback you have below, or in DMs, email, etc.)
 
 
 

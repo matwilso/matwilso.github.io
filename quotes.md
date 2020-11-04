@@ -4,10 +4,11 @@ title: Quotes
 permalink: /quotes/
 ---
 
-just a random sample of some quotes
-
+this is just a random sample, not necessarily all time best quotes
 
 # Startups/life
+
+"The True Way transcends the minutiae of Skill. There is no 'Technology'. There is no 'Design'. There is only a vision of how humanity could be, and the relentless resolve to make it so. The rest is details." - [Bret Victor](http://worrydream.com/#!/Bio)
 
 "Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have." -pg
 
@@ -18,9 +19,6 @@ just a random sample of some quotes
 "Unproductive pleasures pall eventually. After a while you get tired of lying on the beach. If you want to stay happy, you have to do something." -pg
 
 "Wanting to build a successful social product is like wanting to be a famous actor or artist - it's inherently rewarding work, so everyone wants to do it, which makes your odds of succeeding lower. Building an unsexy SaaS product, on the other hand..." - Jay Graber[('s friend)](https://twitter.com/arcalinea/status/1303403898758033408)
-
-
-"The True Way transcends the minutiae of Skill. There is no 'Technology'. There is no 'Design'. There is only a vision of how humanity could be, and the relentless resolve to make it so. The rest is details." - [Bret Victor](http://worrydream.com/#!/Bio)
 
 
 # Rationality:
@@ -47,9 +45,14 @@ just a random sample of some quotes
 
 # Engineering:
 
+"If it's long it's wrong. If it's tight it's right.... The best part is no part. The best process is no process. It weighs nothing, costs nothing, can't go wrong.... Undesigning is the best thing. Just delete it." - elon
+
 "My whole life was basically trying to optimize things. You don't just save parts, but every time you save parts you save on complexity and reliability, the amount of time it takes to understand something. And how good you can build it without errors and bugs and flaws." - woz
 
-"If it's long it's wrong. If it's tight it's right.... The best part is no part. The best process is no process. It weighs nothing, costs nothing, can't go wrong.... Undesigning is the best thing. Just delete it." - elon
+
+'"Figure out the optimal configuration of atoms first... then figure out how to put them there" - elon' - [jim keller](https://www.youtube.com/watch?v=oIG9ztQw2Gc&feature=youtu.be&t=985)
+
+(in other words:) "Don't let the how's constrain the what's." - jim keller
 
 
 # Misc
