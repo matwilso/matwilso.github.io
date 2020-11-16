@@ -8,13 +8,13 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine a *huge* video prediction model trained on a *huge* chunk of YouTube---tens of thousands of cooking videos, DIY, home improvement, exercise, gardening, etc.
-A big enough model could become a fairly general purpose predictive model, with generative abilities akin to [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3),
+>Imagine a huge video prediction model trained on a huge chunk of YouTube---tens of thousands of cooking videos, DIY, home improvement, exercise, gardening, etc.
+Imagine something like a general purpose predictive model, with generative abilities akin to [GPT-3 (and beyond)](https://www.gwern.net/newsletter/2020/05#gpt-3),
 but for video instead of text.
 <br><br>
 What might this enable in robotics? And more generally, for bringing advances from information tech to the physical world?
 
-Recent advances in language modeling demonstrate a path to powerful AI systems.
+Recent advances in huge language models demonstrate a path to powerful AI systems.
 Step 1. Develop fairly simple but scalable architectures and training procedures.
 Step 2. Proceed to scale the shit out of them.
 Bigger models, more compute, and more data lead to better performance and wholly new qualitative abilities, it turns out.
@@ -38,14 +38,14 @@ It will probably take specialized effort beyond a vanilla video prediction model
 But certainly with enough physics specific data, a few built-in inductive biases, and some fine-tuning, a learned model could become insanely good at physical prediction and simulation<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
-And physicsal simulation will just be a single narrow use of such a model. 
-AI generated video content and VR environments, for example, are going to be huge, I'm guessing.
+With "physicsal simulation" being just a narrow use case of such a model. 
+I imagine that AI generated video content and VR environments, for example, are going to be huge.
 There'll be plenty of incentive to develop large generative video models outside of physics prediction.
 </span>
 
 By absorbing knowledge across many domains, a large video prediction model could simulate environments with a
 physical accuracy and generality light-years beyond what is possible today.
-It could replace all the narrow, special, hand-engineered [rigid-body, fluid, optic, agent, etc] simulators
+It could replace all the narrow, special, hand-engineered (rigid-body, fluid, optic, agent, etc) simulators
 with a single great tool for robot learning, engineering, scientific discovery.
 
 A single model could simulate an egg cracking, pouring out, and sizzling on a frying pan. A paintbrush dipping into a bucket,
@@ -72,19 +72,19 @@ Train a robot to paint your room. Visualize the sequence of actions the robot wo
 
 Train models directly from human preferences in source videos. Learn that humans don’t like spilling paint, or breaking vases, or burning their eggs. Learn how humans and animals move naturally. How humans are polite in letting others pass. 
 
-This could be an incredible tool for accelerating progress. Invest a fraction of resources in creating and developing it and it could become a source of compounding growth for the entire company/field.
-As it gets better, so will robotics capabilities, data, $, and time budgets.
+This could be an incredible tool for future progress. One that a small fraction of people build and maintain,
+while many others benefit from what it enables them to do.
 
-Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent understands and interacts with the world in terms of its high-fidelity physics model, relying on its future predictions for making decisions in the world.
+Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent could understand and interact with the world in terms of its high-fidelity physics model, relying on its future predictions for making decisions in the world.
 
 For example, humans can accurately predict what will happen if we bump our 
 coffee cup near the edge of a table
-or how someone might respond if we bump *their coffee* near the edge of a table.
+or how someone might respond if we bump their coffee near the edge of a table.
 
 Human intuitive physics and psychology predictions are very good, despite the
 fact our information processing abilities are severely constrained by our hardware,
 the DNA bottleneck, and whatever we can learn in a single lifetime.
-In theory, you can do much better---with digital brains, specifically optimized to 
+In theory, it seems like you can do much better---with digital brains, specifically optimized to 
 model these things, trained on orders of magnitude more data than anyone
 encounters in a lifetime, with more memory and much higher accuracy representations.
 
@@ -92,7 +92,7 @@ For example, such brains may be able to predict things like the precise
 trajectory of the mug.  Or perhaps whether that outdoor deck all those people are standing on [is about to collapse](https://www.youtube.com/results?search_query=deck+collapse).
 By having watched thousands of videos of structural 
 failures like that on YouTube, including several videos of this exact thing, they might know all the tell-tale signs, like
-the overloading from too many people and the stress fracture in the wood.
+the overloading from too many people and the stress fractures in the wood.
 Models that have "experienced" much more than any single human may have extraordinary capabilities like this.
 
 If text-based-GPT-X is like having thousands of world experts to talk to,
@@ -107,12 +107,12 @@ It’s possible text is a uniquely well-suited modality for progress here<label 
 <input type="checkbox" id="sn-2" class="margin-toggle"/>
 <span class="sidenote">
 Probably true. Images/video are less [semantically dense than text](https://twitter.com/jcjohnss/status/1271273497310965762),
-You need to process many more bits to gain relevant info---perhaps thousands of irrelevant or redudant pixels to determine you are looking at a blank wall.
+You need to process many more bits to gain relevant info---perhaps thousands of irrelevant or redudant pixels to determine you are looking at a brick wall or something.
 I don't see this as a roadblock to very accurate video models.
-It probably just means we're going to need a bit more cleverness and a lot more scale.
+It probably just means we'll need a bit more cleverness and a lot more scale.
 </span>.
 
-With improved hardware([?](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit)[?](https://en.wikipedia.org/wiki/Huang%27s_law#:~:text=Huang's%20Law%20is%20an%20observation,central%20processing%20units%20(CPU).&text=Huang's%20law%20states%20that%20the,than%20double%20every%20two%20years.)), [larger investments](https://openai.com/blog/ai-and-compute/), and [efficiency gains](https://openai.com/blog/ai-and-efficiency/),
+But with [improved](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit)[ hardware](https://en.wikipedia.org/wiki/Huang%27s_law#:~:text=Huang's%20Law%20is%20an%20observation,central%20processing%20units%20(CPU).&text=Huang's%20law%20states%20that%20the,than%20double%20every%20two%20years.), [larger investments](https://openai.com/blog/ai-and-compute/), and [efficiency gains](https://openai.com/blog/ai-and-efficiency/),
 massive-scale video prediction and general physics simulators don't seem too far on the horizon though.
 Seems like they're probably worth planning for.
 
