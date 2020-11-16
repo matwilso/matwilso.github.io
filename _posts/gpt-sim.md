@@ -9,7 +9,7 @@ toc_sticky: true
 ---
 
 >Imagine a huge video prediction model trained on a huge chunk of YouTube---tens of thousands of cooking videos, DIY, home improvement, exercise, gardening, etc.
-Imagine something like a general purpose predictive model, with generative abilities akin to [GPT-3 (and beyond)](https://www.gwern.net/newsletter/2020/05#gpt-3),
+Something like a general purpose predictive model, with generative abilities akin to [GPT-3 (and beyond)](https://www.gwern.net/newsletter/2020/05#gpt-3),
 but for video instead of text.
 <br><br>
 What might this enable in robotics? And more generally, for bringing advances from information tech to the physical world?
