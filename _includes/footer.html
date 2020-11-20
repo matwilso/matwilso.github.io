@@ -47,7 +47,44 @@
         <p>{{ site.description | escape }}</p>
       </div>
     </div>
+	<script>
+		if (localStorage.getItem('darkMode') == 1) {
+			var element = document.body;
+			console.log(localStorage.getItem('darkMode'));
+			element.classList.add("dark-mode");
+			let e2 = document.getElementsByClassName("page-link")
+			for (const e of e2){
+				e.classList.add("dark-mode");
+			}
+		}
 
+		function darkMode() {
+			var element = document.body;
+			let e2 = document.getElementsByClassName("page-link")
+			element.classList.toggle("dark-mode");
+			for (const e of e2){
+				e.classList.toggle("dark-mode");
+			}
+			if (localStorage.getItem('darkMode') == 1) {
+				localStorage.setItem('darkMode', 0);
+				//console.log('if', localStorage.getItem('darkMode'));
+			} else {
+				localStorage.setItem('darkMode', 1);
+				//console.log('lse', localStorage.getItem('darkMode'));
+			}
+		}
+
+		function KeyPress(e) {
+			console.log(e);
+			var evtobj = window.event? event : e
+			if (evtobj.keyCode == 88 && evtobj.ctrlKey && evtobj.shiftKey) {
+				darkMode();
+			}
+		}
+		document.onkeydown = KeyPress;
+	</script>
+	<button onclick="darkMode()">Dark mode (Ctrl-Shift-X)</button>
   </div>
+
 
 </footer>
