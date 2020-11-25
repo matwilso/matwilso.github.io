@@ -8,28 +8,41 @@ toc: true
 toc_sticky: true
 ---
 
->Imagine a huge video prediction model trained on a huge chunk of YouTube---tens of thousands of cooking videos, DIY, home improvement, exercise, gardening, etc.
-Something like a general purpose predictive model, with generative abilities akin to [GPT-3 (and beyond)](https://www.gwern.net/newsletter/2020/05#gpt-3),
-but for video instead of text.
+
+>Imagine a huge video prediction model, with 10s to 100s of trillions of parameters, trained on many thousands of hours of YouTube cooking videos, DIY, home improvement, exercise, gardening, etc.,
+or on many thousands of hours of high-quality robot data.
 <br><br>
-What might this enable in robotics? And more generally, for bringing advances from information tech to the physical world?
+We are starting to see hints of the capabilities and scaling laws of *huge* neural network models---like [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3) for text.
+#But what might such scaling laws look like in video?
+What will massively scaled video predictive models be capable of? 
+<!--But what do these look like for general video predictive models?  A generative model of reality?-->
+And what will they enable? For robot learning specifically, and for bringing advances from information tech to the physical world more generally?
 
-Recent advances in huge language models demonstrate a path to powerful AI systems.
-Step 1. Develop fairly simple but scalable architectures and training procedures.
+Recent advances in language modeling demonstrate a seamingly straightforward path to increasingly powerful AI systems.
+That is, Step 1. Develop fairly simple but scalable architectures and training procedures.
 Step 2. Proceed to scale the shit out of them.
-Bigger models, more compute, and more data lead to better performance and wholly new qualitative abilities, it turns out.
-The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true. [All hail](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)[ compute ;)](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)
 
-When GPT is given more compute and more parameters, it keeps on filling those parameters with more and more 
-knowledge. It learns basic syntax and grammar so it can better predict the next word.
-Then it learns paragraph and dialogue structure. Then [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/).
-Then, at 175 billion parameters, things like [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), 
+Bigger models, more compute, and more data lead to better performance and wholly new qualitative abilities, it turns out.
+The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true! [All hail compute](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)[ ;)](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)
+
+
+We see a pretty interesting scaling progression leading up to GPT-3.
+As GPT-X is given more parameters and more compute, it keeps on filling those parameters with more and more 
+knowledge. It first learns things like basic syntax and grammar so that it can better predict the next word.
+Then it learns things like paragraph and dialogue structure. Then at a certain threshold, even more parameters
+and even more training, things like [emotional sentiment](https://openai.com/blog/unsupervised-sentiment-neuron/).
+And you keep on scaling up and training.
+Then, at 175 billion parameters, really amazing things like [amateur chess playing](https://twitter.com/TomChivers/status/1214488063310741504), 
 [arithmetic](https://twitter.com/gwern/status/1277244260186763265), [UI programming](https://twitter.com/sharifshameem/status/1284095222939451393)... 
 
-There's good reason to believe these [scaling trends are robust](https://arxiv.org/abs/2001.08361) and that they hold [beyond natural](https://arxiv.org/abs/2010.14701)[ language](https://www.youtube.com/watch?v=QMqPAM_knrE&feature=youtu.be&t=2380),
+And these [scaling trends](https://arxiv.org/abs/2001.08361) have yet to slow down. There's good reason to believe these they are robust and that they hold [beyond natural](https://arxiv.org/abs/2010.14701)[ language](https://www.youtube.com/watch?v=QMqPAM_knrE&feature=youtu.be&t=2380),
 in video for example.
-Current language models are still quite limited, of course.
-There are many more issues to fix and details to get right in text and other domains, but it seems like we're just getting started here with massively scaled models.
+
+On the other hand, models like GPT-3 and other large language models have major limitations.
+Also other domains have yet to really take off.
+No doubt, there are many more issues to fix and details to get right in text and other domains,
+but it does seem like we're just getting started here with massively scaled models.
+It seems highly likely that these are going to change the future.
 
 So, just as GPT-3 picks up on grammar, sentiment, and so on,
 in order to better predict the next word,
@@ -63,17 +76,17 @@ We could “prompt” our model with a video sequence to match our specific robo
 No XML files, no painstaking calibration or modeling e.g., the articulated physics of a Rubik’s Cube. (With all the cubing videos on YouTube, we should be especially well covered here lol.)
 Just film a video of our scene and the model would catch on, like GPT-3 catches [on](https://twitter.com/xuenay/status/1283312640199196673) [when](https://twitter.com/gwern/status/1267215588214136833) [given](https://www.gwern.net/newsletter/2020/05#gpt-3) [prompts](https://openai.com/blog/openai-api/).
 
-It’s all differentiable and can be placed directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
+It would all be differentiable and placable directly in our PyTorch/TensorFlow computational graph.  Gradients flow like water.
 
-Model-based learning algos can plug directly into it. Plan ahead and pipe RL gradients directly through the model. 
+Model-based learning algos could plug directly into it. Plan ahead and pipe RL gradients directly through the model. 
 Maybe with some fully continuous, fully differentiable analog of MCTS, which has worked so well in Alpha/MuZero.
 
 Train a robot to paint your room. Visualize the sequence of actions the robot would take. Make modifications. “Be careful not to spill on the rug, and don’t paint the baseboards.” Visualize the adjusted behavior to ensure it achieves exactly what you had in mind.
 
 Train models directly from human preferences in source videos. Learn that humans don’t like spilling paint, or breaking vases, or burning their eggs. Learn how humans and animals move naturally. How humans are polite in letting others pass. 
 
-This could be an incredible tool for future progress. One that a small fraction of people build and maintain,
-while many others benefit from what it enables them to do.
+This could be an incredible enabling tool for future progress. A small fraction of people build and maintain it,
+while countless others benefit from what it enables them to do.
 
 Beyond just a training tool, it could form the basis of an internal model that the agent uses online during deployment. The agent could understand and interact with the world in terms of its high-fidelity physics model, relying on its future predictions for making decisions in the world.
 
@@ -86,14 +99,14 @@ fact our information processing abilities are severely constrained by our hardwa
 the DNA bottleneck, and whatever we can learn in a single lifetime.
 In theory, it seems like you can do much better---with digital brains, specifically optimized to 
 model these things, trained on orders of magnitude more data than anyone
-encounters in a lifetime, with more memory and much higher accuracy representations.
+encounters in a lifetime, with more memory and higher accuracy representations.
 
 For example, such brains may be able to predict things like the precise 
 trajectory of the mug.  Or perhaps whether that outdoor deck all those people are standing on [is about to collapse](https://www.youtube.com/results?search_query=deck+collapse).
 By having watched thousands of videos of structural 
 failures like that on YouTube, including several videos of this exact thing, they might know all the tell-tale signs, like
 the overloading from too many people and the stress fractures in the wood.
-Models that have "experienced" much more than any single human may have extraordinary capabilities like this.
+Models that have "experienced" much more than any single human may have extraordinary breadth and depth capabilities like this.
 
 If text-based-GPT-X is like having thousands of world experts to talk to,
 robot-embodied-video-GPT could be like having thousands of world experts in the room with you. 
@@ -101,19 +114,18 @@ It could know things like survival skills, yoga, workout routines, guitar cords.
 It could explain and demonstrate the mechanics of these things to you (e.g., starting a fire with a magnifying glass [[youtube video]](https://www.youtube.com/watch?v=D2ym8wt5NWo)).
 Like having an Ian Banks Culture [drone](https://en.wikipedia.org/wiki/The_Culture#Drones) or Star Wars droid with you. C3PO that knows all the languages or whatever.
 
-To caveat, it's hard to say how far we are from video-GPT-X. It's possible that
-patching up current limitations proves extremely difficult. 
+To caveat, it's hard to say how far we are from all of this fanciful stuff, and how far we are from video-GPT-X.
+It's possible that patching up current limitations proves extremely difficult. 
 It’s possible text is a uniquely well-suited modality for progress here<label for="sn-2" class="margine-toggle sidenote-number"/>
 <input type="checkbox" id="sn-2" class="margin-toggle"/>
 <span class="sidenote">
-Probably true. Images/video are less [semantically dense than text](https://twitter.com/jcjohnss/status/1271273497310965762),
-You need to process many more bits to gain relevant info---perhaps thousands of irrelevant or redudant pixels to determine you are looking at a brick wall or something.
-I don't see this as a roadblock to very accurate video models.
+Probably true. Images/video are much less [semantically dense than text](https://twitter.com/jcjohnss/status/1271273497310965762),
+You need to process many more bits to gain relevant meaning---perhaps thousands of irrelevant or redudant pixels to determine you are looking at a brick wall or something like that.
+I don't see this as a roadblock to very accurate and useful video models.
 It probably just means we'll need a bit more cleverness and a lot more scale.
 </span>.
-
 But with [improved](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit)[ hardware](https://en.wikipedia.org/wiki/Huang%27s_law#:~:text=Huang's%20Law%20is%20an%20observation,central%20processing%20units%20(CPU).&text=Huang's%20law%20states%20that%20the,than%20double%20every%20two%20years.), [larger investments](https://openai.com/blog/ai-and-compute/), and [efficiency gains](https://openai.com/blog/ai-and-efficiency/),
-massive-scale video prediction and general physics simulators don't seem too far on the horizon though.
+massive-scale video prediction and general physics simulators don't seem too far on the horizon.
 Seems like they're probably worth planning for.
 
 
