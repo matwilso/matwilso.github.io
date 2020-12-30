@@ -8,12 +8,13 @@ toc: true
 toc_sticky: true
 ---
 
-
->Imagine a huge video prediction model, with 10s to 100s of trillions of parameters, trained on many thousands of hours of YouTube cooking videos, DIY, home improvement, exercise, gardening, etc.,
-or on many thousands of hours of high-quality robot data.
+>Imagine a huge predictive model trained on thousands of hours of YouTube cooking videos, DIY, home improvement, cleaning, gardening, along with thousands of hours of robot interaction data.
 <br><br>
-We are starting to see hints of the capabilities and scaling laws of *huge* neural network models---like [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3) for text.
-#But what might such scaling laws look like in video?
+It seems increasingly clear that huge models are going to play a large role in the
+future of robot learning.
+
+In 2020, we are starting to see hints of the capabilities and scaling laws of *huge* neural network models---like [GPT-3](https://www.gwern.net/newsletter/2020/05#gpt-3) for text.
+But what might such scaling laws look like in video?
 What will massively scaled video predictive models be capable of? 
 <!--But what do these look like for general video predictive models?  A generative model of reality?-->
 And what will they enable? For robot learning specifically, and for bringing advances from information tech to the physical world more generally?
