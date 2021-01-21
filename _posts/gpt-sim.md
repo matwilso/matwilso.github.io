@@ -15,8 +15,8 @@ but for video instead of text.
 What might this enable in robotics? And more generally, for bringing advances from information tech to the physical world?
 
 Recent advances in huge language models demonstrate a path to powerful AI systems.
-(1) Develop fairly simple but scalable architectures and training procedures, and (2)
-Proceed to scale the shit out of them.
+First, develop fairly simple but scalable architectures and training procedures, and then
+proceed to scale the shit out of them.
 Bigger models, more compute, and more data lead to better performance and wholly new qualitative abilities, it turns out.
 The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true. [All hail](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)[ compute ;)](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)
 
