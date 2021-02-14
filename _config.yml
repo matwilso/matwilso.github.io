@@ -23,6 +23,7 @@ header_pages:
  - blog.md
  # - about.md
  # - projects.md
+ # - robot-learning.md
  - quotes.md
  - personal.md
  # - hacks.md
@@ -41,4 +42,3 @@ plugins:
   - jekyll-toc
   - jekyll-feed
   - jekyll-seo-tag
-

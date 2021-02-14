@@ -5,3 +5,4 @@ _site
 *.gem
 *.swp
 *.swo
+.jekyll-cache
