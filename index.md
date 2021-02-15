@@ -22,16 +22,54 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 
 ### News
 
+<!--
+- Feb 2021 **[New!]**: Released [boxLCD repo](https://github.com/matwilso/boxLCD) and a new blog post on the [Future of Robot Learning](/robot-learning/future)!
+-->
 - Nov 2019: Our work won the Best System Paper Award at [CoRL 2019!](https://sites.google.com/robot-learning.org/corl2019) 
 - Sep 2019: Our work on "Learning to Manipulate Object Collections Using Grounded State Representations" was accepted to the Conference on Robot Learning ([CoRL](https://www.robot-learning.org/)) 2019!
 - Jun 2018: I wrote up an answer to a [stackoverflow question on PPO (Proximal Policy Optimization)](https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl/50663200#50663200)
 
 
-# Publications
+# Projects
 ---
+<style>
+.static {
+  background: white;
+}
+.static:hover {
+  opacity:0;
+}
+.container {
+    position: relative;
+    width: 35%;
+}
+
+.image {
+    position: absolute;
+}
+</style>
+
 <br>
 
-<img align="left" width="30%" src="/assets/task.png" style="border-radius: 0%; margin: 0px 10px 30px 0px;"/>
+<!--
+<div class="container">
+    <div class="mage">
+    <img class="active" align="left" src="/assets/robot/lcd_sideside.gif" style="border-radius: 0%; margin: 0px 10px 30px 0px;"/>
+    </div>
+    <div class="image">
+    <img class="static" align="left" src="/assets/robot/lcd_sideside.png" style="border-radius: 0%; margin: 0px 10px 30px 0px;"/>
+    </div>
+</div>
+<div style="font-size: 18px; font-weight: bold;">boxLCD</div>
+2021 <br>
+[[GitHub Page](https://github.com/matwilso/boxLCD)] 
+
+<br>
+-->
+
+
+
+<img align="left" width="35%" src="/assets/task.png" style="border-radius: 0%; margin: 0px 10px 30px 0px;"/>
 <div style="font-size: 18px; font-weight: bold;">Learning to Manipulate Object Collections<br>Using Grounded State Representations</div>
 Matthew Wilson, Tucker Hermans <br>
 [CoRL 2019](https://www.robot-learning.org) (Oral) <br>
