@@ -1,9 +1,25 @@
 ---
-layout: none
+layout: basic
 title: Object Collections
 ---
 
-<div align="left" style="width: 50%; margin:0 auto">
+<style>
+/* here the rules for small windows */
+@media (max-width: 500px) {
+	.mainone {
+		width: 90%;
+		margin:0 auto;
+	}
+}
+@media (min-width: 500px) {
+	.mainone {
+		width: 50%;
+		margin:0 auto;
+	}
+}
+</style>
+
+<div class="mainone" align="left">
 <div align="center">
 
 <h1>Learning to Manipulate Object Collections<br>Using Grounded State Representations</h1>
@@ -42,12 +58,12 @@ We propose a method for sim-to-real robot learning which exploits simulator stat
 <br>
 <h2>bibtex</h2>
 <code>
-@article{wilson2019collections,<br>
-  title={Learning to Manipulate Object Collections Using Grounded State Representations},<br>
-  author={Matthew Wilson and Tucker Hermans},<br>
-  journal={Conference on Robot Learning},<br>
-  year={2019},<br>
-  url={https://arxiv.org/abs/1909.07876}<br>
+@article{wilson2019collections,
+  title={Learning to Manipulate Object Collections Using Grounded State Representations},
+  author={Matthew Wilson and Tucker Hermans},
+  journal={Conference on Robot Learning},
+  year={2019},
+  url={https://arxiv.org/abs/1909.07876}
 }
 </code>
 <br>
@@ -63,3 +79,4 @@ We propose a method for sim-to-real robot learning which exploits simulator stat
 
 
 </div>
+
