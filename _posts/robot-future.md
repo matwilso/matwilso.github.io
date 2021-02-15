@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Future of Robot Learning"
-date: 2021-02-21
+date: 2021-02-22
 permalink: /robot-learning/future/
 tags: robotics 
 toc: true
