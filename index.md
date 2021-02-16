@@ -49,9 +49,10 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 }
 </style>
 
+<!--
+
 <br>
 
-<!--
 <div class="container">
     <div class="mage">
     <img class="active" align="left" src="/assets/robot/lcd_sideside.gif" style="border-radius: 0%; margin: 0px 10px 30px 0px;"/>
@@ -62,10 +63,10 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 </div>
 <div style="font-size: 18px; font-weight: bold;">boxLCD</div>
 2021 <br>
-[[GitHub Page](https://github.com/matwilso/boxLCD)] 
+[[GitHub Project](https://github.com/matwilso/boxLCD)] [[Blog](robot-learning/future) [Posts](/robot-learing/learned-sims)]
+-->
 
 <br>
--->
 
 
 
