@@ -13,13 +13,14 @@ toc_sticky: true
 -->
 
 <div style="margin-left: 2em; font-style: italic;">
-"I found it was well worth the 10% of my time to do this careful examination of where computing was heading
+"For some years I set aside Friday afternoons for 'great thoughts'...
+I found it was well worth the 10% of my time to do this careful examination of where computing was heading
 so I would know where we were going and hence could go in the right direction... I could also keep a sharp eye on
 the important problems and see that my major effort went to them." - Richard Hamming (You and Your Research)
 </div><br/>
 
 
-One thing that seems fairly clear now is that robot learning is going to be dominated by huge, learned dynamics models. We are going to collect real world video, sensor, and motor command data and use this to train massive predictive models. These models are going to be extremely powerful, they are going to “understand” a surprising chunk of the world, and they are going to allow us to solve much more difficult tasks than we can today.
+One thing that seems fairly clear to me now is that robot learning is going to be dominated by huge, learned dynamics models. We are going to collect real world video, sensor, and motor command data and use this to train massive predictive models. These models are going to be extremely powerful, they are going to “understand” a surprising chunk of the world, and they are going to allow us to solve much more difficult tasks than we can today.
 
 The two angles I see on how this might come together are: (1) model-based reinforcement learning w/ world models, and (2) sim2real w/ learned simulators.
 
@@ -46,8 +47,8 @@ As in many engineered systems, [the best part is no part](https://twitter.com/Er
 There is, however, a point at which the value of a part becomes worth the price of its extra complexity.
 If models in RL have not yet reached this threshold point, they certainly will in the future.
 Unsupervised / predictive learning is going to be the only way to gather the signal to train powerful enough neural networks.
-Geoff Hinton and Yann Lecun (with his Cake) have been making this argument for several years now. 
-But what really makes me excited now is the artifacts that prove it.
+Geoff Hinton and Yann Lecun (with his Cake) have been making this argument for several years,
+but what really makes me excited now is the artifacts that prove it.
 
 I am much more bullish on the future of model-based RL now, not due to any
 recent spectacular MBRL results, but due to the recent spectacular unsupervised learning results.
@@ -74,7 +75,7 @@ ConvNets, as we mostly train them today, can do complex information processing
 and pick up on important features of the world, but their understanding is extremely superficial.
 This is fundamentally because they are not given the chance to acquire even a fraction of the information they need about the world to understand it.
 
-It’s not going to require radically new and complex processes that we currently “can’t even imagine” to endow networks with this deeper understanding. Some form of large scale predictive training (roughly like GPT-3/DALL-E) will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
+It’s not going to require radically new and complex processes that we currently 'can’t even imagine' to endow networks with this deeper understanding. Some form of large scale predictive training will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
 
 ## Sim2real and learned sims
 
@@ -83,18 +84,19 @@ It’s not going to require radically new and complex processes that we currentl
 The field of sim2real deals with training policies in simulation and then deploying them in the real world with little to no fine-tuning. Sim2real offers several advantages over real world training, in speed, safety, and environment read + write access.
 
 Arguably, sim2real is the same idea as model-based learning, where the model is the simulator.
-In MBRL, though, it’s common to learn models end2end with gradient descent. In sim2real, everyone uses fundamentally traditional simulators, with perhaps partially learned or hybrid components. There are trade-offs here---traditional simulators have nice structure, are general and reusable across tasks---but eventually the human engineering becomes the bottleneck that limits the complexity of environments we can handle.
+In MBRL, though, it’s common to learn models end2end with gradient descent. In sim2real, everyone uses fundamentally traditional simulators, with perhaps partially learned or hybrid components. There are trade-offs to this---traditional simulators have nice structure, and are general and reusable across tasks---but eventually the human engineering becomes the bottleneck that limits the complexity of environments we can handle.
 
-Eventually, we need to learn our simulators basically from scratch, much more like how humans do. The world is too complex and traditional simulators are not flexible enough to handle it. Too often their assumptions are broken---with deformable objects, with material property changes, with shattering, with strange artifacts like fire, paint, lightswitches and microwaves---and eventually the structure becomes too burdensome. The best simulators of the future will impose fairly minimal structure with some inductive biases for efficient learning<label for="sn-1" class="margine-toggle sidenote-number"/>.
+Eventually, we need to learn our simulators basically from scratch, much more like how humans do. The world is too complex and traditional simulators are not flexible enough to handle it. Too often their assumptions are broken---with deformable objects, with material property changes, with shattering, with strange artifacts like fire, paint, lightswitches and microwaves---and eventually the structure becomes too burdensome. The best simulators of the future will impose fairly minimal structure with some inductive biases for efficient learning.
+
+Robotics simulators should be mainly Software 2.0 systems, not 1.0 systems<label for="sn-1" class="margine-toggle sidenote-number"/>
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
-I concede that in the interim, domain-specific structure is useful for constraining what you have to learn.
+In the interim, I concede that domain-specific structures are useful for constraining what you have to learn.
 But for training household robots in the future, I expect minimal imposed simulator structure to be best.
-</span>
+</span>.
+To develop traditional 1.0 simulators, humans have spent years of domain specific effort, studying the physical world, distilling our knowledge into core principles and equations, and implementing these equations in computer programs. In the end, after a massive “real2sim2real” loop, at extreme cost in human science and engineering effort, we can train RL policies that operate in the real world. Ultimately, a learned simulator is just a better version of this human-based loop, where the feedback loops are much quicker and neural networks are much better at dealing with the high-dimensionality (sys-id and dynamics) necessary to simulate the real world. Once learning is in place, learned simulators will require much less effort per incremental advance in performance. They’ll just consume data and compute and grow stronger.
 
-Robotics simulators should be mainly Software 2.0 systems, not 1.0 systems. To develop traditional 1.0 simulators, humans have spent years of domain specific effort, studying the physical world, distilling our knowledge into core principles and equations, and implementing these equations in computer programs. In the end, after a massive “real2sim2real” loop, at extreme cost in human science and engineering effort, we can train RL policies that operate in the real world. Ultimately, a learned simulator is just a better version of this human-based loop, where the feedback loops are much quicker and neural networks are much better at dealing with the high-dimensionality (sys-id and dynamics) necessary to simulate the real world. Once learning is in place, learned simulators will require much less effort per incremental advance in performance. They’ll just consume data and compute and grow stronger.
-
-(And they'll be way easier to use. For a more detailed discussion of learned simulators and the framing they provide, see my [dedicated post](/robot/learned-sims).)
+(Also, they'll be way easier to use. For a more detailed discussion of learned simulators and the framing they provide, see my [dedicated post](/robot/learned-sims) on this.)
 
 ## Conclusion
 
@@ -127,7 +129,7 @@ Smaller problems and simpler systems allow for greater iteration speed and build
 It's best if you can get first hand experience building systems and working on the nitty-gritty details.
 And for this, its' good to choose small problems because they will let you train in a few hours on a single machine, rather than weeks on a full cluster.
 
-I'm building something you can think of like an MNIST of world modeling / learned simulators, called [boxLCD](https://github.com/matwilso/boxLCD).
+I'm building something like an MNIST of world modeling / learned simulators, called [boxLCD](https://github.com/matwilso/boxLCD).
 It's meant to be a testbed for developing ideas and algorithms in this space.
 It uses box2D physics and very low resolution, binarized images for rendering, and it aims to capture as much structure of the full real world learned simulator / world model problem as possible, while remaining much quicker and easier to run experiments and iterate ideas on.
 
@@ -145,9 +147,10 @@ This seems like an exciting area. But alternatively, you should go work on makin
 
 ## FAQs
 
-(Kind of just looser and less polished thoughts that didn't fit in the main body, posed as questions.)
+<!--
+(Kind of just loose and less polished thoughts that didn't fit in the main body)
+-->
 
-(still a bit of a work in progress)
 <!--TODO: add table of contents for this specifically-->
 
 <div class="faq">Is it even possible to build world models and/or learned simulators?</div>
@@ -158,8 +161,7 @@ This is going to take lots of money to create. And so you maybe want to be able 
 Maybe you benefit more from not licensing or releasing and using the simulator
 to create some other end-user product.
 (It's actually hard for me to imagine in detail how development is going to work. And it does make it seem like a massive endeavor. Probably starting in niches and expanding from there. Then as you build momentum, you will have the resources to build this system in a way that actually seems possible. In the meantime, doing the R&D and pushing on these ideas seems useful so we are ready when the full vision becomes possible.)
-
-Maybe OpenAI's API approach does give some path here. Once you have the big model, seems like having an API but releasing access to researchers so
+Maybe OpenAI's API approach is somewhat informative here. Once you have the big model, seems like having an API but releasing access to researchers so
 they can tell you interesting things about the model is a good idea.
 
 <div class="faq">Timing?</div>
@@ -177,7 +179,7 @@ Sure MBRL and models are likely to win out in the long run. But when is the long
 You probably want to do a bit of both, short-term and long-term work.
 But I think the long run bet is good, especially the earlier in your
 career you are. It gives you time to position yourself and benefit from some compounding.
-And the thing about the future is that it eventually happens. It eventually is no longer “the future”, but what is happening now. If you are not sufficiently prepared, you don’t fare as well.
+And the thing about the future is that it eventually happens. It eventually is no longer “the future”, but what is happening now. 
 
 <div class="faq">Where is the data going to come from?</div>
 internet, gopros, and robots maybe.
@@ -203,12 +205,12 @@ Maybe there is a way to incorporate something like a gamma model, but I
 don't see quite how yet.
 
 Autoregressive and/or combined latent variable model seem a pretty promising path forward.
-Likelihood models are provably better at mode covering (than e.g., GANs), and the recent top results are using these types of models.
-Autoregressive models can be expensive to sample,  but the samples are damn good.
+Likelihood models are provably mode covering (better than e.g., GANs), and many recent top results use autoregressive models.
+They can be expensive to sample,  but the samples are damn good.
 And the sequential nature may fit quite well with the structure of world modeling, where you
-get actions at every step as well.
+get actions at every step as well. ¯\\\_(ツ)_/¯
 
-But perhaps world modeling is different enough from past tasks where these have shined, that something
+But perhaps world modeling is different enough from past tasks where these have shined, and that something
 else works much better.
 
 This question is pretty wide open.
@@ -218,11 +220,15 @@ I focused on predictive modeling here, but that is only one aspect of the proble
 Over time, I might develop this post more to cover the other aspects.
 But to start, this is what I focus on because I've been thinking a lot about it.
 
-probably learning from humans and human demos will matter. i somewhat doubt teleoperation becoming big.
+it's likely that learning from humans and human demos will matter.
+and maybe you can use the model to help ground the information you get.
+and reduce the amount of feedback and guiding you need.
+
+i somewhat doubt teleoperation becoming big.
 it is a lot of the fuel for telsa autonomy, but that's because it makes sense to drive a car before it's autonomous.
 it makes less sense to teleop a humanoid robot before it's autonomous.
-it seems cheaper and easier to hire manual labor than to teleop a less reliable robot from somewhere else.
-unless we get really good cheap hardware and then telepresence from developing countries becomes economically viable, i think the tesla / karpathy short story route is not going to be main driving force
+it seems cheaper and easier to hire manual labor than to teleop an unreliable robot from somewhere else.
+unless we get really good cheap hardware and then telepresence from developing countries or something becomes economically viable, i think the tesla / karpathy short story route is not going to be a main driving force in humanoid robotics
 
 <div class="faq">Data curation?</div>
 Data curation will be important. Just like it really is for SL. In USL, it will be as well. You don’t have to be as strict. But you will want to curate the dataset to make sure it is
