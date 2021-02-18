@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Future of Robot Learning"
+title: "The Future of Robot Learning"
 date: 2021-02-22
 permalink: /robot-learning/future/
 tags: robotics 
@@ -8,12 +8,20 @@ toc: true
 toc_sticky: true
 ---
 
-
+<!--
 >What is the future of robot learning going to look like? What is going to enable us to create general purpose robots, that can do things like household cooking, cleaning, and laundry?
+-->
 
-It's hard to predict the future in general, but one thing that seems fairly clear now is that robot learning is going to be dominated by huge, learned dynamics models. We are going to collect real world video, sensor, and motor command data and use this to train massive predictive models. These models are going to be extremely powerful, they are going to “understand” a surprising chunk of the world, and they are going to allow us to solve much more difficult tasks than we can today.
+<div style="margin-left: 2em; font-style: italic;">
+"I found it was well worth the 10% of my time to do this careful examination of where computing was heading
+so I would know where we were going and hence could go in the right direction... I could also keep a sharp eye on
+the important problems and see that my major effort went to them." - Richard Hamming (You and Your Research)
+</div><br/>
 
-I see two slightly different angles on how this might come together: (1) model-based reinforcement learning w/ world models, and (2) sim2real w/ learned simulators.
+
+One thing that seems fairly clear now is that robot learning is going to be dominated by huge, learned dynamics models. We are going to collect real world video, sensor, and motor command data and use this to train massive predictive models. These models are going to be extremely powerful, they are going to “understand” a surprising chunk of the world, and they are going to allow us to solve much more difficult tasks than we can today.
+
+The two angles I see on how this might come together are: (1) model-based reinforcement learning w/ world models, and (2) sim2real w/ learned simulators.
 
 {: class="table-of-content"}
 * TOC
@@ -25,38 +33,48 @@ I see two slightly different angles on how this might come together: (1) model-b
 <br>
 The field of model-based reinforcement learning (MBRL) deals with leveraging predictive models of the environment to solve RL tasks. Often these models are learned from data, and in certain cases are considered an agent’s “world model”, somewhat akin to the mental model of the world that humans carry around in their heads.
 
-The main argument today for using model-based RL (over model-free RL) is data efficiency. Fundamentally, if you can extract more useful bits of information from the environment per step of interaction, you should need fewer interactions. For example,  algorithms like Dyna learn a dynamics model and then leverage it as a proxy environment to collect extra rollouts in, and algorithms like MuZero learn a latent dynamics model and then leverage it for planning ahead and distilling into the base policy.
+The main argument today for using model-based RL (over model-free RL) is data efficiency. If you can extract more useful bits of information from the environment per step of interaction, you should need fewer interactions. Algorithms like Dyna make this happen by learning a dynamics model and then leveraging it as a proxy environment to collect extra rollouts in, and algorithms like MuZero learn a latent dynamics model and then leverage it for planning ahead and distilling into the base policy.
 
-Unfortunately, greater data efficiency often comes at the cost of complexity---in extra theory, lines of code, and moving parts of the algorithm. In MBRL, there are often more details to wrap your head around, more failure points, and more to debug. In practice, this reduces iteration speed and slows progress<label for="sn-1" class="margine-toggle sidenote-number"/>.
+Unfortunately, greater data efficiency comes at the price of complexity. MBRL comes with extra theory and moving parts that you have to wrap your head around, train, debug, and tune. This tends to reduce iteration speed and slow progress<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
 There’s a decent argument here that MBRL has seen overall less adoption in the past several years because of this: it’s just easier to reach for and modify something like PPO or SAC than it is to reach for an MBRL algo like Dreamer.
 </span>
-As in many engineered systems, the best part is no part.
+As in many engineered systems, [the best part is no part](https://twitter.com/Erdayastronaut/status/1203840982497792005?s=20).
 
-There is, however, a point at which the value of a part becomes worth its extra complexity. Models in RL may not often reach that threshold today, but they will increasingly in the future. Unsupervised / predictive learning will be the only way to get enough signal to train large enough and powerful enough neural networks. This argument has been made for several years by Hinton, and Lecun w/ the Cake. It has mostly been theoretical though---for several years, supervised learning was working extremely well and unsupervised learning *wasn’t*.
 
-In the last few years though, I am much more bullish on the future of model-based RL, not due to any
+There is, however, a point at which the value of a part becomes worth the price of its extra complexity.
+If models in RL have not yet reached this threshold point, they certainly will in the future.
+Unsupervised / predictive learning is going to be the only way to gather the signal to train powerful enough neural networks.
+Geoff Hinton and Yann Lecun (with his Cake) have been making this argument for several years now. 
+But what really makes me excited now is the artifacts that prove it.
+
+I am much more bullish on the future of model-based RL now, not due to any
 recent spectacular MBRL results, but due to the recent spectacular unsupervised learning results.
-Models like GPT-3 and DALL-E prove the power of predictive training. They prove how much knowledge these systems can absorb at scale. Of course, there are still many flaws and shortcomings, but they are only the tip of the iceberg for what’s coming and what’s possible. If we extrapolate forward and imagine predictive models for video and robot sensors, this seems clearly how we are going to train a large part of a general purpose robot brain.
+Models like GPT-3 and DALL-E prove the power of predictive training and just
+how much knowledge these systems can absorb at scale.
+They still have many flaws and shortcomings, but they are only the tip of the iceberg for what’s coming and what’s possible. If we extrapolate forward and imagine predictive models for video and robot sensors, this seems clearly how we are going to train a large part of a general purpose robot brain.
 
 As babies, humans learn about basic concepts like gravity as our brains try to make constant predictions about what is normal and what isn’t<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
 Because you can't exactly ask a baby what physics it understands, [infant cognitive development](https://en.wikipedia.org/wiki/Developmental_psychology#Infancy)
-researchers instead often test "violation of expectation", where they
-give babies a control scenario and an impossible physics scenario (e.g., an unsupported block that falls vs. an unsupported block that magically floats),
-and test whether the babies look longer at the impossible physics sceneraio.
-If babies look longer on average at impossible scenario, this suggests it 
-surprised them---that it's breaking their world model in some way.
+researchers instead often test "violation of expectation". They
+give babies an impossible physics scenario (e.g., a block that magically floats instead of falling)
+and a control scenario (block that falls as expected), and test whether the babies look longer at the impossible physics sceneraio.
+If they do look longer on average at impossible scenarios, it suggests they are surprised and that
+the data is not fitting with their world model as well.
 (review papers from: [2002](/assets/papers/baillargeon_2002.pdf), [2004](/assets/papers/baillargeon_2004.pdf))
 </span>
-As adults, we are continually forced to adapt and refine our predictions, as we confront increasingly complex phenomena. Our models become very good. Humans look at the world and we understand it.
+As adults, we are continually forced to adapt and refine our predictions, as we confront increasingly complex phenomena.
+Through this process, our models become very good. Humans look at the world and we understand it.
 
-On the other hand, robots look at the world and they effectively see static. ConvNets trained on classification or even segmentation, for example, can pick up on important features of the world and can acquire a surprising amount of knowledge, but their understanding is extremely superficial compared to humans.
-This is because they are not given the chance to acquire all of the information they need about the world to understand it.
+On the other hand, robots look at the world and they effectively see static. 
+ConvNets, as we mostly train them today, can do complex information processing
+and pick up on important features of the world, but their understanding is extremely superficial.
+This is fundamentally because they are not given the chance to acquire even a fraction of the information they need about the world to understand it.
 
-In the end, I don’t think it’s going to require fundamentally new and complex processes that we currently “can’t even imagine” to endow networks with this information. Some form of large scale predictive training (roughly like GPT-3/DALL-E) will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
+It’s not going to require radically new and complex processes that we currently “can’t even imagine” to endow networks with this deeper understanding. Some form of large scale predictive training (roughly like GPT-3/DALL-E) will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
 
 ## Sim2real and learned sims
 
