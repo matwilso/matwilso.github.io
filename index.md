@@ -22,9 +22,7 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 
 ### News
 
-<!--
-- Feb 2021 **[New!]**: Released [boxLCD repo](https://github.com/matwilso/boxLCD) and a new blog post on the [Future of Robot Learning](/robot-learning/future)!
--->
+- Feb 2021 **[New!]**: Released [boxLCD repo](https://github.com/matwilso/boxLCD) and a new blog post on the [Future of Robot Learning](/robot-learning/future)
 - Nov 2019: Our work won the Best System Paper Award at [CoRL 2019!](https://sites.google.com/robot-learning.org/corl2019) 
 - Sep 2019: Our work on "Learning to Manipulate Object Collections Using Grounded State Representations" was accepted to the Conference on Robot Learning ([CoRL](https://www.robot-learning.org/)) 2019!
 - Jun 2018: I wrote up an answer to a [stackoverflow question on PPO (Proximal Policy Optimization)](https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl/50663200#50663200)
@@ -49,7 +47,6 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 }
 </style>
 
-<!--
 
 <br>
 
@@ -63,8 +60,7 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 </div>
 <div style="font-size: 18px; font-weight: bold;">boxLCD</div>
 2021 <br>
-[[GitHub Project](https://github.com/matwilso/boxLCD)] [[Blog](robot-learning/future) [Posts](/robot-learing/learned-sims)]
--->
+[[GitHub Project](https://github.com/matwilso/boxLCD)] [[Blog](robot/future) [Posts](/robot/learned-sims)]
 
 <br>
 
