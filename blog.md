@@ -12,7 +12,7 @@ A more complete vision of the future of robot learning from the perspective of l
 
 <div>
 <div style="color: grey; font-size: 15px;">Feb 22, 2021</div>
-<a style="font-size: 25px;" href="/robot-future">Learned Simulators</a>
+<a style="font-size: 25px;" href="/learned-sims">Learned Simulators</a>
 </div>
 Dedicated post expanding some thoughts on the perspectives, properties, and uses of learned simulators and how
 they could raise the waterline in robot learning.
