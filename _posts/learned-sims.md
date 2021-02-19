@@ -1,10 +1,10 @@
 ---
-layout: page
-title: Learned Simulators
-permalink: /robot/learned-sims/
+layout: post
+title: "Learned Simulators"
+date: 2021-02-22
+permalink: /learned-sims/
+tags: robotics 
 ---
-
-# Learned Simulators
 
 Traditional simulators are not flexible enough to handle deformability, material property changes, shattering, and strange artifacts like fire, paint, lightswitches and microwaves.
 Eventually, we will need to learn our simulators basically from scratch, much more akin to how humans do.
@@ -12,10 +12,9 @@ Eventually, we will need to learn our simulators basically from scratch, much mo
 The best simulators of the future will impose minimal but carefully architected inductive biases for efficient learning;
 they will be flexible in what they can represent and in how they let you program them.
 
-
 ## Properties and uses
 
-Here is my list of various framings, properties, and uses that learned simulators suggest, for how they might raise the water line:
+Here is my list of various perspectives, properties, and uses that learned simulators suggest, for how they might raise the water line in robotics:
 
 **Reusable tool.** Traditional simulators are fairly general tools. They can be reprogrammed for many tasks. They have nice structure that enables you to interface with them and visualize their results in interpretable formats. 
 Rather than constructing ah-hoc world models for each environment or agent, a learned simulator would aim to be more reusable. 
@@ -25,13 +24,12 @@ The analogue of a git repository for [Software 2.0](https://medium.com/@karpathy
 but I think this is the type of thing you want to be thinking about to develop a reusable system.
 It let's you pile up effort over time in a single place and compound effort more.
 
-**Pushing hard on general accuracy.** To me, a general simulator also suggests pushing some level of accuracy, independent of a specific downstream task.
-Of course you can't cover everything, and you will need to grow out from small niches early in development.
-But given the challenge of learning accurate models, I think dedicated effort on improving accuracy would pay off in the long run.
-And given the benefits of expanding the scope of coverage, I also think pushing hard on making the simulator more general will pay off.
-
-**sim2real engine.** The development of learned simulators also suggests the idea of the "sim2real engine",
+**Sim2real Engine.** The development of learned simulators also suggests the idea of a Sim2Real Engine,
 where you iteratively bootstrapping a learned simulator as follows: train models inside of the simulator, use those models to collect data in the real world, and use that data to train and improve the simulator. Rinse repeat for compounding progress.
+
+**Accuracy.** To me, a simulator also suggests pushing some level of accuracy. Given the challenge of learning accurate models, I think some dedicated effort on improving accuracy (even somewhat independent of task) would pay off in the long run.
+
+**Generality.** It also suggests expanding the scope of the domains you try to model. Of course you can't cover everything, and you will need to grow out from small niches early in development. But given the benefits of covering more domains with a single system, I also think pushing hard on making the simulator more general will pay off.
 
 **Grounding.** A learned simulator will be much easier to work and interface with. Instead of defining XML files to specify all the details and possible things we want to vary over, we can naturally “prompt” the model to simulate what we want. It can absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that we can encode with a neural network. We can film a quick video of our scene, with some robot specifications, command data and proprioception, and we'll get a calibrated and general simulation of the scene and the robot.
 
@@ -40,7 +38,7 @@ We can visualize the effects of different objects in the scene, the uncertainty 
 We can perhaps render different modalities, like feed in a visual scene and the model will be able to pull out the
 scene geometry and likely meshes that correspond to a scene. 
 
-**Repeatable and controllable.** For training, we can induce specific and repeatable settings that we want our agent to practice, by using a natural interface. We can use this for debugging our system, for example by pulling in information from the fleet about areas
+**Repeatability and controllability.** For training, we can induce specific and repeatable settings that we want our agent to practice, by using a natural interface. We can use this for debugging our system, for example by pulling in information from the fleet about areas
 we are failing and then embed similar scenarios in the simulator to create behavioral unit tests.
 
 **Intelligent domain randomization.**
@@ -77,12 +75,11 @@ That seems imaginable. And it seems a good way to build momentum.
 
 ## Framing
 
-
 **What actually brings a field forward?**
 
 I believe it is the ideas and artifacts that raise the water level---that enable researchers and practitioners to do with more with less,
 *over and over again*.
-The most obvious, universal, and steady example is compute, which let's us offload work to optimization processes.
+The most obvious, universal, and steady example is compute, which let's us gradually [offload more work to optimization processes](http://www.incompleteideas.net/IncIdeas/BitterLesson.html).
 Other examples include:
 - Frameworks like TensorFlow and Pytorch, which help abstract away messy lower-level and hardware details, and let us focus on what matters for our work specifically.
 - Tricks like batch norm (though it's going out of fashion) and architectures like Transformers, which let us train networks more effectively.
@@ -97,7 +94,7 @@ and general unsupervised models like GPT-3, this is really going to take off.
 
 **What are these models going to look like for robotics?**
 
-Compared to world models, I think learned simulators provide a slightly better framing on [the problem](robot/future).
+Compared to world models, I think learned simulators provide a slightly better framing on [the problem](robot-future).
 
 For robotics, learned simulators suggest a nice way to develop large predictive models,
 and then package and leverage them.

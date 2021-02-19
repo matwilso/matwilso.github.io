@@ -2,7 +2,7 @@
 layout: post
 title: "The Future of Robot Learning"
 date: 2021-02-22
-permalink: /robot/future/
+permalink: /robot-future/
 tags: robotics 
 toc: true
 toc_sticky: true
@@ -96,7 +96,7 @@ But for training household robots in the future, I expect minimal imposed simula
 </span>.
 To develop traditional 1.0 simulators, humans have spent years of domain specific effort, studying the physical world, distilling our knowledge into core principles and equations, and implementing these equations in computer programs. In the end, after a massive “real2sim2real” loop, at extreme cost in human science and engineering effort, we can train RL policies that operate in the real world. Ultimately, a learned simulator is just a better version of this human-based loop, where the feedback loops are much quicker and neural networks are much better at dealing with the high-dimensionality (sys-id and dynamics) necessary to simulate the real world. Once learning is in place, learned simulators will require much less effort per incremental advance in performance. They’ll just consume data and compute and grow stronger.
 
-(Also, they'll be way easier to use. For a more detailed discussion of learned simulators and the framing they provide, see my [dedicated post](/robot/learned-sims) on this.)
+(Also, they'll be way easier to use. For a more detailed discussion of learned simulators and the framing they provide, see my [dedicated post](/learned-sims) on this.)
 
 ## Conclusion
 
