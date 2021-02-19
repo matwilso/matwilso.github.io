@@ -22,7 +22,7 @@ the important problems and see that my major effort went to them." - Richard Ham
 
 One thing that seems fairly clear to me now is that robot learning is going to be dominated by huge, learned dynamics models. We are going to collect real world video, sensor, and motor command data and use this to train massive predictive models. These models are going to be extremely powerful, they are going to “understand” a surprising chunk of the world, and they are going to allow us to solve much more difficult tasks than we can today.
 
-The two angles I see on how this might come together are: (1) model-based reinforcement learning w/ world models, and (2) sim2real w/ learned simulators.
+The two angles I see on how this might come together are: (1) model-based reinforcement learning w/ world models, and (2) sim2real w/ [learned simulators](/learned-sims).
 
 {: class="table-of-content"}
 * TOC

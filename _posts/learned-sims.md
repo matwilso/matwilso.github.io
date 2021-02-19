@@ -14,7 +14,7 @@ they will be flexible in what they can represent and in how they let you program
 
 ## Properties and uses
 
-Here is my list of various perspectives, properties, and uses that learned simulators suggest, for how they might raise the water line in robotics:
+Here is my list of various perspectives, properties, and uses that learned simulators suggest, for how they might raise the waterline in robotics:
 
 **Reusable tool.** Traditional simulators are fairly general tools. They can be reprogrammed for many tasks. They have nice structure that enables you to interface with them and visualize their results in interpretable formats. 
 Rather than constructing ah-hoc world models for each environment or agent, a learned simulator would aim to be more reusable. 
@@ -87,7 +87,7 @@ Other examples include:
 - Models and simulators (to the extent they are general and accurately approximate the true phenomena), which let us quickly iterate on ideas and validate systems.
 - Benchmarks like ImageNet, which let us compare ideas head to head in a consistent way and let us realize which ideas and artifacts matter.
 
-In the future, trained models themselves are going raise the water line substantially.
+In the future, trained models themselves are going raise the waterline substantially.
 Fine-tuning on ImageNet trained weights is the beginning of this. But with more powerful
 and general unsupervised models like GPT-3, this is really going to take off.
 
