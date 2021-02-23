@@ -16,7 +16,7 @@ toc_sticky: true
 "For some years I set aside Friday afternoons for 'great thoughts'...
 I found it was well worth the 10% of my time to do this careful examination of where computing was heading
 so I would know where we were going and hence could go in the right direction... I could also keep a sharp eye on
-the important problems and see that my major effort went to them." - Richard Hamming (<a href="/assets/papers/hamming_stripe.pdf">You and Your Research</a>)
+the important problems and see that my major effort went to them." - Richard Hamming (<a href="/assets/papers/hamming_research_stripe.pdf">You and Your Research</a>)
 </div><br/>
 
 <!--To me, it seems that robot learning is heading towards the use of large learned dynamics models.-->
