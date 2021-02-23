@@ -21,10 +21,10 @@ the important problems and see that my major effort went to them." - Richard Ham
 
 <!--To me, it seems that robot learning is heading towards the use of large learned dynamics models.-->
 
-One thing that seems fairly clear now is that robot learning is going to be dominated by the use of large learned dynamics models. 
-In the future, we will be collecting massive amounts of real world video, sensor, and motor command data, and using this to train massive predictive models. These models will be extremely powerful, they'll “understand” a surprising chunk of the world, and they'll allow us to solve much more difficult tasks than we can today.
+One thing that seems fairly likely is that robot learning is going to be dominated by the use of large, learned dynamics models. 
+In the future, we'll be collecting massive amounts of real world video, sensor, and motor command data, and using this to train massive predictive models. These models will be extremely powerful, they'll “understand” a surprising chunk of the world, and they'll allow us to solve much more difficult tasks than we can today.
 
-I can see two angles on how this might come together: (1) is model-based reinforcement learning w/ world models, and (2) is sim2real w/ [learned simulators](/learned-sims).
+I can see two angles on how this might come together: (1) is model-based reinforcement learning w/ world models, and (2) is sim2real learning w/ [learned simulators](/learned-sims).
 
 {: class="table-of-content"}
 * TOC
@@ -36,34 +36,34 @@ I can see two angles on how this might come together: (1) is model-based reinfor
 <br>
 The field of model-based reinforcement learning (MBRL) deals with leveraging predictive models of the environment to solve RL tasks. Often these models are learned from data, and in certain cases are considered an agent’s “world model”, somewhat akin to the mental model of the world that humans carry around in their heads.
 
-The main argument today for using model-based RL (over model-free RL) is data efficiency. If you can extract more useful bits of information from the environment per step of interaction, you should need fewer interactions. Algorithms like Dyna make this happen by learning a dynamics model and then leveraging it as a proxy environment to collect extra rollouts in, and algorithms like MuZero learn a latent dynamics model and then leverage it for planning ahead and distilling into the base policy.
+The main argument today for using model-based RL (over model-free RL) is data efficiency. If you can extract more useful bits of information from the environment per step of interaction, you should need fewer interactions. Algorithms like Dyna make this happen by learning a dynamics model and then leveraging it as a proxy environment to collect extra rollouts in, and algorithms like MuZero learn a latent dynamics model and then leverage it for planning ahead and distilling into a policy.
 
-Unfortunately, greater data efficiency comes at the price of complexity. MBRL comes with extra theory to wrap your head around and extra moving parts to train, debug, and tune. This tends to reduce iteration speed and slow progress<label for="sn-1" class="margine-toggle sidenote-number"/>.
+Unfortunately, greater data efficiency comes at the price of complexity. MBRL comes with extra theory to wrap your head around, and it comes with extra moving parts to train, debug, and tune. This tends to reduce iteration speed and slow progress<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
 There’s a decent argument here that MBRL has seen overall less adoption in the past several years because of this: it’s just easier to reach for and modify something like PPO or SAC than it is to reach for an MBRL algo like Dreamer.
 </span>
 As in many systems, [the best part is no part](https://twitter.com/Erdayastronaut/status/1203840982497792005?s=20).
 
-There is, however, a point at which the value of a part becomes worth the price of its extra complexity.
+There is, however, a point at which the value of a part becomes worth the complexity.
 If models in RL have not yet reached this threshold, they certainly will in the future.
-Unsupervised / predictive learning is going to be the only way to gather the signal to train powerful enough neural networks.
-Geoff Hinton and Yann Lecun (with his Cake) have been making this argument for several years,
-but what really makes me excited now isn't the argument itself, but *the artifacts that prove it*.
+Unsupervised / predictive learning is going to be the only way to gather enough signal to train powerful enough neural networks.
+Geoff Hinton and Yann Lecun (with the Cake) have been making this argument for several years.
+But what makes me really excited now are *the artifacts that prove it*.
 
-I am much more bullish on the future of model-based RL now, not due to any
+I am much more bullish on the future of model-based RL *now*, not due to any
 recent spectacular MBRL results, but due to the recent spectacular unsupervised learning results.
 Models like GPT-3 and DALL-E prove the power of predictive training and just
 how much knowledge these systems can absorb at scale.
 They still have many flaws and shortcomings, but they are only the tip of the iceberg for what’s coming and what’s possible. If we extrapolate forward and imagine predictive models for video and robot sensors, this seems clearly how we are going to train a large part of a general purpose robot brain.
 
-As babies, humans learn about basic concepts like gravity as our brains try to make constant predictions about what is normal and what isn’t<label for="sn-1" class="margine-toggle sidenote-number"/>.
+As babies, humans learn about basic concepts like gravity, as our brains try to make constant predictions about what is normal and what isn’t<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
 Because you can't exactly ask a baby what physics it understands, [infant cognitive development](https://en.wikipedia.org/wiki/Developmental_psychology#Infancy)
 researchers instead often test "violation of expectation". They
 give babies an impossible physics scenario (e.g., a block that magically floats instead of falling)
-and a control scenario (block that falls as expected), and test whether the babies look longer at the impossible physics sceneraio.
+and a control scenario (e.g., block that falls as expected), and test whether the babies look longer at the impossible physics sceneraio.
 If they do look longer on average at impossible scenarios, it suggests they are surprised and that
 the data doesn't fit their world model.
 (review papers from: [2002](/assets/papers/baillargeon_2002.pdf), [2004](/assets/papers/baillargeon_2004.pdf))
@@ -71,33 +71,33 @@ the data doesn't fit their world model.
 As adults, we are continually forced to adapt and refine our predictions, as we confront increasingly complex phenomena.
 Through this process, our models become very good. Humans look at the world and we understand it.
 
-On the other hand, robots look at the world today and they effectively see static. 
+On the other hand, robots look at the world and they effectively see static. 
 ConvNets, as we mostly train them today, can do complex information processing
 and pick up on important features of the world, but their understanding is extremely superficial.
 They are not given the chance to acquire even a fraction of the information they need about the world to understand it.
-They are starved for training bits and so it's not surprising they understand very little.
+They are starved for training bits, so it's not surprising they understand very little.
 
-I don't believe it’s going to require radically new and complex processes that we currently 'can’t even imagine' to endow networks with this deeper understanding. Some form of large scale predictive training will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
+I don't believe it will require radically new and complex processes that we currently "can’t even imagine" to endow networks with this deeper understanding. Some form of large scale predictive training will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
 
-## Sim2real and learned sims
+## Sim2real and learned simulators
 
 <div style="text-align: center;"><em>It’s all about Software 2.0 baby.</em></div>
 <br>
 The field of sim2real deals with training policies in simulation and then deploying them in the real world with little to no fine-tuning. Sim2real offers several advantages over real world training, in speed, safety, and environment read + write access.
 
-Arguably, sim2real is the same idea as model-based learning, where the model is the simulator.
+Arguably, sim2real is the same idea as model-based learning, where the simulator is the model.
 In MBRL, though, it’s common to learn models end2end with gradient descent. In sim2real, everyone uses fundamentally traditional simulators, with perhaps partially learned or hybrid components. There are trade-offs to this---traditional simulators have nice structure and are general and reusable across tasks---but eventually human engineering becomes a bottleneck that limits the complexity of environments we can handle.
 
 Eventually, we need to learn our simulators basically from scratch, much more like how humans do. The world is too complex and traditional simulators are not flexible enough to handle it. Too often their assumptions are broken---with deformable objects, with material property changes, with shattering, with strange artifacts like fire, paint, lightswitches and microwaves---and eventually the structure becomes too burdensome. The best simulators of the future will impose fairly minimal structure with some inductive biases for efficient learning<label for="sn-1" class="margine-toggle sidenote-number"/>
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
 In the interim, I concede that domain-specific structures are useful for constraining what you have to learn.
-But for training household robots in the future, I expect minimal imposed simulator structure to be best.
+But for training things like household robots in the future, minimal structure will be be best.
 </span>.
 
 
-Robotics simulators should be mainly [Software 2.0](https://medium.com/@karpathy/software-2-0-a64152b37c35) systems, not 1.0 systems.
-To develop traditional simulators, humans have spent years of domain specific effort, studying the physical world, distilling our knowledge into core principles and equations, and implementing these equations in computer programs. In the end, after a massive “real2sim2real” loop, at extreme cost in human science and engineering effort, we can train RL policies that operate in the real world. Ultimately, a learned simulator is just a better version of this human-based loop, where the feedback loops are much quicker and neural networks are much better at dealing with the high-dimensionality (sys-id and dynamics) necessary to simulate the real world. Once learning is in place, learned simulators will require much less effort per incremental advance in performance. They’ll just consume data and compute and grow stronger.
+Robotics simulators should be mainly [Software 2.0](https://medium.com/@karpathy/software-2-0-a64152b37c35) systems, not 1.0.
+For traditional simulation, humans have spent years of domain specific effort, studying the physical world, distilling our knowledge into core principles and equations, and implementing these equations in computer programs. In the end, after a massive “real2sim2real” loop, at extreme cost in human science and engineering effort, we can train RL policies that operate in the real world. Ultimately, a learned simulator is a better version of this human-based loop, where the feedback loops are quicker and the neural networks are better at dealing with the high-dimensionality (sys-id and dynamics) necessary to simulate the real world. Once learning is in place, learned simulators will require much less effort per incremental advance in performance. They’ll just consume data and compute and grow stronger.
 
 (Also, they'll be way easier to use. For a more detailed discussion of learned simulators and the framing they provide, see my [dedicated post](/learned-sims) on this.)
 
@@ -106,8 +106,11 @@ To develop traditional simulators, humans have spent years of domain specific ef
 Model-based RL and sim2real give two perspectives on the role that massive predictive models will play in the future of robot learning. World models represent something akin to what humans have going on in their heads, and suggest that with predictive learning and simply more bits, we can build intelligent agents
 that see the world. Learned simulators represent an extension of traditional human-engineered simulators to the era of Software 2.0, and suggest that we can build more general and reusable tools for training intelligent agents that handle the full complexity of the world.
 
-World models and learned sims perhaps draw on different bodies of work and suggest different paths of development. They may diverge, or they may end up being largely the same thing, but they both point to the value of predictive learning in robotics. As the base of the Cake, they seem like the most important part in some ways, or at least a major catalyst and context to ground and amplify the power of the other components (human supervision, RL signal).
+World models and learned sims perhaps draw on different bodies of work and suggest different paths of development. They may diverge, or they may end up being largely the same thing.
+Regardless, they both point to the value of predictive learning in robotics. As the base of the Cake, they seem like the most important part in some ways, or at least a major catalyst and context to ground and amplify the power of the other components (human supervision, RL signal).
 If you care about building general purpose robots (and useful AI systems in general), you should probably care about predictive modeling.
+
+Thanks for reading.
 
 ## References
 
