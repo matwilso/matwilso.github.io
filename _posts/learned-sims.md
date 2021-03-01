@@ -16,9 +16,7 @@ they will be flexible in what they can represent and in how they let you program
 
 ## Prelude/setting the stage
 
-**What actually brings a field forward?**
-
-I believe it is the ideas and artifacts that raise the waterline. Those things that we end
+I believe what actually brings our field forward are the ideas and artifacts that raise the waterline. Those things that we end
 up benefitting from over and over again, and that enable us to solve harder problems with less effort.
 The most obvious, universal, and steady example is compute, which we keep benefitting from by [offloading
 more work](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) to optimization processes.
