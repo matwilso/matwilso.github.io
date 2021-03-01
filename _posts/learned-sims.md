@@ -6,7 +6,7 @@ permalink: /learned-sims/
 tags: robotics 
 ---
 
-> This post represents some of my thoughts on **learned simulators**. It is a spin-off from my other post on [The Future of Robot Learning](/robot-future), which provides some more contextualization.
+> This post represents some of my thoughts on **learned simulators** specifically. It is a spin-off from my other post on [The Future of Robot Learning](/robot-future), which provides some more contextualization.
 
 Traditional simulators are not flexible enough to handle the full complexity of the world---things like deformability, material property changes, shattering, and strange artifacts like fire, paint, lightswitches and microwaves.
 Eventually, we will need to learn our simulators basically from scratch, much more akin to how humans do.
