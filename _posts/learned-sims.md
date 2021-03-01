@@ -35,7 +35,7 @@ One interesting and emerging class of such artifacts is learned models themselve
 Fine-tuning on ImageNet trained weights is a primitive example of this, where
 maybe people could solve their own tasks by reusing the optimization, but in a limited scope.
 With more powerful and general unsupervised models like GPT-3, reusable learned models are
-going to start raising the waterline of what we can do in many specific tasks we care about.
+going to start raising the waterline for many more domains that we care about.
 
 ## Learned simulators
 
@@ -60,7 +60,9 @@ partial mesh.
 
 **Differentiability.** Currently, the environment is a giant stop_gradient in the middle of your reinforcement learning computational graph.
 Every other part of the system is learned and differentiable. 
-If you can patch this stop_gradient, it seems you will open your design space and things will be cleaner.
+If you can patch this stop_gradient, it seems there is great opportunity for cleaner and more free design decisions.
+(Technically this is available today in certain differentiable simulators being developed, but those are external software (not in your PyTorch graph), 
+and they are ceiling-ed by human engineering.)
 
 <!--
 we can apply more ideas from generative modeling directly, where the actions are just control variables and part of what we are generating over. Things become much cleaner.
@@ -73,11 +75,11 @@ or delayed learning of a Q-function (e.g., SAC) that you can push gradients back
 (This applies equally well to the "world model" framing, like in Dreamer, but I mention it here for completeness.)
 -->
 
-**Repeatability and controllability.** (Technically this applies to traditional simulators as well, but it becomes more significant with learned ones.)For training, you could induce specific and repeatable settings that you want your agent to practice, by using a natural interface. You could use this for debugging your system, for example by pulling in information from the fleet about areas
-you are failing and then embed similar scenarios in the simulator to create behavioral unit tests.
+**Repeatability and controllability.** For training, you could induce specific and repeatable settings that you want your agent to practice, by using a natural interface. You could use this for debugging your system, for example by pulling in information from the fleet about areas
+you are failing and then embed similar scenarios in the simulator to create behavioral unit tests. (Technically this applies to traditional simulators as well, but learned simulators greatly reduce the friction here.)
 
 **Intelligent domain randomization.**
-Because powerful generative models will have to model uncertainty in the environment, sampling them could yield intelligent domain randomization. Instead of randomizing over a bunch of wacky parameters, your model could be tuned to the underlying distribution and only give you variety you might actually see in the real world. For example, given a video of an opaque container, the model samples over the range of possible masses that could fit in the container.
+Because powerful generative models will have to model uncertainty in the environment, sampling them will yield something like intelligent domain randomization. Instead of randomizing over a bunch of wacky parameters, your model could be tuned to the underlying distribution and only give you variety you might actually see in the real world. For example, given a video of an opaque container, the model samples over the range of possible masses that could fit in the container.
 
 **Sim2real Engine.** Learned simulators may enable a "Sim2Real Engine",
 where you iteratively bootstrap a system by: training models inside of the simulator, using those models to collect data in the real world, and using that data to train and improve the simulator. Then just rinsing and repeating.
@@ -94,7 +96,7 @@ approaches might be better.
 -->
 
 **Science and engineering applications.** A learned simulator may be useful to answer scientific questions and to use in an engineering design process.
-They could offer a more repeatable and more examinable model of the real world. You could study the dynamics of systems more easily.
+It could offer a more repeatable and more examinable model of the real world. You could study the dynamics of systems more easily.
 Or you could plug in information like technical drawings and descriptions of new parts and observe how systems behave (similar to how simulators are used now, but in an easier automatic way).
 
 
