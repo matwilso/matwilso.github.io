@@ -37,8 +37,6 @@ this is just a random sample, not necessarily all time best quotes
 
 # Engineering
 
-"If it's long it's wrong. If it's tight it's right" - elon
-
 "The best part is no part. The best process is no process. It weighs nothing, costs nothing, can't go wrong.... Undesigning is the best thing. Just delete it." - [elon](https://twitter.com/Erdayastronaut/status/1203840982497792005)
 
 "My whole life was basically trying to optimize things. You don't just save parts, but every time you save parts you save on complexity and reliability, the amount of time it takes to understand something. And how good you can build it without errors and bugs and flaws." - woz
@@ -46,6 +44,8 @@ this is just a random sample, not necessarily all time best quotes
 '"Figure out the optimal configuration of atoms first... then figure out how to put them there" - elon' - [jim keller](https://www.youtube.com/watch?v=oIG9ztQw2Gc&feature=youtu.be&t=985)
 
 (in other words:) "Don't let the how's constrain the what's." - jim keller
+
+"If it's long it's wrong. If it's tight it's right" - elon
 
 "It is important to view knowledge as sort of a semantic tree--make sure you understand the fundamental principles, ie the trunk and big branches, before you get into the leaves/details or there is nothing for them to hang on to." - elon
 
