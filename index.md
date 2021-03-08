@@ -13,8 +13,8 @@ British Columbia (UBC)](https://www.cs.ubc.ca/), working on robotics and reinfor
 \+ deep learning, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Previously, I worked on similar things for my undergraduate 
 thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://robot-learning.cs.utah.edu/), advised by [Tucker Hermans](https://robot-learning.cs.utah.edu/thermans). 
 
+I graduate in May 2021 and I am looking for a job.
 
-<br>
 
 [CV](/assets/cv.pdf) / [GitHub](https://github.com/matwilso) / [Twitter](https://twitter.com/matwilso) / [Stack Overflow](https://stackoverflow.com/users/7211137/matwilso)
 
@@ -28,7 +28,7 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 - Jun 2018: I wrote up an answer to a [stackoverflow question on PPO (Proximal Policy Optimization)](https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl/50663200#50663200)
 
 
-# Projects
+# Projects & Publications
 ---
 <style>
 .static {

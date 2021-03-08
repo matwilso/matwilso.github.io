@@ -24,7 +24,7 @@ the important problems and see that my major effort went to them." - Richard Ham
 It seems likely that robot learning is going to be dominated by the use of large, learned dynamics models. 
 In the future, we'll be collecting massive amounts of real world video, sensor, and motor command data, and using this to train massive predictive models. These models will be extremely powerful, they'll “understand” a surprising chunk of the world, and they'll allow us to solve much more difficult tasks than we can today.
 
-I can see two angles on how this might come together: (1) is model-based reinforcement learning w/ world models, and (2) is sim2real learning w/ [learned simulators](/learned-sims).
+I can see two angles on how this might come together: (1) model-based reinforcement learning w/ world models, and (2) sim2real learning w/ [learned simulators](/learned-sims).
 
 {: class="table-of-content"}
 * TOC
@@ -48,7 +48,7 @@ As in many systems, [the best part is no part](https://twitter.com/Erdayastronau
 There is, however, a point at which the value of a part becomes worth the complexity.
 If models in RL have not yet reached this threshold, they certainly will in the future.
 Unsupervised / predictive learning is going to be the only way to gather enough signal to train powerful enough neural networks.
-Geoff Hinton and Yann Lecun (with the Cake) have been making this argument for several years.
+[Geoff Hinton](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/clyjogf/) and Yann Lecun (with the [Cake](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59)) have been making this argument for several years.
 But what makes me really excited now is not the argument itself, but the artifacts that prove it.
 
 I am much more bullish on the future of model-based RL now, not due to any
@@ -81,7 +81,7 @@ It's not going to require radically new and complex processes that we currently 
 
 ## Sim2real and learned simulators
 
-<div style="text-align: center;"><em>And, it’s all about Software 2.0.</em></div>
+<div style="text-align: center;"><em>It's also all about Software 2.0.</em></div>
 <br>
 The field of sim2real deals with training policies in simulation and then deploying them in the real world with little to no fine-tuning. Sim2real offers several advantages over real world training, in speed, safety, and environment read + write access.
 
@@ -116,7 +116,7 @@ Thanks for reading.
 ## References
 
 There is some background that is useful to have and stay current on:
-- **fundamentals in DL and Deep RL.** [Karpathy’s DL course](https://cs231n.github.io/) and [OpenAI’s Spinning Up in Deep RL](https://spinningup.openai.com/). I recommend doing the cs231n assignments, and messing with the spinningup RL algorithms and understanding why every single line is in the code.
+- **fundamentals in DL and Deep RL.** [Karpathy’s DL course](https://cs231n.github.io/) and [OpenAI’s Spinning Up in Deep RL](https://spinningup.openai.com/). If you are new to the field, I recommend doing the cs231n assignments, and messing with the spinningup RL algorithms and understanding why every single line is in the code.
 - **model-based RL.** Igor Mordatch and Jessica Hamrick have a good tutorial on [MBRL @ ICML 2020](https://sites.google.com/view/mbrl-tutorial). I’d recommend that for a good overview. Also reading specific recent papers in the space. One I like is [Dreamer](https://danijar.com/project/dreamer/), which learns a stochastic world model that handles uncertainty to some extent; it uses the model’s latent state as input to the policy and value networks; and it uses differentiable rollouts through the model for training. I wouldn't say it strongly outperform other algorithms---for example, image-based SAC with a [few tricks](https://mishalaskin.github.io/rad/) can be made to work better---but it feels like Dreamer is on the right path.
 - **sim2real.** The [sim2real Workshop @ RSS 2020](https://sim2real.github.io/) is solid ([summary document](https://twitter.com/sim2realAIorg/status/1336364134510678017)). Also reading the recent work in the space. One I like [Jemin Hwangbo et. al’s work](https://arxiv.org/abs/1901.08652) on learning a network to model the series elastic actuator network on Anymal, and plugging this network into the simulator dynamics for sim2real learning. The [real world results are impressive](https://www.youtube.com/watch?v=aTDkYFZFWug). Also, [Josh Tobin's slides on sim2real](http://josh-tobin.com/assets/pdf/randomization_and_the_reality_gap.pdf) are pretty nice too.
 - **generative modeling.** [Pieter Abbeel’s Deep Unsupervised Learning Course](https://sites.google.com/view/berkeley-cs294-158-sp20/home) is a great course for fundamentals. I’ve been going through the course and implementing/transcribing various models and [training them on MNIST](https://github.com/matwilso/generative_models). Generative modeling is super important in this area, and it’s easier to study and build intuition on tasks like MNIST where you don’t have to simultaneously deal with data collection and actions and exploration.
@@ -124,7 +124,7 @@ There is some background that is useful to have and stay current on:
 - **video prediction.** Pixels seem like they will be the primary modality used to train world models and learned simulators, so this will be an especially important subset of generative modeling. Also, there are many people pushing on video prediction for different reasons, so it's good if we can draft off that work.
 - **cloning simulators.** This area of research takes existing physics simulation and clones them  with neural networks to run faster, basically (kind of like neural [clean-rooming](https://en.wikipedia.org/wiki/Clean_room_design)). One example is [Learning to simulate complex physics with graph networks](https://sites.google.com/view/learning-to-simulate). While this only lets you get as good as the original simulation, there are likely good insights here in how to set up effective inductive biases and set up training. I think this is actually a decent path for getting traction in more fully learned simulators.
 - **case studies.** Case studies of related areas provide valuable lessons to draw on. Some things that come to mind are the recent large language models and large scale, production grade systems at Tesla, OpenAI, Google, etc. Alec Radford gave a good talk on historical development of language models [[video]](https://youtu.be/BnpB3GrpsfM) [[slides]](https://drive.google.com/open?id=1sdH-9KQipnu3RMN0-YUqU8R4ZMLapz8IJzfe7VLN39o).
-And Andrej has some talks about Tesla [on his website](https://karpathy.ai/). Anyone tackling big problems and constantly facing reality is a good case study.
+And Andrej has some talks about Tesla [on his website](https://karpathy.ai/). Reality in general is a great filter for flawed approaches.
 - **infant cognitive development**. It might be useful to draw on what we know about how babies develop their models of the world. Like in what sequence do they learn different concepts about the world? Is there anything we can learn about the inductive biases they have for physical reasoning---about which physics they understand early on, and which takes a long time to learn? There are some [reviews on physical](/assets/papers/baillargeon_2002.pdf) [reasoning in infants](/assets/papers/baillargeon_2004.pdf), that discuss when babies learn certain skills. 
 - **yann lecun and self-supervised learning.** [His podcast with Lex is good, and his recent talks can probably offer insight on this area as well.](https://www.youtube.com/results?search_query=yann+lecun) He is a big believer in this type of stuff now.
 
@@ -159,8 +159,8 @@ This seems like an exciting area. But alternatively, you should go work on makin
 - <a href="#faq-data">Where is the data going to come from?</a>
 - <a href="#faq-model">What is the model going to look like exactly?</a>
 - <a href="#faq-selfsupe">What about non-generative self-supervision?</a>
-- <a href="#faq-whatelse">What else is going to matter in the future?</a>
 - <a href="#faq-curation">Data curation?</a>
+- <a href="#faq-whatelse">What else is going to matter in the future?</a>
 
 <!--
 (Kind of just loose and less polished thoughts that didn't fit in the main body)
@@ -172,7 +172,7 @@ This seems like an exciting area. But alternatively, you should go work on makin
 Humans give an example that this type of knowledge can be learned. And generative models (VAEs, GANs, etc) give an example that machine systems can go beyond humans in pixel perfect generating of images. Only a select few humans can do something like generate high-resolution realistic human faces, but they need art tools and it takes a long time. Generative models point to something that can go far beyond human abilities in this space. And it is just a matter of how far. 
 
 <div class="faq" id="faq-money">What about money?</div>
-This is going to take a lot of money to create. Maybe you can capitalize on the investment by licensing it. I can see an open sourced / crowd-sourced version being potentially viable, at least as a weaker version of what the top companies have.
+This is going to take a lot of $. Maybe you can capitalize on the investment by licensing it. I can see an open sourced / crowd-sourced version being potentially viable, at least as a weaker version of what the top companies have.
 Maybe you benefit more from not licensing or releasing and using the simulator
 to create some other end-user product.
 (It's actually hard for me to imagine in detail how development is going to work. It does just seem like a massive endeavor. Probably starting in niches and expanding from there. Then as you build momentum, you will have the resources to build this system in a way that actually seems possible. In the meantime, doing the R&D and pushing on these ideas seems useful so we are ready when the full vision becomes possible.)
@@ -244,6 +244,10 @@ But I suppose you can get pretty far using some contrastive type approach to lea
 
 In summary, I believe non-generative self-supervised learning is worth paying attention to going forward.
 
+<div class="faq" id="faq-curation">Data curation?</div>
+Data curation will be important. Just like it really is for SL. In USL, it will be as well. You don’t have to be as strict. But you will want to curate the dataset to make sure it is
+balanced and interesting.
+
 <div class="faq" id="faq-whatelse">What else is going to matter in the future?</div>
 In this post, I mainly focused on how we're going to train the general predictive models,
 but that is only a part of the future store.
@@ -260,6 +264,3 @@ Unless we get really good cheap hardware and then telepresence from developing c
 
 (Over time, I might develop this post more to cover these other aspects in more detail.)
 
-<div class="faq" id="faq-curation">Data curation?</div>
-Data curation will be important. Just like it really is for SL. In USL, it will be as well. You don’t have to be as strict. But you will want to curate the dataset to make sure it is
-balanced and interesting.
