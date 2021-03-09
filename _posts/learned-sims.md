@@ -16,7 +16,9 @@ they will be flexible in what they can represent and in how they let you program
 
 ## Motivation
 
-I believe what actually brings a field forward are the ideas and artifacts that raise the waterline. Those things that we end
+What actually brings a field forward?
+
+One answer I would give is: the ideas and artifacts that *raise the waterline*. Those things that we end
 up benefitting from over and over again and that enable us to solve harder problems with less effort.
 The most obvious, universal, and steady example in AI is compute, which we keep benefitting from by [offloading
 more work](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) to optimization processes.
@@ -69,7 +71,7 @@ You could visualize the effects of different objects in the scene, the uncertain
 
 **Differentiability.** Currently, the environment is a giant `stop_gradient` in the middle of your reinforcement learning computational graph.
 Every other part of the system is learned and differentiable. 
-If you can patch this `stop_gradient`, it seems there is great opportunity for cleaner and more free design decisions.
+If you can patch this `stop_gradient`, it seems there is great opportunity for cleaner designs.
 It may enable more straightforward application of ideas from generative modeling.
 (Technically this is available today in certain differentiable simulators being developed, but those are external software (not in your PyTorch graph), 
 and they are ceiling-ed by human engineering.)
@@ -86,7 +88,7 @@ or delayed learning of a Q-function (e.g., SAC) that you can push gradients back
 -->
 
 **Repeatability and controllability.** For training, you could induce specific and repeatable settings that you want your agent to practice, using a natural interface. You could use this for debugging your system, for example by pulling in information from the fleet about areas
-the agents are failing and then embedding similar scenarios in the simulator to create behavioral unit tests. (Part of this applies to traditional simulators as well, but learned simulators greatly reduce the friction here.)
+the agents are failing and then embedding similar scenarios in the simulator to create behavioral unit tests. (Part of this also applies to traditional simulators, but learned simulators greatly reduce the friction here.)
 
 **Intelligent domain randomization.**
 Because powerful generative models will have to model uncertainty in the environment, sampling them will yield something like intelligent domain randomization. Instead of randomizing over a bunch of wacky parameters, your model could be tuned to the underlying distribution and only give you variety you might actually see in the real world. For example, given a video of an opaque container, the model samples over the range of possible masses that could fit in the container.
