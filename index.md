@@ -13,7 +13,7 @@ British Columbia (UBC)](https://www.cs.ubc.ca/), working on robotics and reinfor
 \+ deep learning, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Previously, I worked on similar things for my undergraduate 
 thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://robot-learning.cs.utah.edu/), advised by [Tucker Hermans](https://robot-learning.cs.utah.edu/thermans). 
 
-I graduate in May 2021 and I am looking for a job.
+I graduate in May 2021 and I am in the job market.
 
 
 [CV](/assets/cv.pdf) / [GitHub](https://github.com/matwilso) / [Twitter](https://twitter.com/matwilso) / [Stack Overflow](https://stackoverflow.com/users/7211137/matwilso)
