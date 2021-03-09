@@ -6,7 +6,7 @@ permalink: /learned-sims/
 tags: robotics 
 ---
 
-> This post represents some of my thoughts on **learned simulators**. It is a spin-off from my other post on [The Future of Robot Learning](/robot-future), which provides some more contextualization.
+> This post represents some of my thoughts on **learned simulators**. It is a spin-off from my post on [The Future of Robot Learning](/robot-future), which provides some more contextualization.
 
 Traditional simulators are not flexible enough to handle the full complexity of the world---things like deformability, material property changes, shattering, and strange artifacts like fire, paint, lightswitches and microwaves.
 Eventually, we will need to learn our simulators basically from scratch, much more akin to how humans do.
@@ -14,7 +14,7 @@ Eventually, we will need to learn our simulators basically from scratch, much mo
 The best simulators of the future will impose minimal but carefully architected inductive biases for efficient learning;
 they will be flexible in what they can represent and in how they let you program and interact with them.
 
-## Setting the stage
+## Motivation
 
 I believe what actually brings a field forward are the ideas and artifacts that raise the waterline. Those things that we end
 up benefitting from over and over again and that enable us to solve harder problems with less effort.
@@ -67,9 +67,9 @@ Ultimately, though, learned simulators will go far beyond traditional simulators
 **Rendering.** On the flip side of grounding is rich rendering and visualizing of different predictions.
 You could visualize the effects of different objects in the scene, the uncertainty your model has, and how your robot will behave.
 
-**Differentiability.** Currently, the environment is a giant stop_gradient in the middle of your reinforcement learning computational graph.
+**Differentiability.** Currently, the environment is a giant `stop_gradient` in the middle of your reinforcement learning computational graph.
 Every other part of the system is learned and differentiable. 
-If you can patch this stop_gradient, it seems there is great opportunity for cleaner and more free design decisions.
+If you can patch this `stop_gradient`, it seems there is great opportunity for cleaner and more free design decisions.
 It may enable more straightforward application of ideas from generative modeling.
 (Technically this is available today in certain differentiable simulators being developed, but those are external software (not in your PyTorch graph), 
 and they are ceiling-ed by human engineering.)
