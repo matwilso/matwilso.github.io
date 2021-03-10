@@ -8,7 +8,7 @@ tags: robotics
 
 > This post represents some of my thoughts on **learned simulators**. It is a spin-off from my post on [The Future of Robot Learning](/robot-future), which provides some more contextualization.
 
-Traditional simulators are not flexible enough to handle the full complexity of the world---things like deformability, material property changes, shattering, and strange artifacts like fire, paint, lightswitches and microwaves.
+Traditional simulators are not flexible enough to handle the full complexity of the world---things like deformability, material property changes, shattering, and strange artifacts like fire, paint, light switches and microwaves.
 Eventually, we will need to learn our simulators basically from scratch, much more akin to how humans do.
 
 The best simulators of the future will impose minimal but carefully architected inductive biases for efficient learning;
