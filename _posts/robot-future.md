@@ -21,7 +21,7 @@ the important problems and see that my major effort went to them." - Richard Ham
 
 <!--To me, it seems that robot learning is heading towards the use of large learned dynamics models.-->
 
-It seems likely that robot learning is going to be dominated by the use of large, learned dynamics models. 
+It seems likely that robot learning is going to be dominated by unsupervised learning and by the use of large, learned dynamics models. 
 In the future, we'll be collecting massive amounts of real world video, sensor, and motor command data, and using this to train massive predictive models. These models will be extremely powerful, they'll “understand” a surprising chunk of the world, and they'll allow us to solve much more difficult tasks than we can today.
 
 I can see two angles on how this might come together: (1) model-based reinforcement learning w/ world models, and (2) sim2real learning w/ [learned simulators](/learned-sims).
@@ -34,7 +34,7 @@ I can see two angles on how this might come together: (1) model-based reinforcem
 
 <div style="text-align: center;"><em>It’s all about bits baby.</em></div>
 <br>
-The field of model-based reinforcement learning (MBRL) deals with leveraging predictive models of the environment to solve RL tasks. Often these models are learned from data, and in certain cases are considered an agent’s “world model”, somewhat akin to the mental model of the world that humans carry around in their heads.
+The field of model-based reinforcement learning (MBRL) deals with leveraging predictive models of the environment to solve RL tasks. Often these models are learned from data, and in certain cases can be considered an agent’s “world model”, somewhat akin to the mental model of the world that humans carry around in their heads.
 
 The main argument today for using model-based RL (over model-free RL) is data efficiency. If you can extract more useful bits of information from the environment per step of interaction, you should need fewer interactions. Algorithms like Dyna make this happen by learning a dynamics model and then leveraging it as a proxy environment to collect extra rollouts in, and algorithms like MuZero learn a latent dynamics model and then leverage it for planning ahead and distilling into a policy.
 
@@ -48,7 +48,7 @@ As in many systems, [the best part is no part](https://twitter.com/Erdayastronau
 There is, however, a point at which the value of a part becomes worth the complexity.
 If models in RL have not yet reached this threshold, they certainly will in the future.
 Unsupervised / predictive learning is going to be the only way to gather enough signal to train powerful enough neural networks.
-[Geoff Hinton](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/clyjogf/) and Yann Lecun (with the [Cake](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59)) have been making this argument for several years.
+[Geoff Hinton](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/clyjogf/) and [Yann Lecun](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59) have been making this argument for several years.
 But what makes me really excited now is not the argument itself, but the artifacts that prove it.
 
 I am much more bullish on the future of model-based RL now, not due to any
@@ -60,13 +60,13 @@ They still have many flaws and shortcomings, but they are only the tip of the ic
 As babies, humans learn about basic concepts like gravity, as our brains try to make constant predictions about what is normal and what isn’t<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
-Because you can't exactly ask a baby what physics it understands, [infant cognitive development](https://en.wikipedia.org/wiki/Developmental_psychology#Infancy)
+Because you can't exactly ask a baby what it understands, [infant cognitive development](https://en.wikipedia.org/wiki/Developmental_psychology#Infancy)
 researchers instead often test "violation of expectation". They
 give babies an impossible physics scenario (e.g., a block that magically floats instead of falling)
 and a control scenario (e.g., block that falls as expected), and test whether the babies look longer at the impossible physics sceneraio.
 If they do look longer on average at impossible scenarios, it suggests they are surprised and that
 the data doesn't fit their world model.
-(review papers from: [2002](/assets/papers/baillargeon_2002.pdf), [2004](/assets/papers/baillargeon_2004.pdf))
+(some review papers from Baillargeon [2002](/assets/papers/baillargeon_2002.pdf), [2004](/assets/papers/baillargeon_2004.pdf))
 </span>
 As adults, we are continually forced to adapt and refine our predictions, as we confront increasingly complex phenomena.
 Through this process, our models become very good. Humans look at the world and we understand it.
@@ -77,13 +77,13 @@ and pick up on important features of the world, but their understanding is extre
 They are not given the chance to acquire even a fraction of the information they need about the world to understand it.
 They are starved for training bits, so it's not surprising they understand very little.
 
-It's not going to require radically new and complex processes that we currently "can’t even imagine" to endow networks with this deeper understanding. Some form of large scale predictive training will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
+I don't believe it's going to require radically new and complex processes that we currently "can't even imagine" to endow networks with this deeper understanding. Some form of large scale predictive training will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
 
 ## Sim2real and learned simulators
 
-<div style="text-align: center;"><em>It's also all about Software 2.0.</em></div>
+<div style="text-align: center;"><em>It's all about Software 2.0.</em></div>
 <br>
-On the other side of the coin is sim2real learning.
+The other angle is sim2real learning.
 The field of sim2real learning deals with training policies in simulation and then deploying them in the real world with little to no fine-tuning. Sim2real offers several advantages over real world training, in speed, safety, and environment read + write access.
 
 Arguably, sim2real is the same idea as model-based learning, where the simulator acts as the model.
@@ -129,22 +129,23 @@ And Andrej has some talks about Tesla [on his website](https://karpathy.ai/). Re
 - **infant cognitive development**. It might be useful to draw on what we know about how babies develop their models of the world. Like in what sequence do they learn different concepts about the world? Is there anything we can learn about the inductive biases they have for physical reasoning---about which physics they understand early on, and which takes a long time to learn? There are some [reviews on physical](/assets/papers/baillargeon_2002.pdf) [reasoning in infants](/assets/papers/baillargeon_2004.pdf), that discuss when babies learn certain skills. 
 - **yann lecun and self-supervised learning.** [His podcast with Lex is good, and his recent talks can probably offer insight on this area as well.](https://www.youtube.com/results?search_query=yann+lecun) He is a big believer in this type of stuff now.
 
-## Call to action
+## What next?
 Ultimately, the best way to proceed is to get building. And the best way to get building is to start small.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Because deep learning is so empirical, success in it is to a large extent proportional to raw experimental throughput - the ability to babysit a large number of experiments at once, staring at plots and tweaking/re-launching what works. This is necessary, but not sufficient.</p>&mdash; Andrej Karpathy (@karpathy) <a href="https://twitter.com/karpathy/status/1350503355299205120?ref_src=twsrc%5Etfw">January 16, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-If it takes a lot of experimentation to build up fundamentals and intuitions about a problem,
-then it's best if you start small at first, so you're waiting for hours and not days for feedback.
-
-I'm building something like an MNIST of world modeling / learned simulators, called [boxLCD](https://github.com/matwilso/boxLCD).
-It's meant to be a testbed for developing ideas and algorithms in this space.
-It uses box2D physics and very low resolution, binarized images for rendering, and it aims to capture as much structure of the full real world learned simulator / world model problem as possible, while remaining much quicker and easier to run experiments and iterate ideas on.
-
+If it takes a lot of experimentation to build up fundamentals and intuitions about a problem
+(as it does in deep learning),
+then it's best to start small at first, so we're waiting for hours and not days for feedback.
 
 I don't think we quite have the compute to build the grand version of learned simulators or world models, but 
 we can start working on the ideas and building up real progress in this space.
 And we can be ready when the compute arrives.
+
+To plug my own work in this space, I'm building something like an MNIST of world modeling / learned simulators, called [boxLCD](https://github.com/matwilso/boxLCD).
+It's meant to be a testbed for developing ideas and algorithms for learned simulators and world models.
+It uses box2D physics and very low resolution, binarized images for rendering, and it aims to capture as much structure of the full real world learned simulator / world model problem as possible, while remaining much quicker and easier to run experiments and iterate ideas on.
+
 
 <!--
 And I think one thing to really note here is there is so much work left to be done. There are so many exciting things yet to happen in NNs and generative modeling and all of this. If you get in and work *very hard*, you can do well. And you need to work very hard because that happens to be what it takes to make progress on most challenging problems. 
@@ -155,6 +156,7 @@ This seems like an exciting area. But alternatively, you should go work on makin
 ## FAQs
 
 - <a href="#faq-possible">Is it even possible to build world models and/or learned simulators?</a>
+- <a href="#faq-actions">What about actions and goals?</a>
 - <a href="#faq-money">What about money?</a>
 - <a href="#faq-timing">What about timing?</a>
 - <a href="#faq-data">Where is the data going to come from?</a>
@@ -162,18 +164,42 @@ This seems like an exciting area. But alternatively, you should go work on makin
 - <a href="#faq-selfsupe">What about non-generative self-supervision?</a>
 - <a href="#faq-curation">Data curation?</a>
 - <a href="#faq-whatelse">What else is going to matter in the future?</a>
-
+/
 <!--
 (Kind of just loose and less polished thoughts that didn't fit in the main body)
 -->
 
 <!--TODO: add table of contents for this specifically-->
 
+
 <div class="faq" id="faq-possible">Is it even possible to build world models and/or learned simulators?</div>
 Humans give an example that this type of knowledge can be learned. And generative models (VAEs, GANs, etc) give an example that machine systems can go beyond humans in pixel perfect generating of images. Only a select few humans can do something like generate high-resolution realistic human faces, but they need art tools and it takes a long time. Generative models point to something that can go far beyond human abilities in this space. And it is just a matter of how far. 
 
+
+<div class="faq" id="faq-actions">What about actions and goals?</div>
+
+I think learned simulators are a good fit when you need to accurately simulate a scene
+step-by-step. They will benefit from abundant data and they will be able to cover a wide variety of scenarios.
+But my sense is that the learned sim framework does not facilitate policy learning as well
+as the world model framework does.
+World models can provide temporal abstractions and you can narrow down into certain niches that are easier to predict.
+Perhaps we can develop some unified approach to action and perception (e.g., [APD](https://danijar.com/project/apd/)),
+of exploration and representation learning, for example.
+
+I guess I think about learned simulators as simulators/environments and world models as brains.
+
+Maybe we use brains to collect the data for learning our simulators.
+Maybe we use our simulators to train our brains.
+Maybe we do both iteratively.
+
+
+<!--
+Learned simulator components could perhaps be used in a world model, 
+-->
+
 <div class="faq" id="faq-money">What about money?</div>
-This is going to take a lot of $. Maybe you can capitalize on the investment by licensing it. I can see an open sourced / crowd-sourced version being potentially viable, at least as a weaker version of what the top companies have.
+Developing an effective learned simulator and/or world model is going to take a lot of $.
+Maybe you can capitalize on the investment by licensing it. I can see an open sourced / crowd-sourced version being potentially viable, at least as a weaker version of what the top companies have.
 Maybe you benefit more from not licensing or releasing and using the simulator
 to create some other end-user product.
 (It's actually hard for me to imagine in detail how development is going to work. It does just seem like a massive endeavor. Probably starting in niches and expanding from there. Then as you build momentum, you will have the resources to build this system in a way that actually seems possible. In the meantime, doing the R&D and pushing on these ideas seems useful so we are ready when the full vision becomes possible.)
