@@ -179,18 +179,28 @@ Humans give an example that this type of knowledge can be learned. And generativ
 <div class="faq" id="faq-actions">What about actions and goals?</div>
 
 I think learned simulators are a good fit when you need to accurately simulate a scene
-step-by-step. They will benefit from abundant data and they will be able to cover a wide variety of scenarios.
+step-by-step. They will benefit from abundant offline data and they will be able to cover a wide variety of scenarios.
 But my sense is that the learned sim framework does not facilitate policy learning as well
 as the world model framework does.
-World models can provide temporal abstractions and you can narrow down into certain niches that are easier to predict.
-Perhaps we can develop some unified approach to action and perception (e.g., [APD](https://danijar.com/project/apd/)),
-of exploration and representation learning, for example.
+
 
 I guess I think about learned simulators as simulators/environments and world models as brains.
+For a learned simulator, the agent action is just another part of the state.
+For a brain, the action is something it chooses.
+Perhaps we can develop some unified approach to action and perception (e.g., [APD](https://danijar.com/project/apd/)), as [might](https://en.wikipedia.org/wiki/Free_energy_principle) [exist](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/whatever-next-predictive-brains-situated-agents-and-the-future-of-cognitive-science/33542C736E17E3D1D44E8D03BE5F4CD9) [in](https://www.amazon.com/Surfing-Uncertainty-Prediction-Action-Embodied/dp/0190217014) human brains.
 
-Maybe we use brains to collect the data for learning our simulators.
+<!--
+World models can provide temporal abstractions and you can narrow down into certain niches that are easier to predict.
+of exploration and representation learning, for example.
+-->
+
+Maybe we use brains to collect the data for learning our simulators
+(the interesting data needs to come from somewhere; we can't get it by motor babbling).
 Maybe we use our simulators to train our brains.
 Maybe we do both iteratively.
+Maybe learned simulators will just be brains.
+Maybe brains will use components of learned simulators.
+This seems like a big knot of questions that is only going to come undone as we start to build more complex working systems.
 
 
 <!--
