@@ -24,7 +24,7 @@ The most obvious, universal, and steady example in AI is compute, which we keep 
 more work](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) to optimization processes.
 Other examples include:
 - Frameworks like TensorFlow and Pytorch, which help abstract away messy lower-level and hardware details, and let us focus on what matters for our work specifically.
-- Tricks like batch norm and architectures like Transformers, which let us train networks more effectively.
+- Ideas like Adam and batch norm, and architectures like Transformers, which let us train more powerful networks more effectively.
 - Algorithms like PPO and SAC (especially if they have open source implementations), which let us build off and use for our own applications.
 - Models and simulators (to the extent they are general and accurately approximate the true phenomena), which let us quickly iterate on ideas and validate systems.
 - Benchmarks like ImageNet, which let us compare ideas head to head in a consistent way and let us realize which ideas and artifacts matter.
@@ -39,15 +39,14 @@ would work, where users are compensated for providing their useful data.
 </span>, which define what we can train a model to do. (ie data is how you program Software 2.0.)
 
 Work on these types of waterline-raising ideas and artifacts is extremely impactful.
-But it is hard to always say what these are going to be and what the best way of going
+But it is hard to always predict what these are going to be and what the best way of going
 about developing them is.
 
-
 One interesting and emerging class of such artifacts is learned models themselves.
-Fine-tuning on ImageNet trained weights is a primitive example of this, where
-people can solve solve a limited scope of transfer tasks on a smaller computational and data budget.
-With more powerful and general unsupervised models like GPT-3, it's likely that large learned models themselves will
-start raising the waterline for many more domains we care about. 
+Fine-tuning on ImageNet trained weights provides a primitive example, where
+users can solve solve a limited scope of transfer tasks on a smaller computational and data budget.
+With more powerful and general unsupervised models like GPT-3, the scope of impact
+is going to be massive.
 Learned simulators are a promising prospect here.
 
 ## Learned simulators
@@ -62,7 +61,7 @@ Rather than constructing ah-hoc world models for each environment or agent, our 
 
 **Accuracy.** Simulators are useful to the extent they accurately model the world. I think dedicated effort, somewhat independent of task, is likely to pay off in the the long run---given the large challenge of learning good models.
 
-Ultimately, though, learned simulators will go far beyond traditional simulators and this is where prospects become interesting:
+Ultimately, though, learned simulators will go far beyond traditional simulators:
 
 **Grounding.** A learned simulator will be much easier to work with and interface with. Instead of defining XML files to specify all the details and possible things you want to vary over, you could naturally “prompt” the model to simulate what you want. It could absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that you could encode with a neural network---and spit out a simulator description. You could film a quick video of your scene, with some robot specifications, command data and proprioception, and get out a calibrated and general simulation of the scene and the robot.
 
