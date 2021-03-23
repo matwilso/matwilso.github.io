@@ -4,7 +4,7 @@ title: Quotes
 permalink: /quotes/
 ---
 
-this is just a random sample, not necessarily all time best quotes
+this is just a random sample, not necessarily best quotes
 
 # Technology/startups/life
 
@@ -15,6 +15,43 @@ this is just a random sample, not necessarily all time best quotes
 "Good procrastination is avoiding errands to do real work" -pg
 
 "Unproductive pleasures pall eventually. After a while you get tired of lying on the beach. If you want to stay happy, you have to do something." -pg
+
+
+
+# Engineering
+
+"The best part is no part. The best process is no process. It weighs nothing, costs nothing, can't go wrong.... Undesigning is the best thing. Just delete it." - [elon](https://twitter.com/Erdayastronaut/status/1203840982497792005)
+
+"My whole life was basically trying to optimize things. You don't just save parts, but every time you save parts you save on complexity and reliability, the amount of time it takes to understand something. And how good you can build it without errors and bugs and flaws." - woz
+
+'"Figure out the optimal configuration of atoms first... then figure out how to put them there" - elon' - [jim keller](https://www.youtube.com/watch?v=oIG9ztQw2Gc&feature=youtu.be&t=985)
+
+(in other words:) "Don't let the how's constrain the what's." - jim keller
+
+"If it's long it's wrong. If it's tight it's right" - elon (on time schedules)
+
+"It is important to view knowledge as sort of a semantic tree--make sure you understand the fundamental principles, ie the trunk and big branches, before you get into the leaves/details or there is nothing for them to hang on to." - elon
+
+
+# Obsession
+
+"If someone’s much better than you at something, they probably try much harder. You probably underestimate how much harder they try." - [ava](https://ava.substack.com/p/effort)
+
+"If others would think as hard as I did, then they would get similar results." - Netwon
+
+"Luck favors the prepared mind" - [Louis Pasteur (probably)](https://en.wikiquote.org/wiki/Louis_Pasteur)
+
+“We're not obsessed by anything, you see," insisted Ford. <br>
+"..." <br>
+"And that's the deciding factor. We can't win against obsession. They care, we don't. They win." <br>
+"I care about lots of things," said Slartibartfast, his voice trembling partly with annoyance, but partly also with uncertainty. <br>
+"Such as?" <br>
+"Well," said the old man, "life, the Universe. Everything, really. Fjords." <br>
+"Would you die for them?" <br>
+"Fjords?" blinked Slartibartfast in surprise. "No." <br>
+"Well then."<br>
+\- Douglas Adams (Hitchhiker's Guide)
+
 
 # Rationality
 
@@ -35,19 +72,6 @@ this is just a random sample, not necessarily all time best quotes
 
 “P.C. Hodgell said - That which can be destroyed by the truth should be. Do not flinch from experiences that might destroy your beliefs. The thought you cannot think controls you more than thoughts you speak aloud. Submit yourself to ordeals and test yourself in fire. Relinquish the emotion which rests upon a mistaken belief, and seek to feel fully that emotion which fits the facts. If the iron approaches your face, and you believe it is hot, and it is cool, the Way opposes your fear. If the iron approaches your face, and you believe it is cool, and it is hot, the Way opposes your calm. Evaluate your beliefs first and then arrive at your emotions. Let yourself say - If the iron is hot, I desire to believe it is hot, and if it is cool, I desire to believe it is cool.” - ey
 
-# Engineering
-
-"The best part is no part. The best process is no process. It weighs nothing, costs nothing, can't go wrong.... Undesigning is the best thing. Just delete it." - [elon](https://twitter.com/Erdayastronaut/status/1203840982497792005)
-
-"My whole life was basically trying to optimize things. You don't just save parts, but every time you save parts you save on complexity and reliability, the amount of time it takes to understand something. And how good you can build it without errors and bugs and flaws." - woz
-
-'"Figure out the optimal configuration of atoms first... then figure out how to put them there" - elon' - [jim keller](https://www.youtube.com/watch?v=oIG9ztQw2Gc&feature=youtu.be&t=985)
-
-(in other words:) "Don't let the how's constrain the what's." - jim keller
-
-"If it's long it's wrong. If it's tight it's right" - elon
-
-"It is important to view knowledge as sort of a semantic tree--make sure you understand the fundamental principles, ie the trunk and big branches, before you get into the leaves/details or there is nothing for them to hang on to." - elon
 
 # Misc
 
