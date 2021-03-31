@@ -21,7 +21,7 @@ the important problems and see that my major effort went to them." - Richard Ham
 
 <!--To me, it seems that robot learning is heading towards the use of large learned dynamics models.-->
 
-It seems likely that robot learning is going to be dominated by unsupervised learning and by the use of large, learned dynamics models. 
+It seems likely that robot learning is going to be dominated by unsupervised learning and the use of large, learned dynamics models. 
 In the future, we'll be collecting massive amounts of real world video, sensor, and motor command data, and using this to train massive predictive models. These models will be extremely powerful, they'll “understand” a surprising chunk of the world, and they'll allow us to solve much more difficult tasks than we can today.
 
 I can see two angles on how this might come together: (1) model-based reinforcement learning w/ world models, and (2) sim2real learning w/ [learned simulators](/learned-sims).
@@ -34,14 +34,14 @@ I can see two angles on how this might come together: (1) model-based reinforcem
 
 <div style="text-align: center;"><em>It’s all about bits baby.</em></div>
 <br>
-The field of model-based reinforcement learning (MBRL) deals with leveraging predictive models of the environment to solve RL tasks. Often these models are learned from data, and in certain cases can be considered an agent’s “world model”, somewhat akin to the mental model of the world that humans carry around in their heads.
+The field of model-based reinforcement learning (MBRL) deals with leveraging predictive models of the environment to solve RL tasks. Often these models are learned from data, and can sometimes be considered an agent’s “world model”, akin to the mental model of the world that humans carry around in their heads.
 
-The main argument today for using model-based RL (over model-free RL) is data efficiency. If you can extract more useful bits of information from the environment per step of interaction, you should need fewer interactions. Algorithms like Dyna make this happen by learning a dynamics model and then leveraging it as a proxy environment to collect extra rollouts in, and algorithms like MuZero learn a latent dynamics model and then leverage it for planning ahead and distilling into a policy.
+The main argument today for using model-based RL (over model-free RL) is data efficiency. If you can extract more useful bits of information from the environment per step of interaction, you should need fewer interactions. Algorithms like Dyna achieve this by learning a dynamics model and then leveraging it as a proxy environment to collect extra rollout steps in, and algorithms like MuZero learn a latent dynamics model and then leverage it for planning ahead and distilling into a policy.
 
-Unfortunately, greater data efficiency often comes at the price of complexity. MBRL comes with extra theory to wrap your head around and extra moving parts to train, debug, and tune. Extra complexity tends to reduce iteration speed and slow progress<label for="sn-1" class="margine-toggle sidenote-number"/>.
+Unfortunately, greater data efficiency in MBRL often comes at the price of complexity. Model-based RL comes with extra theory to wrap your head around and extra moving parts to tune, train, and debug. Extra complexity tends to reduce iteration speed and slow progress<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
-There’s a decent argument here that MBRL has seen overall less adoption in the past several years because of this: it’s just easier to reach for and modify something like PPO or SAC than it is to reach for an MBRL algo like Dreamer.
+There’s a decent argument here that MBRL has seen overall less adoption in the past several years because of this: it’s just easier to reach for and modify something like PPO or SAC than it is to reach for an MBRL algo like Dreamer, for example.
 </span>
 As in many systems, [the best part is no part](https://twitter.com/Erdayastronaut/status/1203840982497792005?s=20).
 
@@ -49,13 +49,14 @@ There is, however, a point at which the value of a part becomes worth the comple
 If models in RL have not yet reached this threshold, they certainly will in the future.
 Unsupervised / predictive learning is going to be the only way to gather enough signal to train powerful enough neural networks.
 [Geoff Hinton](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/clyjogf/) and [Yann Lecun](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59) have been making this argument for several years.
-But what makes me really excited now is not the argument itself, but the artifacts that prove it.
+But what makes me really excited now is that we are starting to build the artifacts that prove it.
 
 I am much more bullish on the future of model-based RL now, not due to any
 recent spectacular MBRL results, but due to the recent spectacular unsupervised learning results.
 Models like GPT-3 and DALL-E prove the power of predictive training and just
 how much knowledge these systems can absorb at scale.
-They still have many flaws and shortcomings, but they are only the tip of the iceberg for what’s coming and what’s possible. If we extrapolate forward and imagine predictive models for video and robot sensors, this seems clearly how we are going to train a large part of a general purpose robot brain.
+They still have many flaws and shortcomings, but they offer a strong existence proof of the potential of unsupervised learning.
+And they are only the tip of the iceberg for what’s coming and what’s possible. If we extrapolate forward and imagine predictive models for video and robot sensors, this seems clearly how we are going to train a large part of a general purpose robot brain.
 
 As babies, humans learn about basic concepts like gravity, as our brains try to make constant predictions about what is normal and what isn’t<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
@@ -71,13 +72,14 @@ the data doesn't fit their world model.
 As adults, we are continually forced to adapt and refine our predictions, as we confront increasingly complex phenomena.
 Through this process, our models become very good. Humans look at the world and we understand it.
 
-On the other hand, robots look at the world and they effectively see static. 
+Robots look at the world and they effectively see static. 
 ConvNets, as we mostly train them today, can do complex information processing
 and pick up on important features of the world, but their understanding is extremely superficial.
 They are not given the chance to acquire even a fraction of the information they need about the world to understand it.
 They are starved for training bits, so it's not surprising they understand very little.
 
-I don't believe it's going to require radically new and complex processes that we currently "can't even imagine" to endow networks with this deeper understanding. Some form of large scale predictive training will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
+I don't believe it will require radically new and complex processes that we currently "can't even imagine" to endow networks with this deeper understanding.
+Some form of large scale predictive training will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
 
 ## Sim2real and learned simulators
 
@@ -89,11 +91,11 @@ The field of sim2real learning deals with training policies in simulation and th
 Arguably, sim2real is the same idea as model-based learning, where the simulator acts as the model.
 In MBRL, though, it’s becoming increasingly common to learn models end2end with gradient descent. Wherase in sim2real, everyone uses fundamentally traditional simulators, with perhaps partially learned or hybrid components. There are trade-offs to this---traditional simulators have nice structure and are general and reusable across tasks---but eventually human engineering becomes a bottleneck that limits the complexity of environments we can handle.
 
-Eventually, we need to learn our simulators basically from scratch, much more like how humans do. The world is too complex and traditional simulators are not flexible enough to handle it. Too often their assumptions are broken---with deformable objects, with material property changes, with shattering, with strange artifacts like fire, paint, light switches and microwaves---and eventually the structure becomes too burdensome. The best simulators of the future will impose fairly minimal structure with some inductive biases for efficient learning<label for="sn-1" class="margine-toggle sidenote-number"/>
+Eventually, we need to learn our simulators basically from scratch, much more like how humans do. The world is just too complex and traditional simulators are not flexible enough to handle it. Too often their assumptions are broken---with deformable objects, with material property changes, with shattering, with strange artifacts like fire, paint, light switches and microwaves---and eventually the structure becomes too burdensome. The best simulators of the future will impose fairly minimal structure with some inductive biases for efficient learning<label for="sn-1" class="margine-toggle sidenote-number"/>
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
 In the interim, I concede that domain-specific structures are useful for constraining what you have to learn.
-It's hard to say exactly when the changing of the guard will be, 
+It's hard to say exactly when learned simulators become more effective for general use,
 but for training something like a household robot in the future, minimal structure is going to be best.
 </span>.
 
@@ -108,9 +110,17 @@ To build traditional simulators, humans have spent years of domain specific effo
 Model-based RL and sim2real give two perspectives on the role that massive predictive models will play in the future of robot learning. World models represent something akin to what humans have going on in their heads, and suggest that with predictive learning and simply more bits, we can build intelligent agents
 that see the world. Learned simulators represent an extension of traditional human-engineered simulators to the era of Software 2.0, and suggest that we can build more general and reusable tools for training intelligent agents that handle the full complexity of the world.
 
+<!--
+Model learning is computationally expensive, especially if you want accuracy.
+That is a limitation for now, but in the grand arc of the Bitter Lesson, that is a good thing that these methods leverage compute.
+-->
+
 As the base of the Cake, these components seem like the most important in some ways.
 At the very least they provide a context to ground and amplify the power of other system components (human supervision, RL signal).
 If you care about building general purpose robots (and useful AI systems in general), you should probably care about predictive learning.
+
+
+
 
 Thanks for reading.
 
@@ -118,21 +128,26 @@ Thanks for reading.
 
 There is some background that is useful to have and stay current on:
 - **fundamentals in DL and Deep RL.** If you are new to the field, I recommend doing the [cs231n](https://cs231n.github.io/) assignments, and messing with the [Spinning Up](https://spinningup.openai.com/) RL algorithms and understanding why every single line is in the code.
-- **model-based RL.** Igor Mordatch and Jessica Hamrick have a good tutorial on [MBRL @ ICML 2020](https://sites.google.com/view/mbrl-tutorial). I’d recommend that for a good overview. Also reading specific recent papers in the space. One I like is [Dreamer](https://danijar.com/project/dreamer/), which learns a stochastic world model that handles uncertainty to some extent; it uses the model’s latent state as input to the policy and value networks; and it uses differentiable rollouts through the model for training. I wouldn't say it strongly outperform other algorithms---for example, image-based SAC with a [few tricks](https://mishalaskin.github.io/rad/) can be made to work better---but it feels like Dreamer is on the right path.
+- **model-based RL.** Igor Mordatch and Jessica Hamrick have a good tutorial on [MBRL @ ICML 2020](https://sites.google.com/view/mbrl-tutorial). I’d recommend that for a good overview. Also reading specific recent papers in the space. One I like is [Dreamer](https://danijar.com/project/dreamer/), which learns a stochastic world model that handles uncertainty to some extent; it uses the model’s latent state as input to the policy and value networks; and it uses differentiable rollouts through the model for training. I wouldn't say it strongly outperform other algorithms---for example, image-based SAC with a [few tricks](https://mishalaskin.github.io/rad/) can get better learning curves---but it feels like Dreamer is on the right path.
 - **sim2real.** The [sim2real Workshop @ RSS 2020](https://sim2real.github.io/) is solid ([summary document](https://twitter.com/sim2realAIorg/status/1336364134510678017)). Also reading the recent work in the space. One I like [Jemin Hwangbo et. al’s work](https://arxiv.org/abs/1901.08652) on learning a network to model the series elastic actuator network on Anymal, and plugging this network into the simulator dynamics for sim2real learning. The [real world results are impressive](https://www.youtube.com/watch?v=aTDkYFZFWug). Also, [Josh Tobin's slides on sim2real](http://josh-tobin.com/assets/pdf/randomization_and_the_reality_gap.pdf) are pretty nice too.
 - **generative modeling.** [Pieter Abbeel’s Deep Unsupervised Learning Course](https://sites.google.com/view/berkeley-cs294-158-sp20/home) is a great course for fundamentals. I’ve been going through the course and implementing/transcribing various models and [training them on MNIST](https://github.com/matwilso/generative_models). Generative modeling is super important in this area, and it’s easier to study and build intuition on tasks like MNIST where you don’t have to simultaneously deal with data collection and actions and exploration.
 - **non-generative self-supervised learning.** It seems to me that generative models are going to be central, but other types of self-supervised learning might also be useful. Most notably contrastive learning ([[CPC]](https://arxiv.org/abs/1807.03748), [[Berkeley Slides]](https://docs.google.com/presentation/d/1rnvyNWnVv1Q0-aFLK-wdiNiFNedNAz30nWLsNuTh4Nk/edit#slide=id.g54597b54d0_0_21)), which we see being used for feature learning in RL, and also in [CLIP](https://openai.com/blog/clip/). The way the [DALL-E](https://openai.com/blog/dall-e/) results use CLIP for filtering may point to a larger trend where non-generative self-supervised models are used to interact with generative models.
 - **video prediction.** Pixels seem like they will be the primary modality used to train world models and learned simulators, so this will be an especially important subset of generative modeling. Also, there are many people pushing on video prediction for different reasons, so it's good if we can draft off that work.
-- **cloning simulators.** This area of research takes existing physics simulation and clones them  with neural networks to run faster, basically (kind of like neural [clean-rooming](https://en.wikipedia.org/wiki/Clean_room_design)). One example is [Learning to simulate complex physics with graph networks](https://sites.google.com/view/learning-to-simulate). While this only lets you get as good as the original simulation, there are likely good insights here in how to set up effective inductive biases and set up training. I think this is actually a decent path for getting traction in more fully learned simulators.
+- **cloning simulators.** This area of research takes existing physics simulation and clones them  with neural networks to run faster (kind of like neural [clean-rooming](https://en.wikipedia.org/wiki/Clean_room_design)). One example is [Learning to simulate complex physics with graph networks](https://sites.google.com/view/learning-to-simulate). While this only lets you get as good as the original simulation, there are likely good insights here in how to set up effective inductive biases and set up training. I think this is actually a decent path for getting traction in more fully learned simulators.
 - **case studies.** Case studies of related areas provide valuable lessons to draw on. Some things that come to mind are the recent large language models and large scale, production grade systems at Tesla, OpenAI, Google, etc. Alec Radford gave a good talk on historical development of language models [[video]](https://youtu.be/BnpB3GrpsfM) [[slides]](https://drive.google.com/open?id=1sdH-9KQipnu3RMN0-YUqU8R4ZMLapz8IJzfe7VLN39o).
 And Andrej has some talks about Tesla [on his website](https://karpathy.ai/). Reality in general is a great filter for flawed approaches.
 - **infant cognitive development**. It might be useful to draw on what we know about how babies develop their models of the world. Like in what sequence do they learn different concepts about the world? Is there anything we can learn about the inductive biases they have for physical reasoning---about which physics they understand early on, and which takes a long time to learn? There are some [reviews on physical](/assets/papers/baillargeon_2002.pdf) [reasoning in infants](/assets/papers/baillargeon_2004.pdf), that discuss when babies learn certain skills. 
 - **yann lecun and self-supervised learning.** [His podcast with Lex is good, and his recent talks can probably offer insight on this area as well.](https://www.youtube.com/results?search_query=yann+lecun) He is a big believer in this type of stuff now.
 
 ## What next?
+
 Ultimately, the best way to proceed is to get building. And the best way to get building is to start small.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Because deep learning is so empirical, success in it is to a large extent proportional to raw experimental throughput - the ability to babysit a large number of experiments at once, staring at plots and tweaking/re-launching what works. This is necessary, but not sufficient.</p>&mdash; Andrej Karpathy (@karpathy) <a href="https://twitter.com/karpathy/status/1350503355299205120?ref_src=twsrc%5Etfw">January 16, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div style="margin-left: 2em"><em>A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system. - <a href="https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law">Galls's Law</a></em></div>
+<br>
+
+<div style="margin-left: 2em"><em>Because deep learning is so empirical, success in it is to a large extent proportional to raw experimental throughput - the ability to babysit a large number of experiments at once, staring at plots and tweaking/re-launching what works. This is necessary, but not sufficient. - <a href="https://twitter.com/karpathy/status/1350503355299205120?ref_src=twsrc%5Etfw">Andrej Karpathy</a></em></div>
+<br>
 
 If it takes a lot of experimentation to build up fundamentals and intuitions about a problem
 (as it does in deep learning),
@@ -195,12 +210,12 @@ of exploration and representation learning, for example.
 -->
 
 Maybe we use brains to collect the data for learning our simulators
-(the interesting data needs to come from somewhere; we can't get it by motor babbling).
+(the interesting data needs to come from somewhere; we can't get it by pure motor babbling).
 Maybe we use our simulators to train our brains.
 Maybe we do both iteratively.
 Maybe learned simulators will just be brains.
 Maybe brains will use components of learned simulators.
-This seems like a big knot of questions that is only going to come undone as we start to build more complex working systems.
+This seems like a big knot of questions that is only going to come undone as we start to build more powerful working systems.
 
 
 <!--
@@ -225,7 +240,7 @@ video requires much more bit processing, but also there is much redundancy in vi
 So there are likely some tricks we can use to benefit from this. Maybe some scheme where we only encode differences from the expectation. And somehow benefit from this during training.
 At some point, I probably ought to do a back of the envelope calculation for how much more computationally intensive we should expect video to be.
 
-<div class="faq">What about timing? (followup)</div>
+<div class="faq">(followup)</div>
 Sure MBRL and models are likely to win out in the long run. But when is the long run? Does it matter? Like what if you are trying to get results today?
 
 You probably want to do a bit of both, short-term and long-term work.
