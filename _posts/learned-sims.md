@@ -18,7 +18,7 @@ they will be flexible in what they can represent and in how they let you program
 
 What actually brings a field forward?
 
-One answer I would give is the ideas and artifacts that *raise the waterline*. Those things that we end
+One answer to this is the ideas and artifacts that *raise the waterline*. Those things that we end
 up benefitting from over and over again and that enable us to solve harder problems with less effort.
 The most obvious, universal, and steady example in AI is compute, which we keep benefitting from by [offloading
 more work](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) to optimization processes.
