@@ -16,11 +16,8 @@ they will be flexible in what they can represent and in how they let you program
 
 ## Motivation
 
-What actually brings a field forward?
-
-One answer to this is the ideas and artifacts that *raise the waterline*. Those things that we end
-up benefitting from over and over again and that enable us to solve harder problems with less effort.
-The most obvious, universal, and steady example in AI is compute, which we keep benefitting from by [offloading
+There is massive value in developing enabling technologies, in ideas and artifacts that we can benefit from over and over again and that enable us to solve harder problems with less effort.
+The most obvious, steady example in AI is compute, which we keep benefitting from by [offloading
 more work](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) to optimization processes.
 Other examples include:
 - Frameworks like TensorFlow and Pytorch, which help abstract away messy lower-level and hardware details, and let us focus on what matters for our work specifically.
@@ -38,15 +35,12 @@ For some pointers, Andrej has some recent [tweets](https://twitter.com/karpathy/
 would work, where users are compensated for providing their useful data.
 </span>, which define what we can train a model to do. (ie data is how you program Software 2.0.)
 
-Work on these types of waterline-raising ideas and artifacts is extremely impactful.
-But it is hard to always predict what these are going to be and what the best way of going
-about developing them is.
+It is hard to always predict what these are going to be and what the best way of going about developing them is.
+But it seems worth thinking about how we can raise the waterline.
 
-One interesting and emerging class of such artifacts is learned models themselves.
-Fine-tuning on ImageNet trained weights provides a primitive example, where
-users can solve solve a limited scope of transfer tasks on a smaller computational and data budget.
-With more powerful and general unsupervised models like GPT-3, the scope of impact
-is going to be massive.
+One particularly interesting and emerging class of such artifacts is learned models themselves.
+Fine-tuned ImageNet weights are a primitive example of this, where users can solve solve a limited scope of transfer tasks on a smaller computational and data budget.
+With more powerful and general unsupervised models like GPT-3 and CLIP, the scope of impact is going to be massive.
 Learned simulators are a promising prospect here.
 
 ## Learned simulators
