@@ -72,6 +72,27 @@ Matthew Wilson, Tucker Hermans <br>
 [CoRL 2019](https://www.robot-learning.org) (Oral) <br>
 [[arXiv](https://arxiv.org/abs/1909.07876)] [[Project Page](/projects/object_collections)]  [[Code](https://github.com/matwilso/object_collections)]
 
+<br>
+<br>
+...<br>
+(older stuff)
+
+<br>
+**[2015-2018] Utah Student Robotics Team Member**
+
+During undergrad at the U, I got into robotics and worked on the [Utah team](http://usr.coe.utah.edu/) on the [NASA Robotic Mining Competition](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc.html) for 3 years of competition.
+We had some great robots and consistently placed well in the competition. It was a lot of fun. S/o to john robe, jon davies, cole mortensen, katie hall, dave purcell, justin schramm, and all the others who worked on the project and continue to carry on the torch.
+
+**[2017] Robotics Institute Summer Scholar @ Carnegie Mellon University (CMU)**
+
+I spent Summer 2017 as part of the [Robotics Institute Summer Scholar (RISS) program](https://riss.ri.cmu.edu/),
+which gives undergraduates from other universities experience working on robotics and machine learning research in great CMU labs.
+I had the great pleasure of working with [Ralph Hollis](http://www.cs.cmu.edu/afs/cs/user/rhollis/www/home.html), [Jean Oh](https://www.cs.cmu.edu/~./jeanoh/), and [Roberto Shu](https://rshum19.github.io./) on getting one of the [ballbots](http://www.msl.ri.cmu.edu/projects/ballbot/) to recognize commands, navigate in a building, recognize objects, and report back about what it saw.
+
+
+You can check my CV for more details on these projects.
+
+
 
 <!-- See my [Projects] page for more details.
 
