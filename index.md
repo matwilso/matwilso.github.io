@@ -21,7 +21,7 @@ I graduate in May 2021 and I am in the job market.
 
 
 ### News
-- Apr 2021: The [boxLCD paper](/assets/boxLCD_iclr2021_workshop.pdf) was accepted to the ICLR 2021 Workshop on [Deep Learning for Simulation (SimDL)](https://simdl.github.io/)!
+- Apr 2021: [boxLCD paper](/assets/boxLCD_iclr2021_workshop.pdf) was accepted to the ICLR 2021 Workshop on [Deep Learning for Simulation (SimDL)](https://simdl.github.io/)!
 - Feb 2021: I released [boxLCD](https://github.com/matwilso/boxLCD) and [generative_models](https://github.com/matwilso/generative_models) repos, and new blog posts on the [Future of Robot Learning](/robot-future) and [Learned Simulators](/learned-sims)
 - Nov 2019: Our work won the Best System Paper Award at [CoRL 2019!](https://sites.google.com/robot-learning.org/corl2019) 
 - Sep 2019: Our work on "Learning to Manipulate Object Collections Using Grounded State Representations" was accepted to the Conference on Robot Learning ([CoRL](https://www.robot-learning.org/)) 2019!
@@ -69,7 +69,7 @@ I graduate in May 2021 and I am in the job market.
 <img align="left" width="35%" src="/assets/task.png" style="border-radius: 0%; margin: 0px 10px 30px 0px;"/>
 <div style="font-size: 18px; font-weight: bold;">Learning to Manipulate Object Collections<br>Using Grounded State Representations</div>
 Matthew Wilson, Tucker Hermans <br>
-[CoRL 2019](https://www.robot-learning.org) (Oral) <br>
+[CoRL 2019](https://www.robot-learning.org) (Oral, Best System Paper) <br>
 [[arXiv](https://arxiv.org/abs/1909.07876)] [[Project Page](/projects/object_collections)]  [[Code](https://github.com/matwilso/object_collections)]
 
 <br>
@@ -81,7 +81,9 @@ Matthew Wilson, Tucker Hermans <br>
 **[2015-2018] Utah Student Robotics Team Member**
 
 During undergrad at the U, I got into robotics and worked on the [Utah team](http://usr.coe.utah.edu/) on the [NASA Robotic Mining Competition](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc.html) for 3 years of competition.
-We had some great robots and consistently placed well in the competition. It was a lot of fun. S/o to john robe, jon davies, cole mortensen, katie hall, dave purcell, justin schramm, and all the others who worked on the project and continue to carry on the torch.
+We had some great robots and consistently placed well in the competition. It was a lot of fun.
+<!--S/o to john robe, jon davies, cole mortensen, katie hall, dave purcell, justin schramm, and all the others who worked on the project and continue to carry on the torch.
+-->
 
 **[2017] Robotics Institute Summer Scholar @ Carnegie Mellon University (CMU)**
 
