@@ -21,7 +21,7 @@ I graduate in May 2021 and I am in the job market.
 
 
 ### News
-
+- Apr 2021: The [boxLCD paper](/assets/boxLCD_iclr2021_workshop.pdf) was accepted to the ICLR 2021 Workshop on [Deep Learning for Simulation (SimDL)](https://simdl.github.io/)!
 - Feb 2021: I released [boxLCD](https://github.com/matwilso/boxLCD) and [generative_models](https://github.com/matwilso/generative_models) repos, and new blog posts on the [Future of Robot Learning](/robot-future) and [Learned Simulators](/learned-sims)
 - Nov 2019: Our work won the Best System Paper Award at [CoRL 2019!](https://sites.google.com/robot-learning.org/corl2019) 
 - Sep 2019: Our work on "Learning to Manipulate Object Collections Using Grounded State Representations" was accepted to the Conference on Robot Learning ([CoRL](https://www.robot-learning.org/)) 2019!
@@ -58,9 +58,9 @@ I graduate in May 2021 and I am in the job market.
     <img class="static" align="left" src="/assets/robot/lcd_sideside.png" style="border-radius: 0%; margin: 0px 10px 30px 0px;"/>
     </div>
 </div>
-<div style="font-size: 18px; font-weight: bold;">boxLCD: a testbed for learned simulator and world model research</div>
+<div style="font-size: 18px; font-weight: bold;">boxLCD: a simple testbed for learned simulator and world model research</div>
 2021 <br>
-[[GitHub Project](https://github.com/matwilso/boxLCD)] [[Blog](robot-future) [Posts](/learned-sims)]
+[[GitHub Project](https://github.com/matwilso/boxLCD)] [[Blog](robot-future) [Posts](/learned-sims)][[Paper (draft)](/assets/boxLCD_iclr2021_workshop.pdf)]
 
 <br>
 
