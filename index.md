@@ -59,8 +59,8 @@ I graduate in May 2021 and I am in the job market.
     </div>
 </div>
 <div style="font-size: 18px; font-weight: bold;">boxLCD: a simple testbed for learned simulator and world model research</div>
-2021 <br>
-[[GitHub Project](https://github.com/matwilso/boxLCD)] [[Blog](robot-future) [Posts](/learned-sims)][[Paper (draft)](/assets/boxLCD_iclr2021_workshop.pdf)]
+ICLR 2021  [SimDL Workshop](https://simdl.github.io/overview) <br>
+[[GitHub Project](https://github.com/matwilso/boxLCD)] [[Blog](robot-future) [Posts](/learned-sims)][[Paper](/assets/boxLCD_iclr2021_workshop.pdf)]
 
 <br>
 
