@@ -28,8 +28,8 @@ I graduate in May 2021 and I am in the job market.
 - Jun 2018: I wrote up an answer to a [stackoverflow question on PPO (Proximal Policy Optimization)](https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl/50663200#50663200)
 
 
-# Projects & Publications
 ---
+# Recent Projects
 <style>
 .static {
   background: white;
@@ -58,7 +58,7 @@ I graduate in May 2021 and I am in the job market.
     <img class="static" align="left" src="/assets/robot/lcd_sideside.png" style="border-radius: 0%; margin: 0px 10px 30px 0px;"/>
     </div>
 </div>
-<div style="font-size: 18px; font-weight: bold;">boxLCD: a simple testbed for learned simulator and world model research</div>
+<div style="font-size: 18px; font-weight: bold;">boxLCD: A Simple Testbed for Learned Simulator and World Model Research</div>
 ICLR 2021  [SimDL Workshop](https://simdl.github.io/overview) <br>
 [[GitHub Project](https://github.com/matwilso/boxLCD)] [[Blog](robot-future) [Posts](/learned-sims)][[Paper](/assets/boxLCD_iclr2021_workshop.pdf)]
 
@@ -72,10 +72,23 @@ Matthew Wilson, Tucker Hermans <br>
 [CoRL 2019](https://www.robot-learning.org) (Oral, Best System Paper) <br>
 [[arXiv](https://arxiv.org/abs/1909.07876)] [[Project Page](/projects/object_collections)]  [[Code](https://github.com/matwilso/object_collections)]
 
-<br>
-<br>
-...<br>
-(older stuff)
+
+
+---
+# Robots
+
+These are the robots I have experience working with.
+On the lower row are three of the robots I helped build and program on [Utah's](http://usr.coe.utah.edu/) NASA [Robotic Mining Competition (RMC)](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc/about) team.
+
+||||
+:-------------------------:|:---:|:---:|
+myCobot<br> (2021)| Baxter<br>(2019)| Ballbot and Shmoobot<br> (2017) | 
+<a href="/assets/cobot.jpg"><img style="max-height:200px;" src="/assets/cobot.jpg"/></a> | <a href="/assets/baxter.jpg"><img style="max-height:200px" src="/assets/baxter.jpg"/></a> | <a href="/assets/ball_and_shmoo.jpg"><img style="max-height:200px" src="/assets/ball_and_shmoo.jpg"/></a> |
+NASA RMC <br>(2018)| NASA RMC<br> (2016) | NASA RMC <br>(2017) | 
+<a href="/assets/urmp/emcee_2018.png"><img style="max-width:200px;" src="/assets/urmp/emcee_2018.png"/></a> | <a href="/assets/urmp/emcee_2017.png"><img  src="/assets/urmp/emcee_2017.png"/></a> | <a href="/assets/urmp/emcee_2016.png"><img src="/assets/urmp/emcee_2016.png"/></a> |
+
+---
+# Past Projects
 
 <br>
 **[2015-2018] Utah Student Robotics Team Member**
@@ -94,14 +107,3 @@ I had the great pleasure of working with [Ralph Hollis](http://www.cs.cmu.edu/af
 
 You can check my CV for more details on these projects.
 
-
-
-<!-- See my [Projects] page for more details.
-
-[Projects]: /backupprojects/ -->
-
-<!-- __Timeline__
-
-<span class="t2when">2015-now:</span> <span class="t2who">University of Utah:</span> BS Computer Engineering <br>
-<span class="t2when">2015-now:</span> <span class="t2who">NASA Robotic Mining Competition:</span> Team member on university robotics team <br>
-<span class="t2when">Summer 2017:</span> <span class="t2who">Carnegie Mellon University:</span> Robotics Institute Summer Scholar, research internship <br> -->
