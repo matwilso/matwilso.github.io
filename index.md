@@ -2,11 +2,6 @@
 layout: default
 ---
 
-<!-- <div class="crop"> -->
-<!-- </div> -->
-
-
-
 <img align="left" width="200" src="/assets/mw.jpg" style="border-radius: 20%; margin: 0px 60px 20px 0px;"/>
 I am a second year masters student in computer science at the [University of 
 British Columbia (UBC)](https://www.cs.ubc.ca/), working on robotics and reinforcement
@@ -78,11 +73,55 @@ Matthew Wilson, Tucker Hermans <br>
 These are the robots I have experience working with.
 On the lower row are three of the robots I helped build and program for [Utah's](http://usr.coe.utah.edu/) NASA [Robotic Mining Competition (RMC)](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc/about) team.
 
-:-------------------------:|:---:|:---:|
-myCobot<br> (Home, 2021)| Baxter<br>(Utah, 2019)| Ballbot and Shmoobot<br> (CMU, 2017) | 
-<a href="/assets/cobot.jpg"><img style="max-height:200px;" src="/assets/cobot.jpg"/></a> | <a href="/assets/baxter.jpg"><img style="max-height:200px" src="/assets/baxter.jpg"/></a> | <a href="/assets/ball_and_shmoo.jpg"><img style="max-height:200px" src="/assets/ball_and_shmoo.jpg"/></a> |
-Sandcrawler <br>(NASA, 2018)| AMEE <br>(NASA, 2017) | Master Chief<br> (NASA, 2016) | 
-<a href="/assets/urmp/emcee_2018.png"><img style="max-width:200px;" src="/assets/urmp/emcee_2018.png"/></a> | <a href="/assets/urmp/emcee_2017.png"><img  src="/assets/urmp/emcee_2017.png"/></a> | <a href="/assets/urmp/emcee_2016.png"><img src="/assets/urmp/emcee_2016.png"/></a> |
+
+<table>
+<tr>
+<th>
+myCobot<br> (Home, 2021)
+</th>
+<th>
+Baxter<br>(Utah, 2019)
+</th>
+<th>
+Ballbot and Shmoobot<br> (CMU, 2017)
+</th>
+</tr>
+<tr>
+<th>
+<a href="/assets/cobot.jpg"><img style="max-height:200px;" src="/assets/cobot.jpg"/></a>
+</th>
+<th>
+<a href="/assets/baxter.jpg"><img style="max-height:200px" src="/assets/baxter.jpg"/></a>
+</th>
+<th>
+<a href="/assets/ball_and_shmoo.jpg"><img style="max-height:200px" src="/assets/ball_and_shmoo.jpg"/></a>
+</th>
+</tr>
+
+<tr>
+<th>
+Sandcrawler <br>(NASA, 2018)
+</th>
+<th>
+AMEE <br>(NASA, 2017)
+</th>
+<th>
+Master Chief<br> (NASA, 2016)
+</th>
+</tr>
+<tr>
+<th>
+<a href="/assets/urmp/emcee_2018.png"><img style="max-height:200px;" src="/assets/urmp/emcee_2018.png"/></a>
+</th>
+<th>
+<a href="/assets/urmp/emcee_2017.png"><img style="max-height:200px" src="/assets/urmp/emcee_2017.png"/></a>
+</th>
+<th>
+<a href="/assets/urmp/emcee_2016.png"><img style="max-height:200px" src="/assets/urmp/emcee_2016.png"/></a>
+</th>
+</tr>
+</table>
+
 
 # Past Projects
 
