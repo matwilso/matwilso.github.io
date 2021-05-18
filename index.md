@@ -78,11 +78,10 @@ Matthew Wilson, Tucker Hermans <br>
 These are the robots I have experience working with.
 On the lower row are three of the robots I helped build and program for [Utah's](http://usr.coe.utah.edu/) NASA [Robotic Mining Competition (RMC)](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc/about) team.
 
-||||
 :-------------------------:|:---:|:---:|
-myCobot<br> (2021)| Baxter<br>(2019)| Ballbot and Shmoobot<br> (CMU, 2017) | 
+myCobot<br> (Home, 2021)| Baxter<br>(Utah, 2019)| Ballbot and Shmoobot<br> (CMU, 2017) | 
 <a href="/assets/cobot.jpg"><img style="max-height:200px;" src="/assets/cobot.jpg"/></a> | <a href="/assets/baxter.jpg"><img style="max-height:200px" src="/assets/baxter.jpg"/></a> | <a href="/assets/ball_and_shmoo.jpg"><img style="max-height:200px" src="/assets/ball_and_shmoo.jpg"/></a> |
-NASA RMC <br>(2018)| NASA RMC <br>(2017) | NASA RMC<br> (2016) | 
+Sandcrawler <br>(NASA, 2018)| AMEE <br>(NASA, 2017) | Master Chief<br> (NASA, 2016) | 
 <a href="/assets/urmp/emcee_2018.png"><img style="max-width:200px;" src="/assets/urmp/emcee_2018.png"/></a> | <a href="/assets/urmp/emcee_2017.png"><img  src="/assets/urmp/emcee_2017.png"/></a> | <a href="/assets/urmp/emcee_2016.png"><img src="/assets/urmp/emcee_2016.png"/></a> |
 
 # Past Projects
