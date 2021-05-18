@@ -28,7 +28,6 @@ I graduate in May 2021 and I am in the job market.
 - Jun 2018: I wrote up an answer to a [stackoverflow question on PPO (Proximal Policy Optimization)](https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl/50663200#50663200)
 
 
----
 # Recent Projects
 <style>
 .static {
@@ -74,7 +73,6 @@ Matthew Wilson, Tucker Hermans <br>
 
 
 
----
 # Robots
 
 These are the robots I have experience working with.
@@ -87,7 +85,6 @@ myCobot<br> (2021)| Baxter<br>(2019)| Ballbot and Shmoobot<br> (2017) |
 NASA RMC <br>(2018)| NASA RMC <br>(2017) | NASA RMC<br> (2016) | 
 <a href="/assets/urmp/emcee_2018.png"><img style="max-width:200px;" src="/assets/urmp/emcee_2018.png"/></a> | <a href="/assets/urmp/emcee_2017.png"><img  src="/assets/urmp/emcee_2017.png"/></a> | <a href="/assets/urmp/emcee_2016.png"><img src="/assets/urmp/emcee_2016.png"/></a> |
 
----
 # Past Projects
 
 <br>
