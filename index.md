@@ -80,7 +80,7 @@ On the lower row are three of the robots I helped build and program for [Utah's]
 
 ||||
 :-------------------------:|:---:|:---:|
-myCobot<br> (2021)| Baxter<br>(2019)| Ballbot and Shmoobot<br> (2017) | 
+myCobot<br> (2021)| Baxter<br>(2019)| Ballbot and Shmoobot<br> (CMU, 2017) | 
 <a href="/assets/cobot.jpg"><img style="max-height:200px;" src="/assets/cobot.jpg"/></a> | <a href="/assets/baxter.jpg"><img style="max-height:200px" src="/assets/baxter.jpg"/></a> | <a href="/assets/ball_and_shmoo.jpg"><img style="max-height:200px" src="/assets/ball_and_shmoo.jpg"/></a> |
 NASA RMC <br>(2018)| NASA RMC <br>(2017) | NASA RMC<br> (2016) | 
 <a href="/assets/urmp/emcee_2018.png"><img style="max-width:200px;" src="/assets/urmp/emcee_2018.png"/></a> | <a href="/assets/urmp/emcee_2017.png"><img  src="/assets/urmp/emcee_2017.png"/></a> | <a href="/assets/urmp/emcee_2016.png"><img src="/assets/urmp/emcee_2016.png"/></a> |
