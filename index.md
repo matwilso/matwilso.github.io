@@ -78,7 +78,7 @@ Matthew Wilson, Tucker Hermans <br>
 # Robots
 
 These are the robots I have experience working with.
-On the lower row are three of the robots I helped build and program on [Utah's](http://usr.coe.utah.edu/) NASA [Robotic Mining Competition (RMC)](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc/about) team.
+On the lower row are three of the robots I helped build and program for [Utah's](http://usr.coe.utah.edu/) NASA [Robotic Mining Competition (RMC)](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc/about) team.
 
 ||||
 :-------------------------:|:---:|:---:|
