@@ -70,7 +70,7 @@ the data doesn't fit their world model.
 (some review papers from Baillargeon [2002](/assets/papers/baillargeon_2002.pdf), [2004](/assets/papers/baillargeon_2004.pdf))
 </span>
 As adults, we are continually forced to adapt and refine our predictions, as we confront increasingly complex phenomena.
-Through this process, our models become very good. Humans look at the world and we understand it.
+Through this process, our models become *very* good. Humans look at the world and we understand it.
 
 Robots look at the world and they effectively see static. 
 ConvNets, as we mostly train them today, can do complex information processing
@@ -101,7 +101,7 @@ but for training something like a household robot in the future, minimal structu
 
 
 Robotics simulators should be mainly [Software 2.0](https://medium.com/@karpathy/software-2-0-a64152b37c35) systems, not 1.0.
-To build traditional simulators, humans have spent years of domain specific effort, studying the physical world, distilling our knowledge into core principles and equations, and implementing these equations in computer programs. In the end, after a massive “real2sim2real” loop, at extreme cost in human science and engineering effort, we can train RL policies that operate in the real world. Ultimately, a learned simulator is a better version of this human-based loop, where the feedback loops are quicker and the neural networks are better at dealing with the high-dimensionality (sys-id and dynamics) necessary to simulate the real world. Once learning is in place, learned simulators will require much less effort per incremental advance in performance. They’ll just consume data and compute and grow stronger.
+To build traditional simulators, humans have spent years of domain specific effort, studying the physical world, distilling our knowledge into core principles and equations, and implementing these equations in computer programs. In the end, after a massive “real2sim2real” loop, at extreme cost in human science and engineering effort, we can train RL policies that operate in the real world. Ultimately, a learned simulator is a better version of this human-based loop, where the feedback loops are quicker and the neural networks are better at dealing with the high-dimensionality (sys-id and dynamics) necessary to simulate the real world. Once learning is in place, learned simulators will require much less effort per incremental advance in performance. They’ll just consume data & compute and grow stronger.
 
 (Also, they'll be way easier to use. For a more detailed discussion of learned simulators and the framing they provide, see my [dedicated post](/learned-sims) on this.)
 
@@ -136,8 +136,9 @@ There is some background that is useful to have and stay current on:
 - **cloning simulators.** This area of research takes existing physics simulation and clones them  with neural networks to run faster (kind of like neural [clean-rooming](https://en.wikipedia.org/wiki/Clean_room_design)). One example is [Learning to simulate complex physics with graph networks](https://sites.google.com/view/learning-to-simulate). While this only lets you get as good as the original simulation, there are likely good insights here in how to set up effective inductive biases and set up training. I think this is actually a decent path for getting traction in more fully learned simulators.
 - **case studies.** Case studies of related areas provide valuable lessons to draw on. Some things that come to mind are the recent large language models and large scale, production grade systems at Tesla, OpenAI, Google, etc. Alec Radford gave a good talk on historical development of language models [[video]](https://youtu.be/BnpB3GrpsfM) [[slides]](https://drive.google.com/open?id=1sdH-9KQipnu3RMN0-YUqU8R4ZMLapz8IJzfe7VLN39o).
 And Andrej has some talks about Tesla [on his website](https://karpathy.ai/). Reality in general is a great filter for flawed approaches.
-- **infant cognitive development**. It might be useful to draw on what we know about how babies develop their models of the world. Like in what sequence do they learn different concepts about the world? Is there anything we can learn about the inductive biases they have for physical reasoning---about which physics they understand early on, and which takes a long time to learn? There are some [reviews on physical](/assets/papers/baillargeon_2002.pdf) [reasoning in infants](/assets/papers/baillargeon_2004.pdf), that discuss when babies learn certain skills. 
-- **yann lecun and self-supervised learning.** [His podcast with Lex is good, and his recent talks can probably offer insight on this area as well.](https://www.youtube.com/results?search_query=yann+lecun) He is a big believer in this type of stuff now.
+- **infant cognitive development**. It might be useful to draw on what we know about how babies develop their models of the world. Like in what sequence do they learn different concepts about the world? Is there anything we can learn about the inductive biases they have for physical reasoning---about which physics they understand early on, and which takes a long time to learn?
+Can we use something like violation of expectation to evaluate our model's understanding? There are some [reviews on physical](/assets/papers/baillargeon_2002.pdf) [reasoning in infants](/assets/papers/baillargeon_2004.pdf), that discuss when babies learn certain skills. 
+- **yann lecun and self-supervised learning.** [His podcast with Lex is good, and his recent talks can probably offer insight on this area as well.](https://www.youtube.com/results?search_query=yann+lecun) He is a big believer in this type of stuff now, though with some differing opinions in the details.
 
 ## What next?
 
@@ -149,8 +150,7 @@ Ultimately, the best way to proceed is to get building. And the best way to get 
 <div style="margin-left: 2em"><em>Because deep learning is so empirical, success in it is to a large extent proportional to raw experimental throughput - the ability to babysit a large number of experiments at once, staring at plots and tweaking/re-launching what works. This is necessary, but not sufficient. - <a href="https://twitter.com/karpathy/status/1350503355299205120?ref_src=twsrc%5Etfw">Andrej Karpathy</a></em></div>
 <br>
 
-If it takes a lot of experimentation to build up fundamentals and intuitions about a problem
-(as it does in deep learning),
+If it takes a lot of experimentation to build up fundamentals and intuitions about a problem (as it does in deep learning),
 then it's best to start small at first, so we're waiting for hours and not days for feedback.
 
 I don't think we quite have the compute to build the grand version of learned simulators or world models, but 
@@ -199,10 +199,14 @@ But my sense is that the learned sim framework does not facilitate policy learni
 as the world model framework does.
 
 
-I guess I think about learned simulators as simulators/environments and world models as brains.
-For a learned simulator, the agent action is just another part of the state.
-For a brain, the action is something it chooses.
-Perhaps we can develop some unified approach to action and perception (e.g., [APD](https://danijar.com/project/apd/)), as [might](https://en.wikipedia.org/wiki/Free_energy_principle) [exist](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/whatever-next-predictive-brains-situated-agents-and-the-future-of-cognitive-science/33542C736E17E3D1D44E8D03BE5F4CD9) [in](https://www.amazon.com/Surfing-Uncertainty-Prediction-Action-Embodied/dp/0190217014) human brains.
+I guess I think about learned simulators as simulators/environments and the world models more as brains (or at least more in that direction).
+For a learned simulator, the agent action is just another part of the state that it uses to predict the future.
+For a brain, the action is something it chooses. This seems like an important distinction.
+Choosing actions requires intent about some state of the world you would like to achieve.
+Also, brains have an easier task for taking actions since they can rely on heuristics.
+When a brain catches a baseball, it can do this by keeping the baseball at a certain angle of its vision, while a simulator has to compute the dynamics.
+On a semi-related note, the work on a unified framework to action and perception(e.g., [APD](https://danijar.com/project/apd/)), as [might](https://en.wikipedia.org/wiki/Free_energy_principle) [exist](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/whatever-next-predictive-brains-situated-agents-and-the-future-of-cognitive-science/33542C736E17E3D1D44E8D03BE5F4CD9) [in](https://www.amazon.com/Surfing-Uncertainty-Prediction-Action-Embodied/dp/0190217014) human brains, is seeming more interesting to me.
+
 
 <!--
 World models can provide temporal abstractions and you can narrow down into certain niches that are easier to predict.
@@ -230,13 +234,15 @@ to create some other end-user product.
 (It's actually hard for me to imagine in detail how development is going to work. It does just seem like a massive endeavor. Probably starting in niches and expanding from there. Then as you build momentum, you will have the resources to build this system in a way that actually seems possible. In the meantime, doing the R&D and pushing on these ideas seems useful so we are ready when the full vision becomes possible.)
 Maybe OpenAI's API approach is somewhat informative here. Once you have the big model, seems like having an API but releasing access to researchers so
 they can tell you interesting things about the model is a good idea.
+Maybe using it in for some application specific purpose, like a simulator for self-driving, where you
+capitalize on the end product of robo taxis.
 
 <div class="faq" id="faq-timing">What about timing?</div>
 In general, it's especially hard to predict the [timing](https://www.gwern.net/Timing) of future innovations.
 Moore’s law seems a  guideline here. I think this is mostly a question of compute.
 We will be developing the ideas and algorithms along the way, but compute is what is going to enable this.
 Given that, if we assume that we are using videos instead of text, how much more computational and information processing do we expect to have to do?
-video requires much more bit processing, but also there is much redundancy in videos both spatially and temporally. You can see this by how much youtube can compress a video.
+Video requires much more bit processing, but also there is much redundancy in videos both spatially and temporally. You can see this by how much youtube can compress a video.
 So there are likely some tricks we can use to benefit from this. Maybe some scheme where we only encode differences from the expectation. And somehow benefit from this during training.
 At some point, I probably ought to do a back of the envelope calculation for how much more computationally intensive we should expect video to be.
 
