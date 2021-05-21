@@ -12,12 +12,12 @@ Traditional simulators are not flexible enough to handle the full complexity of 
 Eventually, we will need to learn our simulators basically from scratch, much more akin to how humans do.
 
 The best simulators of the future will impose minimal but carefully architected inductive biases for efficient learning;
-they will be flexible in what they can represent and in how they let you program and interact with them.
+they will be flexible in what they can represent and in how they let us program and interact with them.
 
 ## Motivation
 
 There is massive value in developing enabling technologies, in ideas and artifacts that we can benefit from over and over again and that enable us to solve harder problems with less effort.
-The most obvious, steady example in AI is compute, which we keep benefitting from by [offloading
+The most obvious, steady example in AI is improved computing hardware, which we keep benefitting from by [offloading
 more work](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) to optimization processes.
 Other examples include:
 - Frameworks like TensorFlow and Pytorch, which help abstract away messy lower-level and hardware details, and let us focus on what matters for our work specifically.
@@ -26,26 +26,35 @@ Other examples include:
 - Models and simulators (to the extent they are general and accurately approximate the true phenomena), which let us quickly iterate on ideas and validate systems.
 - Benchmarks like ImageNet, which let us compare ideas head to head in a consistent way and let us realize which ideas and artifacts matter.
 - Well-curated datasets (to the extent they are publicly available)<label for="sn-1" class="margine-toggle sidenote-number"/><input type="checkbox" id="sn-1" class="margin-toggle"/><span class="sidenote">
-Some examples of datasets which could raise the waterline in their domains if released are Tesla's fleet data,
-Google's JFT, OpenAI's 200M+ text-image pairs. However, there are many reasons they are kept proprietary:
-there's hosting and distribution costs, legal issues, and there's keeping the lights on; companies
-need to receieve compensation to cover both past and future monetary investments.
+Proprietary datasets obviously make a lot of sense; there's hosting and distribution costs, legal issues, and there's ensuring
+companies receieve compensation to cover both past and future monetary investments (which we hope indirectly help push the field forward).
 But it is an interesting question of what the impact of open datasets wil be, and how they can be created.
 For some pointers, Andrej has some recent [tweets](https://twitter.com/karpathy/status/1363973271717171200) [about](https://twitter.com/karpathy/status/1365511769255342084) this. [The Pile](https://pile.eleuther.ai/) looks like an interesting work in this space. Maybe something like [Numerai Signals](https://signals.numer.ai/)
-would work, where users are compensated for providing their useful data.
-</span>, which define what we can train a model to do. (ie data is how you program Software 2.0.)
+could work, where users are compensated for providing their useful data.
+</span>, which define what we can train a model to do (ie data is how you program Software 2.0).
 
 It is hard to always predict what these are going to be and what the best way of going about developing them is.
 But it seems worth thinking about how we can raise the waterline.
 
 One particularly interesting and emerging class of such artifacts is learned models themselves.
 Fine-tuned ImageNet weights are a primitive example of this, where users can solve solve a limited scope of transfer tasks on a smaller computational and data budget.
-With more powerful and general unsupervised models like GPT-3 and CLIP, the scope of impact is going to be massive.
+With more powerful and general unsupervised models like GPT-3, DALL-E, and CLIP, the scope of impact is going to be massive.
 Learned simulators are a promising prospect here.
+
+<!--
+- pre-train and fine-tune on imagenet
+- use as eval metrics (FID)
+- gpt3 something. write code, ideas, idk
+- use as model to generate more data.
+- use as model to collect data in.
+- use to label or make consistent, idk.
+We basically need better ways of sharing models and reusing them.
+-->
+
 
 ## Learned simulators
 
-Learned simulators seem to provide a good framing on how we might develop large predictive models in robotics, and in how we might raise the waterline for robot learning.
+Learned simulators provide a good framing on how we might develop large predictive models in robotics, and in how we might raise the waterline for robot learning.
 
 First, traditional simulators suggest a few perspectives:
 
@@ -57,37 +66,64 @@ Rather than constructing ah-hoc world models for each environment or agent, our 
 
 Ultimately, though, learned simulators will go far beyond traditional simulators:
 
-**Grounding.** A learned simulator will be much easier to work with and interface with. Instead of defining XML files to specify all the details and possible things you want to vary over, you could naturally “prompt” the model to simulate what you want. It could absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that you could encode with a neural network---and spit out a simulator description. You could film a quick video of your scene, with some robot specifications, command data and proprioception, and get out a calibrated and general simulation of the scene and the robot.
+**Grounding.** A learned simulator will be much easier to work with and interface with. Instead of defining XML files to specify all the details and possible things we want to vary over, we could naturally “prompt” the model to simulate what we want. It could absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that we could encode with a neural network---and spit out a simulator description. We could film a quick video of our scene, with some robot specifications, command data and proprioception, and get out a calibrated and general simulation of the scene and the robot.
 
 **Rendering.** On the flip side of grounding is rich rendering and visualizing of different predictions.
-You could visualize the effects of different objects in the scene, the uncertainty your model has, and how your robot will behave.
+We could visualize the effects of different objects in the scene, the uncertainty our model has, and how our robot will behave.
 
-**Differentiability.** Currently, the environment is a giant `stop_gradient` in the middle of your reinforcement learning computational graph.
-Every other part of the system is learned and differentiable. 
-If you can patch this `stop_gradient`, it seems there is great opportunity for cleaner designs.
-It may enable more straightforward application of ideas from generative modeling.
-(Technically this is available today in certain differentiable simulators being developed, but those are external software (not in your PyTorch graph), 
-and they are ceiling-ed by human engineering.)
+**Repeatability and controllability.** For training, we could induce specific and repeatable settings that we want our agent to practice, using natural interfaces. We could use this for debugging our system, for example by pulling in information from the fleet about areas
+the agents are failing and then embedding similar scenarios in the simulator to create behavioral unit tests. (Part of this also applies to traditional simulators, but learned simulators greatly reduce the friction here.)
+
+<!--
+**Foresight and handling delays.** We could query a learned simulator for the action we are about to take. See what the future states are going to be.
+These could become observations into the policy. And we could even deal with sensor delays. It doesn't matter if we don't get an observation right on
+time. We can just use our prediction of what is going to happen.
+-->
+
+**Intelligent domain randomization.**
+Because powerful generative models will have to model uncertainty in the environment, sampling them will yield something like intelligent domain randomization. Instead of randomizing over a bunch of wacky parameters, our model could be tuned to the underlying distribution and only give us variety we might actually see in the real world. For example, given a video of an opaque container, the model samples over the range of possible masses that could fit in the container.
+
+**Differentiability.** Currently, the environment is a giant `stop_gradient` in the middle of our reinforcement learning computational graph.
+In fact, it's even worse than a `stop_gradient`, since we usually have to call into a separate Python or C++ API.
+Every other part of the system is learned and differentiable, so if we can patch these issues, there is a lot of opportunity for cleaner designs
+and perhaps more straightforward application of ideas from generative modeling.
+(Technically some of this is available today in certain differentiable simulators being developed, but those are still generally external software (not in our PyTorch graph), 
+and they are upper bounded by human engineering.)
+
+**Never leaving the hardware accelerator.** 
+On a related note, by making the environment just another nn.Module, we never have to leave the compute graph or the accelerator.
+To train our policy, we can just hook it straight up to the firehose of data coming from the model.
+Resetting an environment is just a means of starting sampling from a new seed or prompt,
+and we can easily generate many counterfactual outcomes from a single location.
 
 <!--
 we can apply more ideas from generative modeling directly, where the actions are just control variables and part of what we are generating over. Things become much cleaner.
 
-There are actually many similarities between RL and generative modeling. You can look at DDPG as something
-like a GAN where the Q-fucntion tells you the value of actions (discriminates) and the policy
+There are actually many similarities between RL and generative modeling. We can look at DDPG as something
+like a GAN where the Q-fucntion tells us the value of actions (discriminates) and the policy
 tries to produce actions (generates). There are additional issues of exploration and stability,
-but the stop_gradient makes RL much messier. You have to rely on either high variance REINFORCE type approaches (e.g., PPO),
-or delayed learning of a Q-function (e.g., SAC) that you can push gradients back through.
+but the stop_gradient makes RL much messier. We have to rely on either high variance REINFORCE type approaches (e.g., PPO),
+or delayed learning of a Q-function (e.g., SAC) that we can push gradients back through.
 (This applies equally well to the "world model" framing, like in Dreamer, but I mention it here for completeness.)
 -->
 
-**Repeatability and controllability.** For training, you could induce specific and repeatable settings that you want your agent to practice, using a natural interface. You could use this for debugging your system, for example by pulling in information from the fleet about areas
-the agents are failing and then embedding similar scenarios in the simulator to create behavioral unit tests. (Part of this also applies to traditional simulators, but learned simulators greatly reduce the friction here.)
+**Code simplicity.** 
+With traditional simulators (and Software 1.0 generally), the more features you support, 
+the more complex and unwieldy it gets, both for development and usage.
+For Software 2.0, improving performance is just a matter of scaling the size of the model, along with data and compute.
+And for application of the simulator, the interface stays simple and we can use natural interfaces to program it (e.g., natural language like in OpenAI's API).
+It's not a free lunch and this is not going to be trivial or cheap, but it ultimately seems more manageable as our Software 2.0
+tools develop and as Moore's Law runs for a few more cycles.
 
-**Intelligent domain randomization.**
-Because powerful generative models will have to model uncertainty in the environment, sampling them will yield something like intelligent domain randomization. Instead of randomizing over a bunch of wacky parameters, your model could be tuned to the underlying distribution and only give you variety you might actually see in the real world. For example, given a video of an opaque container, the model samples over the range of possible masses that could fit in the container.
+**Portability.** On another related note, learned simulators would have many fewer dependencies.
+We just need to save the weights and model definition, and then we can load them anywhere that supports the floating point operation primitives.
+We can deploy them in browser, for example, or any hardware that supports those ops.
+
+
+<!--in fact: check it out. if i included boxlcd right here with a learned policy that would be freaking dope-->
 
 **Sim2real Engine.** A learned simulator may enable a Sim2Real Engine,
-where you iteratively bootstrap a system by: training models inside of the simulator, using those models to collect data in the real world, and using that data to train and improve the simulator. Rinse, repeat.
+where we iteratively bootstrap a system by: training models inside of the simulator, using those models to collect data in the real world, and using that data to train and improve the simulator. Rinse, repeat.
 
 <!--
 **Interpretability.** By having a central learned simulator that we build off, we could invest effort
@@ -99,8 +135,8 @@ approaches might be better.
 -->
 
 **Science and engineering applications.** A learned simulator may be useful to answer scientific questions and to use in an engineering design process.
-It could offer a more repeatable and examinable model of the real world. You could study the dynamics of systems more easily.
-You could plug in information like technical drawings and descriptions of new parts and observe how systems behave (similar to how simulators are used now, but in an easier automatic way).
+It could offer a more repeatable and examinable model of the real world. We could study the dynamics of systems more easily.
+We could plug in information like technical drawings and descriptions of new parts and observe how systems behave (similar to how simulators are used now, but in an easier automatic way).
 
 
 
