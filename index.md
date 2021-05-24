@@ -143,8 +143,7 @@ We had some great robots and consistently placed well in the competition. It was
 
 **[2017] Robotics Institute Summer Scholar @ Carnegie Mellon University (CMU)**
 
-I spent Summer 2017 as part of the [Robotics Institute Summer Scholar (RISS) program](https://riss.ri.cmu.edu/),
-which gives undergraduates from other universities experience working on robotics and machine learning research in great CMU labs.
+I spent Summer 2017 as part of the [Robotics Institute Summer Scholar (RISS) program](https://riss.ri.cmu.edu/),  which gives undergraduates from other universities experience working on robotics and machine learning research in CMU robotics labs.
 I had the great pleasure of working with [Ralph Hollis](http://www.cs.cmu.edu/afs/cs/user/rhollis/www/home.html), [Jean Oh](https://www.cs.cmu.edu/~./jeanoh/), and [Roberto Shu](https://rshum19.github.io./) on getting one of the [ballbots](http://www.msl.ri.cmu.edu/projects/ballbot/) to recognize commands, navigate in a building, recognize objects, and report back about what it saw.
 
 
