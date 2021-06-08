@@ -16,7 +16,7 @@ they will be flexible in what they can represent and in how they let us program 
 
 ## Motivation
 
-There is massive value in developing enabling technologies, in ideas and artifacts that we can benefit from over and over again and that enable us to solve harder problems with less effort.
+There is massive value in developing enabling technologies---in ideas and artifacts that we can benefit from over and over again and that enable us to solve harder problems with less effort.
 The most obvious, steady example in AI is improved computing hardware, which we keep benefitting from by [offloading
 more work](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) to optimization processes.
 Other examples include:
@@ -26,8 +26,8 @@ Other examples include:
 - Models and simulators (to the extent they are general and accurately approximate the true phenomena), which let us quickly iterate on ideas and validate systems.
 - Benchmarks like ImageNet, which let us compare ideas head to head in a consistent way and let us realize which ideas and artifacts matter.
 - Well-curated datasets (to the extent they are publicly available)<label for="sn-1" class="margine-toggle sidenote-number"/><input type="checkbox" id="sn-1" class="margin-toggle"/><span class="sidenote">
-Proprietary datasets obviously make a lot of sense; there's hosting and distribution costs, legal issues, and there's ensuring
-companies receieve compensation to cover both past and future monetary investments (which we hope indirectly help push the field forward).
+I am not bagging on proprietary datasets. It makes a lot of sense to keep data private due
+to  hosting and distribution costs, legal issues, and ensuring you receieve compensation to cover both past and future monetary investments (which we hope indirectly help push the field forward).
 But it is an interesting question of what the impact of open datasets wil be, and how they can be created.
 For some pointers, Andrej has some recent [tweets](https://twitter.com/karpathy/status/1363973271717171200) [about](https://twitter.com/karpathy/status/1365511769255342084) this. [The Pile](https://pile.eleuther.ai/) looks like an interesting work in this space. Maybe something like [Numerai Signals](https://signals.numer.ai/)
 could work, where users are compensated for providing their useful data.
@@ -39,7 +39,10 @@ But it seems worth thinking about how we can raise the waterline.
 One particularly interesting and emerging class of such artifacts is learned models themselves.
 Fine-tuned ImageNet weights are a primitive example of this, where users can solve solve a limited scope of transfer tasks on a smaller computational and data budget.
 With more powerful and general unsupervised models like GPT-3, DALL-E, and CLIP, the scope of impact is going to be massive.
-Learned simulators are a promising prospect here.
+
+Learned simulators are a promising prospect here. If we can build a reusable tool by training models on real data,
+and then we use it for training and evaluating on a wide variety of robotics tasks, this could
+greatly accelerate progress in the field.
 
 <!--
 - pre-train and fine-tune on imagenet

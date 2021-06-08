@@ -85,7 +85,6 @@ Some form of large scale predictive training will be sufficient and necessary to
 
 <div style="text-align: center;"><em>It's all about Software 2.0.</em></div>
 <br>
-The other angle is sim2real learning.
 The field of sim2real learning deals with training policies in simulation and then deploying them in the real world with little to no fine-tuning. Sim2real offers several advantages over real world training, in speed, safety, and environment read + write access.
 
 Arguably, sim2real is the same idea as model-based learning, where the simulator acts as the model.
