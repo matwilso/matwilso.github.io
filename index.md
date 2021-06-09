@@ -81,7 +81,7 @@ On the lower row are three of the robots I helped build and program for [Utah's]
 <table>
 <tr>
 <th>
-myCobot<br> (Home, 2021)
+myCobot<br> (2021)
 </th>
 <th>
 Baxter<br>(Utah, 2019)
