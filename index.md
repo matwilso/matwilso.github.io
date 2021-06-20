@@ -74,7 +74,7 @@ and then using them to do RL.
 
 # Robots
 
-These are the robots I have experience working with.
+These are some robots I have worked with.
 On the lower row are three of the robots I helped build and program for [Utah's](http://usr.coe.utah.edu/) NASA [Robotic Mining Competition (RMC)](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc/about) team.
 
 
