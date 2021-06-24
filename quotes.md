@@ -6,19 +6,9 @@ permalink: /quotes/
 
 this is just a random sample, not necessarily best quotes
 
-# Technology/startups/life
+# Technology/engineering
 
 "The True Way transcends the minutiae of Skill. There is no 'Technology'. There is no 'Design'. There is only a vision of how humanity could be, and the relentless resolve to make it so. The rest is details." - [Bret Victor](http://worrydream.com/#!/Bio)
-
-"Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have." -pg
-
-"Good procrastination is avoiding errands to do real work" -pg
-
-"Unproductive pleasures pall eventually. After a while you get tired of lying on the beach. If you want to stay happy, you have to do something." -pg
-
-
-
-# Engineering
 
 "The best part is no part. The best process is no process. It weighs nothing, costs nothing, can't go wrong.... Undesigning is the best thing. Just delete it." - [elon](https://twitter.com/Erdayastronaut/status/1203840982497792005)
 
@@ -31,6 +21,14 @@ this is just a random sample, not necessarily best quotes
 "If it's long it's wrong. If it's tight it's right" - elon (on time schedules)
 
 "It is important to view knowledge as sort of a semantic tree--make sure you understand the fundamental principles, ie the trunk and big branches, before you get into the leaves/details or there is nothing for them to hang on to." - elon
+
+# Life
+
+"Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have." -pg
+
+"Good procrastination is avoiding errands to do real work" -pg
+
+"Unproductive pleasures pall eventually. After a while you get tired of lying on the beach. If you want to stay happy, you have to do something." -pg
 
 
 # Obsession
