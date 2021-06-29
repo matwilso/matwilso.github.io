@@ -263,7 +263,7 @@ I just haven't seen any super convincing results for general predictive video ge
 (a key ingredient), and it seems like it will take quite a bit of compute.
 I think it is important to watch the space, but my current sense is at least a few more years
 out (3-5 at least maybe), before it would be super useful to go for end2end learned sim.
-You could always just pay more now for compute (the old [Xerox PARC addage](https://youtu.be/id1WShzzMCQ?t=3320)),
+You can always pay more now for compute (the old [Xerox PARC addage](https://youtu.be/id1WShzzMCQ?t=3320)),
 but the timing is important here and you could bleed all your money prematurely
 if you jump the gun.
 
@@ -273,14 +273,13 @@ what and that helps the field.
 In industry, it actually has to work and be deployable and provide real value,
 and that is much harder.)
 
-For now, it probably makes sense iteratively work on areas where learned 
+For now, it probably makes sense to iteratively work on areas where learned 
 components are relatively cheap and provide strict advantages over their 
 engineered counterparts. [Jemin et al.'s work on the Anymal](https://arxiv.org/abs/1901.08652)
 is probably my favorite example in this space right now.
 
 Anyway, physical world AI work seems exciting going forward and I am always
-excited to chat and learn more from others working on it.
-
+excited to chat and learn more from others working on related topics.
 
 [defenseone]: https://www.defenseone.com/technology/2020/09/virtual-tools-built-air-forces-new-fighter-prototype/168505/ 
 [popmech]: https://www.popularmechanics.com/military/aviation/a34043731/air-force-new-designation-e-series-aircraft/
