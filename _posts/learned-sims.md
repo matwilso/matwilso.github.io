@@ -6,7 +6,7 @@ permalink: /learned-sims/
 tags: robotics 
 ---
 
-> This is a spin-off from my post on [The Future of Robot Learning](/robot-future), and focuses more on ideas around learned simulators, which I think are likely to play a major role in the future of the industry.
+> This is a spin-off from my post on [The Future of Robot Learning](/robot-future), and focuses more on learned simulators, which seem likely to play a major role in the future of the industry.
 <!--
 well as an enumeration of the features this framing suggests.
 -->
@@ -14,13 +14,18 @@ well as an enumeration of the features this framing suggests.
 Robots lie at an interesting 
 intersection between embodied intelligence that learns from experience and 
 human-engineered system that must be extremely safe and reliable.  Simulation is 
-a well-established and widely-used tool in both domains---it's used 
-quite successfully to design complex fighter jets and to teach human pilots 
-how to fly them. It helps make development and deployment safer 
+a well-established tool in both domains---it's been used 
+quite successfully to [teach human pilots][flightsim] how to fly and to [design the][defenseone] [complex fighter jets][popmech] that they fly in.
+
+
+<!--
+and to teach human pilots how to fly them.  
+
+It's fairly widely-used and it helps make development and deployment safer 
 and cheaper, and it lets us induce scenarios that are otherwise impossible or 
 too dangerous to prep and test for.
 
-<!--
+
 It is already widely used in robotics (mostly for debugging/evaluation, but in some cases
 for training), and I don't see it becoming any less important going forward.
 
@@ -59,17 +64,23 @@ the incentive structure. In reality, this is extremely difficult)
 This is especially true in robotics, and for more complex automated decision making with strong safety requirements.
 -->
 
-Simulation already plays a large role in robotics for debugging, evaluation, and sometimes
-training, and it seems here to stay. 
-As our robot systems become capable of handling more complex and varied settings, our 
-simulators need to become more complex and varied to remain useful.
-I don't think the traditional way of doing things is going to cut it.
+It's already used universally in robotics for debugging, evaluation, and sometimes training.
+It helps make development and deployment safer 
+and cheaper, and it lets us induce scenarios that are otherwise impossible or 
+too dangerous to prep and test for.
+
+It seems here to stay, but as our robot systems become capable of 
+handling more complex and varied settings, our simulators need to become more 
+complex and varied to remain useful.
+In the long run, I don't think the traditional way of doing things is going to cut it.
 I think we are going to need to start learning more of the simulator from data,
 much more akin to how humans learn their world models, and much more akin to how 
 the rest of modern robot learning systems work.
 
-
 <!--
+But our robot systems are becoming increasingly capable
+of handling more complex and varied settings. To keep up, I don't think the traditional way of doing things is going to cut it.
+
 
 Fundamentally, the world is too complex and varied.
 
@@ -136,7 +147,7 @@ Learned simulators provide a good framing on how we might develop large predicti
 We basically need better ways of sharing models and reusing them.
 -->
 
-## What is this going to look like?
+## The feature set
 
 Traditional simulators suggest a useful perspective, and they have emerged as 
 fairly general and reusable tools: they can be reprogrammed for many tasks; 
@@ -147,7 +158,7 @@ and compound, rather than needing to be constructed from scratch for each enviro
 
 But they are limited in many ways, and ultimately by introducing learned
 components, it seems we can go far beyond they are currently capable of.
-I imagine a learned simulator is overall much easier to work with and enables things like:
+I imagine a learned simulator would be overall much easier to work with and would enable things like:
 
 **Grounding.** Instead of defining XML files to specify all the details and possible things we want to vary over, we could naturally “prompt” the model to simulate what we want. It could absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that we could encode with a neural network---and spit out a simulator description. We could film a quick video of our scene, with some robot specifications, command data and proprioception, and get out a calibrated and general simulation of the scene and the robot.
 
@@ -200,7 +211,7 @@ tools develop and as Moore's Law runs for a few more cycles.
 
 **Portability.** On another related note, learned simulators would have many fewer dependencies.
 We just need to save the weights and model definition, and then we can load them anywhere that supports the floating point operation primitives.
-We can deploy them in browser, for example, or any hardware that supports those ops.
+We can deploy them in browser for interactive control, for example, and we can deploy on any hardware that supports those ops.
 
 
 <!--in fact: check it out. if i included boxlcd right here with a learned policy that would be freaking dope-->
@@ -236,26 +247,42 @@ But basically developing this like we would develop a simulator, but extending t
 That seems imaginable. And it seems a good way to build momentum.
 -->
 
-## How are we going to build this?
+## Building it
 
-I think this is a interesting open question, worthwhile thinking about
-in more depth than I am about to cover.
-My brief answer for now is that we build this gradually.
+I think the question of how we are going to build this is the big one.
+It's worthwhile thinking about in much more depth than I am about to cover,
+but my brief answer for now is: gradually.
 
-If we don't have the data (i.e., a fleet acting now), we need some way to bootstrap capabilities
-from worse simulators and policies.
+If we don't have abundant teleoperation data available, we need some way to bootstrap capabilities from worse simulators and policies. This opens many further questions about how
+to specify goals, learn human preferences, learn to take actions, and explore
+as necessary to cover the space.
 
-If we do have the data, creating a fully learned simulator would
+But if we do have the data (e.g., in self-driving cars)... creating a fully learned simulator would
 still be extremely difficult and is probably out of reach with current technology.
 I just haven't seen any super convincing results for general predictive video generation
 (a key ingredient), and it seems like it will take quite a bit of compute.
 I think it is important to watch the space, but my current sense is at least a few more years
-out (3-5 at least maybe), before it would be super useful to go for end2end.
+out (3-5 at least maybe), before it would be super useful to go for end2end learned sim.
+You could always just pay more now for compute (the old [Xerox PARC addage](https://youtu.be/id1WShzzMCQ?t=3320)),
+but the timing is important here and you could bleed all your money prematurely
+if you jump the gun.
+
+(This timing issue seems much more pressing in industry. In research,
+you just do what you can and the results will probably be interesting no matter
+what and that helps the field.
+In industry, it actually has to work and be deployable and provide real value,
+and that is much harder.)
 
 For now, it probably makes sense iteratively work on areas where learned 
 components are relatively cheap and provide strict advantages over their 
 engineered counterparts. [Jemin et al.'s work on the Anymal](https://arxiv.org/abs/1901.08652)
 is probably my favorite example in this space right now.
 
-Anyway, physical world AI work seems exciting going forward.
+Anyway, physical world AI work seems exciting going forward and I am always
+excited to chat and learn more from others working on it.
+
+
+[defenseone]: https://www.defenseone.com/technology/2020/09/virtual-tools-built-air-forces-new-fighter-prototype/168505/ 
+[popmech]: https://www.popularmechanics.com/military/aviation/a34043731/air-force-new-designation-e-series-aircraft/
+[flightsim]: https://en.wikipedia.org/wiki/Flight_simulator
 
