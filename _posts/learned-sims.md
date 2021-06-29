@@ -6,15 +6,105 @@ permalink: /learned-sims/
 tags: robotics 
 ---
 
-> This post represents some of my thoughts on **learned simulators**. It is a spin-off from my post on [The Future of Robot Learning](/robot-future), which provides some more contextualization.
+> This is a spin-off from my post on [The Future of Robot Learning](/robot-future), and focuses more on learned simulators, which seem likely to play a major role in the future of the industry.
+<!--
+well as an enumeration of the features this framing suggests.
+-->
 
-Traditional simulators are not flexible enough to handle the full complexity of the world---things like deformability, material property changes, shattering, and strange artifacts like fire, paint, light switches and microwaves.
-Eventually, we will need to learn our simulators basically from scratch, much more akin to how humans do.
+Robots lie at an interesting 
+intersection between embodied intelligence that learns from experience and 
+human-engineered system that must be extremely safe and reliable.  Simulation is 
+a well-established tool in both domains---it's been used 
+quite successfully to [teach human pilots][flightsim] how to fly and to [design the][defenseone] [complex fighter jets][popmech] that they fly in.
 
-The best simulators of the future will impose minimal but carefully architected inductive biases for efficient learning;
-they will be flexible in what they can represent and in how they let us program and interact with them.
 
-## Motivation
+<!--
+and to teach human pilots how to fly them.  
+
+It's fairly widely-used and it helps make development and deployment safer 
+and cheaper, and it lets us induce scenarios that are otherwise impossible or 
+too dangerous to prep and test for.
+
+
+It is already widely used in robotics (mostly for debugging/evaluation, but in some cases
+for training), and I don't see it becoming any less important going forward.
+
+
+First, simulation seems here to stay. 
+It is a well-established and widely-used 
+tool in engineering to speed up development and evaluate and deploy systems more safely.
+It is also widely used to teach and evaluate intelligent systems (humans).
+For example, it is used both to [design](https://www.defenseone.com/technology/2020/09/virtual-tools-built-air-forces-new-fighter-prototype/168505/) [planes](https://www.popularmechanics.com/military/aviation/a34043731/air-force-new-designation-e-series-aircraft/) and to [teach pilots how to fly them](https://en.wikipedia.org/wiki/Flight_simulator).
+Robotics is at an interesting intersection between an intelligent system
+that must make decisions and an engineered system that mustprep and test with high precision
+and robustness in the real world.
+For this case, I think simulation makes a lot of sense. 
+You can induce scenarios that are otherwise impossible or too dangerous or expensive.
+You can verify that your system is behaving as expected in all cases.
+
+
+It has been used quite successfully to design and test planes.
+
+It has also been used to teach pilots.
+So on the one hand is engineering, on the other hand is teaching and evaluating skills.
+
+It's widely used in robotics and makes a lot of sense for decision making systems.
+
+How else do you test that a car is not going to crash into a pedestrian or
+obstacle without putting someone in danger or costing money in case of failure?
+
+It's not perfect, but it is the only way.
+
+
+(These airplanes are an engineering feat and I think this illustrates the concept well, 
+but I am somewhat wary promoting these. Arms racing seems mostly a zero-sum game
+and the resources could probably be better used, if you could step outside of
+the incentive structure. In reality, this is extremely difficult)
+
+This is especially true in robotics, and for more complex automated decision making with strong safety requirements.
+-->
+
+It's already used universally in robotics for debugging, evaluation, and sometimes training.
+It helps make development and deployment safer 
+and cheaper, and it lets us induce scenarios that are otherwise impossible or 
+too dangerous to prep and test for.
+
+It seems here to stay, but as our robot systems become capable of 
+handling more complex and varied settings, our simulators need to become more 
+complex and varied to remain useful.
+In the long run, I don't think the traditional way of doing things is going to cut it.
+I think we are going to need to start learning more of the simulator from data,
+much more akin to how humans learn their world models, and much more akin to how 
+the rest of modern robot learning systems work.
+
+<!--
+But our robot systems are becoming increasingly capable
+of handling more complex and varied settings. To keep up, I don't think the traditional way of doing things is going to cut it.
+
+
+Fundamentally, the world is too complex and varied.
+
+To handle the full complexity of the world---like deformability, material property changes, shattering, and strange artifacts like fire, paint, light switches and microwaves---
+eventually the traditional way does not scale.
+Eventually, we will need to learn our simulators largely from data, much more akin to how humans learn their world models.
+
+And the question I am interested in asking is: what does that look like and how 
+are we going to get there?
+
+The best simulators of the future will impose minimal but carefully architected inductive biases for efficient learning; they will be flexible in what they can represent and in how they let us program and interact with them.
+-->
+
+<!--
+This seems necessary. I don't see an easy path to household robots that are
+not tested and evaluated extensively in simulation.
+
+So simulation seems here to stay, but we need to make it more accurate.
+
+This seems the only way to handle the great complexity and variety of the physical world.
+-->
+
+<!--
+## Enabling technologies
 
 There is massive value in developing enabling technologies---in ideas and artifacts that we can benefit from over and over again and that enable us to solve harder problems with less effort.
 The most obvious, steady example in AI is improved computing hardware, which we keep benefitting from by [offloading
@@ -44,6 +134,9 @@ Learned simulators are a promising prospect here. If we can build a reusable too
 and then we use it for training and evaluating on a wide variety of robotics tasks, this could
 greatly accelerate progress in the field.
 
+Learned simulators provide a good framing on how we might develop large predictive models in robotics, and in how we might raise the waterline for robot learning.
+-->
+
 <!--
 - pre-train and fine-tune on imagenet
 - use as eval metrics (FID)
@@ -54,22 +147,20 @@ greatly accelerate progress in the field.
 We basically need better ways of sharing models and reusing them.
 -->
 
+## The feature set
 
-## Learned simulators
+Traditional simulators suggest a useful perspective, and they have emerged as 
+fairly general and reusable tools: they can be reprogrammed for many tasks; 
+they have nice structure that enables us to interface with them and visualize 
+their results in interpretable formats; they are built up from a central 
+codebase, where effort and insights can pile up over time in a central place 
+and compound, rather than needing to be constructed from scratch for each environment or task.
 
-Learned simulators provide a good framing on how we might develop large predictive models in robotics, and in how we might raise the waterline for robot learning.
+But they are limited in many ways, and ultimately by introducing learned
+components, it seems we can go far beyond they are currently capable of.
+I imagine a learned simulator would be overall much easier to work with and would enable things like:
 
-First, traditional simulators suggest a few perspectives:
-
-**Reusability and generality.**  Traditional simulators are fairly reusable tools. They can be reprogrammed for many tasks. They have nice structure that enables you to interface with them and visualize their results in interpretable formats. 
-They are built up from a central codebase, where effort and insights can pile up over time in a central place and compound.
-Rather than constructing ah-hoc world models for each environment or agent, our systems should aim to be more reusable and general.
-
-**Accuracy.** Simulators are useful to the extent they accurately model the world. I think dedicated effort, somewhat independent of task, is likely to pay off in the the long run---given the large challenge of learning good models.
-
-Ultimately, though, learned simulators will go far beyond traditional simulators:
-
-**Grounding.** A learned simulator will be much easier to work with and interface with. Instead of defining XML files to specify all the details and possible things we want to vary over, we could naturally “prompt” the model to simulate what we want. It could absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that we could encode with a neural network---and spit out a simulator description. We could film a quick video of our scene, with some robot specifications, command data and proprioception, and get out a calibrated and general simulation of the scene and the robot.
+**Grounding.** Instead of defining XML files to specify all the details and possible things we want to vary over, we could naturally “prompt” the model to simulate what we want. It could absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that we could encode with a neural network---and spit out a simulator description. We could film a quick video of our scene, with some robot specifications, command data and proprioception, and get out a calibrated and general simulation of the scene and the robot.
 
 **Rendering.** On the flip side of grounding is rich rendering and visualizing of different predictions.
 We could visualize the effects of different objects in the scene, the uncertainty our model has, and how our robot will behave.
@@ -91,7 +182,7 @@ In fact, it's even worse than a `stop_gradient`, since we usually have to call i
 Every other part of the system is learned and differentiable, so if we can patch these issues, there is a lot of opportunity for cleaner designs
 and perhaps more straightforward application of ideas from generative modeling.
 (Technically some of this is available today in certain differentiable simulators being developed, but those are still generally external software (not in our PyTorch graph), 
-and they are upper bounded by human engineering.)
+and more importantly they are upper bounded in accuracy by human engineering effort.)
 
 **Never leaving the hardware accelerator.** 
 On a related note, by making the environment just another nn.Module, we never have to leave the compute graph or the accelerator.
@@ -111,16 +202,16 @@ or delayed learning of a Q-function (e.g., SAC) that we can push gradients back 
 -->
 
 **Code simplicity.** 
-With traditional simulators (and Software 1.0 generally), the more features you support, 
+With traditional simulators (and Software 1.0 generally), the more features we support, 
 the more complex and unwieldy it gets, both for development and usage.
 For Software 2.0, improving performance is just a matter of scaling the size of the model, along with data and compute.
-And for application of the simulator, the interface stays simple and we can use natural interfaces to program it (e.g., natural language like in OpenAI's API).
-It's not a free lunch and this is not going to be trivial or cheap, but it ultimately seems more manageable as our Software 2.0
+And for users of the simulator, the interface stays simple and we can use natural interfaces to program it (e.g., natural language like in OpenAI's API).
+It's not a free lunch and this is not going to be trivial or cheap, but in the long run seems more manageable as our Software 2.0
 tools develop and as Moore's Law runs for a few more cycles.
 
 **Portability.** On another related note, learned simulators would have many fewer dependencies.
 We just need to save the weights and model definition, and then we can load them anywhere that supports the floating point operation primitives.
-We can deploy them in browser, for example, or any hardware that supports those ops.
+We can deploy them in browser for interactive control, for example, and we can deploy on any hardware that supports those ops.
 
 
 <!--in fact: check it out. if i included boxlcd right here with a learned policy that would be freaking dope-->
@@ -155,4 +246,42 @@ And the potential downstreams tasks could be large.
 But basically developing this like we would develop a simulator, but extending the ideas to software 2.0.
 That seems imaginable. And it seems a good way to build momentum.
 -->
+
+## Building it
+
+I think the question of how we are going to build this is the big one.
+It's worthwhile thinking about in much more depth than I am about to cover,
+but my brief answer for now is: gradually.
+
+If we don't have abundant teleoperation data available, we need some way to bootstrap capabilities from worse simulators and policies. This opens many further questions about how
+to specify goals, learn human preferences, learn to take actions, and explore
+as necessary to cover the space.
+
+But if we do have the data (e.g., in self-driving cars)... creating a fully learned simulator would
+still be extremely difficult and is probably out of reach with current technology.
+I just haven't seen any super convincing results for general predictive video generation
+(a key ingredient), and it seems like it will take quite a bit of compute.
+I think it is important to watch the space, but my current sense is at least a few more years
+out (3-5 at least maybe), before it would be super useful to go for end2end learned sim.
+You can always pay more now for compute (the old [Xerox PARC addage](https://youtu.be/id1WShzzMCQ?t=3320)),
+but the timing is important here and you could bleed all your money prematurely
+if you jump the gun.
+
+(This timing issue seems much more pressing in industry. In research,
+you just do what you can and the results will probably be interesting no matter
+what and that helps the field.
+In industry, it actually has to work and be deployable and provide real value,
+and that is much harder.)
+
+For now, it probably makes sense to iteratively work on areas where learned 
+components are relatively cheap and provide strict advantages over their 
+engineered counterparts. [Jemin et al.'s work on the Anymal](https://arxiv.org/abs/1901.08652)
+is probably my favorite example in this space right now.
+
+Anyway, physical world AI work seems exciting going forward and I am always
+excited to chat and learn more from others working on related topics.
+
+[defenseone]: https://www.defenseone.com/technology/2020/09/virtual-tools-built-air-forces-new-fighter-prototype/168505/ 
+[popmech]: https://www.popularmechanics.com/military/aviation/a34043731/air-force-new-designation-e-series-aircraft/
+[flightsim]: https://en.wikipedia.org/wiki/Flight_simulator
 
