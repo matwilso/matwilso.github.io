@@ -22,6 +22,12 @@ this is just a random sample, not necessarily best quotes
 
 "It is important to view knowledge as sort of a semantic tree--make sure you understand the fundamental principles, ie the trunk and big branches, before you get into the leaves/details or there is nothing for them to hang on to." - elon
 
+"Instead of innovating out from the present, what you want to do is invent the future from the future. Go out and live in the future and bring the future back." - [alan](https://youtu.be/id1WShzzMCQ) [kay](https://jotengine.com/transcriptions/ew4Ff2gdicfUqwg7ogy2Eg).
+
+
+"For some years I set aside Friday afternoons for 'great thoughts'... I found it was well worth the 10% of my time to do this careful examination of where computing was heading so I would know where we were going and hence could go in the right direction... I could also keep a sharp eye on the important problems and see that my major effort went to them." - [hamming](/assets/papers/hamming_research_stripe.pdf)
+
+
 # Life
 
 "Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have." -pg
