@@ -6,35 +6,43 @@ permalink: /learned-sims/
 tags: robotics 
 ---
 
-> This is a spin-off from my post on [The Future of Robot Learning](/robot-future), and focuses more on learned simulators, which seem likely to play a major role in the future of the industry.
+> This is a spin-off from my post on [The Future of Robot Learning](/robot-future), and focuses more on learned simulators, which I think will play a major role in the future of the industry.
 <!--
 well as an enumeration of the features this framing suggests.
 -->
 
-Robots lie at an interesting intersection between being an embodied intelligence that learns from experience and 
-a human-engineered system that must be safe and extremely reliable.
-This combination presents a unique set of challenges
-and it represents an exciting frontier in human technological development.
+<!--
+Robotics is at an interesting confluence between engineering and learning approaches.
 
-Simulation is one well-established tool in both training agents
-and in developing engineered systems---it's used 
-quite successfully to [teach human pilots][flightsim] how to fly and to [design the][defenseone] [complex fighter jets][popmech] that they fly in, for example.
-It's also used universally in robotics for debugging, evaluation, and sometimes training.
-It helps make development and deployment safer 
-and cheaper, and it lets us induce scenarios that are otherwise impossible or 
-too dangerous to prep for.
+The main stream until now has been Highly Reliable Engineered System,
+and that is being joined by the tributary Highly Flexible Embodied Intelligence That Learns From Experience.
 
-It seems likely that simulation will play a key role in the future of robotics.
-But our robot systems are becoming increasingly capable of handling complex and varied
-settings; in order for our simulators to remain useful, they need to become increasingly complex and varied themselves.
+This junction represents an exciting frontier in technology and a unique set of challenges to grapple with.
+-->
 
-I believe we are going to hit a wall with traditional simulator development---a wall 
+Robotics is at an interesting confluence between highly reliable engineered systems
+and highly flexible embodied intelligences that learn from experience.
+This combination represents an exciting frontier in technology and a unique set of challenges to grapple with.
+
+Simulation is a well-established tool in both engineering and skill acquisition---it's been used both 
+to [design complex][defenseone] [fighter jets][popmech] and to [teach human pilots][flightsim] how to fly them.
+It's also used universally in robotics for debugging, evaluation, and (sometimes) training,
+to make development safer and cheaper, and to induce scenarios that are otherwise impossible or too dangerous to prep for.
+
+Thus, simulation seems likely to continue playing a key role in the future of robotics.
+As our systems become capable of handling increasingly complex and varied
+settings, however, our simulators need to become increasingly complex and varied to remain useful.
+And I believe we are going to hit a wall with traditional simulator development---a wall 
 very similar to the one we hit with traditional computer vision before deep learning.
+
 In the long run, we will need to learn our simulators *from data*,
 much more akin to how humans learn their world models, and much more akin to how 
 the rest of modern robot learning systems work.
-I don't see any other way to generally simulate things as varied as an egg cracking
-and cooking in a pan, or a bag of popcorn cooking in a microwave, for example.
+I don't see any other way to simulate the variety of the real world in a general
+and scalable way (e.g., an egg cracking, 
+pouring out, sizzling on a frying pan, and a paintbrush dipping into 
+a bucket, dragging across the wall, leaving a streak of red paint behind).
+
 
 <!--
 But as our robot systems become capable of handling more complex and varied settings,
@@ -121,32 +129,36 @@ Learned simulators provide a good framing on how we might develop large predicti
 We basically need better ways of sharing models and reusing them.
 -->
 
-## The feature set
+## The future feature set
 
-Traditional simulators are fairly general and reusable tools: They can be reprogrammed for many tasks; 
+Traditional simulators provide a nice conceptual blueprint for the future of learned simulators.
+They are fairly general and reusable tools; they can be reprogrammed for many tasks; 
 they have nice structure that enables us to interface with them and visualize 
 their results in interpretable formats; they are built up from a central 
 codebase, where effort and insights can pile up over time in a central place 
 and compound, rather than needing to be constructed from scratch for each environment or task.
-They provide a nice conceptual blueprint.
 
-But they are limited in many ways, and ultimately by introducing learned
+But traditional simulators are limited in many ways, and ultimately by introducing learned
 components, we can go far beyond what they are currently capable of.
-Beyond additional accuracy and variety, I imagine a learned simulator would be much easier to work with and would enable things like:
+Beyond additional accuracy and variety, I imagine a simulator that is much easier to use and that enables things like:
 
 <!--
 I can't see any other way we are going to handle the
 complexity and variety of the real world.
 -->
 
+**Automatic grounding.** Instead of defining XML files to specify all the details and possible things we want to vary over, we could naturally “prompt” the model to simulate what we want. It could absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that we could encode with a neural network---and spit out a simulator description. We could film a quick video of our scene, with some robot specifications, command data and proprioception, and get out a calibrated and general simulation of the scene and the robot.
 
-**Grounding.** Instead of defining XML files to specify all the details and possible things we want to vary over, we could naturally “prompt” the model to simulate what we want. It could absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that we could encode with a neural network---and spit out a simulator description. We could film a quick video of our scene, with some robot specifications, command data and proprioception, and get out a calibrated and general simulation of the scene and the robot.
+**Native rendering.** On the flip side of grounding is rich rendering coming directly from the model.
+Instead of dealing with complex rendering APIs or designing custom visuals for effects like smoke or dust,
+we could just query the model, and as long as it has sufficient video data of these effects, it could render them.
 
-**Rendering.** On the flip side of grounding is rich rendering and visualizing of different predictions.
-We could visualize the effects of different objects in the scene, the uncertainty our model has, and how our robot will behave.
-
-**Repeatability and controllability.** For training, we could induce specific and repeatable settings that we want our agent to practice, using natural interfaces. We could use this for debugging our system, for example by pulling in information from the fleet about areas
-the agents are failing and then embedding similar scenarios in the simulator to create behavioral integration tests. (Part of this also applies to traditional simulators, but learned simulators greatly reduce the friction here.)
+**Repeatability and controllability.** For training, we could induce specific 
+and repeatable settings that we want our agent to practice, using natural 
+interfaces (video, text).  We could debug our system by 
+pulling in failures from the fleet, embedding similar scenarios in the simulator,
+and creating behavioral unit and integration tests. (This somewhat applies to 
+traditional simulators as well, but learned simulators greatly reduce the friction.)
 
 <!--
 **Foresight and handling delays.** We could query a learned simulator for the action we are about to take. See what the future states are going to be.
@@ -161,14 +173,14 @@ Because powerful generative models will have to model uncertainty in the environ
 In fact, it's even worse than a `stop_gradient`, since we usually have to call into a separate Python or C++ API.
 Every other part of the system is learned and differentiable, so if we can patch these issues, there is a lot of opportunity for cleaner designs
 and perhaps more straightforward application of ideas from generative modeling.
-(Technically some of this is available today in certain differentiable simulators being developed, but those are still generally external software (not in our PyTorch graph), 
+(Technically some of this is available today in certain differentiable simulators being developed, but those are still generally external software (not in a PyTorch/jax graph), 
 and more importantly they are upper bounded in accuracy by human engineering effort.)
 
 **Staying on the hardware accelerator.** 
-On a related note, by making the environment just another nn.Module, we never have to leave the compute graph or the accelerator.
+On a related note, by making the environment just another Module, we never have to leave the compute graph or the accelerator.
 To train our policy, we can just hook it straight up to the firehose of data coming from the model.
-Resetting an environment is just a means of starting sampling from a new seed or prompt,
-and we can easily generate many counterfactual outcomes from a single location.
+Resetting an environment is just a means of sampling from a new seed or prompt,
+and we can easily generate many counterfactual outcomes from a single state.
 
 <!--
 we can apply more ideas from generative modeling directly, where the actions are just control variables and part of what we are generating over. Things become much cleaner.
@@ -191,7 +203,7 @@ tools develop and as Moore's Law runs for a few more cycles.
 
 **Portability.** On another related note, learned simulators would have many fewer dependencies.
 We just need to save the weights and model definition, and then we can load them anywhere that supports the floating point operation primitives.
-We can deploy them in browser for interactive control, for example, and we can deploy on any hardware that supports those ops.
+We can deploy them in browser for interactivity, for example, or on any hardware that supports those ops.
 
 
 <!--in fact: check it out. if i included boxlcd right here with a learned policy that would be freaking dope-->
@@ -227,14 +239,14 @@ But basically developing this like we would develop a simulator, but extending t
 That seems imaginable. And it seems a good way to build momentum.
 -->
 
-## Building it
+...
 
 The big question, then, is how are we going to build this?
 
-My brief answer for now is: gradually.
+My brief response for now is: gradually.
 
-I don't think we currently have the technology (compute and otherwise) to build a fully learned simulator that is economically valuable.
-In the meantime, it seems like a good strategy to look for the low-hanging fruit where we can learn components of the simulator and incorporate them in the loop
+I don't think we currently have the technology (compute and otherwise) to build and run a fully learned simulator in a way that is economically sustainable.
+In the meantime, it seems like a good strategy to pick the low-hanging fruit where we can learn components of the simulator and incorporate them in the loop
 for greater accuracy.  [Jemin et al.'s work on the Anymal](https://arxiv.org/abs/1901.08652) is probably my favorite example in this space right now.
 
 <!--
