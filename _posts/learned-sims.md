@@ -146,7 +146,7 @@ complexity and variety of the real world.
 We could visualize the effects of different objects in the scene, the uncertainty our model has, and how our robot will behave.
 
 **Repeatability and controllability.** For training, we could induce specific and repeatable settings that we want our agent to practice, using natural interfaces. We could use this for debugging our system, for example by pulling in information from the fleet about areas
-the agents are failing and then embedding similar scenarios in the simulator to create behavioral unit tests. (Part of this also applies to traditional simulators, but learned simulators greatly reduce the friction here.)
+the agents are failing and then embedding similar scenarios in the simulator to create behavioral integration tests. (Part of this also applies to traditional simulators, but learned simulators greatly reduce the friction here.)
 
 <!--
 **Foresight and handling delays.** We could query a learned simulator for the action we are about to take. See what the future states are going to be.
