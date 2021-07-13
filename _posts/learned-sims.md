@@ -20,25 +20,28 @@ and that is being joined by the tributary Highly Flexible Embodied Intelligence 
 This junction represents an exciting frontier in technology and a unique set of challenges to grapple with.
 -->
 
-Robotics is at an interesting confluence between highly reliable engineered systems
-and highly flexible embodied intelligences that learn from experience.
-This combination represents an exciting frontier in technology and a unique set of challenges to grapple with.
+Robots are at an interesting intersection between engineered system and 
+embodied intelligence.  We have fairly well-established practices for 
+designing and building highly reliable engineered systems, but we are actively 
+figuring out how to develop flexible intelligent systems that learn from 
+experience *and* that reach the same levels of safety and reliability.
+This combination represents a unique set of 
+challenges and an exciting frontier in technology.
 
-Simulation is a well-established tool in both engineering and skill acquisition---it's been used both 
-to [design complex][defenseone] [fighter jets][popmech] and to [teach human pilots][flightsim] how to fly them.
+Simulation is actually one well-established tool in both domains of engineering and skill acquisition---it's been used to [design complex][defenseone] [fighter jets][popmech] and to [teach the human pilots][flightsim] that fly them, for example.
 It's also used universally in robotics for debugging, evaluation, and (sometimes) training,
 to make development safer and cheaper, and to induce scenarios that are otherwise impossible or too dangerous to prep for.
 
-Thus, simulation seems likely to continue playing a key role in the future of robotics.
+Simulation, thus, seems likely to play a key role in the future of robotics.
 As our systems become capable of handling increasingly complex and varied
-settings, however, our simulators need to become increasingly complex and varied to remain useful.
+settings, however, our simulators must become increasingly complex and varied to remain useful.
 And I believe we are going to hit a wall with traditional simulator development---a wall 
 very similar to the one we hit with traditional computer vision before deep learning.
 
-In the long run, we will need to learn our simulators *from data*,
+In the long run, then, we will need to learn our simulators *from data*,
 much more akin to how humans learn their world models, and much more akin to how 
 the rest of modern robot learning systems work.
-I don't see any other way to simulate the variety of the real world in a general
+I don't see any other way to handle the variety of the real world in a general
 and scalable way (e.g., an egg cracking, 
 pouring out, sizzling on a frying pan, and a paintbrush dipping into 
 a bucket, dragging across the wall, leaving a streak of red paint behind).
@@ -174,7 +177,7 @@ In fact, it's even worse than a `stop_gradient`, since we usually have to call i
 Every other part of the system is learned and differentiable, so if we can patch these issues, there is a lot of opportunity for cleaner designs
 and perhaps more straightforward application of ideas from generative modeling.
 (Technically some of this is available today in certain differentiable simulators being developed, but those are still generally external software (not in a PyTorch/jax graph), 
-and more importantly they are upper bounded in accuracy by human engineering effort.)
+and *more importantly*, they are upper bounded in accuracy by human engineering effort.)
 
 **Staying on the hardware accelerator.** 
 On a related note, by making the environment just another Module, we never have to leave the compute graph or the accelerator.
@@ -196,7 +199,7 @@ or delayed learning of a Q-function (e.g., SAC) that we can push gradients back 
 **Code simplicity.** 
 With traditional simulators (and Software 1.0 generally), the more features we support, 
 the more complex and unwieldy it gets, both for development and usage.
-For Software 2.0, improving performance is just a matter of scaling the size of the model, along with data and compute.
+For Software 2.0, improving accuracy is just a matter of scaling the size of the model, along with data and compute.
 And for users of the simulator, the interface stays simple and we can use natural interfaces to program it (e.g., natural language like in OpenAI's API).
 It's not a free lunch and this is not going to be trivial or cheap, but in the long run seems more manageable as our Software 2.0
 tools develop and as Moore's Law runs for a few more cycles.
