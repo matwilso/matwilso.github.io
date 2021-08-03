@@ -26,7 +26,7 @@ designing and building highly reliable engineered systems, but we are actively
 figuring out how to develop flexible intelligent systems that learn from 
 experience *and* that reach the same levels of safety and reliability.
 This combination represents a unique set of 
-challenges and an exciting frontier in technology.
+challenges and an exciting frontier in technology today.
 
 Simulation is actually one well-established tool in both domains of engineering and skill acquisition---it's been used to [design complex][defenseone] [fighter jets][popmech] and to [teach the human pilots][flightsim] that fly them, for example.
 It's also used universally in robotics for debugging, evaluation, and (sometimes) training,
