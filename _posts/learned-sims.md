@@ -135,7 +135,7 @@ We basically need better ways of sharing models and reusing them.
 ## The future feature set
 
 Traditional simulators provide a nice conceptual blueprint for the future of learned simulators.
-They are fairly general and reusable tools; they can be reprogrammed for many tasks; 
+Traditional simulators are fairly general and reusable tools; they can be reprogrammed for many tasks; 
 they have nice structure that enables us to interface with them and visualize 
 their results in interpretable formats; they are built up from a central 
 codebase, where effort and insights can pile up over time in a central place 
@@ -246,8 +246,7 @@ That seems imaginable. And it seems a good way to build momentum.
 
 The big question, then, is how are we going to build this?
 
-My brief response for now is: gradually.
-
+My brief answer for now is: gradually.
 I don't think we currently have the technology (compute and otherwise) to build and run a fully learned simulator in a way that is economically sustainable.
 In the meantime, it seems like a good strategy to pick the low-hanging fruit where we can learn components of the simulator and incorporate them in the loop
 for greater accuracy.  [Jemin et al.'s work on the Anymal](https://arxiv.org/abs/1901.08652) is probably my favorite example in this space right now.
