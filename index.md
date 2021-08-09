@@ -11,7 +11,11 @@ British Columbia (UBC)](https://www.cs.ubc.ca/), working on robotics and reinfor
 \+ deep learning, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Before that, I worked on similar research for my undergraduate 
 thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://robot-learning.cs.utah.edu/), advised by [Tucker Hermans](https://robot-learning.cs.utah.edu/thermans). 
 
-[CV](/assets/cv.pdf) / [GitHub](https://github.com/matwilso) / [Twitter](https://twitter.com/matwilso) / [Stack Overflow](https://stackoverflow.com/users/7211137/matwilso)
+[CV](/assets/cv.pdf)
+/ [GitHub](https://github.com/matwilso)
+/ [Twitter](https://twitter.com/matwilso) 
+/ [LinkedIn](https://www.linkedin.com/in/matthew-wilson-916505104/)
+/ [Stack Overflow](https://stackoverflow.com/users/7211137/matwilso)
 
 
 ### News
