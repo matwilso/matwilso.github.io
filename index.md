@@ -3,19 +3,19 @@ layout: default
 ---
 
 <img align="left" width="200" src="/assets/mw.jpg" style="border-radius: 20%; margin: 0px 60px 20px 0px;"/>
-I am a second year masters student in computer science at the [University of 
+
+I am a software engineer on Tesla's Autopilot team.
+
+Previously, I was a masters student in computer science at the [University of 
 British Columbia (UBC)](https://www.cs.ubc.ca/), working on robotics and reinforcement
-\+ deep learning, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Previously, I worked on similar research for my undergraduate 
+\+ deep learning, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Before that, I worked on similar research for my undergraduate 
 thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://robot-learning.cs.utah.edu/), advised by [Tucker Hermans](https://robot-learning.cs.utah.edu/thermans). 
-
-I am just finishing my thesis now and I am in the job market.
-
 
 [CV](/assets/cv.pdf) / [GitHub](https://github.com/matwilso) / [Twitter](https://twitter.com/matwilso) / [Stack Overflow](https://stackoverflow.com/users/7211137/matwilso)
 
 
-
 ### News
+- Aug 2021: I joined Tesla's Autopilot team!
 - Apr 2021: [boxLCD paper](/assets/boxLCD_iclr2021_workshop.pdf) was accepted to the ICLR 2021 Workshop on [Deep Learning for Simulation (SimDL)](https://simdl.github.io/)!
 - Feb 2021: I released [boxLCD](https://github.com/matwilso/boxLCD) and [generative_models](https://github.com/matwilso/generative_models) repos, and new blog posts on the [Future of Robot Learning](/robot-future) and [Learned Simulators](/learned-sims)
 - Nov 2019: Our work won the Best System Paper Award at [CoRL 2019!](https://sites.google.com/robot-learning.org/corl2019) 
