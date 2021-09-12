@@ -136,12 +136,11 @@ Master Chief<br> (Utah/RMC, 2016)
 **[2015-2018] Utah Student Robotics Team Member**
 
 During undergrad at the U, I got into robotics and worked on the [Utah team](http://usr.coe.utah.edu/) on the [NASA Robotic Mining Competition](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc.html) for 3 years of competition.
-We had some great robots and consistently placed well in the competition. It was a lot of fun.
+We had some great robots and consistently placed well in the competition.
 
+<!--
 - [Competition video 2016](https://www.youtube.com/watch?v=tsUz3quMwMI&t=144s)
 - Simulations I made of [2016 robot](https://www.youtube.com/watch?v=CdpFUFFlBOw), and [2017 robot](https://www.youtube.com/watch?v=IGnOgAnL9ag) with localization and nav state machine
-
-<!--S/o to john robe, jon davies, cole mortensen, katie hall, dave purcell, justin schramm, and all the others who worked on the project and continue to carry on the torch.
 -->
 
 **[2017] Robotics Institute Summer Scholar @ Carnegie Mellon University (CMU)**
