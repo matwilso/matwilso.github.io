@@ -48,7 +48,8 @@ As in many systems, [the best part is no part](https://twitter.com/Erdayastronau
 There is, however, a point at which the value of a part becomes worth the complexity.
 If models in RL have not yet reached this threshold, they certainly will in the future.
 Unsupervised / predictive learning is going to be the only way to gather enough signal to train powerful enough neural networks.
-[Geoff Hinton](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/clyjogf/) and [Yann Lecun](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59) have been making this argument for several years.
+The most famous proponents,
+[Geoff Hinton](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/clyjogf/) and [Yann Lecun](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59), have been making this argument for several years.
 But what makes me really excited now is that we are starting to build the artifacts that prove it.
 
 I am much more bullish on the future of model-based RL now, not due to any
@@ -81,8 +82,6 @@ They are starved for training bits, so it's not surprising they understand very 
 I don't believe it will require radically new and complex processes that we currently "can't even imagine" to endow networks with this deeper understanding.
 Some form of large scale predictive training will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
 
-Now on to the next angle...
-
 ## Sim2real and learned simulators
 
 <div style="text-align: center;"><em>It's all about Software 2.0.</em></div>
@@ -102,7 +101,7 @@ trade-offs to this---traditional simulators have nice structure and are
 general and reusable across tasks---but eventually human engineering becomes a 
 bottleneck that limits the complexity of environments we can handle.
 
-Eventually, we need to learn our simulators basically from scratch, much more like how humans do. The world is just too complex and traditional simulators are not flexible enough to handle it. Too often their assumptions are broken---with deformable objects, with material property changes, with shattering, with strange artifacts like fire, paint, light switches and microwaves---and eventually the structure becomes too burdensome. The best simulators of the future will impose fairly minimal structure with some inductive biases for efficient learning<label for="sn-1" class="margine-toggle sidenote-number"/>
+Eventually, we need to learn our simulators basically from scratch, much more akin to how humans do. The world is just too complex and traditional simulators are not flexible enough to handle it. Too often their assumptions are broken---with deformable objects, with material property changes, with shattering, with strange artifacts like fire, paint, light switches and microwaves---and eventually the structure becomes too burdensome. The best simulators of the future will impose fairly minimal structure with some inductive biases for efficient learning<label for="sn-1" class="margine-toggle sidenote-number"/>
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
 In the interim, I concede that domain-specific structures are useful for constraining what you have to learn.
@@ -158,14 +157,14 @@ Ultimately, the best way to proceed is to get building. And the best way to get 
 <div style="margin-left: 2em"><em>Because deep learning is so empirical, success in it is to a large extent proportional to raw experimental throughput - the ability to babysit a large number of experiments at once, staring at plots and tweaking/re-launching what works. This is necessary, but not sufficient. - <a href="https://twitter.com/karpathy/status/1350503355299205120?ref_src=twsrc%5Etfw">Andrej Karpathy</a></em></div>
 <br>
 
-**If** it takes a lot of experimentation to build up fundamentals and intuitions about a problem (as it does in deep learning),
+*If* it takes a lot of experimentation to build up fundamentals and intuitions about a problem (as it does in deep learning),
 then it's best to start small at first, so we're waiting for hours and not days for feedback.
 
 I don't think we quite have the compute to build the grand version of learned simulators or world models, but 
 we can start working on the ideas and building up real progress in this space.
 And we can be ready when the compute arrives.
 
-To plug my own work in this space, I'm building something like an MNIST of world modeling / learned simulators, called [boxLCD](https://github.com/matwilso/boxLCD).
+I built something like an MNIST of world modeling / learned simulators, called [boxLCD](https://github.com/matwilso/boxLCD).
 It's meant to be a testbed for developing ideas and algorithms for learned simulators and world models.
 It uses box2D physics and very low resolution, binarized images for rendering, and it aims to capture as much structure of the full real world learned simulator / world model problem as possible, while remaining much quicker and easier to run experiments and iterate ideas on.
 
