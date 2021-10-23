@@ -6,7 +6,8 @@ permalink: /personal/
 
 I grew up in [Salt Lake City](https://www.google.com/search?q=salt+lake+city), [Utah](https://www.google.com/search?q=utah).
 I lived in [Pittsburgh](https://www.google.com/search?q=pittsburgh), [Pennsylvania](https://www.google.com/search?q=pennsylvania) for a summer.
-And I lived in [Vancouver](https://www.google.com/search?q=vancouver), Canada for a year.
+I lived in [Vancouver](https://www.google.com/search?q=vancouver), Canada for a year.
+And now I live in the [Bay Area](https://www.google.com/search?&q=san+francisco+bay+area).
 
 ...
 
