@@ -20,19 +20,19 @@ and that is being joined by the tributary Highly Flexible Embodied Intelligence 
 This junction represents an exciting frontier in technology and a unique set of challenges to grapple with.
 -->
 
-Robots are at an interesting intersection between engineered system and 
-embodied intelligence.  We have fairly well-established practices for 
+Robots are at an interesting intersection between being an engineered system and 
+an embodied intelligence.  We have fairly well-established practices for 
 designing and building highly reliable engineered systems, but we are actively 
 figuring out how to develop flexible intelligent systems that learn from 
 experience *and* that reach the same levels of safety and reliability.
 This combination represents a unique set of 
 challenges and an exciting frontier in technology today.
 
-Simulation is actually one well-established tool in both domains of engineering and skill acquisition---it's been used to [design complex][defenseone] [fighter jets][popmech] and to [teach the human pilots][flightsim] that fly them, for example.
+Simulation is actually one well-established tool in both domains of engineering, and skill acquisition---it's been used to [design complex][defenseone] [fighter jets][popmech] and to [teach the human pilots][flightsim] that fly them, for example.
 It's also used universally in robotics for debugging, evaluation, and (sometimes) training,
 to make development safer and cheaper, and to induce scenarios that are otherwise impossible or too dangerous to prep for.
 
-Simulation, thus, seems likely to play a key role in the future of robotics.
+Simulation is going to play a key role in the future of robotics.
 As our systems become capable of handling increasingly complex and varied
 settings, however, our simulators must become increasingly complex and varied to remain useful.
 And I believe we are going to hit a wall with traditional simulator development---a wall 
@@ -132,7 +132,7 @@ Learned simulators provide a good framing on how we might develop large predicti
 We basically need better ways of sharing models and reusing them.
 -->
 
-## The future feature set
+## The Simulator of Tomorrow
 
 Traditional simulators provide a nice conceptual blueprint for the future of learned simulators.
 Traditional simulators are fairly general and reusable tools; they can be reprogrammed for many tasks; 
@@ -143,7 +143,7 @@ and compound, rather than needing to be constructed from scratch for each enviro
 
 But traditional simulators are limited in many ways, and ultimately by introducing learned
 components, we can go far beyond what they are currently capable of.
-Beyond additional accuracy and variety, I imagine a simulator that is much easier to use and that enables things like:
+Beyond additional accuracy and variety, the Simulator of Tomorrow will be much easier to use and will enables things like:
 
 <!--
 I can't see any other way we are going to handle the
@@ -160,8 +160,7 @@ we could just query the model, and as long as it has sufficient video data of th
 and repeatable settings that we want our agent to practice, using natural 
 interfaces (video, text).  We could debug our system by 
 pulling in failures from the fleet, embedding similar scenarios in the simulator,
-and creating behavioral unit and integration tests. (This somewhat applies to 
-traditional simulators as well, but learned simulators greatly reduce the friction.)
+and creating behavioral unit and integration tests.
 
 <!--
 **Foresight and handling delays.** We could query a learned simulator for the action we are about to take. See what the future states are going to be.
@@ -179,8 +178,8 @@ and perhaps more straightforward application of ideas from generative modeling.
 (Technically some of this is available today in certain differentiable simulators being developed, but those are still generally external software (not in a PyTorch/jax graph), 
 and *more importantly*, they are upper bounded in accuracy by human engineering effort.)
 
-**Staying on the hardware accelerator.** 
-On a related note, by making the environment just another Module, we never have to leave the compute graph or the accelerator.
+**Keeping data local.** 
+On a related note, by making the environment just another nn.Module, we never have to leave the compute graph or the accelerator.
 To train our policy, we can just hook it straight up to the firehose of data coming from the model.
 Resetting an environment is just a means of sampling from a new seed or prompt,
 and we can easily generate many counterfactual outcomes from a single state.
@@ -242,7 +241,7 @@ But basically developing this like we would develop a simulator, but extending t
 That seems imaginable. And it seems a good way to build momentum.
 -->
 
-...
+## Conclusion
 
 The big question, then, is how are we going to build this?
 
@@ -252,6 +251,13 @@ In the meantime, it seems like a good strategy to pick the low-hanging fruit whe
 for greater accuracy.  [Jemin et al.'s work on the Anymal](https://arxiv.org/abs/1901.08652) is probably my favorite example in this space right now.
 
 <!--
+And if we look to the history of computer vision at Tesla---an example
+of an industry rather than academic or research setting. The way that has
+worked is the gradual replacement of the traditional C++ stack with
+learned components.
+
+
+
 
 It's probably worthwhile thinking about this in much more depth, but for now my brief answer is: gradually.
 
