@@ -7,18 +7,6 @@ tags: robotics
 ---
 
 > This is a spin-off from my post on [The Future of Robot Learning](/robot-future), and focuses more on learned simulators, which I think will play a major role in the future of the industry.
-<!--
-well as an enumeration of the features this framing suggests.
--->
-
-<!--
-Robotics is at an interesting confluence between engineering and learning approaches.
-
-The main stream until now has been Highly Reliable Engineered System,
-and that is being joined by the tributary Highly Flexible Embodied Intelligence That Learns From Experience.
-
-This junction represents an exciting frontier in technology and a unique set of challenges to grapple with.
--->
 
 Robots are at an interesting intersection between being an engineered system and 
 an embodied intelligence.  We have fairly well-established practices for 
@@ -28,12 +16,15 @@ experience *and* that reach the same levels of safety and reliability.
 This combination represents a unique set of 
 challenges and an exciting frontier in technology today.
 
-Simulation is actually one well-established tool in both domains of engineering, and skill acquisition---it's been used to [design complex][defenseone] [fighter jets][popmech] and to [teach the human pilots][flightsim] that fly them, for example.
+Simulation is actually one well-established tool in both engineering and human skill acquisition---it's been used to [design complex][defenseone] [fighter jets][popmech] and to [teach the human pilots][flightsim] that fly them.
 It's also used universally in robotics for debugging, evaluation, and (sometimes) training,
 to make development safer and cheaper, and to induce scenarios that are otherwise impossible or too dangerous to prep for.
 
-Simulation is going to play a key role in the future of robotics.
-As our systems become capable of handling increasingly complex and varied
+Simulation is going to play an increasingly important role in the future of robotics, by
+providing a readable and writeable proxy for reality.
+The best robotics companies will have the best simulators, because that will be the cheapest, quickest, and safest way to iterate on and deploy intelligent systems in the real world.
+
+As our robotic systems become capable of handling increasingly complex and varied
 settings, however, our simulators must become increasingly complex and varied to remain useful.
 And I believe we are going to hit a wall with traditional simulator development---a wall 
 very similar to the one we hit with traditional computer vision before deep learning.
@@ -41,7 +32,7 @@ very similar to the one we hit with traditional computer vision before deep lear
 In the long run, then, we will need to learn our simulators *from data*,
 much more akin to how humans learn their world models, and much more akin to how 
 the rest of modern robot learning systems work.
-I don't see any other way to handle the variety of the real world in a general
+There is no other way to handle the variety of the real world in a general
 and scalable way (e.g., an egg cracking, 
 pouring out, sizzling on a frying pan, and a paintbrush dipping into 
 a bucket, dragging across the wall, leaving a streak of red paint behind).
