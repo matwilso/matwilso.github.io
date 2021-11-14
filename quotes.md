@@ -18,7 +18,7 @@ this is just a random sample, not necessarily best quotes
 
 (in other words:) "Don't let the how's constrain the what's." - jim keller
 
-"If it's long it's wrong. If it's tight it's right" - elon (on time schedules)
+"If it's long it's wrong. If it's tight it's right" - elon on time schedules
 
 "It is important to view knowledge as sort of a semantic tree--make sure you understand the fundamental principles, ie the trunk and big branches, before you get into the leaves/details or there is nothing for them to hang on to." - elon
 
@@ -26,6 +26,8 @@ this is just a random sample, not necessarily best quotes
 
 
 "For some years I set aside Friday afternoons for 'great thoughts'... I found it was well worth the 10% of my time to do this careful examination of where computing was heading so I would know where we were going and hence could go in the right direction... I could also keep a sharp eye on the important problems and see that my major effort went to them." - [hamming](/assets/papers/hamming_research_stripe.pdf)
+
+"A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system." - [Gall's Law](https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law)
 
 
 # Life
@@ -80,7 +82,7 @@ this is just a random sample, not necessarily best quotes
 # Misc
 
 
-"I did it for me. I liked it.  I was good at it.  And I was really - I was alive." - walt white
+"I did it for me. I liked it.  I was good at it.  And I was really - I was alive." - [walt white](https://www.youtube.com/watch?v=gUJci5RWsqE)
 
 
 <!--
