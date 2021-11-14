@@ -34,7 +34,7 @@ I can see two angles on how this might come together: (1) model-based reinforcem
 
 <div style="text-align: center;"><em>It’s all about bits baby.</em></div>
 <br>
-The field of model-based reinforcement learning (MBRL) deals with leveraging predictive models of the environment to solve RL tasks. Often these models are learned from data, and can sometimes be considered an agent’s “world model”, akin to the mental model of the world that humans carry around in their heads.
+The field of model-based reinforcement learning (MBRL) deals with leveraging predictive models of the environment to solve RL tasks. Often these models are learned from data, and can be considered an agent’s “world model”, akin to the mental model of the world that humans carry around in their heads.
 
 The main argument today for using model-based RL (over model-free RL) is data efficiency. If you can extract more useful bits of information from the environment per step of interaction, you should need fewer interactions. Algorithms like Dyna achieve this by learning a dynamics model and then leveraging it as a proxy environment to collect extra rollout steps in, and algorithms like MuZero learn a latent dynamics model and then leverage it for planning ahead and distilling into a policy.
 
@@ -48,13 +48,13 @@ As in many systems, [the best part is no part](https://twitter.com/Erdayastronau
 There is, however, a point at which the value of a part becomes worth the complexity.
 If models in RL have not yet reached this threshold, they certainly will in the future.
 Unsupervised / predictive learning is going to be the only way to gather enough signal to train powerful enough neural networks.
-The most famous proponents,
-[Geoff Hinton](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/clyjogf/) and [Yann Lecun](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59), have been making this argument for several years.
+The most famous proponents of this argument,
+[Geoff Hinton](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/clyjogf/) and [Yann Lecun](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59), have been making it for several years now.
 But what makes me really excited now is that we are starting to build the artifacts that prove it.
 
 I am much more bullish on the future of model-based RL now, not due to any
 recent spectacular MBRL results, but due to the recent spectacular unsupervised learning results.
-Models like GPT-3 and DALL-E prove the power of predictive training and just
+Models like GPT-3, DALL-E, and CLIP prove the power of predictive training and just
 how much knowledge these systems can absorb at scale.
 They still have many flaws and shortcomings, but they offer a strong existence proof of the potential of unsupervised learning.
 And they are only the tip of the iceberg for what’s coming and what’s possible. If we extrapolate forward and imagine predictive models for video and robot sensors, this seems clearly how we are going to train a large part of a general purpose robot brain.
@@ -117,7 +117,7 @@ To build traditional simulators, humans have spent years of domain specific effo
 
 ## Conclusion
 
-Model-based RL and sim2real give two perspectives on the role that massive predictive models will play in the future of robot learning. World models represent something akin to what humans have going on in their heads, and suggest that with predictive learning and simply more bits, we can build intelligent agents
+Model-based RL and sim2real give two perspectives on the role that massive predictive models will play in the future of robot learning. World models represent something akin to what humans have going on in their heads, and suggest that with predictive learning and simply by providing more bits of information, we can build intelligent agents
 that see the world. Learned simulators represent an extension of traditional human-engineered simulators to the era of Software 2.0, and suggest that we can build more general and reusable tools for training intelligent agents that handle the full complexity of the world.
 
 <!--
@@ -125,7 +125,7 @@ Model learning is computationally expensive, especially if you want accuracy.
 That is a limitation for now, but in the grand arc of the Bitter Lesson, that is a good thing that these methods leverage compute.
 -->
 
-As the base of the Cake, these components seem like the most important in some ways.
+As the base of the [Cake](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59), these components seem like the most important in some ways.
 At the very least they provide a context to ground and amplify the power of other system components (human supervision, RL signal).
 If you care about building general purpose robots (and useful AI systems in general), you should probably care about predictive learning.
 
