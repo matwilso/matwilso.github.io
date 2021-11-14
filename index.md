@@ -79,6 +79,7 @@ and then using them to do RL.
 
 These are some robots I have worked with.
 On the lower row are three of the robots I helped build and program for [Utah's](http://usr.coe.utah.edu/) NASA [Robotic Mining Competition (RMC)](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc/about) team.
+And [these are the robots](https://www.tesla.com/) I work with now.
 
 
 <table>
