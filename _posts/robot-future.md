@@ -32,11 +32,11 @@ I can see two angles on how this might come together: (1) model-based reinforcem
 
 ## Model-based RL and world models
 
-<div style="text-align: center;"><em>It’s all about bits baby.</em></div>
+<div style="text-align: center;"><em>It’s all about bits baby</em></div>
 <br>
 The field of model-based reinforcement learning (MBRL) deals with leveraging predictive models of the environment to solve RL tasks. Often these models are learned from data, and can be considered an agent’s “world model”, akin to the mental model of the world that humans carry around in their heads.
 
-The main argument today for using model-based RL (over model-free RL) is data efficiency. If you can extract more useful bits of information from the environment per step of interaction, you should need fewer interactions. Algorithms like Dyna achieve this by learning a dynamics model and then leveraging it as a proxy environment to collect extra rollout steps in, and algorithms like MuZero learn a latent dynamics model and then leverage it for planning ahead and distilling into a policy.
+The main argument today for using model-based RL (over model-free RL) is data efficiency. If you can extract more useful bits of information from the environment per step of interaction, you should need fewer interactions. Algorithms like Dyna achieve this by learning a dynamics model and then leveraging it as a proxy environment to collect extra rollout steps in, and algorithms like MuZero learn a latent dynamics model and then leverage it for planning ahead and distilling the outcomes of a search process to iteratively bootstrap a learned policy.
 
 Unfortunately, greater data efficiency in MBRL often comes at the price of complexity. Model-based RL comes with extra theory to wrap your head around and extra moving parts to tune, train, and debug. Extra complexity tends to reduce iteration speed and slow progress<label for="sn-1" class="margine-toggle sidenote-number"/>.
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
@@ -54,7 +54,7 @@ But what makes me really excited now is that we are starting to build the artifa
 
 I am much more bullish on the future of model-based RL now, not due to any
 recent spectacular MBRL results, but due to the recent spectacular unsupervised learning results.
-Models like GPT-3, DALL-E, and CLIP prove the power of predictive training and just
+Models like GPT-3 and DALL-E prove the power of predictive training and just
 how much knowledge these systems can absorb at scale.
 They still have many flaws and shortcomings, but they offer a strong existence proof of the potential of unsupervised learning.
 And they are only the tip of the iceberg for what’s coming and what’s possible. If we extrapolate forward and imagine predictive models for video and robot sensors, this seems clearly how we are going to train a large part of a general purpose robot brain.
@@ -81,10 +81,11 @@ They are starved for training bits, so it's not surprising they understand very 
 
 I don't believe it will require radically new and complex processes that we currently "can't even imagine" to endow networks with this deeper understanding.
 Some form of large scale predictive training will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
+The main thing standing in our way now is lack of sufficient computation.
 
 ## Sim2real and learned simulators
 
-<div style="text-align: center;"><em>It's all about Software 2.0.</em></div>
+<div style="text-align: center;"><em>It's all about Software 2.0</em></div>
 <br>
 The field of sim2real learning deals with training policies in simulation and then deploying them in the real world with little to no fine-tuning. Sim2real offers several advantages over real world training, in speed, safety, and environment read + write access.
 
@@ -105,7 +106,7 @@ Eventually, we need to learn our simulators basically from scratch, much more ak
 <input type="checkbox" id="sn-1" class="margin-toggle"/>
 <span class="sidenote">
 In the interim, I concede that domain-specific structures are useful for constraining what you have to learn.
-It's hard to say exactly when learned simulators become more effective for general use,
+It's hard to say exactly when fully learned simulators become more effective for general use,
 but for training something like a household robot in the future, minimal structure is going to be best.
 </span>.
 
@@ -117,7 +118,7 @@ To build traditional simulators, humans have spent years of domain specific effo
 
 ## Conclusion
 
-Model-based RL and sim2real give two perspectives on the role that massive predictive models will play in the future of robot learning. World models represent something akin to what humans have going on in their heads, and suggest that with predictive learning and simply by providing more bits of information, we can build intelligent agents
+Model-based RL and sim2real give two perspectives on the role that massive predictive models will play in the future of robot learning. World models represent something akin to what humans have going on in their heads, and suggest that with predictive learning and "simply" by providing more bits of information, we can build intelligent agents
 that see the world. Learned simulators represent an extension of traditional human-engineered simulators to the era of Software 2.0, and suggest that we can build more general and reusable tools for training intelligent agents that handle the full complexity of the world.
 
 <!--

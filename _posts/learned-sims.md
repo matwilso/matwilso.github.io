@@ -141,7 +141,7 @@ I can't see any other way we are going to handle the
 complexity and variety of the real world.
 -->
 
-**Automatic grounding.** Instead of defining XML files to specify all the details and possible things we want to vary over, we could naturally “prompt” the model to simulate what we want. It could absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that we could encode with a neural network---and spit out a simulator description. We could film a quick video of our scene, with some robot specifications, command data and proprioception, and get out a calibrated and general simulation of the scene and the robot.
+**Automatic grounding.** Instead of defining YAML/XML files to specify all the details and possible things we want to vary over, we could naturally “prompt” the model to simulate what we want. It could absorb videos, still images, text, sound, technical drawings, robot specifications, meshes---any modality that we could encode with a neural network---and spit out a simulator description. We could film a quick video of our scene, with some robot specifications, command data and proprioception, and get out a calibrated and general simulation of the scene and the robot.
 
 **Native rendering.** On the flip side of grounding is rich rendering coming directly from the model.
 Instead of dealing with complex rendering APIs or designing custom visuals for effects like smoke or dust,
@@ -164,13 +164,15 @@ Because powerful generative models will have to model uncertainty in the environ
 
 **Differentiability.** Currently, the environment is a giant `stop_gradient` in the middle of our reinforcement learning computational graph.
 In fact, it's even worse than a `stop_gradient`, since we usually have to call into a separate Python or C++ API.
-Every other part of the system is learned and differentiable, so if we can patch these issues, there is a lot of opportunity for cleaner designs
-and perhaps more straightforward application of ideas from generative modeling.
+Every other part of the system is learned and differentiable, so if we can
+patch these issues, there is a lot of opportunity for cleaner designs and
+perhaps more straightforward application of ideas from generative modeling.
+Or just straight up supervised learning.
 (Technically some of this is available today in certain differentiable simulators being developed, but those are still generally external software (not in a PyTorch/jax graph), 
 and *more importantly*, they are upper bounded in accuracy by human engineering effort.)
 
 **Keeping data local.** 
-On a related note, by making the environment just another nn.Module, we never have to leave the compute graph or the accelerator.
+On a related note, by making the environment just another `nn.Module`, we never have to leave the compute graph or the accelerator.
 To train our policy, we can just hook it straight up to the firehose of data coming from the model.
 Resetting an environment is just a means of sampling from a new seed or prompt,
 and we can easily generate many counterfactual outcomes from a single state.
@@ -189,7 +191,7 @@ or delayed learning of a Q-function (e.g., SAC) that we can push gradients back 
 **Code simplicity.** 
 With traditional simulators (and Software 1.0 generally), the more features we support, 
 the more complex and unwieldy it gets, both for development and usage.
-For Software 2.0, improving accuracy is just a matter of scaling the size of the model, along with data and compute.
+For Software 2.0, improving accuracy is "just a matter" of scaling the size of the model, along with data and compute.
 And for users of the simulator, the interface stays simple and we can use natural interfaces to program it (e.g., natural language like in OpenAI's API).
 It's not a free lunch and this is not going to be trivial or cheap, but in the long run seems more manageable as our Software 2.0
 tools develop and as Moore's Law runs for a few more cycles.

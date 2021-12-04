@@ -4,10 +4,10 @@ layout: default
 
 <img align="left" width="200" src="/assets/mw.jpg" style="border-radius: 20%; margin: 0px 60px 20px 0px;"/>
 
-I work at Tesla on the Autopilot team.
+I work at Tesla on the Autopilot Simulation team.
 Previously, I was a masters student in computer science at the [University of 
 British Columbia (UBC)](https://www.cs.ubc.ca/), working on robotics and reinforcement
-\+ deep learning, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Before that, I worked on similar research for my undergraduate 
+\+ deep learning research, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Before that, I worked on similar research for my undergraduate 
 thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://robot-learning.cs.utah.edu/), advised by [Tucker Hermans](https://robot-learning.cs.utah.edu/thermans). 
 
 [CV](/assets/cv.pdf)
@@ -18,7 +18,7 @@ thesis at the University of Utah (2019) as a member of the [LL4MA lab](https://r
 
 
 ### News
-- Aug 2021: I joined Tesla's Autopilot team as a software engineer
+- Aug 2021: I joined Tesla's Autopilot Simulation team as a software engineer
 - Apr 2021: [boxLCD paper](/assets/boxLCD_iclr2021_workshop.pdf) was accepted to the ICLR 2021 Workshop on [Deep Learning for Simulation (SimDL)](https://simdl.github.io/)!
 - Feb 2021: I released [boxLCD](https://github.com/matwilso/boxLCD) and [generative_models](https://github.com/matwilso/generative_models) repos, and new blog posts on the [Future of Robot Learning](/robot-future) and [Learned Simulators](/learned-sims)
 - Nov 2019: Our work won the Best System Paper Award at [CoRL 2019!](https://sites.google.com/robot-learning.org/corl2019) 
@@ -77,9 +77,9 @@ and then using them to do RL.
 
 # Robots
 
-These are some robots I have worked with.
+These are some robots I have worked with in the past.
 On the lower row are three of the robots I helped build and program for [Utah's](http://usr.coe.utah.edu/) NASA [Robotic Mining Competition (RMC)](https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc/about) team.
-And [these are the robots](https://www.tesla.com/) I work with now.
+And [these are the robots](https://www.tesla.com/) I work with now ;)
 
 
 <table>

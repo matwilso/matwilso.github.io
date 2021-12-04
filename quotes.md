@@ -8,8 +8,6 @@ this is just a random sample, not necessarily best quotes
 
 # Technology/engineering
 
-"The True Way transcends the minutiae of Skill. There is no 'Technology'. There is no 'Design'. There is only a vision of how humanity could be, and the relentless resolve to make it so. The rest is details." - [Bret Victor](http://worrydream.com/#!/Bio)
-
 "The best part is no part. The best process is no process. It weighs nothing, costs nothing, can't go wrong.... Undesigning is the best thing. Just delete it." - [elon](https://twitter.com/Erdayastronaut/status/1203840982497792005)
 
 "My whole life was basically trying to optimize things. You don't just save parts, but every time you save parts you save on complexity and reliability, the amount of time it takes to understand something. And how good you can build it without errors and bugs and flaws." - woz
@@ -29,6 +27,8 @@ this is just a random sample, not necessarily best quotes
 
 "A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system." - [Gall's Law](https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law)
 
+"The True Way transcends the minutiae of Skill. There is no 'Technology'. There is no 'Design'. There is only a vision of how humanity could be, and the relentless resolve to make it so. The rest is details." - [Bret Victor](http://worrydream.com/#!/Bio)
+
 
 # Life
 
@@ -45,7 +45,7 @@ this is just a random sample, not necessarily best quotes
 
 "If others would think as hard as I did, then they would get similar results." - Netwon
 
-"Luck favors the prepared mind" - [Louis Pasteur (probably)](https://en.wikiquote.org/wiki/Louis_Pasteur)
+"Luck favors the prepared mind" - [Louis Pasteur](https://en.wikiquote.org/wiki/Louis_Pasteur)
 
 “We're not obsessed by anything, you see," insisted Ford. <br>
 "..." <br>
