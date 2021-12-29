@@ -16,7 +16,7 @@ experience *and* that reach the same levels of safety and reliability.
 This combination represents a unique set of 
 challenges and an exciting frontier in technology today.
 
-Simulation is actually one well-established tool in both engineering and human skill acquisition---it's been used to [design complex][defenseone] [fighter jets][popmech] and to [teach the human pilots][flightsim] that fly them.
+Simulation is a well-established tool in both engineering and human skill acquisition---it's been used to [design complex][defenseone] [fighter jets][popmech] and to [teach the human pilots][flightsim] that fly them.
 It's also used universally in robotics for debugging, evaluation, and (sometimes) training,
 to make development safer and cheaper, and to induce scenarios that are otherwise impossible or too dangerous to prep for.
 

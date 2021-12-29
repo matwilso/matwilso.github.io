@@ -91,7 +91,7 @@ myCobot<br> (2021)
 Baxter<br>(Utah, 2019)
 </th>
 <th>
-Ballbot and Shmoobot<br> (CMU, 2017)
+Ballbots <br> (CMU, 2017)
 </th>
 </tr>
 <tr>
