@@ -18,7 +18,7 @@ Recent advances in huge language models demonstrate a path to powerful AI system
 First, develop fairly simple but scalable architectures and training procedures, and then
 proceed to scale the shit out of them.
 Bigger models, more compute, and more data lead to better performance and wholly new qualitative abilities, it turns out.
-The [scaling hypothesis](https://www.gwern.net/newsletter/2020/05#scaling-hypothesis) is true. [All hail](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)[ compute ;)](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)
+The [scaling hypothesis](https://www.gwern.net/Scaling-hypothesis#scaling-hypothesis) is true. [All hail](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)[ compute ;)](https://www.gwern.net/images/ai/2020-07-24-meme-moneyprinter-bitterlesson-gpt3.png)
 
 When GPT is given more compute and more parameters, it keeps on filling those parameters with more and more 
 knowledge. It learns basic syntax and grammar so it can better predict the next word.
