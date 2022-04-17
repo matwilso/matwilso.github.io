@@ -4,7 +4,7 @@ layout: default
 
 <img align="left" width="200" src="/assets/mw.jpg" style="border-radius: 20%; margin: 0px 60px 20px 0px;"/>
 
-I work at Tesla on the Autopilot Simulation team.
+I work at Tesla as a Software Engineer on the Autopilot team.
 Previously, I was a masters student in computer science at the [University of 
 British Columbia (UBC)](https://www.cs.ubc.ca/), working on robotics and reinforcement
 \+ deep learning research, advised by [Michiel van de Panne](https://www.cs.ubc.ca/~van/).  Before that, I worked on similar research for my undergraduate 
