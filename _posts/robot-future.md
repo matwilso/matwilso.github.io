@@ -48,12 +48,12 @@ As in many systems, [the best part is no part](https://twitter.com/Erdayastronau
 There is, however, a point at which the value of a part becomes worth the complexity.
 If models in RL have not yet reached this threshold, they certainly will in the future.
 Unsupervised / predictive learning is going to be the only way to gather enough signal to train powerful enough neural networks.
-The most famous proponents of this argument,
-[Geoff Hinton](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/clyjogf/) and [Yann Lecun](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59), have been making it for several years now.
-But what makes me really excited now is that we are starting to build the artifacts that prove it.
+This is a familiar argument, made famously by
+[Geoff Hinton](https://www.reddit.com/r/MachineLearning/comments/2lmo0l/ama_geoffrey_hinton/clyjogf/) and [Yann Lecun](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59).
 
+What makes me more excited now is that we are starting to build the artifacts that prove these arguments.
 I am much more bullish on the future of model-based RL now, not due to any
-recent spectacular MBRL results, but due to the recent spectacular unsupervised learning results.
+recent spectacular MBRL results, but due to recent spectacular unsupervised learning results.
 Models like GPT-3 and DALL-E prove the power of predictive training and just
 how much knowledge these systems can absorb at scale.
 They still have many flaws and shortcomings, but they offer a strong existence proof of the potential of unsupervised learning.
@@ -79,15 +79,15 @@ and pick up on important features of the world, but their understanding is extre
 They are not given the chance to acquire even a fraction of the information they need about the world to understand it.
 They are starved for training bits, so it's not surprising they understand very little.
 
-I don't believe it will require radically new and complex processes that we currently "can't even imagine" to endow networks with this deeper understanding.
+I don't believe it will require radically new and complex processes that we currently can't fathom to endow networks with this deeper understanding.
 Some form of large scale predictive training will be sufficient and necessary to get powerful models that allow robots to "see the world". These models will provide the context and scaffolding to ground further supervision and human feedback in, and bring us much closer to solving the hard tasks we care about.
-The main thing standing in our way now is lack of sufficient computation.
+And the main thing standing in our way now is actually lack of computation.
 
 ## Sim2real and learned simulators
 
 <div style="text-align: center;"><em>It's all about Software 2.0</em></div>
 <br>
-The field of sim2real learning deals with training policies in simulation and then deploying them in the real world with little to no fine-tuning. Sim2real offers several advantages over real world training, in speed, safety, and environment read + write access.
+The field of sim2real learning deals with training policies fully or partially in simulation and then deploying them in the real world. Sim2real offers several advantages over real world training, in speed, safety, and environment read + write access.
 
 Like model-based RL (MBRL), it allows agents to gain useful information and strategies
 without having to interact with the real environment.
@@ -128,7 +128,8 @@ That is a limitation for now, but in the grand arc of the Bitter Lesson, that is
 
 As the base of the [Cake](https://www.gwern.net/docs/ai/2019-02-18-lecun-isscc-talk-deeplearninghardwarepastpresentandfuture.pdf#page=59), these components seem like the most important in some ways.
 At the very least they provide a context to ground and amplify the power of other system components (human supervision, RL signal).
-If you care about building general purpose robots (and useful AI systems in general), you should probably care about predictive learning.
+If you care about building general purpose robots (and useful AI systems in general),
+I recommend investing your time in predictive learning.
 
 Thanks for reading.
 
@@ -149,8 +150,6 @@ Can we use something like violation of expectation to evaluate our model's under
 - **yann lecun and self-supervised learning.** [His podcast with Lex is good, and his recent talks can probably offer insight on this area as well.](https://www.youtube.com/results?search_query=yann+lecun) He is a big believer in this type of stuff now, though with some differing opinions in the details.
 
 ## What next?
-
-Ultimately, the best way to proceed is to get building. And the best way to get building is to start small.
 
 <div style="margin-left: 2em"><em>A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system. - <a href="https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law">Galls's Law</a></em></div>
 <br>
