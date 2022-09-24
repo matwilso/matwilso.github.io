@@ -33,8 +33,8 @@ In the long run, then, we will need to learn our simulators *from data*,
 much more akin to how humans learn their world models, and much more akin to how 
 the rest of modern robot learning systems work.
 There is no other way to handle the variety of the real world in a general
-and scalable way (e.g., an egg cracking, 
-pouring out, sizzling on a frying pan, and a paintbrush dipping into 
+and scalable way (e.g., An egg cracking,
+pouring out, sizzling on a frying pan. Or a paintbrush dipping into
 a bucket, dragging across the wall, leaving a streak of red paint behind).
 
 
@@ -123,7 +123,7 @@ Learned simulators provide a good framing on how we might develop large predicti
 We basically need better ways of sharing models and reusing them.
 -->
 
-## The Simulator of Tomorrow
+## The Learned Simulator
 
 Traditional simulators provide a nice conceptual blueprint for the future of learned simulators.
 Traditional simulators are fairly general and reusable tools; they can be reprogrammed for many tasks; 
@@ -134,7 +134,7 @@ and compound, rather than needing to be constructed from scratch for each enviro
 
 But traditional simulators are limited in many ways, and ultimately by introducing learned
 components, we can go far beyond what they are currently capable of.
-Beyond additional accuracy and variety, the Simulator of Tomorrow will be much easier to use and will enables things like:
+Beyond additional accuracy and variety, the Learned Simulator will be much easier to use and will enables things like:
 
 <!--
 I can't see any other way we are going to handle the
@@ -174,7 +174,7 @@ and *more importantly*, they are upper bounded in accuracy by human engineering 
 **Keeping data local.** 
 On a related note, by making the environment just another `nn.Module`, we never have to leave the compute graph or the accelerator.
 To train our policy, we can just hook it straight up to the firehose of data coming from the model.
-Resetting an environment is just a means of sampling from a new seed or prompt,
+Resetting an environment is as simple as sampling from a new seed or prompt,
 and we can easily generate many counterfactual outcomes from a single state.
 
 <!--
