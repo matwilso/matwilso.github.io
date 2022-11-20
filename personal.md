@@ -5,9 +5,9 @@ permalink: /personal/
 ---
 
 I grew up in [Salt Lake City](https://www.google.com/search?q=salt+lake+city), [Utah](https://www.google.com/search?q=utah).
-I lived in [Pittsburgh](https://www.google.com/search?q=pittsburgh), [Pennsylvania](https://www.google.com/search?q=pennsylvania) for a summer.
-I lived in [Vancouver](https://www.google.com/search?q=vancouver), [Canada](https://www.google.com/search?q=canada) for a year.
-And now I live in the [Bay Area](https://www.google.com/search?&q=san+francisco+bay+area).
+I lived in [Pittsburgh](https://www.google.com/search?q=pittsburgh), [Pennsylvania](https://www.google.com/search?q=pennsylvania) in summer 2017.
+I lived in [Vancouver](https://www.google.com/search?q=vancouver), [Canada](https://www.google.com/search?q=canada) for a year in 2019/2020.
+And now I've lived in the [Bay Area](https://www.google.com/search?&q=san+francisco+bay+area) since 2021.
 
 ...
 
