@@ -5,6 +5,13 @@ permalink: /blog/
 ---
 
 <div>
+<div style="color: grey; font-size: 15px;">Nov 25, 2022</div>
+<a style="font-size: 25px;" href="/diffusion">Diffusion Models</a>
+</div>
+Diffusion models
+
+
+<div>
 <div style="color: grey; font-size: 15px;">Feb 22, 2021</div>
 <a style="font-size: 25px;" href="/robot-future">The Future of Robot Learning</a>
 </div>
