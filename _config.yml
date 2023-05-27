@@ -1,13 +1,13 @@
 title: Matthew Wilson
 #author: Matthew Wilson
 email: mattwilsonmbw@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-    masters student, ubc. interested in robotics and deep + reinforcement learning
+#description: > # this means to ignore newlines until "baseurl:"
+#    software engineer in ai and robotics
 
 
 twitter_username: matwilso
 github_username:  matwilso
-so_username: 7211137/matwilso 
+so_username: 7211137/matwilso
 disqus:
     shortname: "https-matwilso-github-io"
 google_analytics: "UA-89794815-1"
